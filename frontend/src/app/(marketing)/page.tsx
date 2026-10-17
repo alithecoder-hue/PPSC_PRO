@@ -10,7 +10,7 @@ import {
   ArrowRight,
   Check,
 } from 'lucide-react';
-import { TestInterfaceMock, AnalyticsMock } from './components/ProductMock';
+import { AnalyticsMock } from './components/ProductMock';
 import PricingSection from './components/PricingSection';
 import FaqSection from './components/FaqSection';
 import SubjectsSection from './components/SubjectsSection';
@@ -83,41 +83,40 @@ export default function LandingPage() {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="mm-hero">
-        <div className="mm-container mm-hero-grid">
-          <div>
-            <span className="mm-eyebrow">PPSC · FPSC · NTS preparation</span>
-            <h1>
-              Pass the PPSC exam on your <span className="hl">first attempt.</span>
-            </h1>
-            <p className="mm-hero-sub">
-              Merit Master gives you 50,000+ topic-wise MCQs, 5 years of solved
-              past papers and timed mock tests — with analytics that show you
-              exactly where you stand.
-            </p>
-            <div className="mm-hero-ctas">
-              <Link href="/signup" className="mm-btn mm-btn-primary mm-btn-lg">
-                Start preparing — it&apos;s free
-              </Link>
-              <Link href="/past-papers" className="mm-btn mm-btn-ghost mm-btn-lg">
-                Browse past papers
-              </Link>
+      <section className="mm-hero mm-hero-dark">
+        <div className="mm-hero-bg" aria-hidden="true" />
+        <div className="mm-container mm-hero-inner">
+          <span className="mm-eyebrow mm-eyebrow-dark">PPSC · FPSC · NTS preparation</span>
+          <h1>
+            Pass the PPSC exam on your <span className="hl">first attempt.</span>
+          </h1>
+          <p className="mm-hero-sub">
+            Merit Master gives you 50,000+ topic-wise MCQs, 5 years of solved
+            past papers and timed mock tests — with analytics that show you
+            exactly where you stand.
+          </p>
+          <div className="mm-hero-ctas">
+            <Link href="/signup" className="mm-btn mm-btn-accent mm-btn-lg">
+              Start preparing — it&apos;s free
+            </Link>
+            <Link href="/past-papers" className="mm-btn mm-btn-ghost-dark mm-btn-lg">
+              Browse past papers
+            </Link>
+          </div>
+          <div className="mm-hero-stats">
+            <div>
+              <strong>50,000+</strong>
+              <span>topic-wise MCQs</span>
             </div>
-            <div className="mm-trust">
-              <div className="mm-avatars" aria-hidden="true">
-                <span style={{ background: '#0c1b2e' }}>SF</span>
-                <span style={{ background: '#b45309' }}>AR</span>
-                <span style={{ background: '#166534' }}>MK</span>
-                <span style={{ background: '#334155' }}>+</span>
-              </div>
-              <div className="mm-trust-text">
-                <span className="mm-stars">★★★★★</span>
-                <br />
-                <strong>4.9/5</strong> from 2,300+ aspirants preparing daily
-              </div>
+            <div>
+              <strong>5 years</strong>
+              <span>solved past papers</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>from 2,300+ aspirants</span>
             </div>
           </div>
-          <TestInterfaceMock />
         </div>
       </section>
 

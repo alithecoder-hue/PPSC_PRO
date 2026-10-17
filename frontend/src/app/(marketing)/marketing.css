@@ -383,6 +383,105 @@ a.mm-btn-primary:active {
   font-size: 0.85rem;
 }
 
+/* ---------- hero v2: dark cinematic ---------- */
+.mm-hero.mm-hero-dark {
+  position: relative;
+  background: #0a1628;
+  border-bottom: none;
+  padding: 118px 0 104px;
+  overflow: hidden;
+}
+.mm-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/images/hero-bg.jpg') center 30% / cover no-repeat;
+}
+.mm-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8,18,34,.6) 0%, rgba(8,18,34,.38) 45%, rgba(8,18,34,.92) 100%);
+}
+.mm-hero.mm-hero-dark .mm-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mm-eyebrow.mm-eyebrow-dark {
+  color: #fcd34d;
+  background: rgba(245,158,11,.13);
+  border-color: rgba(245,158,11,.38);
+}
+.mm-hero.mm-hero-dark h1 {
+  color: #fff;
+}
+.mm-hero.mm-hero-dark h1 .hl::after {
+  background: rgba(245,158,11,.42);
+}
+.mm-hero.mm-hero-dark .mm-hero-sub {
+  color: #cbd5e1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+}
+.mm-hero.mm-hero-dark .mm-hero-ctas {
+  justify-content: center;
+}
+.mm-btn-ghost-dark {
+  background: rgba(255,255,255,.07);
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.mm-btn-ghost-dark:hover {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.45);
+  transform: translateY(-1px);
+}
+.mm-hero-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.mm-hero-stats > div {
+  padding: 4px 44px;
+  text-align: center;
+}
+.mm-hero-stats > div + div {
+  border-left: 1px solid rgba(255,255,255,.16);
+}
+.mm-hero-stats strong {
+  display: block;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.mm-hero-stats span {
+  color: #94a3b8;
+  font-size: 0.92rem;
+}
+@media (max-width: 680px) {
+  .mm-hero.mm-hero-dark {
+    padding: 76px 0 72px;
+  }
+  .mm-hero-stats {
+    gap: 28px;
+    margin-top: 44px;
+  }
+  .mm-hero-stats > div {
+    padding: 4px 20px;
+  }
+  .mm-hero-stats > div + div {
+    border-left: none;
+  }
+}
+
 /* ---------- product mock (pure CSS) ---------- */
 .mm-mock {
   background: #fff;
