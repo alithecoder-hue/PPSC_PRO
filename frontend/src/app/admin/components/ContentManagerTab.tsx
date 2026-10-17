@@ -95,8 +95,8 @@ export default function ContentManagerTab() {
   };
 
   const renderContent = () => {
-    if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading content data from database...</div>;
-    if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+    if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading content data from database...</div>;
+    if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
     switch (subTab) {
       case 'testimonials':

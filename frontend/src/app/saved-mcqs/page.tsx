@@ -114,8 +114,8 @@ export default function SavedMCQsPage() {
         ) : mcqs.length === 0 ? (
           <div className={styles.empty}>
             <Bookmark size={56} style={{ opacity: 0.5, marginBottom: 16 }} />
-            <p style={{ fontSize: '1.2rem', fontWeight: 600, color: '#fff', marginBottom: 8 }}>No saved MCQs yet.</p>
-            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', maxWidth: 300, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--app-ink)', marginBottom: 8 }}>No saved MCQs yet.</p>
+            <p style={{ color: 'var(--app-muted)', fontSize: '0.9rem', maxWidth: 300, margin: '0 auto' }}>
               While practising, click the bookmark icon on any question to save it here for later review.
             </p>
             <Link href="/classroom" className={styles.practiceBtn} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 24 }}>
@@ -186,7 +186,7 @@ export default function SavedMCQsPage() {
                   </button>
                 ) : mcq.explanation ? (
                   <div className={styles.explanation}>
-                    <strong style={{ color: '#10B981', display: 'block', marginBottom: 4 }}>Explanation</strong>
+                    <strong style={{ color: 'var(--app-success)', display: 'block', marginBottom: 4 }}>Explanation</strong>
                     {mcq.explanation}
                   </div>
                 ) : null}
@@ -198,15 +198,15 @@ export default function SavedMCQsPage() {
         ) : activeTab === 'flashcards' ? (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={styles.mockContainer}>
             <div className={styles.mockHeader}>
-              <h2 style={{ color: '#fff' }}>Smart Flashcards</h2>
-              <p style={{ color: 'rgba(255,255,255,0.6)' }}>Active recall sessions based on your saved items.</p>
+              <h2 style={{ color: 'var(--app-ink)' }}>Smart Flashcards</h2>
+              <p style={{ color: 'var(--app-muted)' }}>Active recall sessions based on your saved items.</p>
             </div>
             
             {mcqs.length === 0 ? (
               <div className={styles.empty}>
                 <Layers size={56} style={{ opacity: 0.5, marginBottom: 16 }} />
-                <p style={{ fontSize: '1.2rem', fontWeight: 600, color: '#fff', marginBottom: 8 }}>No flashcards available.</p>
-                <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', maxWidth: 300, margin: '0 auto' }}>
+                <p style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--app-ink)', marginBottom: 8 }}>No flashcards available.</p>
+                <p style={{ color: 'var(--app-muted)', fontSize: '0.9rem', maxWidth: 300, margin: '0 auto' }}>
                   Save some MCQs from the classroom to start a flashcard session.
                 </p>
                 <Link href="/classroom" className={styles.practiceBtn} style={{ display: 'inline-flex', marginTop: 24 }}>
@@ -215,7 +215,7 @@ export default function SavedMCQsPage() {
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <div style={{ marginBottom: '16px', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
+                <div style={{ marginBottom: '16px', color: 'var(--app-muted)', fontSize: '0.9rem' }}>
                   Card {flashcardIndex + 1} of {mcqs.length}
                 </div>
                 
@@ -235,18 +235,18 @@ export default function SavedMCQsPage() {
                   >
                     {/* Front */}
                     <div className={styles.flashcardFront} style={{ backfaceVisibility: 'hidden', position: 'absolute', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px' }}>
-                      <p style={{ color: '#8B5CF6', fontWeight: 600, marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem' }}>Question (Click to flip)</p>
+                      <p style={{ color: 'var(--app-accent-deep)', fontWeight: 600, marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem' }}>Question (Click to flip)</p>
                       <h3 style={{ fontSize: '1.2rem', textAlign: 'center', lineHeight: 1.5 }}>{mcqs[flashcardIndex].question}</h3>
                     </div>
                     
                     {/* Back */}
-                    <div className={styles.flashcardFront} style={{ backfaceVisibility: 'hidden', position: 'absolute', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', transform: 'rotateX(180deg)', background: 'linear-gradient(145deg, rgba(30, 40, 30, 0.9), rgba(15, 20, 15, 0.9))', borderColor: 'rgba(16, 185, 129, 0.3)' }}>
-                      <p style={{ color: '#10B981', fontWeight: 600, marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem' }}>Answer (Click to flip back)</p>
-                      <h3 style={{ fontSize: '1.5rem', color: '#10B981', textAlign: 'center', fontWeight: 800 }}>
+                    <div className={styles.flashcardFront} style={{ backfaceVisibility: 'hidden', position: 'absolute', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', transform: 'rotateX(180deg)', background: '#f0fdf4', borderColor: '#bbf7d0' }}>
+                      <p style={{ color: 'var(--app-success)', fontWeight: 600, marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem' }}>Answer (Click to flip back)</p>
+                      <h3 style={{ fontSize: '1.5rem', color: '#15803d', textAlign: 'center', fontWeight: 800 }}>
                         {getOption(mcqs[flashcardIndex], mcqs[flashcardIndex].correctOption)}
                       </h3>
                       {mcqs[flashcardIndex].explanation && (
-                        <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', textAlign: 'center' }}>
+                        <p style={{ marginTop: '20px', fontSize: '0.9rem', color: 'var(--app-muted)', textAlign: 'center' }}>
                           {mcqs[flashcardIndex].explanation}
                         </p>
                       )}
@@ -264,13 +264,13 @@ export default function SavedMCQsPage() {
         ) : (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={styles.mockContainer}>
             <div className={styles.mockHeader}>
-              <h2 style={{ color: '#fff' }}>Weak Areas Analysis</h2>
-              <p style={{ color: 'rgba(255,255,255,0.6)' }}>Review MCQs you answered incorrectly during your mock tests.</p>
+              <h2 style={{ color: 'var(--app-ink)' }}>Weak Areas Analysis</h2>
+              <p style={{ color: 'var(--app-muted)' }}>Review MCQs you answered incorrectly during your mock tests.</p>
             </div>
             <div className={styles.empty}>
               <Shield size={56} style={{ opacity: 0.5, marginBottom: 16 }} />
-              <p style={{ fontSize: '1.2rem', fontWeight: 600, color: '#fff', marginBottom: 8 }}>No weak areas identified yet.</p>
-              <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', maxWidth: 300, margin: '0 auto' }}>
+              <p style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--app-ink)', marginBottom: 8 }}>No weak areas identified yet.</p>
+              <p style={{ color: 'var(--app-muted)', fontSize: '0.9rem', maxWidth: 300, margin: '0 auto' }}>
                 Complete more mock tests and drills. Incorrect answers will automatically appear here for review.
               </p>
               <Link href="/classroom?mode=full-mock" className={styles.practiceBtn} style={{ display: 'inline-flex', marginTop: 24 }}>

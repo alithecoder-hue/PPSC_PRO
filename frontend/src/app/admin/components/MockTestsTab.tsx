@@ -43,8 +43,8 @@ export default function MockTestsTab() {
   const instructionsRef = useRef<HTMLTextAreaElement>(null);
   const statusRef = useRef<HTMLInputElement>(null);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading exams from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading exams from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const filteredTests = exams.filter((t: any) => t.title.toLowerCase().includes(search.toLowerCase()));
   const totalPages = Math.ceil(filteredTests.length / itemsPerPage);
@@ -153,32 +153,32 @@ export default function MockTestsTab() {
             <div className={styles.formGroup}>
               <label className={styles.formLabel}>Status</label>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <label style={{ display: 'flex', gap: '8px', color: '#FFF', cursor: 'pointer' }}>
+                <label style={{ display: 'flex', gap: '8px', color: '#334155', cursor: 'pointer' }}>
                   <input type="radio" name="status" value="Active" defaultChecked ref={statusRef} /> Publish Now (Active)
                 </label>
-                <label style={{ display: 'flex', gap: '8px', color: '#FFF', cursor: 'pointer' }}>
+                <label style={{ display: 'flex', gap: '8px', color: '#334155', cursor: 'pointer' }}>
                   <input type="radio" name="status" value="Draft" /> Save as Draft
                 </label>
               </div>
             </div>
 
-            <hr style={{ borderColor: 'rgba(255,255,255,0.1)', margin: '20px 0' }} />
+            <hr style={{ borderColor: '#E6EAF0', margin: '20px 0' }} />
             
-            <h4 style={{ color: '#F59E0B', marginBottom: '15px' }}>MCQ Selection Engine</h4>
+            <h4 style={{ color: '#B45309', marginBottom: '15px' }}>MCQ Selection Engine</h4>
             <div className={styles.formGroup}>
               <label className={styles.formLabel}>Generation Mode</label>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <label style={{ display: 'flex', gap: '8px', color: '#FFF', cursor: 'pointer' }}>
+                <label style={{ display: 'flex', gap: '8px', color: '#334155', cursor: 'pointer' }}>
                   <input type="radio" checked={mcqMode === 'random'} onChange={() => setMcqMode('random')} /> System Random Picker
                 </label>
-                <label style={{ display: 'flex', gap: '8px', color: '#FFF', cursor: 'pointer' }}>
+                <label style={{ display: 'flex', gap: '8px', color: '#334155', cursor: 'pointer' }}>
                   <input type="radio" checked={mcqMode === 'manual'} onChange={() => setMcqMode('manual')} /> Manual IDs Selection
                 </label>
               </div>
             </div>
 
             {mcqMode === 'random' ? (
-              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <div style={{ background: '#F8FAFC', padding: '15px', borderRadius: '8px', border: '1px solid #E6EAF0' }}>
                 <div className={styles.formGroup} style={{ marginBottom: '15px' }}>
                   <label className={styles.formLabel}>Add Custom Subject Allocation</label>
                   <select className={styles.formInput} onChange={addAllocation}>
@@ -194,10 +194,10 @@ export default function MockTestsTab() {
                       {allocations.map((a, idx) => {
                         const subName = (subjects as any[]).find((s: any) => s.id === a.subjectId)?.name || 'Unknown';
                         return (
-                          <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', background: 'rgba(255,255,255,0.05)', padding: '10px 15px', borderRadius: '8px' }}>
-                            <span style={{ color: '#F59E0B', fontWeight: 'bold', width: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{subName}</span>
+                          <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', background: '#FFFFFF', border: '1px solid #E6EAF0', padding: '10px 15px', borderRadius: '8px' }}>
+                            <span style={{ color: '#B45309', fontWeight: 'bold', width: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{subName}</span>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                              <label style={{ fontSize: '0.85rem', color: '#FFF' }}>MCQs:</label>
+                              <label style={{ fontSize: '0.85rem', color: '#334155' }}>MCQs:</label>
                               <input 
                                 type="number" 
                                 className={styles.formInput} 
@@ -207,7 +207,7 @@ export default function MockTestsTab() {
                                 onChange={(e) => updateAllocationCount(a.subjectId, parseInt(e.target.value) || 0)} 
                               />
                             </div>
-                            <button type="button" style={{ marginLeft: 'auto', background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer', fontSize: '0.85rem' }} onClick={() => removeAllocation(a.subjectId)}>Remove</button>
+                            <button type="button" style={{ marginLeft: 'auto', background: 'none', border: 'none', color: '#DC2626', cursor: 'pointer', fontSize: '0.85rem' }} onClick={() => removeAllocation(a.subjectId)}>Remove</button>
                           </div>
                         );
                       })}
@@ -216,7 +216,7 @@ export default function MockTestsTab() {
                 )}
                 
                 {allocations.length === 0 && (
-                  <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', marginBottom: '15px' }}>
+                  <p style={{ color: '#94A3B8', fontSize: '0.85rem', marginBottom: '15px' }}>
                     No subjects selected. The system will pick random MCQs from ALL available subjects. Add a subject above to set specific amounts.
                   </p>
                 )}
@@ -234,7 +234,7 @@ export default function MockTestsTab() {
                 </div>
               </div>
             ) : (
-              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <div style={{ background: '#F8FAFC', padding: '15px', borderRadius: '8px', border: '1px solid #E6EAF0' }}>
                 <div className={styles.formGroup}>
                   <label className={styles.formLabel}>Enter MCQ IDs (comma separated)</label>
                   <textarea 
@@ -244,7 +244,7 @@ export default function MockTestsTab() {
                     value={manualMcqIdsText} 
                     onChange={e => setManualMcqIdsText(e.target.value)} 
                   />
-                  <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', marginTop: '5px' }}>Find these IDs in the MCQs Database tab.</p>
+                  <p style={{ color: '#94A3B8', fontSize: '0.8rem', marginTop: '5px' }}>Find these IDs in the MCQs Database tab.</p>
                 </div>
               </div>
             )}
@@ -261,7 +261,7 @@ export default function MockTestsTab() {
 
       <div className={styles.tableControls}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input
             type="text"
             placeholder="Search mock tests..."
@@ -288,7 +288,7 @@ export default function MockTestsTab() {
           <tbody>
             {displayedTests.length === 0 ? (
               <tr>
-                <td colSpan={7} style={{ textAlign: 'center', color: 'rgba(255,255,255,0.4)', padding: '40px' }}>
+                <td colSpan={7} style={{ textAlign: 'center', color: '#94A3B8', padding: '40px' }}>
                   No exams yet. Click "Create Mock Test" to add one.
                 </td>
               </tr>
@@ -297,7 +297,7 @@ export default function MockTestsTab() {
                 <td style={{ fontWeight: 600 }}>{test.title}</td>
                 <td>{Math.round((test.duration || 5400) / 60)} mins</td>
                 <td>{test.totalMarks ?? '—'}</td>
-                <td style={{ color: '#F59E0B' }}>{test.mcqIds?.length || 0}</td>
+                <td style={{ color: '#B45309' }}>{test.mcqIds?.length || 0}</td>
                 <td>
                   <span className={`${styles.badge} ${test.type === 'Premium' ? styles.badgePremium : styles.badgeFree}`}>
                     {test.type || 'Free'}
@@ -305,8 +305,8 @@ export default function MockTestsTab() {
                 </td>
                 <td>
                   {test.status === 'Active'
-                    ? <span style={{ color: '#10b981' }}>● Active</span>
-                    : <span style={{ color: 'rgba(255,255,255,0.4)' }}>● Draft</span>}
+                    ? <span style={{ color: '#16A34A' }}>● Active</span>
+                    : <span style={{ color: '#94A3B8' }}>● Draft</span>}
                 </td>
                 <td>
                   <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDelete(test.id, test.title)}>
@@ -323,7 +323,7 @@ export default function MockTestsTab() {
         <span className={styles.pageInfo}>Showing {displayedTests.length} of {filteredTests.length} tests</span>
         <div className={styles.pageButtons}>
           <button className={styles.pageBtn} disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Prev</button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
           <button className={styles.pageBtn} disabled={currentPage === totalPages || totalPages === 0} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
         </div>
       </div>

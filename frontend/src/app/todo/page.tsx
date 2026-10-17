@@ -256,7 +256,7 @@ export default function TodoPage() {
                   <div className={styles.cardMeta}>
                     <span
                       className={styles.priorityBadge}
-                      style={{ background: `${PRIORITY_COLOR[todo.priority]}20`, color: PRIORITY_COLOR[todo.priority] }}
+                      style={{ background: `${PRIORITY_COLOR[todo.priority]}20`, color: todo.priority === 'Medium' ? 'var(--app-accent-deep)' : PRIORITY_COLOR[todo.priority] }}
                     >
                       {todo.priority}
                     </span>
@@ -283,8 +283,8 @@ export default function TodoPage() {
             className={styles.plannerContainer}
           >
             <div className={styles.plannerHeader}>
-              <h2 style={{ color: '#fff' }}>Weekly Study Plan</h2>
-              <p style={{ color: 'rgba(255,255,255,0.6)' }}>Your custom learning roadmap.</p>
+              <h2 style={{ color: 'var(--app-ink)' }}>Weekly Study Plan</h2>
+              <p style={{ color: 'var(--app-muted)' }}>Your custom learning roadmap.</p>
             </div>
             <div className={styles.plannerMockGrid}>
               {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Weekend'].map((day) => {
@@ -296,16 +296,16 @@ export default function TodoPage() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '12px' }}>
                       {dayItems.map(item => (
                         <div key={item.id} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', opacity: item.completed ? 0.5 : 1 }}>
-                          <button onClick={() => togglePlannerComplete(item)} style={{ background: 'transparent', border: 'none', color: item.completed ? '#8B5CF6' : 'rgba(255,255,255,0.4)', padding: 0, cursor: 'pointer', marginTop: '2px' }}>
+                          <button onClick={() => togglePlannerComplete(item)} style={{ background: 'transparent', border: 'none', color: item.completed ? 'var(--app-success)' : 'var(--app-faint)', padding: 0, cursor: 'pointer', marginTop: '2px' }}>
                             {item.completed ? <CheckCircle size={16} /> : <Circle size={16} />}
                           </button>
-                          <span style={{ flex: 1, fontSize: '0.85rem', color: '#fff', textDecoration: item.completed ? 'line-through' : 'none', wordBreak: 'break-word' }}>{item.title}</span>
-                          <button onClick={() => deletePlannerTask(item.id)} style={{ background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.2)', padding: 0, cursor: 'pointer' }}>
+                          <span style={{ flex: 1, fontSize: '0.85rem', color: 'var(--app-ink-2)', textDecoration: item.completed ? 'line-through' : 'none', wordBreak: 'break-word' }}>{item.title}</span>
+                          <button onClick={() => deletePlannerTask(item.id)} style={{ background: 'transparent', border: 'none', color: 'var(--app-faint)', padding: 0, cursor: 'pointer' }}>
                             <Trash2 size={14} />
                           </button>
                         </div>
                       ))}
-                      {dayItems.length === 0 && <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)' }}>No tasks for this day.</div>}
+                      {dayItems.length === 0 && <div style={{ fontSize: '0.8rem', color: 'var(--app-faint)' }}>No tasks for this day.</div>}
                     </div>
 
                     {addingPlannerTaskFor === day ? (
@@ -317,13 +317,13 @@ export default function TodoPage() {
                           value={plannerTaskTitle} 
                           onChange={(e) => setPlannerTaskTitle(e.target.value)} 
                           onKeyDown={(e) => { if (e.key === 'Enter') handleAddPlannerTask(day); else if (e.key === 'Escape') setAddingPlannerTaskFor(null); }}
-                          style={{ flex: 1, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', borderRadius: '6px', padding: '6px', fontSize: '0.8rem', outline: 'none' }}
+                          style={{ flex: 1, background: '#fff', border: '1px solid var(--app-line)', color: 'var(--app-ink)', borderRadius: '6px', padding: '6px', fontSize: '0.8rem', outline: 'none' }}
                         />
-                        <button onClick={() => handleAddPlannerTask(day)} style={{ background: '#8B5CF6', border: 'none', color: '#fff', borderRadius: '6px', padding: '0 8px', cursor: 'pointer' }}>+</button>
-                        <button onClick={() => setAddingPlannerTaskFor(null)} style={{ background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer' }}><X size={14}/></button>
+                        <button onClick={() => handleAddPlannerTask(day)} style={{ background: 'var(--app-accent)', border: 'none', color: '#1a1207', borderRadius: '6px', padding: '0 8px', cursor: 'pointer' }}>+</button>
+                        <button onClick={() => setAddingPlannerTaskFor(null)} style={{ background: 'transparent', border: 'none', color: 'var(--app-muted)', cursor: 'pointer' }}><X size={14}/></button>
                       </div>
                     ) : (
-                      <button onClick={() => { setAddingPlannerTaskFor(day); setPlannerTaskTitle(''); }} style={{ background: 'rgba(255,255,255,0.05)', border: '1px dashed rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)', borderRadius: '6px', padding: '6px', fontSize: '0.8rem', width: '100%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
+                      <button onClick={() => { setAddingPlannerTaskFor(day); setPlannerTaskTitle(''); }} style={{ background: 'var(--app-bg)', border: '1px dashed var(--app-line)', color: 'var(--app-muted)', borderRadius: '6px', padding: '6px', fontSize: '0.8rem', width: '100%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
                         <Plus size={14} /> Add Task
                       </button>
                     )}

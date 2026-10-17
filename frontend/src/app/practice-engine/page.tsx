@@ -114,8 +114,8 @@ function PracticeEngineContent() {
       <div className={styles.container}>
         <div className={styles.noData} style={{ textAlign: 'center', padding: '60px 20px' }}>
           <div style={{ fontSize: '3rem', marginBottom: '20px' }}>📚</div>
-          <h2 style={{ color: '#F59E0B', marginBottom: '10px' }}>No Questions Yet</h2>
-          <p style={{ color: 'rgba(255,255,255,0.6)', maxWidth: '400px', margin: '0 auto' }}>
+          <h2 style={{ color: 'var(--app-accent-deep)', marginBottom: '10px' }}>No Questions Yet</h2>
+          <p style={{ color: 'var(--app-muted)', maxWidth: '400px', margin: '0 auto' }}>
             No practice questions are available for this section yet. The admin is working on adding content. Check back soon!
           </p>
         </div>
@@ -183,7 +183,7 @@ function PracticeEngineContent() {
                         textAlign: 'right', lineHeight: 2.2, fontSize: '1.2rem'
                       } : {}}
                     >
-                      <span style={{ color: '#F59E0B', marginRight: isUrdu ? 0 : '10px', marginLeft: isUrdu ? '10px' : 0 }}>Q{currentIndex + 1}.</span>
+                      <span style={{ color: 'var(--app-accent-deep)', marginRight: isUrdu ? 0 : '10px', marginLeft: isUrdu ? '10px' : 0 }}>Q{currentIndex + 1}.</span>
                       {currentMcq.question}
                     </h3>
 
@@ -248,7 +248,7 @@ function PracticeEngineContent() {
 
 export default function PracticeEnginePage() {
   return (
-    <Suspense fallback={<div style={{ padding: '100px', textAlign: 'center', color: '#FFF' }}>Loading...</div>}>
+    <Suspense fallback={<div style={{ padding: '100px', textAlign: 'center', color: 'var(--app-muted)' }}>Loading...</div>}>
       <PracticeEngineContent />
     </Suspense>
   );

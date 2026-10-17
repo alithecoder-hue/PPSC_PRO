@@ -11,10 +11,10 @@
 }
 
 .bottomNav {
-  background: rgba(15, 15, 20, 0.75);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--app-line);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
   padding: 12px 24px;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 32px rgba(15, 30, 51, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.7);
   pointer-events: auto;
 }
 
@@ -32,14 +32,14 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--app-faint);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   min-width: 64px;
 }
 
 .navItem:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--app-ink);
   transform: translateY(-2px);
 }
 
@@ -65,7 +65,7 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--app-muted);
   position: relative;
   margin-top: -30px;
   min-width: 64px;
@@ -73,35 +73,36 @@
 }
 
 .centerButtonWrapper:hover .label {
-  color: #fff;
+  color: var(--app-ink);
 }
 
 .centerButton {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--app-navy-2) 0%, var(--app-navy) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(12, 27, 46, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.25);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .centerButtonWrapper:hover .centerButton {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 28px rgba(12, 27, 46, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .centerActive {
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, var(--app-accent) 0%, #d97706 100%);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 /* Active State */
 .active {
-  color: #fff;
+  color: var(--app-navy);
   transform: translateY(-4px);
 }
 
@@ -112,7 +113,7 @@
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
   filter: blur(4px);
@@ -120,8 +121,8 @@
 }
 
 .active svg {
-  color: #F59E0B;
-  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+  color: var(--app-accent-deep);
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.45));
 }
 
 @keyframes pulse {

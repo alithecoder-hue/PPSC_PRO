@@ -11,8 +11,8 @@ export default function UsersTab() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading users...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading users...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const filteredUsers = users.filter((u: any) => 
     u.name.toLowerCase().includes(search.toLowerCase()) || 
@@ -61,7 +61,7 @@ export default function UsersTab() {
         <h2 className={styles.sectionTitle}>User Management</h2>
         <button 
           className={styles.quickActionBtn} 
-          style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderColor: 'rgba(16, 185, 129, 0.3)' }}
+          style={{ background: '#DCFCE7', color: '#16A34A', borderColor: '#BBF7D0' }}
           onClick={handleExportCsv}
         >
           <Download size={16} /> Export to CSV
@@ -70,7 +70,7 @@ export default function UsersTab() {
 
       <div className={styles.tableControls}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input 
             type="text" 
             placeholder="Search users by name or email..." 
@@ -90,7 +90,7 @@ export default function UsersTab() {
           </thead>
           <tbody>
             {displayedUsers.length === 0 ? (
-              <tr><td colSpan={6} style={{ textAlign: 'center', color: 'rgba(255,255,255,0.4)', padding: '30px' }}>No users found.</td></tr>
+              <tr><td colSpan={6} style={{ textAlign: 'center', color: '#94A3B8', padding: '30px' }}>No users found.</td></tr>
             ) : displayedUsers.map((user: any) => (
               <tr key={user.id}>
                 <td style={{ fontWeight: 600 }}>{user.name}</td>
@@ -129,7 +129,7 @@ export default function UsersTab() {
         <span className={styles.pageInfo}>Showing {displayedUsers.length} of {filteredUsers.length} users</span>
         <div className={styles.pageButtons}>
           <button className={styles.pageBtn} disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Prev</button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
           <button className={styles.pageBtn} disabled={currentPage === totalPages || totalPages === 0} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
         </div>
       </div>

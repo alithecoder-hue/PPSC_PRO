@@ -19,7 +19,7 @@ export default function SubjectsDrilldownTab() {
   const config = useMemo(() => ({
     readonly: false,
     placeholder: isUrdu ? 'یہاں اردو نوٹس لکھیں...' : 'Start typing your detailed notes here...',
-    theme: 'dark',
+    theme: 'light',
     height: 500,
     direction: (isUrdu ? 'rtl' : 'ltr') as 'rtl' | 'ltr',
     language: isUrdu ? 'ar' : 'en',
@@ -348,21 +348,21 @@ export default function SubjectsDrilldownTab() {
   // RENDERING HELPERS
   // ----------------------------------------------------
   const Breadcrumbs = () => (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px', color: '#64748B', fontSize: '0.9rem' }}>
       {level > 1 && <button onClick={goBack} className={styles.actionBtn} style={{ padding: '4px 8px', marginRight: '10px' }}><ArrowLeft size={16} /></button>}
       <span style={{ cursor: 'pointer' }} onClick={() => setLevel(1)}>Subjects</span>
-      {level >= 2 && <><ChevronRight size={14} /><span style={{ cursor: level > 2 ? 'pointer' : 'default', color: level === 2 ? '#FFF' : '' }} onClick={() => setLevel(2)}>{selectedCategory?.name}</span></>}
-      {level >= 3 && <><ChevronRight size={14} /><span style={{ cursor: level > 3 ? 'pointer' : 'default', color: level === 3 ? '#FFF' : '' }} onClick={() => setLevel(3)}>{selectedTopic?.name}</span></>}
-      {level === 4 && <><ChevronRight size={14} /><span style={{ color: '#FFF' }}>{selectedSubtopic?.name}</span></>}
+      {level >= 2 && <><ChevronRight size={14} /><span style={{ cursor: level > 2 ? 'pointer' : 'default', color: level === 2 ? '#0C1B2E' : '' }} onClick={() => setLevel(2)}>{selectedCategory?.name}</span></>}
+      {level >= 3 && <><ChevronRight size={14} /><span style={{ cursor: level > 3 ? 'pointer' : 'default', color: level === 3 ? '#0C1B2E' : '' }} onClick={() => setLevel(3)}>{selectedTopic?.name}</span></>}
+      {level === 4 && <><ChevronRight size={14} /><span style={{ color: '#0C1B2E' }}>{selectedSubtopic?.name}</span></>}
     </div>
   );
 
   const getLevelBadgeClass = (lvl: string) => {
     switch(lvl) {
-      case 'beginner': return 'bg-green-500/20 text-green-400 border border-green-500/30';
-      case 'moderate': return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
-      case 'expert': return 'bg-red-500/20 text-red-400 border border-red-500/30';
-      default: return 'bg-gray-500/20 text-gray-400';
+      case 'beginner': return 'bg-green-500/20 text-green-400 border border-green-500/30 app-badge app-badge-green';
+      case 'moderate': return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 app-badge app-badge-amber';
+      case 'expert': return 'bg-red-500/20 text-red-400 border border-red-500/30 app-badge app-badge-red';
+      default: return 'bg-gray-500/20 text-gray-400 app-badge app-badge-gray';
     }
   };
 
@@ -378,7 +378,7 @@ export default function SubjectsDrilldownTab() {
       {level === 1 && (
         <>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
-            <h3 style={{ margin: 0, color: '#FFF' }}>All Subjects</h3>
+            <h3 style={{ margin: 0, color: '#0F1E33' }}>All Subjects</h3>
             <button className={styles.quickActionBtn} onClick={() => {
               setEditSubjectId(null);
               setSubjectForm({ name: '', description: '' });
@@ -400,7 +400,7 @@ export default function SubjectsDrilldownTab() {
                     <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDeleteSubject(c.id)}><Trash2 size={14} /></button>
                   </div>
                 </div>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', flex: 1 }}>{c.description}</p>
+                <p style={{ color: '#64748B', fontSize: '0.85rem', flex: 1 }}>{c.description}</p>
                 <button 
                   className={styles.submitBtn} 
                   style={{ width: '100%', padding: '10px', fontSize: '0.9rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', marginTop: '15px' }}
@@ -440,7 +440,7 @@ export default function SubjectsDrilldownTab() {
       {/* LEVEL 2: TOPICS LIST */}
       {level === 2 && (
         <div className={styles.tableContainer}>
-          <div style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+          <div style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #E6EAF0' }}>
             <h3 style={{ margin: 0 }}>Topics inside {selectedCategory?.name}</h3>
             {!isAddingTopic ? (
               <div style={{ display: 'flex', gap: '10px' }}>
@@ -478,9 +478,9 @@ export default function SubjectsDrilldownTab() {
             <tbody>
               {topics.map((t: any) => (
                 <tr key={t.id} className={styles.clickableRow} onClick={() => goLevel3(t)}>
-                  <td style={{ color: 'rgba(255,255,255,0.4)' }}>#{t.id}</td>
+                  <td style={{ color: '#94A3B8' }}>#{t.id}</td>
                   <td style={{ fontWeight: 600 }}>{t.name}</td>
-                  <td style={{ color: '#F59E0B' }}>{t._count?.topics || 0}</td>
+                  <td style={{ color: '#B45309' }}>{t._count?.topics || 0}</td>
                   <td onClick={e => e.stopPropagation()}>
                     <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDeleteTopic(t.id)}>
                       <Trash2 size={14} />
@@ -488,7 +488,7 @@ export default function SubjectsDrilldownTab() {
                   </td>
                 </tr>
               ))}
-              {topics.length === 0 && <tr><td colSpan={4} style={{ textAlign:'center', padding:'20px', color:'rgba(255,255,255,0.5)' }}>No topics found.</td></tr>}
+              {topics.length === 0 && <tr><td colSpan={4} style={{ textAlign:'center', padding:'20px', color:'#94A3B8' }}>No topics found.</td></tr>}
             </tbody>
           </table>
         </div>
@@ -499,7 +499,7 @@ export default function SubjectsDrilldownTab() {
         <div className={styles.modalBackdrop}>
           <div className={styles.modalContent} style={{ maxWidth: '600px' }}>
             <h3>Bulk Upload Topics & Subtopics</h3>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', marginBottom: '15px' }}>
+            <p style={{ color: '#64748B', fontSize: '0.9rem', marginBottom: '15px' }}>
               Format your text with topics on regular lines, and subtopics indented with a hyphen `- ` below them.
               <br/><br/>
               <strong>Example:</strong><br/>
@@ -531,7 +531,7 @@ export default function SubjectsDrilldownTab() {
       {level === 3 && (
         <>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
-            <h3 style={{ margin: 0, color: '#FFF' }}>Subtopics</h3>
+            <h3 style={{ margin: 0, color: '#0F1E33' }}>Subtopics</h3>
             <button className={styles.quickActionBtn} onClick={() => {
               setEditSubtopicId(null);
               setSubtopicForm({ name: '', description: '', level: 'beginner' });
@@ -554,24 +554,24 @@ export default function SubjectsDrilldownTab() {
               <tbody>
                 {subtopics.map((s: any) => (
                   <tr key={s.id}>
-                    <td style={{ color: 'rgba(255,255,255,0.4)' }}>#{s.id}</td>
+                    <td style={{ color: '#94A3B8' }}>#{s.id}</td>
                     <td style={{ fontWeight: 600 }}>{s.name}</td>
                     <td>
                       <span className={`px-2 py-1 rounded text-xs font-bold uppercase tracking-wider ${getLevelBadgeClass(s.level)}`}>{s.level}</span>
                     </td>
                     <td>
-                      {s.hasContent ? <CheckCircle size={18} color="#10b981" /> : <span style={{ color:'rgba(255,255,255,0.3)' }}>—</span>}
+                      {s.hasContent ? <CheckCircle size={18} color="#16A34A" /> : <span style={{ color:'#94A3B8' }}>—</span>}
                     </td>
                     <td>
                       <button className={styles.actionBtn} onClick={() => openEditSubtopic(s)}><Edit size={14} /></button>
-                      <button className={styles.actionBtn} style={{ background: 'rgba(245, 158, 11, 0.1)', color: '#F59E0B' }} onClick={() => goLevel4(s)}>
+                      <button className={styles.actionBtn} style={{ background: '#FEF3C7', color: '#B45309', borderColor: '#FDE68A' }} onClick={() => goLevel4(s)}>
                         Edit Content &rarr;
                       </button>
                       <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDeleteSubtopic(s.id)}><Trash2 size={14} /></button>
                     </td>
                   </tr>
                 ))}
-                {subtopics.length === 0 && <tr><td colSpan={5} style={{ textAlign:'center', padding:'20px', color:'rgba(255,255,255,0.5)' }}>No subtopics found.</td></tr>}
+                {subtopics.length === 0 && <tr><td colSpan={5} style={{ textAlign:'center', padding:'20px', color:'#94A3B8' }}>No subtopics found.</td></tr>}
               </tbody>
             </table>
           </div>
@@ -613,10 +613,10 @@ export default function SubjectsDrilldownTab() {
       {level === 4 && contentData && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(245, 158, 11, 0.1)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(0,229,255,0.2)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#FEF3C7', padding: '20px', borderRadius: '12px', border: '1px solid #FDE68A' }}>
             <div>
-              <h3 style={{ margin: '0 0 5px 0', color: '#F59E0B' }}>Editing Content for: {selectedSubtopic?.name}</h3>
-              <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>Add markdown text, bullet points, data tables, and references.</span>
+              <h3 style={{ margin: '0 0 5px 0', color: '#B45309' }}>Editing Content for: {selectedSubtopic?.name}</h3>
+              <span style={{ fontSize: '0.85rem', color: '#64748B' }}>Add markdown text, bullet points, data tables, and references.</span>
             </div>
             <button className={styles.submitBtn} style={{ margin: 0, minWidth: '150px' }} onClick={handleSaveContent}>
               {loading ? 'Saving...' : '💾 Save Content'}
@@ -626,7 +626,7 @@ export default function SubjectsDrilldownTab() {
           {/* Section A: Body Text */}
           <div className={styles.formCard} style={{ color: '#000' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-              <h3 style={{ color: '#FFF', margin: 0 }}>A. Study Notes (Rich Text)</h3>
+              <h3 style={{ color: '#0F1E33', margin: 0 }}>A. Study Notes (Rich Text)</h3>
               <button
                 type="button"
                 onClick={() => {
@@ -637,9 +637,9 @@ export default function SubjectsDrilldownTab() {
                 style={{
                   display: 'flex', alignItems: 'center', gap: '8px',
                   padding: '8px 16px', borderRadius: '8px', cursor: 'pointer',
-                  border: `1px solid ${isUrdu ? '#F59E0B' : 'rgba(255,255,255,0.2)'}`,
-                  background: isUrdu ? 'rgba(245,158,11,0.15)' : 'rgba(255,255,255,0.05)',
-                  color: isUrdu ? '#F59E0B' : 'rgba(255,255,255,0.7)',
+                  border: `1px solid ${isUrdu ? '#F59E0B' : '#E6EAF0'}`,
+                  background: isUrdu ? '#FEF3C7' : '#FFFFFF',
+                  color: isUrdu ? '#B45309' : '#64748B',
                   fontFamily: isUrdu ? "'Noto Naskh Arabic', serif" : 'inherit',
                   fontSize: isUrdu ? '1rem' : '0.85rem',
                   fontWeight: 700, transition: 'all 0.2s ease'
@@ -649,7 +649,7 @@ export default function SubjectsDrilldownTab() {
               </button>
             </div>
             {isUrdu && (
-              <div style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.25)', borderRadius: '8px', padding: '10px 14px', marginBottom: '10px', direction: 'rtl', textAlign: 'right', fontFamily: "'Noto Naskh Arabic', serif", color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
+              <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: '8px', padding: '10px 14px', marginBottom: '10px', direction: 'rtl', textAlign: 'right', fontFamily: "'Noto Naskh Arabic', serif", color: '#334155', fontSize: '0.9rem' }}>
                 اردو موڈ فعال ہے۔ ایڈیٹر میں متن دائیں سے بائیں لکھا جائے گا۔
               </div>
             )}
@@ -665,7 +665,7 @@ export default function SubjectsDrilldownTab() {
           {/* Section B: Key Points */}
           <div className={styles.formCard}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-              <h3 style={{ margin: 0 }}>B. Key Points {isUrdu && <span style={{ fontFamily: "'Noto Naskh Arabic', serif", fontSize: '0.85rem', color: '#F59E0B', marginRight: '6px' }}>(اہم نکات)</span>}</h3>
+              <h3 style={{ margin: 0 }}>B. Key Points {isUrdu && <span style={{ fontFamily: "'Noto Naskh Arabic', serif", fontSize: '0.85rem', color: '#B45309', marginRight: '6px' }}>(اہم نکات)</span>}</h3>
               <button className={styles.quickActionBtn} style={{ padding: '5px 10px', fontSize: '0.8rem' }} onClick={addKeyPoint}>+ Add Point</button>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -689,7 +689,7 @@ export default function SubjectsDrilldownTab() {
                   <button className={`${styles.actionBtn} ${styles.danger}`} style={{ margin: 0 }} onClick={() => removeKeyPoint(i)}><XCircle size={18} /></button>
                 </div>
               ))}
-              {(!contentData.keyPoints || contentData.keyPoints.length === 0) && <p style={{ color: 'rgba(255,255,255,0.4)', margin: 0 }}>No key points added yet.</p>}
+              {(!contentData.keyPoints || contentData.keyPoints.length === 0) && <p style={{ color: '#94A3B8', margin: 0 }}>No key points added yet.</p>}
             </div>
           </div>
 
@@ -702,7 +702,7 @@ export default function SubjectsDrilldownTab() {
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
               {(contentData.tables || []).map((table: any, tableIdx: number) => (
-                <div key={tableIdx} style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)', padding: '15px', borderRadius: '8px' }}>
+                <div key={tableIdx} style={{ background: '#F8FAFC', border: '1px solid #E6EAF0', padding: '15px', borderRadius: '8px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
                     <input 
                       type="text" className={styles.formInput} style={{ fontWeight: 'bold', width: '300px' }} 
@@ -738,7 +738,7 @@ export default function SubjectsDrilldownTab() {
                           <tr key={rowIdx}>
                             {row.map((cell: string, colIdx: number) => (
                               <td key={colIdx} style={{ padding: '5px' }}>
-                                <input type="text" className={styles.formInput} style={{ width: '100%', padding: '5px', background: 'rgba(255,255,255,0.05)' }} value={cell} onChange={e => {
+                                <input type="text" className={styles.formInput} style={{ width: '100%', padding: '5px', background: '#FFFFFF' }} value={cell} onChange={e => {
                                   const newRows = [...table.rows];
                                   newRows[rowIdx] = [...newRows[rowIdx]];
                                   newRows[rowIdx][colIdx] = e.target.value;
@@ -760,7 +760,7 @@ export default function SubjectsDrilldownTab() {
                   </div>
                 </div>
               ))}
-              {(!contentData.tables || contentData.tables.length === 0) && <p style={{ color: 'rgba(255,255,255,0.4)', margin: 0 }}>No tables added.</p>}
+              {(!contentData.tables || contentData.tables.length === 0) && <p style={{ color: '#94A3B8', margin: 0 }}>No tables added.</p>}
             </div>
           </div>
 
@@ -778,7 +778,7 @@ export default function SubjectsDrilldownTab() {
                   <button className={`${styles.actionBtn} ${styles.danger}`} style={{ margin: 0 }} onClick={() => removeRef(i)}><XCircle size={18} /></button>
                 </div>
               ))}
-              {(!contentData.references || contentData.references.length === 0) && <p style={{ color: 'rgba(255,255,255,0.4)', margin: 0 }}>No references added.</p>}
+              {(!contentData.references || contentData.references.length === 0) && <p style={{ color: '#94A3B8', margin: 0 }}>No references added.</p>}
             </div>
           </div>
 

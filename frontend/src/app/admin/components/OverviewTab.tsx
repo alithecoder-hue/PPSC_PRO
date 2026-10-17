@@ -6,8 +6,8 @@ import { useAdminData } from '../useAdminData';
 export default function OverviewTab() {
   const { stats, loading, error } = useAdminData();
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading dashboard stats...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading dashboard stats...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const recentActivity: any[] = stats?.recentActivity || [];
 
@@ -56,7 +56,7 @@ export default function OverviewTab() {
         </button>
       </div>
 
-      <h3 style={{ color: '#FFF', marginBottom: '15px' }}>Recent Activity (Last 10)</h3>
+      <h3 style={{ color: '#0F1E33', marginBottom: '15px' }}>Recent Activity (Last 10)</h3>
       <div className={styles.tableContainer}>
         <table className={styles.dataTable}>
           <thead>
@@ -69,14 +69,14 @@ export default function OverviewTab() {
           <tbody>
             {recentActivity.length === 0 ? (
               <tr>
-                <td colSpan={3} style={{ textAlign: 'center', color: 'rgba(255,255,255,0.4)', padding: '30px' }}>
+                <td colSpan={3} style={{ textAlign: 'center', color: '#94A3B8', padding: '30px' }}>
                   No activity logged yet. Actions taken in the admin panel will appear here.
                 </td>
               </tr>
             ) : (
               recentActivity.map((activity: any) => (
                 <tr key={activity.id}>
-                  <td style={{ fontWeight: 500, color: '#F59E0B' }}>{activity.action}</td>
+                  <td style={{ fontWeight: 500, color: '#B45309' }}>{activity.action}</td>
                   <td>{activity.entity}</td>
                   <td>{new Date(activity.createdAt).toLocaleString()}</td>
                 </tr>

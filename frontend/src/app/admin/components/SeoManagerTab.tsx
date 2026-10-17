@@ -46,7 +46,7 @@ export default function SeoManagerTab() {
     }
   };
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading settings...</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading settings...</div>;
 
   return (
     <div>
@@ -71,8 +71,8 @@ export default function SeoManagerTab() {
               <input type="text" name="seo_keywords" className={styles.formInput} value={settings.seo_keywords || ''} onChange={handleChange} />
             </div>
             
-            <hr style={{ borderColor: 'rgba(255,255,255,0.05)', margin: '20px 0' }} />
-            <h4 style={{ color: '#FFF', margin: '0 0 15px 0' }}>Social Sharing (OpenGraph)</h4>
+            <hr style={{ borderColor: '#E6EAF0', margin: '20px 0' }} />
+            <h4 style={{ color: '#0F1E33', margin: '0 0 15px 0' }}>Social Sharing (OpenGraph)</h4>
             <div className={styles.formGroup}>
               <label className={styles.formLabel}>OG Image URL</label>
               <input type="url" name="seo_og_image" className={styles.formInput} value={settings.seo_og_image || ''} onChange={handleChange} />
@@ -88,8 +88,8 @@ export default function SeoManagerTab() {
           </form>
         </div>
 
-        <div className={styles.formCard} style={{ display: 'flex', flexDirection: 'column', background: 'rgba(0,0,0,0.5)' }}>
-          <h4 style={{ color: 'gray', marginBottom: '20px', textTransform: 'uppercase' }}>Google Search Preview</h4>
+        <div className={styles.formCard} style={{ display: 'flex', flexDirection: 'column', background: '#FFFFFF' }}>
+          <h4 style={{ color: '#64748B', marginBottom: '20px', textTransform: 'uppercase' }}>Google Search Preview</h4>
           
           <div style={{ background: '#FFF', padding: '20px', borderRadius: '8px', color: '#1a0dab', fontFamily: 'Arial, sans-serif' }}>
             <div style={{ fontSize: '14px', color: '#202124', marginBottom: '5px' }}>https://meritmaster.com</div>
@@ -99,16 +99,16 @@ export default function SeoManagerTab() {
             </div>
           </div>
 
-          <h4 style={{ color: 'gray', marginTop: '40px', marginBottom: '20px', textTransform: 'uppercase' }}>Twitter/X Preview</h4>
+          <h4 style={{ color: '#64748B', marginTop: '40px', marginBottom: '20px', textTransform: 'uppercase' }}>Twitter/X Preview</h4>
           
-          <div style={{ border: '1px solid rgba(255,255,255,0.2)', borderRadius: '16px', overflow: 'hidden' }}>
+          <div style={{ border: '1px solid #E6EAF0', borderRadius: '16px', overflow: 'hidden' }}>
             <div style={{ height: '200px', background: 'linear-gradient(45deg, #000, #F59E0B)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000', fontWeight: 'bold', backgroundImage: settings.seo_og_image ? `url(${settings.seo_og_image})` : 'none', backgroundSize: 'cover', backgroundPosition: 'center' }}>
               {!settings.seo_og_image && '[ OG Image Here ]'}
             </div>
-            <div style={{ padding: '15px', background: 'rgba(255,255,255,0.05)' }}>
-              <div style={{ color: 'gray', fontSize: '14px', marginBottom: '5px' }}>meritmaster.com</div>
-              <div style={{ color: '#FFF', fontWeight: 'bold', marginBottom: '5px' }}>{settings.seo_title}</div>
-              <div style={{ color: 'gray', fontSize: '14px' }}>{settings.seo_description.substring(0, 100)}...</div>
+            <div style={{ padding: '15px', background: '#F8FAFC' }}>
+              <div style={{ color: '#64748B', fontSize: '14px', marginBottom: '5px' }}>meritmaster.com</div>
+              <div style={{ color: '#0F1E33', fontWeight: 'bold', marginBottom: '5px' }}>{settings.seo_title}</div>
+              <div style={{ color: '#64748B', fontSize: '14px' }}>{settings.seo_description.substring(0, 100)}...</div>
             </div>
           </div>
         </div>

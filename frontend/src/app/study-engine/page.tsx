@@ -165,7 +165,7 @@ function StudyEngineContent() {
 
 export default function StudyEnginePage() {
   return (
-    <Suspense fallback={<div style={{ padding: '100px', textAlign: 'center', color: '#FFF' }}>Loading Study Engine...</div>}>
+    <Suspense fallback={<div style={{ padding: '100px', textAlign: 'center', color: '#64748B' }}>Loading Study Engine...</div>}>
       <StudyEngineContent />
     </Suspense>
   );

@@ -1,72 +1,72 @@
+/* Subject Dashboard — light SaaS theme (tokens from app-theme.css) */
+
 .dashboardContainer {
-  padding: 120px 0 100px;
+  padding: 48px 0 100px;
   position: relative;
-  z-index: 10;
   min-height: 80vh;
+  background: var(--app-bg);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 .backLink {
-  color: #F59E0B;
+  color: var(--app-accent-deep);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .backLink:hover {
-  color: #FFF;
-  text-shadow: 0 0 10px #F59E0B;
+  color: var(--app-navy);
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 15px;
+  letter-spacing: -0.025em;
+  color: var(--app-ink);
+  margin-bottom: 12px;
 }
 
 .title span {
-  background: linear-gradient(90deg, #F59E0B, #0088FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--app-accent-deep);
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.2rem;
+  color: var(--app-muted);
+  font-size: 1.05rem;
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
 .card {
-  background: rgba(20, 24, 28, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 50px 40px;
+  background: #fff;
+  border: 1px solid var(--app-line);
+  border-radius: 20px;
+  padding: 44px 36px;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: var(--app-shadow-sm);
 }
 
 .card::before {
@@ -77,72 +77,74 @@
   transition: opacity 0.4s ease;
 }
 
-/* Card 1: Topics */
-.cardTopics::before { background: linear-gradient(90deg, #F59E0B, #0088FF); }
-.cardTopics:hover { border-color: rgba(245, 158, 11, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(245, 158, 11, 0.05); transform: translateY(-10px); }
-.cardTopics .iconWrapper { color: #F59E0B; background: rgba(245, 158, 11, 0.1); }
-.cardTopics:hover .iconWrapper { box-shadow: 0 0 30px rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.2); }
+/* Card 1: Topics (amber accent) */
+.cardTopics::before { background: linear-gradient(90deg, var(--app-accent), var(--app-info)); }
+.cardTopics:hover { border-color: #fde68a; box-shadow: var(--app-shadow); transform: translateY(-6px); }
+.cardTopics .iconWrapper { color: var(--app-accent-deep); background: var(--app-accent-soft); }
+.cardTopics:hover .iconWrapper { background: var(--app-accent); color: #1a1207; box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35); }
 
-/* Card 2: Practice */
-.cardPractice::before { background: linear-gradient(90deg, #FF3366, #FF6B6B); }
-.cardPractice:hover { border-color: rgba(255, 51, 102, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(255, 51, 102, 0.05); transform: translateY(-10px); }
-.cardPractice .iconWrapper { color: #FF3366; background: rgba(255, 51, 102, 0.1); }
-.cardPractice:hover .iconWrapper { box-shadow: 0 0 30px rgba(255, 51, 102, 0.4); background: rgba(255, 51, 102, 0.2); }
+/* Card 2: Practice (rose/red accent) */
+.cardPractice::before { background: linear-gradient(90deg, var(--app-danger), #f87171); }
+.cardPractice:hover { border-color: #fecaca; box-shadow: var(--app-shadow); transform: translateY(-6px); }
+.cardPractice .iconWrapper { color: var(--app-danger); background: var(--app-danger-soft); }
+.cardPractice:hover .iconWrapper { background: var(--app-danger); color: #fff; box-shadow: 0 10px 24px rgba(220, 38, 38, 0.3); }
 
-/* Card 3: Exam */
-.cardExam::before { background: linear-gradient(90deg, #D97706, #C77DFF); }
-.cardExam:hover { border-color: rgba(157, 78, 221, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(157, 78, 221, 0.05); transform: translateY(-10px); }
-.cardExam .iconWrapper { color: #D97706; background: rgba(157, 78, 221, 0.1); }
-.cardExam:hover .iconWrapper { box-shadow: 0 0 30px rgba(157, 78, 221, 0.4); background: rgba(157, 78, 221, 0.2); }
+/* Card 3: Exam (blue accent) */
+.cardExam::before { background: linear-gradient(90deg, var(--app-info), #60a5fa); }
+.cardExam:hover { border-color: #bfdbfe; box-shadow: var(--app-shadow); transform: translateY(-6px); }
+.cardExam .iconWrapper { color: var(--app-info); background: var(--app-info-soft); }
+.cardExam:hover .iconWrapper { background: var(--app-info); color: #fff; box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3); }
 
 .card:hover::before { opacity: 1; }
 
 .iconWrapper {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 30px;
-  border-radius: 50%;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 28px;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .card:hover .iconWrapper {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 
 .cardTitle {
-  font-size: 1.5rem;
-  color: #FFFFFF;
+  font-size: 1.4rem;
+  color: var(--app-ink);
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
 .cardDesc {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  color: var(--app-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 28px;
   flex-grow: 1;
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 0;
+  padding: 13px 0;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   font-weight: 700;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
-  color: #FFF;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  background: var(--app-bg);
+  color: var(--app-ink);
+  border: 1px solid var(--app-line);
+  font-family: var(--app-font);
 }
 
-.cardTopics:hover .btn { background: #F59E0B; color: #000; border-color: transparent; }
-.cardPractice:hover .btn { background: #FF3366; color: #FFF; border-color: transparent; }
-.cardExam:hover .btn { background: #D97706; color: #FFF; border-color: transparent; }
+.cardTopics:hover .btn { background: var(--app-accent); color: #1a1207; border-color: transparent; }
+.cardPractice:hover .btn { background: var(--app-danger); color: #fff; border-color: transparent; }
+.cardExam:hover .btn { background: var(--app-info); color: #fff; border-color: transparent; }
 
 @media (max-width: 900px) {
   .grid {

@@ -10,8 +10,8 @@ export default function ContactMessagesTab() {
   const [filter, setFilter] = useState<'All' | 'Unread' | 'Read' | 'Replied'>('All');
   const [selectedMessage, setSelectedMessage] = useState<any | null>(null);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading communications data from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading communications data from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const handleDelete = async (id: number) => {
     if (!confirm('Are you sure you want to delete this message?')) return;
@@ -81,10 +81,10 @@ export default function ContactMessagesTab() {
                 <tr className={styles.clickableRow} onClick={() => setSelectedMessage(selectedMessage?.id === msg.id ? null : msg)}>
                   <td>
                     <div style={{ fontWeight: 600 }}>{msg.senderName}</div>
-                    <div style={{ fontSize: '0.8rem', color: 'gray' }}>{msg.email}</div>
+                    <div style={{ fontSize: '0.8rem', color: '#64748B' }}>{msg.email}</div>
                   </td>
                   <td style={{ fontWeight: status === 'Unread' ? 700 : 400 }}>{msg.subject}</td>
-                  <td style={{ color: 'gray' }}>{msg.message.substring(0, 40)}...</td>
+                  <td style={{ color: '#64748B' }}>{msg.message.substring(0, 40)}...</td>
                   <td>{new Date(msg.createdAt).toLocaleDateString()}</td>
                   <td>{getStatusBadge(status)}</td>
                   <td>
@@ -94,10 +94,10 @@ export default function ContactMessagesTab() {
                 {/* Expanded Row Content */}
                 {selectedMessage?.id === msg.id && (
                   <tr>
-                    <td colSpan={6} style={{ background: 'rgba(0,0,0,0.3)', padding: '20px', borderLeft: '3px solid #F59E0B' }}>
+                    <td colSpan={6} style={{ background: '#F8FAFC', padding: '20px', borderLeft: '3px solid #F59E0B' }}>
                       <div style={{ marginBottom: '15px' }}>
-                        <h4 style={{ margin: '0 0 10px 0', color: '#FFF' }}>Full Message:</h4>
-                        <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>{msg.message}</p>
+                        <h4 style={{ margin: '0 0 10px 0', color: '#0F1E33' }}>Full Message:</h4>
+                        <p style={{ color: '#334155', lineHeight: 1.6 }}>{msg.message}</p>
                       </div>
                       <div style={{ display: 'flex', gap: '10px' }}>
                         <a 
@@ -108,11 +108,11 @@ export default function ContactMessagesTab() {
                           <Mail size={16} /> Reply via Email
                         </a>
                         {status === 'Unread' ? (
-                          <button className={styles.quickActionBtn} style={{ background: 'rgba(255,255,255,0.1)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} onClick={() => handleUpdateStatus(msg.id, true)}>
+                          <button className={styles.quickActionBtn} style={{ background: '#FFFFFF', color: '#334155', borderColor: '#E6EAF0' }} onClick={() => handleUpdateStatus(msg.id, true)}>
                             <CheckCircle size={16} /> Mark as Read
                           </button>
                         ) : (
-                          <button className={styles.quickActionBtn} style={{ background: 'rgba(255,255,255,0.1)', color: '#FFF', borderColor: 'rgba(255,255,255,0.2)' }} onClick={() => handleUpdateStatus(msg.id, false)}>
+                          <button className={styles.quickActionBtn} style={{ background: '#FFFFFF', color: '#334155', borderColor: '#E6EAF0' }} onClick={() => handleUpdateStatus(msg.id, false)}>
                             <XCircle size={16} /> Mark as Unread
                           </button>
                         )}

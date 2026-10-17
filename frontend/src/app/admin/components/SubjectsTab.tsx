@@ -31,8 +31,8 @@ export default function SubjectsTab() {
 
   const [csvPreview, setCsvPreview] = useState<any[]>([]);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading academics data from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading academics data from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   // Filter & Pagination
   const filteredData = viewMode === 'subjects' 
@@ -168,7 +168,7 @@ export default function SubjectsTab() {
           <button className={styles.quickActionBtn} onClick={() => setActiveForm('mcq')}>
             <Plus size={16} /> Add MCQ
           </button>
-          <button className={styles.quickActionBtn} style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderColor: 'rgba(16, 185, 129, 0.3)' }} onClick={() => setActiveForm('csv')}>
+          <button className={styles.quickActionBtn} style={{ background: '#DCFCE7', color: '#16A34A', borderColor: '#BBF7D0' }} onClick={() => setActiveForm('csv')}>
             <Upload size={16} /> Bulk CSV
           </button>
         </div>
@@ -251,9 +251,9 @@ export default function SubjectsTab() {
                   onClick={() => setIsUrduMcq(!isUrduMcq)}
                   style={{
                     padding: '5px 12px', borderRadius: '6px', cursor: 'pointer',
-                    border: `1px solid ${isUrduMcq ? '#F59E0B' : 'rgba(255,255,255,0.2)'}`,
-                    background: isUrduMcq ? 'rgba(245,158,11,0.15)' : 'rgba(255,255,255,0.05)',
-                    color: isUrduMcq ? '#F59E0B' : 'rgba(255,255,255,0.6)',
+                    border: `1px solid ${isUrduMcq ? '#F59E0B' : '#E6EAF0'}`,
+                    background: isUrduMcq ? '#FEF3C7' : '#FFFFFF',
+                    color: isUrduMcq ? '#B45309' : '#64748B',
                     fontFamily: "'Noto Naskh Arabic', serif",
                     fontSize: '0.9rem', fontWeight: 700
                   }}
@@ -328,13 +328,13 @@ export default function SubjectsTab() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
             <div>
               <h3 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}><Download size={20} /> Bulk MCQ Import via CSV</h3>
-              <p style={{ color: 'rgba(255,255,255,0.5)', marginTop: '6px', fontSize: '0.9em' }}>
+              <p style={{ color: '#64748B', marginTop: '6px', fontSize: '0.9em' }}>
                 Import hundreds of MCQs at once. Download the template, fill it in Excel or Google Sheets, then upload.
               </p>
             </div>
             <button
               className={styles.quickActionBtn}
-              style={{ background: 'rgba(16,185,129,0.1)', color: '#10b981', borderColor: 'rgba(16,185,129,0.3)', whiteSpace: 'nowrap', flexShrink: 0 }}
+              style={{ background: '#DCFCE7', color: '#16A34A', borderColor: '#BBF7D0', whiteSpace: 'nowrap', flexShrink: 0 }}
               onClick={() => {
                 const header = 'question,optionA,optionB,optionC,optionD,correctOption,subject,difficulty,explanation';
                 const example1 = '"Who was the founder of Pakistan?","Muhammad Ali Jinnah","Liaquat Ali Khan","Sir Syed Ahmed Khan","Allama Iqbal","A","General Knowledge","Easy","Quaid-e-Azam founded Pakistan in 1947"';
@@ -354,16 +354,16 @@ export default function SubjectsTab() {
           </div>
 
           {/* Column reference */}
-          <div style={{ background: 'rgba(0,229,255,0.05)', border: '1px solid rgba(0,229,255,0.15)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px', fontSize: '0.85em' }}>
-            <strong style={{ color: '#F59E0B' }}>Required columns:</strong>
-            <span style={{ color: 'rgba(255,255,255,0.7)' }}> question, optionA, optionB, optionC, optionD, correctOption (A/B/C/D), subject</span>
+          <div style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px', fontSize: '0.85em' }}>
+            <strong style={{ color: '#B45309' }}>Required columns:</strong>
+            <span style={{ color: '#334155' }}> question, optionA, optionB, optionC, optionD, correctOption (A/B/C/D), subject</span>
             <br />
-            <strong style={{ color: '#F59E0B' }}>Optional columns:</strong>
-            <span style={{ color: 'rgba(255,255,255,0.7)' }}> difficulty (Easy/Medium/Hard), explanation</span>
+            <strong style={{ color: '#B45309' }}>Optional columns:</strong>
+            <span style={{ color: '#334155' }}> difficulty (Easy/Medium/Hard), explanation</span>
             <br />
-            <strong style={{ color: '#f59e0b', display: 'flex', alignItems: 'center', gap: 6 }}><AlertTriangle size={16} /> Subject name must exactly match a subject already created in your database.</strong>
+            <strong style={{ color: '#B45309', display: 'flex', alignItems: 'center', gap: 6 }}><AlertTriangle size={16} /> Subject name must exactly match a subject already created in your database.</strong>
             <br />
-            <span style={{ color: 'rgba(255,255,255,0.5)' }}>Current subjects: {subjects.map((s: any) => s.name).join(', ') || 'None — create subjects first!'}</span>
+            <span style={{ color: '#64748B' }}>Current subjects: {subjects.map((s: any) => s.name).join(', ') || 'None — create subjects first!'}</span>
           </div>
 
           <div className={styles.csvUploadArea}>
@@ -422,7 +422,7 @@ export default function SubjectsTab() {
           {csvPreview.length > 0 && (
             <div style={{ marginTop: '20px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                <h4 style={{ color: '#F59E0B', margin: 0 }}>
+                <h4 style={{ color: '#B45309', margin: 0 }}>
                   Preview — {csvPreview.length} MCQ{csvPreview.length !== 1 ? 's' : ''} detected
                 </h4>
                 <button
@@ -448,15 +448,15 @@ export default function SubjectsTab() {
                   <tbody>
                     {csvPreview.map((r: any, i: number) => (
                       <tr key={i}>
-                        <td style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8em' }}>{i + 1}</td>
+                        <td style={{ color: '#94A3B8', fontSize: '0.8em' }}>{i + 1}</td>
                         <td style={{ maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={r.question}>{r.question}</td>
                         <td style={{ maxWidth: '80px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '0.85em' }}>{r.optionA}</td>
                         <td style={{ maxWidth: '80px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '0.85em' }}>{r.optionB}</td>
                         <td style={{ maxWidth: '80px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '0.85em' }}>{r.optionC}</td>
                         <td style={{ maxWidth: '80px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '0.85em' }}>{r.optionD}</td>
-                        <td style={{ fontWeight: 700, color: '#F59E0B' }}>{r.correctOption?.toUpperCase()}</td>
-                        <td style={{ color: r.subject ? '#fff' : '#ef4444' }}>{r.subject || <span style={{display:'flex', alignItems:'center', gap:4}}><AlertTriangle size={14}/> Missing</span>}</td>
-                        <td style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.6)' }}>{r.difficulty || 'Medium'}</td>
+                        <td style={{ fontWeight: 700, color: '#B45309' }}>{r.correctOption?.toUpperCase()}</td>
+                        <td style={{ color: r.subject ? '#0F1E33' : '#DC2626' }}>{r.subject || <span style={{display:'flex', alignItems:'center', gap:4}}><AlertTriangle size={14}/> Missing</span>}</td>
+                        <td style={{ fontSize: '0.85em', color: '#64748B' }}>{r.difficulty || 'Medium'}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -500,7 +500,7 @@ export default function SubjectsTab() {
 
       <div className={styles.tableControls} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input 
             type="text" 
             placeholder={`Search ${viewMode}...`} 
@@ -564,10 +564,10 @@ export default function SubjectsTab() {
               {displayedData.map((m: any) => (
                 <tr key={m.id}>
                   <td style={{ maxWidth: '300px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{m.question}</td>
-                  <td style={{ fontSize: '0.85em', color: 'rgba(255,255,255,0.6)' }}>
+                  <td style={{ fontSize: '0.85em', color: '#64748B' }}>
                     A: {m.optionA} | B: {m.optionB} | C: {m.optionC} | D: {m.optionD}
                   </td>
-                  <td style={{ fontWeight: 600, color: '#F59E0B' }}>{m.correctOption}</td>
+                  <td style={{ fontWeight: 600, color: '#B45309' }}>{m.correctOption}</td>
                   <td>
                     <button className={`${styles.actionBtn}`} onClick={() => handleEditMcq(m)}>Edit</button>
                     <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDeleteMcq(m.id)}>Delete</button>
@@ -590,7 +590,7 @@ export default function SubjectsTab() {
           >
             Prev
           </button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages}</span>
           <button 
             className={styles.pageBtn} 
             disabled={currentPage === totalPages || totalPages === 0} 

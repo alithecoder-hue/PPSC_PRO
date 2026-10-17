@@ -79,9 +79,9 @@ export default function MockTestsSection({ limit, showViewAll = false }: { limit
             display: 'inline-flex',
             alignItems: 'center',
             gap: '10px',
-            background: 'rgba(245, 158, 11, 0.1)',
-            border: '1px solid rgba(245, 158, 11, 0.3)',
-            color: '#F59E0B',
+            background: '#FEF3C7',
+            border: '1px solid #FDE68A',
+            color: '#B45309',
             padding: '12px 30px',
             borderRadius: '50px',
             fontWeight: 'bold',
@@ -94,18 +94,18 @@ export default function MockTestsSection({ limit, showViewAll = false }: { limit
       )}
 
       {showPremiumModal && (
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => setShowPremiumModal(false)}>
-          <div style={{ background: '#1A1A2E', padding: '40px', borderRadius: '20px', maxWidth: '400px', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }} onClick={e => e.stopPropagation()}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px', color: '#FFD700' }}><Crown size={48} /></div>
-            <h3 style={{ color: '#FFF', fontSize: '1.5rem', marginBottom: '10px' }}>Premium Test</h3>
-            <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '30px' }}>
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(12, 27, 46, 0.5)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => setShowPremiumModal(false)}>
+          <div style={{ background: '#FFFFFF', padding: '40px', borderRadius: '20px', maxWidth: '400px', border: '1px solid #E6EAF0', boxShadow: '0 18px 48px rgba(15, 30, 51, 0.12)', textAlign: 'center' }} onClick={e => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px', color: '#F59E0B' }}><Crown size={48} /></div>
+            <h3 style={{ color: '#0C1B2E', fontSize: '1.5rem', marginBottom: '10px' }}>Premium Test</h3>
+            <p style={{ color: '#64748B', marginBottom: '30px' }}>
               This high-yield mock test is exclusively available for Meritmaster Premium members. Unlock this test and hundreds of others!
             </p>
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
-              <button style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', padding: '10px 20px', borderRadius: '10px', color: '#FFF', cursor: 'pointer' }} onClick={() => setShowPremiumModal(false)}>
+              <button style={{ background: '#FFFFFF', border: '1px solid #E6EAF0', padding: '10px 20px', borderRadius: '10px', color: '#0C1B2E', fontWeight: 700, cursor: 'pointer' }} onClick={() => setShowPremiumModal(false)}>
                 Cancel
               </button>
-              <Link href="/subscription" style={{ background: '#FFD700', border: 'none', padding: '10px 20px', borderRadius: '10px', color: '#000', fontWeight: 'bold', textDecoration: 'none' }}>
+              <Link href="/subscription" style={{ background: '#F59E0B', border: 'none', padding: '10px 20px', borderRadius: '10px', color: '#1A1207', fontWeight: 'bold', textDecoration: 'none' }}>
                 View Subscription
               </Link>
             </div>

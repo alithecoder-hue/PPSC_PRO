@@ -71,7 +71,7 @@ export default function MediaLibraryTab() {
   const getFileIcon = (type: string) => {
     if (type === 'PDF') return <FileText size={40} color="#ef4444" />;
     if (type === 'Image') return <ImageIcon size={40} color="#3b82f6" />;
-    return <FileText size={40} color="gray" />;
+    return <FileText size={40} color="#94A3B8" />;
   };
 
   return (
@@ -81,19 +81,19 @@ export default function MediaLibraryTab() {
       </div>
 
       <div className={styles.csvUploadArea} onClick={() => document.getElementById('mediaUpload')?.click()}>
-        <UploadCloud size={48} color="rgba(245, 158, 11, 0.5)" style={{ marginBottom: '15px' }} />
-        <h3 style={{ color: '#FFF', margin: '0 0 10px 0' }}>{uploading ? 'Uploading...' : 'Upload New File'}</h3>
+        <UploadCloud size={48} color="#F59E0B" style={{ marginBottom: '15px' }} />
+        <h3 style={{ color: '#0F1E33', margin: '0 0 10px 0' }}>{uploading ? 'Uploading...' : 'Upload New File'}</h3>
         <div className={styles.csvUploadText}>Drag and drop PDFs, Images, or Documents here</div>
         <div className={styles.csvUploadLabel}>Browse Files</div>
         <input type="file" id="mediaUpload" className={styles.hiddenInput} onChange={handleFileUpload} disabled={uploading} />
       </div>
 
-      {loading ? <div style={{ color: 'white', marginTop: '20px' }}>Loading media...</div> : (
+      {loading ? <div style={{ color: '#64748B', marginTop: '20px' }}>Loading media...</div> : (
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px', marginTop: '30px' }}>
         {media.map(file => (
           <div key={file.id} style={{ 
-            background: 'rgba(0,0,0,0.3)', 
-            border: '1px solid rgba(255,255,255,0.05)', 
+            background: '#FFFFFF', 
+            border: '1px solid #E6EAF0', 
             borderRadius: '12px', 
             padding: '20px',
             display: 'flex',
@@ -102,10 +102,11 @@ export default function MediaLibraryTab() {
             textAlign: 'center',
             position: 'relative',
             transition: 'transform 0.2s ease',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            boxShadow: '0 1px 2px rgba(15, 30, 51, 0.05)'
           }}>
-            <button className={styles.actionBtn} style={{ position: 'absolute', top: '10px', right: '10px', background: 'transparent', padding: '5px' }} onClick={(e) => handleDelete(e, file.id)}>
-              <Trash2 size={16} color="rgba(239, 68, 68, 0.7)" />
+            <button className={styles.actionBtn} style={{ position: 'absolute', top: '10px', right: '10px', background: 'transparent', border: 'none', padding: '5px' }} onClick={(e) => handleDelete(e, file.id)}>
+              <Trash2 size={16} color="#DC2626" />
             </button>
             
             <div style={{ margin: '15px 0' }}>
@@ -114,11 +115,11 @@ export default function MediaLibraryTab() {
               ) : getFileIcon(file.type)}
             </div>
             
-            <div style={{ color: '#FFF', fontWeight: 600, fontSize: '0.9rem', marginBottom: '5px', wordBreak: 'break-all' }}>
+            <div style={{ color: '#0F1E33', fontWeight: 600, fontSize: '0.9rem', marginBottom: '5px', wordBreak: 'break-all' }}>
               {file.name}
             </div>
             
-            <div style={{ color: 'gray', fontSize: '0.8rem', marginBottom: '15px' }}>
+            <div style={{ color: '#64748B', fontSize: '0.8rem', marginBottom: '15px' }}>
               {file.size} • Uploaded {new Date(file.createdAt).toLocaleDateString()}
             </div>
 

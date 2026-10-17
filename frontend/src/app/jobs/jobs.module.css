@@ -4,15 +4,15 @@
 
 .pageWrapper {
   min-height: 100vh;
-  background-color: #F7F9FC; /* Light theme body background */
+  background-color: #F6F8FB; /* Light theme body background */
 }
 
-/* 1. Dark Header Section */
+/* 1. Navy Header Section */
 .darkHeader {
-  background-color: #0b0d12;
+  background-color: #0C1B2E;
   background-image: 
-    radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 70%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+    radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
   color: #f9fafb;
   padding: 140px 24px 110px;
   position: relative;
@@ -132,7 +132,7 @@
 .filterCard {
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid #E6EAF0;
   padding: 24px 30px;
   box-shadow: 
     0 4px 6px rgba(0, 0, 0, 0.02),
@@ -184,7 +184,7 @@
 
 .searchBtn {
   background: #f59e0b;
-  color: #000000;
+  color: #1A1207;
   border: none;
   padding: 0 28px;
   height: 48px;
@@ -369,6 +369,12 @@
 .policeBg { background: #3b82f6; }
 .revenueBg { background: #ea580c; }
 .eduBg { background: #10b981; }
+
+/* Department card variants (referenced by page.tsx; styling comes from .deptCard) */
+.sgadCard {}
+.policeCard {}
+.revenueCard {}
+.eduCard {}
 
 .deptInfo {
   margin-bottom: 16px;
@@ -604,7 +610,7 @@
 
 .prepBtn {
   background: #f59e0b;
-  color: #000000;
+  color: #1A1207;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;

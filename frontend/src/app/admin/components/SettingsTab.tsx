@@ -60,7 +60,7 @@ export default function SettingsTab() {
     }
   };
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading settings...</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading settings...</div>;
 
   const renderContent = () => {
     switch (subTab) {
@@ -74,8 +74,8 @@ export default function SettingsTab() {
                 <div className={styles.formGroup}><label className={styles.formLabel}>Support Email</label><input type="email" name="support_email" className={styles.formInput} value={settings.support_email || 'support@meritmaster.com'} onChange={handleChange} required /></div>
               </div>
               <div className={styles.formGroup}><label className={styles.formLabel}>Tagline</label><input type="text" name="site_tagline" className={styles.formInput} value={settings.site_tagline || 'PPSC Preparation SaaS'} onChange={handleChange} required /></div>
-              <hr style={{ borderColor: 'rgba(255,255,255,0.05)', margin: '20px 0' }} />
-              <h4 style={{ color: '#FFF', margin: '0 0 15px 0' }}>Social Links</h4>
+              <hr style={{ borderColor: '#E6EAF0', margin: '20px 0' }} />
+              <h4 style={{ color: '#0F1E33', margin: '0 0 15px 0' }}>Social Links</h4>
               <div className={styles.optionsGrid}>
                 <div className={styles.formGroup}><label className={styles.formLabel}>WhatsApp Link</label><input type="url" name="social_whatsapp" className={styles.formInput} value={settings.social_whatsapp || ''} onChange={handleChange} /></div>
                 <div className={styles.formGroup}><label className={styles.formLabel}>YouTube Link</label><input type="url" name="social_youtube" className={styles.formInput} value={settings.social_youtube || ''} onChange={handleChange} /></div>
@@ -103,8 +103,8 @@ export default function SettingsTab() {
             <div>
               <div className={styles.formCard} style={{ marginBottom: '20px' }}>
                 <h3>Two-Factor Authentication</h3>
-                <p style={{ color: 'gray', marginBottom: '20px' }}>Protect your admin account with an extra layer of security.</p>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#FFF', cursor: 'pointer' }}>
+                <p style={{ color: '#64748B', marginBottom: '20px' }}>Protect your admin account with an extra layer of security.</p>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#0F1E33', cursor: 'pointer' }}>
                   <input type="checkbox" name="2fa_enabled" checked={settings['2fa_enabled'] === 'true'} onChange={e => setSettings({...settings, '2fa_enabled': e.target.checked ? 'true' : 'false'})} style={{ width: '20px', height: '20px' }} />
                   Enable 2FA (Authenticator App)
                 </label>
@@ -116,33 +116,33 @@ export default function SettingsTab() {
         return (
           <div className={styles.formCard} style={{ maxWidth: '800px' }}>
             <h3>System Notifications</h3>
-            <p style={{ color: 'gray', marginBottom: '30px' }}>Configure which events trigger an email or WhatsApp alert to the Admin.</p>
+            <p style={{ color: '#64748B', marginBottom: '30px' }}>Configure which events trigger an email or WhatsApp alert to the Admin.</p>
             <form className={styles.form} onSubmit={submitForm}>
-              <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0', borderBottom: '1px solid #E6EAF0' }}>
                 <div>
-                  <div style={{ fontWeight: 600, color: '#FFF' }}>New User Signup</div>
-                  <div style={{ fontSize: '0.85rem', color: 'gray' }}>Receive an email when a new user registers.</div>
+                  <div style={{ fontWeight: 600, color: '#0F1E33' }}>New User Signup</div>
+                  <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Receive an email when a new user registers.</div>
                 </div>
                 <input type="checkbox" name="notif_signup" checked={settings.notif_signup === 'true'} onChange={e => setSettings({...settings, notif_signup: e.target.checked ? 'true' : 'false'})} style={{ width: '20px', height: '20px' }} />
               </div>
-              <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0', borderBottom: '1px solid #E6EAF0' }}>
                 <div>
-                  <div style={{ fontWeight: 600, color: '#FFF' }}>New Premium Subscription</div>
-                  <div style={{ fontSize: '0.85rem', color: 'gray' }}>Receive an email when a payment succeeds.</div>
+                  <div style={{ fontWeight: 600, color: '#0F1E33' }}>New Premium Subscription</div>
+                  <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Receive an email when a payment succeeds.</div>
                 </div>
                 <input type="checkbox" name="notif_payment" checked={settings.notif_payment === 'true'} onChange={e => setSettings({...settings, notif_payment: e.target.checked ? 'true' : 'false'})} style={{ width: '20px', height: '20px' }} />
               </div>
-              <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0', borderBottom: '1px solid #E6EAF0' }}>
                 <div>
-                  <div style={{ fontWeight: 600, color: '#FFF' }}>Contact Messages</div>
-                  <div style={{ fontSize: '0.85rem', color: 'gray' }}>Receive an email for new inbox messages.</div>
+                  <div style={{ fontWeight: 600, color: '#0F1E33' }}>Contact Messages</div>
+                  <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Receive an email for new inbox messages.</div>
                 </div>
                 <input type="checkbox" name="notif_messages" checked={settings.notif_messages === 'true'} onChange={e => setSettings({...settings, notif_messages: e.target.checked ? 'true' : 'false'})} style={{ width: '20px', height: '20px' }} />
               </div>
               <div className={styles.formGroup} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: '15px 0' }}>
                 <div>
-                  <div style={{ fontWeight: 600, color: '#FFF' }}>Urgent Announcements</div>
-                  <div style={{ fontSize: '0.85rem', color: 'gray' }}>Receive a WhatsApp alert for server issues.</div>
+                  <div style={{ fontWeight: 600, color: '#0F1E33' }}>Urgent Announcements</div>
+                  <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Receive a WhatsApp alert for server issues.</div>
                 </div>
                 <input type="checkbox" name="notif_urgent" checked={settings.notif_urgent === 'true'} onChange={e => setSettings({...settings, notif_urgent: e.target.checked ? 'true' : 'false'})} style={{ width: '20px', height: '20px' }} />
               </div>
@@ -153,31 +153,31 @@ export default function SettingsTab() {
       case 'danger':
         return (
           <div className={styles.grid} style={{ padding: 0, gap: '20px' }}>
-            <div className={styles.formCard} style={{ border: '1px solid rgba(239, 68, 68, 0.3)', background: 'rgba(239, 68, 68, 0.05)' }}>
-              <h3 style={{ color: '#ef4444', display: 'flex', alignItems: 'center', gap: '10px' }}><AlertTriangle /> Danger Zone</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '30px' }}>Proceed with extreme caution. These actions can cause irreversible changes to the platform.</p>
+            <div className={styles.formCard} style={{ border: '1px solid #FECACA', background: '#FEF2F2' }}>
+              <h3 style={{ color: '#DC2626', display: 'flex', alignItems: 'center', gap: '10px' }}><AlertTriangle /> Danger Zone</h3>
+              <p style={{ color: '#64748B', marginBottom: '30px' }}>Proceed with extreme caution. These actions can cause irreversible changes to the platform.</p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '20px', borderBottom: '1px solid #E6EAF0' }}>
                   <div>
-                    <div style={{ fontWeight: 600, color: '#FFF' }}>Maintenance Mode</div>
-                    <div style={{ fontSize: '0.85rem', color: 'gray' }}>Take the site offline for all non-admin users.</div>
+                    <div style={{ fontWeight: 600, color: '#0F1E33' }}>Maintenance Mode</div>
+                    <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Take the site offline for all non-admin users.</div>
                   </div>
-                  <button onClick={() => handleDangerAction('ENABLE Maintenance Mode')} className={styles.actionBtn} style={{ background: '#f59e0b', color: '#000', fontWeight: 'bold', padding: '10px 20px', display: 'flex', alignItems: 'center', gap: '8px' }}><Power size={16}/> Enable</button>
+                  <button onClick={() => handleDangerAction('ENABLE Maintenance Mode')} className={styles.actionBtn} style={{ background: '#F59E0B', color: '#1A1207', fontWeight: 'bold', padding: '10px 20px', display: 'flex', alignItems: 'center', gap: '8px' }}><Power size={16}/> Enable</button>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '20px', borderBottom: '1px solid #E6EAF0' }}>
                   <div>
-                    <div style={{ fontWeight: 600, color: '#FFF' }}>Export Database</div>
-                    <div style={{ fontSize: '0.85rem', color: 'gray' }}>Download a complete raw JSON backup of all tables.</div>
+                    <div style={{ fontWeight: 600, color: '#0F1E33' }}>Export Database</div>
+                    <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Download a complete raw JSON backup of all tables.</div>
                   </div>
                   <button onClick={() => handleDangerAction('Export Full Database')} className={styles.quickActionBtn} style={{ padding: '10px 20px' }}><Database size={16}/> Export Full Backup</button>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
-                    <div style={{ fontWeight: 600, color: '#ef4444' }}>Wipe Database Records</div>
-                    <div style={{ fontSize: '0.85rem', color: 'gray' }}>Danger: Will delete ALL mock exams, MCQs, and logs permanently!</div>
+                    <div style={{ fontWeight: 600, color: '#DC2626' }}>Wipe Database Records</div>
+                    <div style={{ fontSize: '0.85rem', color: '#64748B' }}>Danger: Will delete ALL mock exams, MCQs, and logs permanently!</div>
                   </div>
                   <button onClick={() => handleDangerAction('WIPE Database Records')} className={`${styles.actionBtn} ${styles.danger}`} style={{ padding: '10px 20px', fontWeight: 'bold' }}>Wipe Data</button>
                 </div>
@@ -198,7 +198,7 @@ export default function SettingsTab() {
         <button className={`${styles.subTabBtn} ${subTab === 'general' ? styles.subTabActive : ''}`} onClick={() => setSubTab('general')}>General</button>
         <button className={`${styles.subTabBtn} ${subTab === 'security' ? styles.subTabActive : ''}`} onClick={() => setSubTab('security')}>Security</button>
         <button className={`${styles.subTabBtn} ${subTab === 'notifications' ? styles.subTabActive : ''}`} onClick={() => setSubTab('notifications')}>Notifications</button>
-        <button className={`${styles.subTabBtn} ${subTab === 'danger' ? styles.subTabActive : ''}`} style={{ color: subTab === 'danger' ? '#ef4444' : 'rgba(239, 68, 68, 0.5)', borderColor: subTab === 'danger' ? '#ef4444' : 'transparent' }} onClick={() => setSubTab('danger')}>Danger Zone</button>
+        <button className={`${styles.subTabBtn} ${subTab === 'danger' ? styles.subTabActive : ''}`} style={{ color: subTab === 'danger' ? '#DC2626' : '#F87171', borderColor: subTab === 'danger' ? '#DC2626' : 'transparent' }} onClick={() => setSubTab('danger')}>Danger Zone</button>
       </div>
 
       {renderContent()}

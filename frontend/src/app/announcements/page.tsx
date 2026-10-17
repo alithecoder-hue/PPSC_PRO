@@ -31,10 +31,10 @@ export default function AnnouncementsPage() {
         </div>
 
         <div className={styles.timeline}>
-          {loading && <div style={{ color: 'rgba(255,255,255,0.5)', textAlign: 'center', padding: '40px' }}>Loading announcements...</div>}
+          {loading && <div style={{ color: '#64748B', textAlign: 'center', padding: '40px' }}>Loading announcements...</div>}
           
           {!loading && announcements.length === 0 && (
-            <div style={{ color: 'rgba(255,255,255,0.4)', textAlign: 'center', padding: '60px' }}>
+            <div style={{ color: '#64748B', textAlign: 'center', padding: '60px' }}>
               <BellRing size={48} style={{ opacity: 0.5, marginBottom: '15px' }} />
               <p>No announcements yet. Check back soon!</p>
             </div>

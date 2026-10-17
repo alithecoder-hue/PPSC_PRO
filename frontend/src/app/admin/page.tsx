@@ -67,7 +67,7 @@ export default function AdminPanel() {
     verifyAdmin();
   }, [router]);
 
-  if (checking) return <div style={{ color: 'white', padding: '50px', textAlign: 'center', minHeight: '100vh' }}>Verifying admin access...</div>;
+  if (checking) return <div style={{ color: '#0C1B2E', background: '#F6F8FB', padding: '50px', textAlign: 'center', minHeight: '100vh' }}>Verifying admin access...</div>;
   if (!adminUser) return null;
 
   const renderContent = () => {

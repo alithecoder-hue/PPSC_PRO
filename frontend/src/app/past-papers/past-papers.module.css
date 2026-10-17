@@ -357,6 +357,13 @@
     0 2px 4px rgba(0, 0, 0, 0.01);
 }
 
+/* Agency accent variants (top border tint per exam body) */
+.ppscCard { border-top: 3px solid #f59e0b; }
+.fpscCard { border-top: 3px solid #0c1b2e; }
+.ntsCard { border-top: 3px solid #2563eb; }
+.spscCard { border-top: 3px solid #16a34a; }
+.kppscCard { border-top: 3px solid #64748b; }
+
 .agencyIconWrapper {
   margin-bottom: 16px;
 }

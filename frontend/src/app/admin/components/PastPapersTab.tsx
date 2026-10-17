@@ -18,8 +18,8 @@ export default function PastPapersTab() {
   const subjectRef = React.useRef<HTMLSelectElement>(null);
   const mcqIdsRef = React.useRef<HTMLInputElement>(null);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading academics data from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading academics data from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const filteredPapers = mockPastPapers.filter((p: any) => p.title.toLowerCase().includes(search.toLowerCase()));
   const totalPages = Math.ceil(filteredPapers.length / itemsPerPage);
@@ -97,8 +97,8 @@ export default function PastPapersTab() {
               <div className={styles.formGroup}>
                 <label className={styles.formLabel}>Type</label>
                 <div style={{ display: 'flex', gap: '20px', marginTop: '10px' }}>
-                  <label style={{ display: 'flex', gap: '8px', color: '#FFF' }}><input type="radio" name="type" value="Free" defaultChecked required /> Free</label>
-                  <label style={{ display: 'flex', gap: '8px', color: '#FFF' }}><input type="radio" name="type" value="Premium" /> Premium</label>
+                  <label style={{ display: 'flex', gap: '8px', color: '#334155' }}><input type="radio" name="type" value="Free" defaultChecked required /> Free</label>
+                  <label style={{ display: 'flex', gap: '8px', color: '#334155' }}><input type="radio" name="type" value="Premium" /> Premium</label>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function PastPapersTab() {
 
       <div className={styles.tableControls}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input 
             type="text" 
             placeholder="Search past papers..." 
@@ -163,7 +163,7 @@ export default function PastPapersTab() {
                 <td>{p.subject || 'CS'}</td>
                 <td>{p.mcqIds?.length || 0}</td>
                 <td><span className={`${styles.badge} ${p.type === 'Premium' ? styles.badgePremium : styles.badgeFree}`}>{p.type || 'Free'}</span></td>
-                <td><span style={{ color: '#10b981' }}>● Active</span></td>
+                <td><span style={{ color: '#16A34A' }}>● Active</span></td>
                 <td>
                   <button className={`${styles.actionBtn}`}>Edit</button>
                   <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDelete(p.id)}>Delete</button>
@@ -178,7 +178,7 @@ export default function PastPapersTab() {
         <span className={styles.pageInfo}>Showing {displayedPapers.length} of {filteredPapers.length} items</span>
         <div className={styles.pageButtons}>
           <button className={styles.pageBtn} disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Prev</button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
           <button className={styles.pageBtn} disabled={currentPage >= totalPages} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
         </div>
       </div>

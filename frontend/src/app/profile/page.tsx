@@ -108,7 +108,7 @@ export default function ProfilePage() {
     }
   };
 
-  if (loading) return <div style={{ color: 'white', padding: '100px', textAlign: 'center' }}>Loading your profile...</div>;
+  if (loading) return <div style={{ color: 'var(--app-muted)', padding: '100px', textAlign: 'center' }}>Loading your profile...</div>;
   if (!userProfile) return null;
 
   const totalTests = userProfile.results?.length || 0;
@@ -183,11 +183,11 @@ export default function ProfilePage() {
                   )}
                 </div>
 
-                <div style={{ marginTop: '40px', width: '100%', textAlign: 'left', padding: '20px', background: 'rgba(255,255,255,0.02)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <h3 style={{ color: '#FCD34D', fontSize: '1rem', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold' }}>
+                <div style={{ marginTop: '40px', width: '100%', textAlign: 'left', padding: '20px', background: 'var(--app-bg)', borderRadius: '16px', border: '1px solid var(--app-line-soft)' }}>
+                  <h3 style={{ color: 'var(--app-accent-deep)', fontSize: '1rem', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold' }}>
                     <Target size={18} /> Daily Progress Target
                   </h3>
-                  <p style={{ color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '20px', lineHeight: '1.5' }}>
+                  <p style={{ color: 'var(--app-muted)', fontSize: '0.85rem', marginBottom: '20px', lineHeight: '1.5' }}>
                     Set your daily MCQ goal to track on the Dashboard.
                   </p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -202,11 +202,11 @@ export default function ProfilePage() {
                       onTouchEnd={saveDailyGoalTarget}
                       style={{ flex: 1, accentColor: '#F59E0B', cursor: 'pointer' }}
                     />
-                    <div style={{ background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.3)', color: '#F59E0B', padding: '4px 12px', borderRadius: '8px', fontWeight: 'bold', fontSize: '1.1rem', minWidth: '45px', textAlign: 'center' }}>
+                    <div style={{ background: 'var(--app-accent-soft)', border: '1px solid #fde68a', color: 'var(--app-accent-deep)', padding: '4px 12px', borderRadius: '8px', fontWeight: 'bold', fontSize: '1.1rem', minWidth: '45px', textAlign: 'center' }}>
                       {dailyGoalTarget}
                     </div>
                   </div>
-                  {savingGoal && <span style={{ color: '#10B981', fontSize: '0.8rem', marginTop: '10px', display: 'block' }}>Saving target...</span>}
+                  {savingGoal && <span style={{ color: 'var(--app-success)', fontSize: '0.8rem', marginTop: '10px', display: 'block' }}>Saving target...</span>}
                 </div>
 
               </div>
@@ -242,9 +242,9 @@ export default function ProfilePage() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                   <div>
                     <h3 className={styles.cardTitle} style={{ marginBottom: '4px' }}>My Study Subjects</h3>
-                    <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', margin: 0 }}>Select the subjects you want to focus on. Your Classroom and Daily Tests will only include MCQs from these subjects.</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--app-muted)', margin: 0 }}>Select the subjects you want to focus on. Your Classroom and Daily Tests will only include MCQs from these subjects.</p>
                   </div>
-                  {savingSubjects && <div style={{ color: '#F59E0B', fontSize: '0.8rem' }}>Saving...</div>}
+                  {savingSubjects && <div style={{ color: 'var(--app-accent-deep)', fontSize: '0.8rem' }}>Saving...</div>}
                 </div>
                 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
@@ -255,8 +255,8 @@ export default function ProfilePage() {
                         key={cat.id} 
                         onClick={() => toggleSubject(cat.id)}
                         style={{ 
-                          background: isEnabled ? 'rgba(245, 158, 11, 0.1)' : 'rgba(255,255,255,0.03)', 
-                          border: isEnabled ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid rgba(255,255,255,0.1)',
+                          background: isEnabled ? 'var(--app-accent-soft)' : '#fff', 
+                          border: isEnabled ? '1px solid #fde68a' : '1px solid var(--app-line)',
                           padding: '16px', 
                           borderRadius: '12px', 
                           display: 'flex', 
@@ -266,12 +266,12 @@ export default function ProfilePage() {
                           transition: 'all 0.2s'
                         }}
                       >
-                        <span style={{ color: isEnabled ? '#FFF' : 'rgba(255,255,255,0.5)', fontWeight: isEnabled ? 'bold' : 'normal' }}>
+                        <span style={{ color: isEnabled ? 'var(--app-ink)' : 'var(--app-muted)', fontWeight: isEnabled ? 'bold' : 'normal' }}>
                           {cat.name}
                         </span>
                         <div style={{ 
                           width: '40px', height: '22px', 
-                          background: isEnabled ? '#F59E0B' : 'rgba(255,255,255,0.2)', 
+                          background: isEnabled ? 'var(--app-accent)' : 'var(--app-line)', 
                           borderRadius: '20px', 
                           position: 'relative',
                           transition: 'background 0.3s'

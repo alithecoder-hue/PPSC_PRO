@@ -1,3 +1,4 @@
+/* Merit Master — prep card grid, light theme */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -16,17 +17,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #E6EAF0;
+  box-shadow: 0 1px 2px rgba(15, 30, 51, 0.05);
+  background: #FFFFFF;
 }
 
 .card:hover {
-  border-color: rgba(245, 158, 11, 0.6);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(245, 158, 11, 0.15), inset 0 0 20px rgba(245, 158, 11, 0.05);
+  border-color: #F59E0B;
+  box-shadow: 0 18px 48px rgba(15, 30, 51, 0.12), 0 0 24px rgba(245, 158, 11, 0.12);
   transform: translateY(-8px) scale(1.02);
 }
 
-/* Background Gradients */
+/* Background Variants — soft pastel washes behind the thumbnail */
 .bgImage {
   position: absolute;
   top: 0;
@@ -36,11 +38,11 @@
   z-index: 1;
 }
 
-.bgVariant1 { background: linear-gradient(135deg, #111 0%, #1A1A2E 100%), radial-gradient(circle at 0% 0%, rgba(255, 51, 102, 0.5) 0%, transparent 50%), radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.5) 0%, transparent 50%); }
-.bgVariant2 { background: linear-gradient(135deg, #1A1000, #2C1A00, #3D2500); }
-.bgVariant3 { background: linear-gradient(135deg, #0F0A00, #1F1400, #2C1E00); }
-.bgVariant4 { background: linear-gradient(135deg, #1A0E00, #2E1A00, #2C1800); }
-.bgVariant5 { background: linear-gradient(135deg, #1A0A00, #3D1A00, #4A1A00); }
+.bgVariant1 { background: linear-gradient(135deg, #DBEAFE 0%, #FEF3C7 100%); }
+.bgVariant2 { background: linear-gradient(135deg, #FFF7ED 0%, #FDE68A 100%); }
+.bgVariant3 { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); }
+.bgVariant4 { background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); }
+.bgVariant5 { background: linear-gradient(135deg, #FEF2F2 0%, #FDE68A 100%); }
 
 .badgeContainer {
   position: absolute;
@@ -50,31 +52,27 @@
 }
 
 .badge {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #E6EAF0;
   padding: 8px 16px;
   border-radius: 50px;
-  color: #FFF;
+  color: #0C1B2E;
   font-weight: 700;
   font-size: 0.85rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(15, 30, 51, 0.08);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
-.badgePremium { border-color: rgba(255, 215, 0, 0.5); color: #FFD700; }
-.badgeSoon { border-color: rgba(255, 100, 100, 0.5); color: #FF6B6B; }
+.badgePremium { border-color: #FDE68A; background: #FEF3C7; color: #B45309; }
+.badgeSoon { border-color: #FECACA; background: #FEF2F2; color: #DC2626; }
 
 .glassContent {
   position: relative;
   z-index: 2;
-  background: rgba(10, 10, 15, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: #FFFFFF;
+  border-top: 1px solid #E6EAF0;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -82,7 +80,7 @@
 }
 
 .card:hover .glassContent {
-  background: rgba(10, 10, 15, 0.8);
+  background: #FAFBFC;
 }
 
 .titleWrapper {
@@ -94,13 +92,13 @@
 .cardTitle {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #FFF;
+  color: #0C1B2E;
   margin: 0;
   line-height: 1.2;
 }
 
 .cardSubtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: #64748B;
   font-size: 0.95rem;
   margin: 0;
   font-weight: 500;
@@ -110,7 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  border-top: 1px dashed #E6EAF0;
   padding-top: 15px;
 }
 
@@ -126,22 +124,22 @@
 }
 
 .metaVal {
-  color: #F59E0B;
+  color: #B45309;
   font-weight: 800;
   font-size: 1.1rem;
 }
 
 .metaLbl {
-  color: rgba(255, 255, 255, 0.5);
+  color: #94A3B8;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .actionBtn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFF;
+  background: #F6F8FB;
+  border: 1px solid #E6EAF0;
+  color: #0C1B2E;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -155,7 +153,7 @@
 .card:hover .actionBtn {
   background: #F59E0B;
   border-color: #F59E0B;
-  color: #000;
+  color: #1A1207;
   transform: translateX(5px);
 }
 
@@ -166,8 +164,8 @@
 
 .cardDisabled:hover {
   transform: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(15, 30, 51, 0.05);
+  border-color: #E6EAF0;
 }
 
 .cardDisabled:hover .bgImage {
@@ -175,9 +173,9 @@
 }
 
 .cardDisabled:hover .actionBtn {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #FFF;
+  background: #F6F8FB;
+  border-color: #E6EAF0;
+  color: #0C1B2E;
   transform: none;
 }
 

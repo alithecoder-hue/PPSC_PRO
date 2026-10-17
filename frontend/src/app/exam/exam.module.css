@@ -1,6 +1,12 @@
+/* ==== MERIT MASTER — Exam engine (light SaaS theme) ====
+   Class names are a stable contract with exam/page.tsx — do not rename. */
 .container {
-  padding: 40px 0;
+  padding: 40px 24px 80px;
   max-width: 800px;
+  margin: 0 auto;
+  background: #F6F8FB;
+  min-height: 100vh;
+  color: #0F1E33;
 }
 
 .header {
@@ -9,40 +15,52 @@
   align-items: center;
   margin-bottom: 30px;
   padding: 20px;
-  background-color: #f3f4f6;
-  border-radius: 8px;
-  color: #000;
+  background-color: #FFFFFF;
+  border: 1px solid #E6EAF0;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(15, 30, 51, 0.05);
+  color: #0C1B2E;
+}
+
+.header h2 {
+  margin: 0;
+  color: #0C1B2E;
 }
 
 .timer {
   font-size: 1.5rem;
   font-weight: bold;
+  font-variant-numeric: tabular-nums;
 }
 
 .timerWarning {
-  color: #ef4444;
+  color: #DC2626;
 }
 
 .timerSafe {
-  color: #10b981;
+  color: #16A34A;
 }
 
 .mainCard {
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border: 1px solid #E6EAF0;
+  border-radius: 14px;
   padding: 30px;
-  background-color: white;
-  color: #000;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(15, 30, 51, 0.05);
+  color: #0F1E33;
 }
 
 .progress {
-  color: #6b7280;
+  color: #64748B;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .questionText {
   font-size: 1.25rem;
   margin-bottom: 20px;
+  color: #0C1B2E;
+  line-height: 1.6;
 }
 
 .optionsList {
@@ -56,13 +74,17 @@
   align-items: center;
   gap: 10px;
   padding: 15px;
-  border: 1px solid #e5e7eb;
-  border-radius: 4px;
+  border: 1.5px solid #E6EAF0;
+  border-radius: 10px;
   cursor: pointer;
+  color: #334155;
+  font-weight: 600;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .optionLabel:hover {
-  background-color: #f9fafb;
+  background-color: #FAFBFC;
+  border-color: #CBD5E1;
 }
 
 .footer {
@@ -73,11 +95,17 @@
 
 .prevBtn {
   padding: 10px 20px;
-  border: 1px solid #e5e7eb;
-  background-color: white;
-  color: #000;
+  border: 1px solid #E6EAF0;
+  background-color: #FFFFFF;
+  color: #334155;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 0.15s ease;
+}
+
+.prevBtn:hover:not(:disabled) {
+  background-color: #F8FAFC;
 }
 
 .prevBtn:disabled {
@@ -88,25 +116,29 @@
 .nextBtn {
   padding: 10px 20px;
   border: none;
-  background-color: #10b981;
-  color: white;
+  background-color: #0C1B2E;
+  color: #FFFFFF;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 0.15s ease;
 }
 
 .nextBtn:hover {
-  background-color: #059669;
+  background-color: #12263F;
 }
 
 .submitBtn {
   padding: 10px 20px;
   border: none;
-  background-color: #3b82f6;
-  color: white;
+  background-color: #F59E0B;
+  color: #1A1207;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 0.15s ease;
 }
 
 .submitBtn:hover {
-  background-color: #2563eb;
+  background-color: #FBBF24;
 }

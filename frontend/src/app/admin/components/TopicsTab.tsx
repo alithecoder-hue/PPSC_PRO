@@ -159,14 +159,14 @@ export default function TopicsTab() {
 
   const getLevelBadgeClass = (level: string) => {
     switch(level) {
-      case 'beginner': return 'bg-green-500/20 text-green-400 border border-green-500/30';
-      case 'moderate': return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
-      case 'expert': return 'bg-red-500/20 text-red-400 border border-red-500/30';
-      default: return 'bg-gray-500/20 text-gray-400';
+      case 'beginner': return 'bg-green-500/20 text-green-400 border border-green-500/30 app-badge app-badge-green';
+      case 'moderate': return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 app-badge app-badge-amber';
+      case 'expert': return 'bg-red-500/20 text-red-400 border border-red-500/30 app-badge app-badge-red';
+      default: return 'bg-gray-500/20 text-gray-400 app-badge app-badge-gray';
     }
   };
 
-  if (loading && topics.length === 0) return <div style={{ color: 'white', padding: '20px' }}>Loading Topics Manager...</div>;
+  if (loading && topics.length === 0) return <div style={{ color: '#64748B', padding: '20px' }}>Loading Topics Manager...</div>;
 
   return (
     <div>
@@ -231,7 +231,7 @@ export default function TopicsTab() {
         </select>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginLeft: 'auto' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input 
             type="text" 
             placeholder="Search topics..." 
@@ -311,15 +311,15 @@ export default function TopicsTab() {
           <tbody>
             {paginatedData.map((t: any) => (
               <tr key={t.id}>
-                <td style={{ color: 'rgba(255,255,255,0.4)' }}>#{t.id}</td>
+                <td style={{ color: '#94A3B8' }}>#{t.id}</td>
                 <td style={{ fontWeight: 600 }}>{t.name}</td>
                 <td>
                   <span className={`px-2 py-1 rounded text-xs font-bold uppercase tracking-wider ${getLevelBadgeClass(t.level)}`}>
                     {t.level}
                   </span>
                 </td>
-                <td style={{ color: '#F59E0B' }}>{t.subCategory?.name || 'N/A'}</td>
-                <td style={{ color: 'rgba(255,255,255,0.6)' }}>{t.subCategory?.category?.name || 'N/A'}</td>
+                <td style={{ color: '#B45309' }}>{t.subCategory?.name || 'N/A'}</td>
+                <td style={{ color: '#64748B' }}>{t.subCategory?.category?.name || 'N/A'}</td>
                 <td>{t._count?.mcqs || 0}</td>
                 <td>
                   <button className={styles.actionBtn} style={{ marginRight: '8px' }} onClick={() => handleEdit(t)}>
@@ -333,7 +333,7 @@ export default function TopicsTab() {
             ))}
             {paginatedData.length === 0 && (
               <tr>
-                <td colSpan={7} style={{ textAlign: 'center', padding: '20px', color: 'rgba(255,255,255,0.5)' }}>
+                <td colSpan={7} style={{ textAlign: 'center', padding: '20px', color: '#94A3B8' }}>
                   No topics found matching your criteria.
                 </td>
               </tr>
@@ -353,7 +353,7 @@ export default function TopicsTab() {
           >
             Prev
           </button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
           <button 
             className={styles.pageBtn} 
             disabled={currentPage === totalPages || totalPages === 0} 

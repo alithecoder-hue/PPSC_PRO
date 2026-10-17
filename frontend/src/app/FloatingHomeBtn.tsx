@@ -44,13 +44,13 @@ export default function FloatingHomeBtn() {
         display: isNearFooter ? 'none' : 'flex',
         gap: '15px',
         zIndex: 90,
-        background: 'rgba(0, 0, 0, 0.6)',
+        background: 'rgba(255, 255, 255, 0.85)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
         padding: isFolded ? '5px' : '10px 15px',
         borderRadius: '50px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
+        border: '1px solid #E6EAF0',
+        boxShadow: '0 10px 30px rgba(15, 30, 51, 0.12)',
         transition: 'all 0.3s ease'
       }}
     >
@@ -73,7 +73,7 @@ export default function FloatingHomeBtn() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#000',
+            color: '#0C1B2E',
             boxShadow: '0 5px 15px rgba(245, 158, 11, 0.4)',
             transition: 'all 0.3s ease'
           }}
@@ -90,7 +90,7 @@ export default function FloatingHomeBtn() {
           width: isFolded ? '50px' : 'auto',
           height: '50px',
           padding: isFolded ? '0' : '0 20px',
-          backgroundColor: '#FF3366',
+          backgroundColor: '#0C1B2E',
           borderRadius: '25px',
           display: 'flex',
           alignItems: 'center',
@@ -98,7 +98,7 @@ export default function FloatingHomeBtn() {
           gap: isFolded ? '0' : '8px',
           color: '#FFF',
           fontWeight: 800,
-          boxShadow: '0 5px 15px rgba(255, 51, 102, 0.4)',
+          boxShadow: '0 5px 15px rgba(12, 27, 46, 0.35)',
           transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
           textDecoration: 'none',
           overflow: 'hidden',
@@ -112,11 +112,11 @@ export default function FloatingHomeBtn() {
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'translateY(-3px)';
-          e.currentTarget.style.boxShadow = '0 10px 25px rgba(255, 51, 102, 0.6)';
+          e.currentTarget.style.boxShadow = '0 10px 25px rgba(12, 27, 46, 0.45)';
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = '0 5px 15px rgba(255, 51, 102, 0.4)';
+          e.currentTarget.style.boxShadow = '0 5px 15px rgba(12, 27, 46, 0.3)';
         }}
       >
         <CalendarClock size={20} />

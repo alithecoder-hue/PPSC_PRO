@@ -16,8 +16,8 @@ export default function PromotionsTab() {
   const expiryDateRef = React.useRef<HTMLInputElement>(null);
   const statusRef = React.useRef<HTMLSelectElement>(null);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading business data from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading business data from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const submitForm = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -131,12 +131,12 @@ export default function PromotionsTab() {
           <tbody>
             {mockCoupons.map((c: any) => (
               <tr key={c.id}>
-                <td style={{ fontWeight: 600, color: '#F59E0B', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  {c.code} <Copy size={14} style={{ cursor: 'pointer', color: 'gray' }} onClick={() => alert('Copied!')}/>
+                <td style={{ fontWeight: 600, color: '#B45309', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  {c.code} <Copy size={14} style={{ cursor: 'pointer', color: '#94A3B8' }} onClick={() => alert('Copied!')}/>
                 </td>
                 <td>{c.discountValue} {c.discountType === 'Percentage' ? '%' : 'PKR'}</td>
                 <td>{c.usedCount || 0} / {c.usageLimit === 0 ? '∞' : c.usageLimit}</td>
-                <td style={{ color: c.status === 'Expired' ? '#ef4444' : 'inherit' }}>{new Date(c.expiryDate).toLocaleDateString()}</td>
+                <td style={{ color: c.status === 'Expired' ? '#DC2626' : 'inherit' }}>{new Date(c.expiryDate).toLocaleDateString()}</td>
                 <td>
                   <span className={`${styles.badge} ${c.status === 'Active' ? styles.badgePremium : styles.badgeUrgent}`}>
                     {c.status}

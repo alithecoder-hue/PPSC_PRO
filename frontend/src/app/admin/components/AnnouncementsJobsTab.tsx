@@ -28,8 +28,8 @@ export default function AnnouncementsJobsTab() {
   const jobLinkRef = useRef<HTMLInputElement>(null);
   const jobDescRef = useRef<HTMLTextAreaElement>(null);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading content from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading content from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   // Filter & Pagination
   const filteredAnnouncements = announcements.filter((a: any) => a.title.toLowerCase().includes(search.toLowerCase()));
@@ -205,7 +205,7 @@ export default function AnnouncementsJobsTab() {
 
       <div className={styles.tableControls}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input type="text" placeholder={`Search ${subTab}...`} className={styles.searchInput}
             value={search} onChange={(e) => { setSearch(e.target.value); setCurrentPage(1); }} />
         </div>
@@ -217,7 +217,7 @@ export default function AnnouncementsJobsTab() {
             <thead><tr><th>Title</th><th>Type</th><th>Date</th><th>Actions</th></tr></thead>
             <tbody>
               {displayedAnnouncements.length === 0 ? (
-                <tr><td colSpan={4} style={{ textAlign: 'center', color: 'rgba(255,255,255,0.4)', padding: '30px' }}>No announcements yet. Click "Add Announcement" to post one.</td></tr>
+                <tr><td colSpan={4} style={{ textAlign: 'center', color: '#94A3B8', padding: '30px' }}>No announcements yet. Click "Add Announcement" to post one.</td></tr>
               ) : displayedAnnouncements.map((a: any) => (
                 <tr key={a.id}>
                   <td style={{ fontWeight: 600 }}>{a.title}</td>
@@ -235,12 +235,12 @@ export default function AnnouncementsJobsTab() {
             <thead><tr><th>Job Title</th><th>Organization</th><th>Deadline</th><th>Posted</th><th>Actions</th></tr></thead>
             <tbody>
               {displayedJobs.length === 0 ? (
-                <tr><td colSpan={5} style={{ textAlign: 'center', color: 'rgba(255,255,255,0.4)', padding: '30px' }}>No jobs posted yet. Click "Add Job" to post one.</td></tr>
+                <tr><td colSpan={5} style={{ textAlign: 'center', color: '#94A3B8', padding: '30px' }}>No jobs posted yet. Click "Add Job" to post one.</td></tr>
               ) : displayedJobs.map((j: any) => (
                 <tr key={j.id}>
                   <td style={{ fontWeight: 600 }}>{j.title}</td>
                   <td>{j.organization}</td>
-                  <td style={{ color: '#ef4444' }}>{new Date(j.deadline).toLocaleDateString()}</td>
+                  <td style={{ color: '#DC2626' }}>{new Date(j.deadline).toLocaleDateString()}</td>
                   <td>{new Date(j.createdAt).toLocaleDateString()}</td>
                   <td>
                     <button className={`${styles.actionBtn} ${styles.danger}`} onClick={() => handleDeleteJob(j.id)}>Delete</button>
@@ -258,7 +258,7 @@ export default function AnnouncementsJobsTab() {
         </span>
         <div className={styles.pageButtons}>
           <button className={styles.pageBtn} disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Prev</button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {subTab === 'announcements' ? announcementsPages : jobsPages}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {subTab === 'announcements' ? announcementsPages : jobsPages}</span>
           <button className={styles.pageBtn} disabled={currentPage === (subTab === 'announcements' ? announcementsPages : jobsPages) || (subTab === 'announcements' ? announcementsPages : jobsPages) === 0} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
         </div>
       </div>

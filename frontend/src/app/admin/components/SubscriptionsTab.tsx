@@ -16,8 +16,8 @@ export default function SubscriptionsTab() {
   const planRef = React.useRef<HTMLSelectElement>(null);
   const amountRef = React.useRef<HTMLInputElement>(null);
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading business data from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading business data from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const now = new Date();
 
@@ -139,7 +139,7 @@ export default function SubscriptionsTab() {
           </button>
           <button 
             className={styles.quickActionBtn} 
-            style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderColor: 'rgba(16, 185, 129, 0.3)' }}
+            style={{ background: '#DCFCE7', color: '#16A34A', borderColor: '#BBF7D0' }}
             onClick={handleExportCsv}
           >
             <Download size={16} /> Export to CSV
@@ -205,7 +205,7 @@ export default function SubscriptionsTab() {
 
       <div className={styles.tableControls}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input 
             type="text" 
             placeholder="Search by name or email..." 
@@ -235,17 +235,17 @@ export default function SubscriptionsTab() {
               <tr key={s.id}>
                 <td>
                   <div style={{ fontWeight: 600 }}>{s.user?.name || 'Unknown'}</div>
-                  <div style={{ fontSize: '0.8rem', color: 'gray' }}>{s.user?.email || ''}</div>
+                  <div style={{ fontSize: '0.8rem', color: '#64748B' }}>{s.user?.email || ''}</div>
                 </td>
                 <td>{s.plan}</td>
                 <td>
                   {s.transactionId ? (
                     <div>
                       <div style={{ fontWeight: 600, textTransform: 'capitalize' }}>{s.paymentMethod || 'Manual'}</div>
-                      <div style={{ fontSize: '0.8rem', color: 'gray', fontFamily: 'monospace' }}>TID: {s.transactionId}</div>
+                      <div style={{ fontSize: '0.8rem', color: '#64748B', fontFamily: 'monospace' }}>TID: {s.transactionId}</div>
                     </div>
                   ) : (
-                    <span style={{ color: 'gray' }}>—</span>
+                    <span style={{ color: '#64748B' }}>—</span>
                   )}
                 </td>
                 <td>{s.amount || '0'}</td>
@@ -267,7 +267,7 @@ export default function SubscriptionsTab() {
                     <button
                       className={`${styles.actionBtn} ${styles.success}`}
                       onClick={() => handleApprove(s.id)}
-                      style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', borderColor: 'rgba(16, 185, 129, 0.4)', marginLeft: '6px' }}
+                      style={{ background: '#DCFCE7', color: '#16A34A', borderColor: '#BBF7D0', marginLeft: '6px' }}
                     >
                       Approve
                     </button>
@@ -291,7 +291,7 @@ export default function SubscriptionsTab() {
         <span className={styles.pageInfo}>Showing {displayedSubs.length} of {filteredSubs.length} items</span>
         <div className={styles.pageButtons}>
           <button className={styles.pageBtn} disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Prev</button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
           <button className={styles.pageBtn} disabled={currentPage >= totalPages} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
         </div>
       </div>

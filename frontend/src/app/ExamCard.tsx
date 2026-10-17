@@ -39,7 +39,7 @@ export default function ExamCard({ test, subjectName }: { test: any, subjectName
               <div className="stat-item difficulty-slider-container" style={{width: '100%', alignItems: 'stretch'}}>
                 <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', marginBottom: '10px', fontSize: '0.9rem'}}>
                   <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><Star size={16} /> Difficulty: <strong>{difficulty}</strong></span>
-                  <span style={{color: 'rgba(255,255,255,0.5)', fontWeight: 'bold', letterSpacing: '1px'}}>{difficulty <= 3 ? 'EASY' : difficulty <= 7 ? 'MEDIUM' : 'HARD'}</span>
+                  <span style={{color: '#94A3B8', fontWeight: 'bold', letterSpacing: '1px'}}>{difficulty <= 3 ? 'EASY' : difficulty <= 7 ? 'MEDIUM' : 'HARD'}</span>
                 </div>
                 <input 
                   type="range" 

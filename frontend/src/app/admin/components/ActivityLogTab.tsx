@@ -10,8 +10,8 @@ export default function ActivityLogTab() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
 
-  if (loading) return <div style={{ color: 'white', padding: '20px' }}>Loading content data from database...</div>;
-  if (error) return <div style={{ color: 'red', padding: '20px' }}>Error: {error}</div>;
+  if (loading) return <div style={{ color: '#64748B', padding: '20px' }}>Loading content data from database...</div>;
+  if (error) return <div style={{ color: '#DC2626', padding: '20px' }}>Error: {error}</div>;
 
   const filteredLogs = mockActivityLog.filter((l: any) => {
     const adminName = l.admin?.name || l.admin?.email || 'System';
@@ -51,11 +51,11 @@ export default function ActivityLogTab() {
       <div className={styles.sectionHeader}>
         <div>
           <h2 className={styles.sectionTitle}>System Activity Log</h2>
-          <p style={{ color: 'gray', fontSize: '0.9rem', marginTop: '5px' }}>Read-only audit trail of all platform operations.</p>
+          <p style={{ color: '#64748B', fontSize: '0.9rem', marginTop: '5px' }}>Read-only audit trail of all platform operations.</p>
         </div>
         <button 
           className={styles.quickActionBtn} 
-          style={{ background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7', borderColor: 'rgba(168, 85, 247, 0.3)' }}
+          style={{ background: '#F3E8FF', color: '#7C3AED', borderColor: '#DDD6FE' }}
           onClick={handleExportCsv}
         >
           <Download size={16} /> Export Audit Trail
@@ -64,7 +64,7 @@ export default function ActivityLogTab() {
 
       <div className={styles.tableControls}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Search size={20} color="rgba(255,255,255,0.5)" />
+          <Search size={20} color="#94A3B8" />
           <input 
             type="text" 
             placeholder="Search by entity or admin name..." 
@@ -74,7 +74,7 @@ export default function ActivityLogTab() {
           />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Filter size={16} color="gray" />
+          <Filter size={16} color="#64748B" />
           <select className={styles.formInput} style={{ minWidth: '150px' }} value={filterType} onChange={(e) => { setFilterType(e.target.value); setCurrentPage(1); }}>
             <option value="All">All Actions</option>
             <option value="CREATE">CREATE</option>
@@ -100,11 +100,11 @@ export default function ActivityLogTab() {
           <tbody>
             {displayedLogs.map((log: any) => (
               <tr key={log.id}>
-                <td style={{ color: 'gray', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>{new Date(log.createdAt).toLocaleString()}</td>
+                <td style={{ color: '#64748B', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>{new Date(log.createdAt).toLocaleString()}</td>
                 <td style={{ fontWeight: 600 }}>{log.admin?.name || log.admin?.email || 'System'}</td>
                 <td><span className={`${styles.badge} ${getBadgeClass(log.action)}`}>{log.action}</span></td>
                 <td>{log.entity}</td>
-                <td style={{ color: 'rgba(255,255,255,0.7)' }}>{log.details}</td>
+                <td style={{ color: '#334155' }}>{log.details}</td>
               </tr>
             ))}
           </tbody>
@@ -115,7 +115,7 @@ export default function ActivityLogTab() {
         <span className={styles.pageInfo}>Showing {displayedLogs.length} of {filteredLogs.length} logs</span>
         <div className={styles.pageButtons}>
           <button className={styles.pageBtn} disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)}>Prev</button>
-          <span style={{ color: '#FFF', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
+          <span style={{ color: '#0F1E33', display: 'flex', alignItems: 'center' }}>Page {currentPage} of {totalPages || 1}</span>
           <button className={styles.pageBtn} disabled={currentPage >= totalPages} onClick={() => setCurrentPage(p => p + 1)}>Next</button>
         </div>
       </div>
