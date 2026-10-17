@@ -13,6 +13,7 @@ import {
 import { TestInterfaceMock, AnalyticsMock } from './components/ProductMock';
 import PricingSection from './components/PricingSection';
 import FaqSection from './components/FaqSection';
+import SubjectsSection from './components/SubjectsSection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -191,6 +192,9 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* ============ SUBJECTS ============ */}
+      <SubjectsSection />
 
       {/* ============ SHOWCASE ============ */}
       <section className="mm-section mm-showcase">

@@ -687,6 +687,76 @@ body:has(.mm-scope) .orb-container {
   margin: 0;
 }
 
+/* ---------- subjects browser ---------- */
+.mm-subjects {
+  background: var(--mm-bg-soft);
+  border-top: 1px solid var(--mm-line-soft);
+  border-bottom: 1px solid var(--mm-line-soft);
+}
+.mm-subj-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.mm-subj-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--mm-line);
+  border-radius: var(--mm-radius);
+  padding: 18px;
+  box-shadow: var(--mm-shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.mm-subj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mm-shadow);
+  border-color: var(--mm-accent);
+}
+.mm-subj-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--mm-navy);
+  color: var(--mm-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.mm-subj-card:hover .mm-subj-icon {
+  background: var(--mm-accent);
+  color: #1a1207;
+}
+.mm-subj-body {
+  flex: 1;
+  min-width: 0;
+}
+.mm-subj-body h3 {
+  font-size: 0.98rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  margin: 0 0 3px;
+  color: var(--mm-ink);
+}
+.mm-subj-body span {
+  font-size: 0.82rem;
+  color: var(--mm-muted);
+  font-weight: 600;
+}
+.mm-subj-arrow {
+  color: var(--mm-faint);
+  flex-shrink: 0;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+.mm-subj-card:hover .mm-subj-arrow {
+  color: var(--mm-accent-deep);
+  transform: translateX(3px);
+}
+
 /* ---------- showcase ---------- */
 .mm-showcase {
   background: var(--mm-navy);
@@ -1419,7 +1489,8 @@ body:has(.mm-scope) .orb-container {
     max-width: 560px;
   }
   .mm-grid-3,
-  .mm-t-grid {
+  .mm-t-grid,
+  .mm-subj-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .mm-steps {
@@ -1462,6 +1533,7 @@ body:has(.mm-scope) .orb-container {
   }
   .mm-grid-3,
   .mm-t-grid,
+  .mm-subj-grid,
   .mm-price-grid {
     grid-template-columns: 1fr;
   }
