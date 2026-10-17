@@ -1,0 +1,902 @@
+[
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Important Dates of Pakistan",
+    "question": "The Pakistan Resolution was passed on:",
+    "options": [
+      "January 26, 1950",
+      "March 23, 1940",
+      "August 14, 1947",
+      "March 23, 1956"
+    ],
+    "correct": 1,
+    "explanation": "The Lahore Resolution, later called the Pakistan Resolution, was passed on March 23, 1940.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Important Dates of Pakistan",
+    "question": "Pakistan celebrates its Independence Day on:",
+    "options": [
+      "August 14, 1947",
+      "March 23, 1940",
+      "December 25, 1876",
+      "August 15, 1947"
+    ],
+    "correct": 0,
+    "explanation": "Pakistan gained independence on August 14, 1947.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Important Dates of Pakistan",
+    "question": "The 18th Amendment to Pakistan's constitution was passed in:",
+    "options": [
+      "2008",
+      "2012",
+      "2010",
+      "2013"
+    ],
+    "correct": 2,
+    "explanation": "The 18th Amendment, which devolved powers to the provinces, was passed in 2010.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "National Symbols of Pakistan",
+    "question": "The national animal of Pakistan is the:",
+    "options": [
+      "Indus dolphin",
+      "Marco Polo sheep",
+      "Markhor",
+      "Snow leopard"
+    ],
+    "correct": 2,
+    "explanation": "The markhor, a wild goat of the northern mountains, is the national animal of Pakistan.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "National Symbols of Pakistan",
+    "question": "The national sport of Pakistan is:",
+    "options": [
+      "Cricket",
+      "Field hockey",
+      "Kabaddi",
+      "Squash"
+    ],
+    "correct": 1,
+    "explanation": "Field hockey is the officially recognized national sport of Pakistan.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "National Symbols of Pakistan",
+    "question": "The national flower of Pakistan is the:",
+    "options": [
+      "Jasmine",
+      "Tulip",
+      "Rose",
+      "Sunflower"
+    ],
+    "correct": 0,
+    "explanation": "Jasmine (chameli) is the national flower of Pakistan.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "National Symbols of Pakistan",
+    "question": "The national bird of Pakistan is the:",
+    "options": [
+      "Shaheen falcon",
+      "Peacock",
+      "Houbara bustard",
+      "Chukar partridge"
+    ],
+    "correct": 3,
+    "explanation": "The chukar partridge (chakor) is the national bird of Pakistan.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Records and Firsts of Pakistan",
+    "question": "The first woman judge of the Supreme Court of Pakistan was:",
+    "options": [
+      "Hina Jilani",
+      "Ayesha A. Malik",
+      "Asma Jahangir",
+      "Nasira Javed Iqbal"
+    ],
+    "correct": 1,
+    "explanation": "Justice Ayesha A. Malik became the first woman judge of Pakistan's Supreme Court in January 2022.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Records and Firsts of Pakistan",
+    "question": "The first woman Prime Minister of Pakistan was:",
+    "options": [
+      "Fatima Jinnah",
+      "Rana Liaquat Ali Khan",
+      "Asma Jahangir",
+      "Benazir Bhutto"
+    ],
+    "correct": 3,
+    "explanation": "Benazir Bhutto became Pakistan's first woman prime minister in 1988.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Records and Firsts of Pakistan",
+    "question": "The first Pakistani to win the Nobel Prize was:",
+    "options": [
+      "Dr. Abdul Qadeer Khan",
+      "Malala Yousafzai",
+      "Dr. Atta-ur-Rahman",
+      "Dr. Abdus Salam"
+    ],
+    "correct": 3,
+    "explanation": "Dr. Abdus Salam won the 1979 Nobel Prize in Physics, the first Pakistani to do so.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Records and Firsts of Pakistan",
+    "question": "Pakistan's first satellite, launched in 1990, was named:",
+    "options": [
+      "PRSS-1",
+      "PAKSAT-1",
+      "iCube-Qamar",
+      "Badr-1"
+    ],
+    "correct": 3,
+    "explanation": "Badr-1, launched on July 16, 1990, was Pakistan's first indigenously developed satellite.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Records and Firsts of Pakistan",
+    "question": "The largest province of Pakistan by area is:",
+    "options": [
+      "Sindh",
+      "Punjab",
+      "Khyber Pakhtunkhwa",
+      "Balochistan"
+    ],
+    "correct": 3,
+    "explanation": "Balochistan is the largest province of Pakistan by area.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Records and Firsts of Pakistan",
+    "question": "The first Governor-General of Pakistan was:",
+    "options": [
+      "Khawaja Nazimuddin",
+      "Liaquat Ali Khan",
+      "Quaid-e-Azam Muhammad Ali Jinnah",
+      "Malik Ghulam Muhammad"
+    ],
+    "correct": 2,
+    "explanation": "Quaid-e-Azam Muhammad Ali Jinnah was Pakistan's first Governor-General in 1947.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Famous Quotes of Quaid-e-Azam",
+    "question": "The famous motto 'Unity, Faith and Discipline' was given by:",
+    "options": [
+      "Quaid-e-Azam Muhammad Ali Jinnah",
+      "Liaquat Ali Khan",
+      "Allama Iqbal",
+      "Sir Syed Ahmed Khan"
+    ],
+    "correct": 0,
+    "explanation": "Quaid-e-Azam gave the guiding principles of Unity, Faith and Discipline to the nation.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Famous Quotes of Quaid-e-Azam",
+    "question": "Quaid-e-Azam's famous address beginning 'You are free...' was delivered on:",
+    "options": [
+      "March 23, 1940",
+      "August 11, 1947",
+      "September 11, 1948",
+      "August 14, 1947"
+    ],
+    "correct": 1,
+    "explanation": "Quaid-e-Azam delivered this landmark address to the Constituent Assembly on August 11, 1947.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Pakistan at a Glance (Quick Facts)",
+    "question": "The national game of Pakistan is:",
+    "options": [
+      "Cricket",
+      "Field Hockey",
+      "Squash",
+      "Kabaddi"
+    ],
+    "correct": 1,
+    "explanation": "Field hockey is Pakistan's national game; the team has won three Olympic gold medals.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Pakistan at a Glance (Quick Facts)",
+    "question": "Pakistan shares its longest land border with:",
+    "options": [
+      "Iran",
+      "Afghanistan",
+      "China",
+      "India"
+    ],
+    "correct": 3,
+    "explanation": "Pakistan's longest land border, about 2,912 km, is with India.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Pakistan Knowledge",
+    "subtopic": "Pakistan at a Glance (Quick Facts)",
+    "question": "The currency of Pakistan is the:",
+    "options": [
+      "Pakistani Rial",
+      "Pakistani Rupee",
+      "Pakistani Dinar",
+      "Pakistani Taka"
+    ],
+    "correct": 1,
+    "explanation": "The Pakistani Rupee (PKR) is the official currency of Pakistan.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Capitals and Currencies of the World",
+    "question": "The capital of New Zealand is:",
+    "options": [
+      "Auckland",
+      "Christchurch",
+      "Wellington",
+      "Queenstown"
+    ],
+    "correct": 2,
+    "explanation": "Wellington is the capital of New Zealand; Auckland is its largest city.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Capitals and Currencies of the World",
+    "question": "The currency of Japan is the:",
+    "options": [
+      "Yen",
+      "Ringgit",
+      "Yuan",
+      "Won"
+    ],
+    "correct": 0,
+    "explanation": "The yen is the official currency of Japan.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Capitals and Currencies of the World",
+    "question": "The capital of Canada is:",
+    "options": [
+      "Vancouver",
+      "Toronto",
+      "Ottawa",
+      "Montreal"
+    ],
+    "correct": 2,
+    "explanation": "Ottawa is the capital of Canada; Toronto is its largest city.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Famous Inventions and Inventors",
+    "question": "The telephone was invented by:",
+    "options": [
+      "Nikola Tesla",
+      "Thomas Edison",
+      "Guglielmo Marconi",
+      "Alexander Graham Bell"
+    ],
+    "correct": 3,
+    "explanation": "Alexander Graham Bell invented the telephone in 1876.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Famous Inventions and Inventors",
+    "question": "The practical electric light bulb was invented by:",
+    "options": [
+      "Michael Faraday",
+      "Joseph Swan",
+      "Thomas Edison",
+      "Humphry Davy"
+    ],
+    "correct": 2,
+    "explanation": "Thomas Edison developed the first practical long-lasting electric light bulb in 1879.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Famous Inventions and Inventors",
+    "question": "The steam engine was significantly improved by:",
+    "options": [
+      "James Watt",
+      "George Stephenson",
+      "Robert Fulton",
+      "Richard Trevithick"
+    ],
+    "correct": 0,
+    "explanation": "James Watt patented his improved steam engine in 1769, powering the Industrial Revolution.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "World Records (Largest, Smallest, Highest)",
+    "question": "The largest hot desert in the world is the:",
+    "options": [
+      "Gobi",
+      "Sahara",
+      "Kalahari",
+      "Thar"
+    ],
+    "correct": 1,
+    "explanation": "The Sahara in North Africa is the world's largest hot desert.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "World Records (Largest, Smallest, Highest)",
+    "question": "Which river is traditionally regarded as the longest in the world:",
+    "options": [
+      "Amazon",
+      "Nile",
+      "Yangtze",
+      "Mississippi"
+    ],
+    "correct": 1,
+    "explanation": "The Nile, at about 6,650 km, is traditionally regarded as the world's longest river.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "World Records (Largest, Smallest, Highest)",
+    "question": "The highest mountain peak in the world is:",
+    "options": [
+      "Makalu",
+      "Kangchenjunga",
+      "K2",
+      "Mount Everest"
+    ],
+    "correct": 3,
+    "explanation": "Mount Everest (8,849 m) in the Himalayas is the world's highest peak.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Famous Books and Authors",
+    "question": "'Gitanjali' was written by:",
+    "options": [
+      "Rudyard Kipling",
+      "Rabindranath Tagore",
+      "Premchand",
+      "Allama Iqbal"
+    ],
+    "correct": 1,
+    "explanation": "Gitanjali, the collection that won Tagore the 1913 Nobel Prize in Literature, was written by Rabindranath Tagore.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Famous Books and Authors",
+    "question": "'War and Peace' was written by:",
+    "options": [
+      "Charles Dickens",
+      "Fyodor Dostoevsky",
+      "Leo Tolstoy",
+      "Victor Hugo"
+    ],
+    "correct": 2,
+    "explanation": "War and Peace is the celebrated novel by Russian author Leo Tolstoy.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Famous Books and Authors",
+    "question": "'The Republic' was written by:",
+    "options": [
+      "Socrates",
+      "Confucius",
+      "Plato",
+      "Aristotle"
+    ],
+    "correct": 2,
+    "explanation": "The Republic is the famous philosophical work of Plato.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Important Days and Dates (World)",
+    "question": "World Environment Day is observed every year on:",
+    "options": [
+      "December 10",
+      "June 5",
+      "March 21",
+      "April 22"
+    ],
+    "correct": 1,
+    "explanation": "World Environment Day is observed annually on June 5.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed General Knowledge",
+    "subtopic": "Important Days and Dates (World)",
+    "question": "International Women's Day is celebrated on:",
+    "options": [
+      "March 8",
+      "February 14",
+      "November 25",
+      "May 1"
+    ],
+    "correct": 0,
+    "explanation": "International Women's Day is celebrated worldwide on March 8.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Important Scientific Terms",
+    "question": "The SI unit of electric current is the:",
+    "options": [
+      "Watt",
+      "Ohm",
+      "Ampere",
+      "Volt"
+    ],
+    "correct": 2,
+    "explanation": "The ampere (A) is the SI unit of electric current.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Important Scientific Terms",
+    "question": "The scientific study of earthquakes is called:",
+    "options": [
+      "Volcanology",
+      "Geology",
+      "Seismology",
+      "Meteorology"
+    ],
+    "correct": 2,
+    "explanation": "Seismology is the scientific study of earthquakes and seismic waves.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Famous Scientists and Discoveries",
+    "question": "The theory of relativity was presented by:",
+    "options": [
+      "Galileo Galilei",
+      "Albert Einstein",
+      "Niels Bohr",
+      "Isaac Newton"
+    ],
+    "correct": 1,
+    "explanation": "Albert Einstein presented the special (1905) and general (1915) theories of relativity.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Famous Scientists and Discoveries",
+    "question": "The laws of motion were formulated by:",
+    "options": [
+      "Galileo Galilei",
+      "Isaac Newton",
+      "Johannes Kepler",
+      "Albert Einstein"
+    ],
+    "correct": 1,
+    "explanation": "Isaac Newton formulated the three laws of motion in his Principia (1687).",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Everyday Science Quick Facts",
+    "question": "The most abundant gas in the Earth's atmosphere is:",
+    "options": [
+      "Hydrogen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Oxygen"
+    ],
+    "correct": 1,
+    "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Everyday Science Quick Facts",
+    "question": "Pure water boils at 100°C at:",
+    "options": [
+      "Any altitude",
+      "Sea level",
+      "The top of a high mountain",
+      "The bottom of the ocean"
+    ],
+    "correct": 1,
+    "explanation": "At sea level, standard atmospheric pressure makes water boil at 100°C.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Medical Terms and Common Diseases",
+    "question": "Insulin is produced in the human body by the:",
+    "options": [
+      "Thyroid gland",
+      "Liver",
+      "Kidney",
+      "Pancreas"
+    ],
+    "correct": 3,
+    "explanation": "The pancreas produces insulin, which regulates blood sugar.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Medical Terms and Common Diseases",
+    "question": "The normal temperature of the human body is about:",
+    "options": [
+      "37°C",
+      "40°C",
+      "39°C",
+      "35°C"
+    ],
+    "correct": 0,
+    "explanation": "Normal human body temperature is about 37°C (98.6°F).",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Technology Milestones",
+    "question": "The first man-made satellite, Sputnik 1, was launched in:",
+    "options": [
+      "1961",
+      "1957",
+      "1949",
+      "1969"
+    ],
+    "correct": 1,
+    "explanation": "The Soviet Union launched Sputnik 1 in 1957, starting the space age.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Science Facts",
+    "subtopic": "Technology Milestones",
+    "question": "Who is regarded as the world's first computer programmer:",
+    "options": [
+      "Ada Lovelace",
+      "Alan Turing",
+      "Charles Babbage",
+      "Grace Hopper"
+    ],
+    "correct": 0,
+    "explanation": "Ada Lovelace wrote the first algorithm intended for a machine in the 1840s.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Quick Calculation Tricks",
+    "question": "25 × 16 equals:",
+    "options": [
+      "375",
+      "450",
+      "400",
+      "425"
+    ],
+    "correct": 2,
+    "explanation": "25 × 16 = 25 × (4 × 4) = 100 × 4 = 400.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Quick Calculation Tricks",
+    "question": "99 × 99 equals:",
+    "options": [
+      "9801",
+      "9999",
+      "9799",
+      "9900"
+    ],
+    "correct": 0,
+    "explanation": "99 × 99 = (100 − 1)² = 10000 − 200 + 1 = 9801.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Number Tricks and Patterns",
+    "question": "What comes next in the series 2, 6, 12, 20, 30:",
+    "options": [
+      "40",
+      "36",
+      "44",
+      "42"
+    ],
+    "correct": 3,
+    "explanation": "The differences are 4, 6, 8, 10, so the next term is 30 + 12 = 42.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Number Tricks and Patterns",
+    "question": "Which of the following is a prime number:",
+    "options": [
+      "91",
+      "51",
+      "57",
+      "61"
+    ],
+    "correct": 3,
+    "explanation": "51 = 3×17, 57 = 3×19 and 91 = 7×13, while 61 has no divisors other than 1 and itself.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Shortcut Methods for MCQs",
+    "question": "If 10% of a number is 45, the number is:",
+    "options": [
+      "450",
+      "90",
+      "4,500",
+      "45"
+    ],
+    "correct": 0,
+    "explanation": "If 10% equals 45, the full number is 45 × 10 = 450.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Shortcut Methods for MCQs",
+    "question": "The average of the first 10 natural numbers is:",
+    "options": [
+      "6",
+      "5",
+      "10",
+      "5.5"
+    ],
+    "correct": 3,
+    "explanation": "The sum of 1 to 10 is 55, and 55 ÷ 10 = 5.5.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Common Formulas Sheet",
+    "question": "The area of a circle of radius 7 cm (π = 22/7) is:",
+    "options": [
+      "144 cm²",
+      "154 cm²",
+      "308 cm²",
+      "44 cm²"
+    ],
+    "correct": 1,
+    "explanation": "Area = πr² = (22/7) × 49 = 154 cm².",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Common Formulas Sheet",
+    "question": "The simple interest on Rs 1,000 at 10% per annum for 2 years is:",
+    "options": [
+      "Rs 200",
+      "Rs 210",
+      "Rs 1,200",
+      "Rs 100"
+    ],
+    "correct": 0,
+    "explanation": "Simple interest = (1000 × 10 × 2) ÷ 100 = Rs 200.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Mathematics",
+    "subtopic": "Common Formulas Sheet",
+    "question": "The area of a circle with radius 7 cm is (π = 22/7):",
+    "options": [
+      "154 cm²",
+      "44 cm²",
+      "88 cm²",
+      "308 cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area = πr² = (22/7) × 7 × 7 = 22 × 7 = 154 cm².",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "Important Events of Last 2 Years",
+    "question": "Pakistan hosted the SCO Council of Heads of Government summit in:",
+    "options": [
+      "November 2023",
+      "October 2024",
+      "June 2024",
+      "March 2025"
+    ],
+    "correct": 1,
+    "explanation": "Pakistan hosted the SCO summit in Islamabad in October 2024.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "Important Events of Last 2 Years",
+    "question": "Arshad Nadeem won Pakistan's Olympic gold medal at Paris 2024 in:",
+    "options": [
+      "Shot put",
+      "Weightlifting",
+      "Javelin throw",
+      "Wrestling"
+    ],
+    "correct": 2,
+    "explanation": "Arshad Nadeem won gold in the javelin throw with an Olympic record of 92.97 m.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "Important Events of Last 2 Years",
+    "question": "The 26th Constitutional Amendment of Pakistan was passed in:",
+    "options": [
+      "2022",
+      "2024",
+      "2025",
+      "2023"
+    ],
+    "correct": 1,
+    "explanation": "The 26th Constitutional Amendment was passed by Parliament in October 2024.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "Key International Agreements",
+    "question": "The Paris Agreement (2015) is mainly concerned with:",
+    "options": [
+      "Refugee rights",
+      "Climate change",
+      "Trade tariffs",
+      "Nuclear disarmament"
+    ],
+    "correct": 1,
+    "explanation": "The Paris Agreement is a global treaty to limit global warming and combat climate change.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "Key International Agreements",
+    "question": "The Geneva Conventions primarily deal with:",
+    "options": [
+      "Humanitarian treatment during armed conflict",
+      "Nuclear testing",
+      "Maritime trade rules",
+      "Diplomatic immunity"
+    ],
+    "correct": 0,
+    "explanation": "The Geneva Conventions set standards for humanitarian treatment in war.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "Key International Agreements",
+    "question": "The Kyoto Protocol is related to:",
+    "options": [
+      "Reduction of greenhouse gas emissions",
+      "Elimination of landmines",
+      "Ban on chemical weapons",
+      "Protection of the ozone layer"
+    ],
+    "correct": 0,
+    "explanation": "The Kyoto Protocol (1997) commits countries to reducing greenhouse gas emissions.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "World Leaders and Their Countries",
+    "question": "The Prime Minister of India (as of 2024) is:",
+    "options": [
+      "Rahul Gandhi",
+      "Amit Shah",
+      "Manmohan Singh",
+      "Narendra Modi"
+    ],
+    "correct": 3,
+    "explanation": "Narendra Modi has been Prime Minister of India since 2014.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "World Leaders and Their Countries",
+    "question": "The President of China (as of 2024) is:",
+    "options": [
+      "Hu Jintao",
+      "Xi Jinping",
+      "Li Keqiang",
+      "Wen Jiabao"
+    ],
+    "correct": 1,
+    "explanation": "Xi Jinping is the President of China.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "General",
+    "topic": "Mixed Current Affairs",
+    "subtopic": "World Leaders and Their Countries",
+    "question": "The Secretary-General of the United Nations (as of 2024) is:",
+    "options": [
+      "António Guterres",
+      "Kofi Annan",
+      "Boutros Boutros-Ghali",
+      "Ban Ki-moon"
+    ],
+    "correct": 0,
+    "explanation": "António Guterres has been UN Secretary-General since 2017.",
+    "difficulty": "medium"
+  }
+]

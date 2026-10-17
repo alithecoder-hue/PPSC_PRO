@@ -1,0 +1,1052 @@
+[
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Indus Valley Civilization (Mohenjo-daro, Harappa)",
+    "question": "Mohenjo-daro was discovered in which year?",
+    "options": [
+      "1921",
+      "1922",
+      "1920",
+      "1924"
+    ],
+    "correct": 1,
+    "explanation": "Mohenjo-daro was discovered in 1922 by R.D. Banerji of the Archaeological Survey of India.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Indus Valley Civilization (Mohenjo-daro, Harappa)",
+    "question": "Harappa was discovered by which archaeologist?",
+    "options": [
+      "R.D. Banerji",
+      "John Marshall",
+      "Alexander Cunningham",
+      "Daya Ram Sahni"
+    ],
+    "correct": 3,
+    "explanation": "Daya Ram Sahni excavated Harappa in 1921, a year before Mohenjo-daro was found.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Indus Valley Civilization (Mohenjo-daro, Harappa)",
+    "question": "The Great Bath is located at which Indus Valley site?",
+    "options": [
+      "Harappa",
+      "Mohenjo-daro",
+      "Lothal",
+      "Kalibangan"
+    ],
+    "correct": 1,
+    "explanation": "The Great Bath, a large water-tight ritual pool, is the most famous structure of Mohenjo-daro.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Indus Valley Civilization (Mohenjo-daro, Harappa)",
+    "question": "What is the present status of the Indus Valley script?",
+    "options": [
+      "It was deciphered in 1922",
+      "It remains undeciphered",
+      "It is identical to Brahmi",
+      "It was written in cuneiform"
+    ],
+    "correct": 1,
+    "explanation": "Despite thousands of seals bearing short inscriptions, the Indus script has never been deciphered.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Indus Valley Civilization (Mohenjo-daro, Harappa)",
+    "question": "Which metal was unknown to the people of the Indus Valley Civilization?",
+    "options": [
+      "Gold",
+      "Bronze",
+      "Iron",
+      "Copper"
+    ],
+    "correct": 2,
+    "explanation": "The Harappans worked gold, copper and bronze, but iron came to the subcontinent much later.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Mesopotamia and Egypt",
+    "question": "The cuneiform script was developed in which civilization?",
+    "options": [
+      "Mesopotamia",
+      "Ancient Egypt",
+      "Indus Valley",
+      "Ancient China"
+    ],
+    "correct": 0,
+    "explanation": "Cuneiform, wedge-shaped writing pressed into clay tablets, originated in Sumerian Mesopotamia.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Mesopotamia and Egypt",
+    "question": "The pyramids of Giza were built primarily as what?",
+    "options": [
+      "Temples of the gods",
+      "Grain storage houses",
+      "Royal palaces",
+      "Tombs of the Pharaohs"
+    ],
+    "correct": 3,
+    "explanation": "The pyramids served as monumental tombs for Pharaohs such as Khufu, Khafre and Menkaure.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Mesopotamia and Egypt",
+    "question": "Egyptian hieroglyphics were deciphered with the help of which artifact?",
+    "options": [
+      "The Behistun Inscription",
+      "The Rosetta Stone",
+      "The Cyrus Cylinder",
+      "The Dead Sea Scrolls"
+    ],
+    "correct": 1,
+    "explanation": "The Rosetta Stone's parallel Greek text let Jean-Francois Champollion decode hieroglyphics in 1822.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Greek and Roman Civilizations",
+    "question": "Alexander the Great invaded the Indian subcontinent in which year?",
+    "options": [
+      "326 BC",
+      "323 BC",
+      "330 BC",
+      "321 BC"
+    ],
+    "correct": 0,
+    "explanation": "Alexander crossed into the Punjab in 326 BC and fought Raja Porus at the Battle of the Hydaspes (Jhelum).",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Greek and Roman Civilizations",
+    "question": "Julius Caesar was assassinated in which year?",
+    "options": [
+      "44 AD",
+      "31 BC",
+      "27 BC",
+      "44 BC"
+    ],
+    "correct": 3,
+    "explanation": "Julius Caesar was stabbed to death by Roman senators on the Ides of March, 44 BC.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Greek and Roman Civilizations",
+    "question": "Which city was the capital of the Eastern Roman (Byzantine) Empire?",
+    "options": [
+      "Rome",
+      "Constantinople",
+      "Athens",
+      "Alexandria"
+    ],
+    "correct": 1,
+    "explanation": "Constantinople, founded by Constantine the Great, was the Byzantine capital until 1453.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Persian Empire",
+    "question": "The Achaemenid (Persian) Empire was founded by whom?",
+    "options": [
+      "Darius I",
+      "Xerxes",
+      "Cyrus the Great",
+      "Cambyses"
+    ],
+    "correct": 2,
+    "explanation": "Cyrus the Great founded the Achaemenid Empire around 550 BC after conquering the Medes.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Persian Empire",
+    "question": "Alexander the Great defeated Darius III at which battle?",
+    "options": [
+      "Marathon",
+      "Gaugamela",
+      "Thermopylae",
+      "Salamis"
+    ],
+    "correct": 1,
+    "explanation": "The Battle of Gaugamela in 331 BC shattered the Persian Empire and made Alexander master of Asia.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "Ancient Civilizations",
+    "subtopic": "Persian Empire",
+    "question": "Persepolis was the ceremonial capital of which empire?",
+    "options": [
+      "The Persian Empire",
+      "The Greek Empire",
+      "The Roman Empire",
+      "The Mauryan Empire"
+    ],
+    "correct": 0,
+    "explanation": "Persepolis, founded by Darius I, was the great ceremonial capital of the Achaemenid Persians.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Rise of Islam (7th Century)",
+    "question": "The Hijrah, the Prophet Muhammad's (PBUH) migration to Madinah, took place in which year?",
+    "options": [
+      "610 CE",
+      "622 CE",
+      "632 CE",
+      "570 CE"
+    ],
+    "correct": 1,
+    "explanation": "The migration from Mecca to Madinah in 622 CE marks year 1 of the Islamic calendar.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Rise of Islam (7th Century)",
+    "question": "Who was the first Caliph after the Prophet Muhammad (PBUH)?",
+    "options": [
+      "Abu Bakr",
+      "Umar",
+      "Usman",
+      "Ali"
+    ],
+    "correct": 0,
+    "explanation": "Abu Bakr Siddique became the first of the Khulafa-e-Rashideen, ruling 632-634 CE.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Rise of Islam (7th Century)",
+    "question": "The Battle of Badr was fought in which year?",
+    "options": [
+      "622 CE",
+      "624 CE",
+      "625 CE",
+      "630 CE"
+    ],
+    "correct": 1,
+    "explanation": "The Battle of Badr, the first major battle of Islam, was fought in Ramadan 2 AH (624 CE).",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Arab Conquests",
+    "question": "Muhammad bin Qasim conquered Sindh in which year?",
+    "options": [
+      "711 CE",
+      "712 CE",
+      "713 CE",
+      "710 CE"
+    ],
+    "correct": 1,
+    "explanation": "Muhammad bin Qasim defeated Raja Dahir and annexed Sindh to the Umayyad Caliphate in 712 CE.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Arab Conquests",
+    "question": "Baghdad was founded in 762 CE by which Abbasid Caliph?",
+    "options": [
+      "Harun al-Rashid",
+      "al-Mamun",
+      "al-Mansur",
+      "al-Mutawakkil"
+    ],
+    "correct": 2,
+    "explanation": "Caliph Abu Jafar al-Mansur founded Baghdad as the Abbasid capital in 762 CE.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Arab Conquests",
+    "question": "The Umayyad Caliphate ruled during which period?",
+    "options": [
+      "632-661 CE",
+      "661-750 CE",
+      "750-1258 CE",
+      "750-850 CE"
+    ],
+    "correct": 1,
+    "explanation": "The Umayyads ruled the Muslim world from Damascus between 661 and 750 CE.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Mongol Empire",
+    "question": "Genghis Khan died in which year?",
+    "options": [
+      "1227",
+      "1258",
+      "1219",
+      "1231"
+    ],
+    "correct": 0,
+    "explanation": "Genghis Khan, founder of the Mongol Empire, died in 1227 during a campaign against Western Xia.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Mongol Empire",
+    "question": "The Abbasid Caliphate ended when the Mongols sacked Baghdad in which year?",
+    "options": [
+      "1248",
+      "1258",
+      "1268",
+      "1250"
+    ],
+    "correct": 1,
+    "explanation": "Hulagu Khan's Mongols destroyed Baghdad in 1258, executing Caliph al-Mustasim and ending the Abbasid line.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Ottoman Empire",
+    "question": "Constantinople was conquered by the Ottoman Turks in which year?",
+    "options": [
+      "1453",
+      "1492",
+      "1520",
+      "1444"
+    ],
+    "correct": 0,
+    "explanation": "Sultan Mehmed II captured Constantinople in 1453, ending the Byzantine Empire.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Ottoman Empire",
+    "question": "Which Ottoman Sultan is known as 'the Magnificent'?",
+    "options": [
+      "Mehmed II",
+      "Suleiman",
+      "Osman I",
+      "Selim I"
+    ],
+    "correct": 1,
+    "explanation": "Suleiman the Magnificent ruled 1520-1566, the peak of Ottoman power and law-making.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Ottoman Empire",
+    "question": "The Ottoman Caliphate was abolished in which year?",
+    "options": [
+      "1918",
+      "1922",
+      "1924",
+      "1920"
+    ],
+    "correct": 2,
+    "explanation": "Mustafa Kemal Ataturk abolished the Ottoman Caliphate on 3 March 1924.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Mughal Empire in Subcontinent",
+    "question": "Babur founded the Mughal Empire in India after winning the First Battle of Panipat in which year?",
+    "options": [
+      "1526",
+      "1556",
+      "1527",
+      "1530"
+    ],
+    "correct": 0,
+    "explanation": "Babur defeated Ibrahim Lodhi at Panipat in 1526, founding Mughal rule in the subcontinent.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Mughal Empire in Subcontinent",
+    "question": "Akbar introduced the Din-i-Ilahi in which year?",
+    "options": [
+      "1575",
+      "1582",
+      "1600",
+      "1560"
+    ],
+    "correct": 1,
+    "explanation": "Akbar proclaimed his syncretic Din-i-Ilahi (Divine Faith) in 1582.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "Medieval History",
+    "subtopic": "Mughal Empire in Subcontinent",
+    "question": "The last Mughal emperor, Bahadur Shah Zafar, was exiled by the British to which city?",
+    "options": [
+      "Kabul",
+      "Rangoon",
+      "Mecca",
+      "London"
+    ],
+    "correct": 1,
+    "explanation": "After the 1857 revolt, Bahadur Shah Zafar was exiled to Rangoon (Yangon), where he died in 1862.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Hindu Shahi and Ghaznavid Period",
+    "question": "Mahmud of Ghazni ruled from which years?",
+    "options": [
+      "977-997 CE",
+      "1001-1025 CE",
+      "997-1030 CE",
+      "1030-1040 CE"
+    ],
+    "correct": 2,
+    "explanation": "Mahmud of Ghazni reigned 997-1030 CE, conducting his famous invasions of India during this period.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Hindu Shahi and Ghaznavid Period",
+    "question": "Mahmud of Ghazni defeated the Hindu Shahi ruler Jayapala near which city in 1001?",
+    "options": [
+      "Thanesar",
+      "Multan",
+      "Kannauj",
+      "Peshawar"
+    ],
+    "correct": 3,
+    "explanation": "Mahmud defeated Jayapala at the Battle of Peshawar in 1001, breaking Hindu Shahi power.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Hindu Shahi and Ghaznavid Period",
+    "question": "Mahmud of Ghazni raided the famous Somnath temple in which year?",
+    "options": [
+      "1001 CE",
+      "1018 CE",
+      "1025 CE",
+      "1030 CE"
+    ],
+    "correct": 2,
+    "explanation": "Mahmud's raid on the Somnath temple in Gujarat took place in 1025 CE.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Delhi Sultanate",
+    "question": "The Delhi Sultanate was founded in 1206 by whom?",
+    "options": [
+      "Qutb-ud-din Aibak",
+      "Iltutmish",
+      "Alauddin Khilji",
+      "Balban"
+    ],
+    "correct": 0,
+    "explanation": "Qutb-ud-din Aibak, a former slave of Muhammad Ghori, founded the Slave dynasty and the Delhi Sultanate in 1206.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Delhi Sultanate",
+    "question": "Razia Sultan, the first woman to rule Delhi, reigned during which years?",
+    "options": [
+      "1211-1236",
+      "1240-1266",
+      "1266-1287",
+      "1236-1240"
+    ],
+    "correct": 3,
+    "explanation": "Razia Sultan, daughter of Iltutmish, ruled Delhi from 1236 until her death in 1240.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Delhi Sultanate",
+    "question": "Alauddin Khilji is most famous in history for which reform?",
+    "options": [
+      "Shifting the capital to Daulatabad",
+      "Building the Qutub Minar",
+      "Market control reforms",
+      "Abolishing the jizya tax"
+    ],
+    "correct": 2,
+    "explanation": "Alauddin Khilji's price-control and market-regulation system kept his large army affordable.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mughal Empire (Babur to Aurangzeb)",
+    "question": "The Second Battle of Panipat (1556) was fought between Akbar's forces and whom?",
+    "options": [
+      "Sher Shah Suri",
+      "Rana Sanga",
+      "Hemu",
+      "Ibrahim Lodhi"
+    ],
+    "correct": 2,
+    "explanation": "Akbar's regent Bairam Khan defeated the Hindu king Hemu at the Second Battle of Panipat in 1556.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mughal Empire (Babur to Aurangzeb)",
+    "question": "Humayun lost the Mughal throne to Sher Shah Suri in which year?",
+    "options": [
+      "1539",
+      "1555",
+      "1530",
+      "1540"
+    ],
+    "correct": 3,
+    "explanation": "Sher Shah Suri defeated Humayun at the Battle of Kannauj in 1540, forcing him into a 15-year exile.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mughal Empire (Babur to Aurangzeb)",
+    "question": "Shah Jahan ruled the Mughal Empire during which years?",
+    "options": [
+      "1605-1627",
+      "1658-1707",
+      "1628-1658",
+      "1556-1605"
+    ],
+    "correct": 2,
+    "explanation": "Shah Jahan, builder of the Taj Mahal, reigned from 1628 until Aurangzeb deposed him in 1658.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mughal Empire (Babur to Aurangzeb)",
+    "question": "The Badshahi Mosque in Lahore was built by which Mughal emperor?",
+    "options": [
+      "Shah Jahan",
+      "Aurangzeb",
+      "Akbar",
+      "Jahangir"
+    ],
+    "correct": 1,
+    "explanation": "Aurangzeb commissioned the Badshahi Mosque in Lahore in 1673.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "British East India Company",
+    "question": "The British East India Company received its royal charter in which year?",
+    "options": [
+      "1599",
+      "1615",
+      "1600",
+      "1608"
+    ],
+    "correct": 2,
+    "explanation": "Queen Elizabeth I granted the Company its charter on 31 December 1600.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "British East India Company",
+    "question": "The Battle of Plassey was fought in which year?",
+    "options": [
+      "1757",
+      "1764",
+      "1765",
+      "1746"
+    ],
+    "correct": 0,
+    "explanation": "Robert Clive defeated Siraj-ud-Daulah at Plassey on 23 June 1757, beginning British political power in India.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "British East India Company",
+    "question": "After the Battle of Buxar (1764), the Company obtained the Diwani of Bengal in which year?",
+    "options": [
+      "1764",
+      "1772",
+      "1773",
+      "1765"
+    ],
+    "correct": 3,
+    "explanation": "The Treaty of Allahabad (1765) gave the Company the Diwani (revenue rights) of Bengal, Bihar and Orissa.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mutiny of 1857",
+    "question": "The Revolt of 1857 began at Meerut on which date?",
+    "options": [
+      "10 May 1857",
+      "29 March 1857",
+      "11 May 1857",
+      "1 June 1857"
+    ],
+    "correct": 0,
+    "explanation": "Sepoys mutinied at Meerut on 10 May 1857 and marched to Delhi, sparking the great revolt.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mutiny of 1857",
+    "question": "Mangal Pandey, regarded as the first martyr of the 1857 revolt, belonged to which regiment?",
+    "options": [
+      "19th Bengal Native Infantry",
+      "11th Bengal Native Infantry",
+      "3rd Light Cavalry",
+      "34th Bengal Native Infantry"
+    ],
+    "correct": 3,
+    "explanation": "Mangal Pandey of the 34th Bengal Native Infantry attacked British officers at Barrackpore on 29 March 1857.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Mutiny of 1857",
+    "question": "Bahadur Shah Zafar died in exile at Rangoon in which year?",
+    "options": [
+      "1858",
+      "1860",
+      "1862",
+      "1857"
+    ],
+    "correct": 2,
+    "explanation": "The last Mughal emperor died in Rangoon on 7 November 1862.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Indian National Movement (1857-1947)",
+    "question": "The Indian National Congress was founded in 1885 by whom?",
+    "options": [
+      "A.O. Hume",
+      "W.C. Bonnerjee",
+      "Dadabhai Naoroji",
+      "Gopal Krishna Gokhale"
+    ],
+    "correct": 0,
+    "explanation": "The retired British civil servant A.O. Hume founded the Congress; its first session met in Bombay.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of the Subcontinent",
+    "subtopic": "Indian National Movement (1857-1947)",
+    "question": "The Jallianwala Bagh massacre took place on which date?",
+    "options": [
+      "13 April 1919",
+      "23 March 1919",
+      "6 April 1919",
+      "1 May 1919"
+    ],
+    "correct": 0,
+    "explanation": "General Dyer's troops fired on a peaceful gathering at Jallianwala Bagh, Amritsar, on 13 April 1919.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "Renaissance and Industrial Revolution",
+    "question": "The Industrial Revolution began in which country?",
+    "options": [
+      "France",
+      "Germany",
+      "The United States",
+      "Britain"
+    ],
+    "correct": 3,
+    "explanation": "The Industrial Revolution began in Britain in the late 18th century with mechanized textile production and steam power.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "American Revolution (1776)",
+    "question": "The American Declaration of Independence was adopted in which year?",
+    "options": [
+      "1776",
+      "1789",
+      "1783",
+      "1765"
+    ],
+    "correct": 0,
+    "explanation": "The Continental Congress adopted the Declaration of Independence on 4 July 1776.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "French Revolution (1789)",
+    "question": "The French Revolution began in which year?",
+    "options": [
+      "1776",
+      "1799",
+      "1848",
+      "1789"
+    ],
+    "correct": 3,
+    "explanation": "The French Revolution erupted in 1789 with the fall of the Bastille and the Declaration of the Rights of Man.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "French Revolution (1789)",
+    "question": "The storming of the Bastille occurred on which date?",
+    "options": [
+      "4 July 1789",
+      "14 June 1789",
+      "14 July 1789",
+      "26 August 1789"
+    ],
+    "correct": 2,
+    "explanation": "Parisians stormed the Bastille prison on 14 July 1789, the symbolic start of the French Revolution.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "Russian Revolution (1917)",
+    "question": "The Bolshevik Revolution took place in which year?",
+    "options": [
+      "1905",
+      "1922",
+      "1917",
+      "1914"
+    ],
+    "correct": 2,
+    "explanation": "Lenin's Bolsheviks seized power in Petrograd in October 1917, creating the Soviet state.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "World War I — Causes, Events, Results",
+    "question": "World War I began in which year?",
+    "options": [
+      "1912",
+      "1916",
+      "1918",
+      "1914"
+    ],
+    "correct": 3,
+    "explanation": "World War I began in July-August 1914 after the assassination of Archduke Franz Ferdinand.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "World War I — Causes, Events, Results",
+    "question": "The Treaty of Versailles, ending World War I, was signed in which year?",
+    "options": [
+      "1918",
+      "1920",
+      "1919",
+      "1921"
+    ],
+    "correct": 2,
+    "explanation": "The Treaty of Versailles was signed on 28 June 1919, imposing heavy terms on Germany.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "World War II — Causes, Events, Results",
+    "question": "World War II began with Germany's invasion of Poland in which year?",
+    "options": [
+      "1938",
+      "1941",
+      "1940",
+      "1939"
+    ],
+    "correct": 3,
+    "explanation": "Germany invaded Poland on 1 September 1939, prompting Britain and France to declare war.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "World War II — Causes, Events, Results",
+    "question": "The United Nations was founded in which year?",
+    "options": [
+      "1944",
+      "1946",
+      "1948",
+      "1945"
+    ],
+    "correct": 3,
+    "explanation": "The UN Charter was signed in San Francisco in June 1945 and came into force that October.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "Cold War and its End",
+    "question": "The Cold War ended with the dissolution of the Soviet Union in which year?",
+    "options": [
+      "1989",
+      "1991",
+      "1985",
+      "1993"
+    ],
+    "correct": 1,
+    "explanation": "The Soviet Union dissolved in December 1991, ending the Cold War.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "Decolonization of Asia and Africa",
+    "question": "India and Pakistan gained independence in which year?",
+    "options": [
+      "1946",
+      "1948",
+      "1950",
+      "1947"
+    ],
+    "correct": 3,
+    "explanation": "British India was partitioned and both dominions became independent in August 1947.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "Modern World History",
+    "subtopic": "Decolonization of Asia and Africa",
+    "question": "Ghana, the first sub-Saharan African country to gain independence, did so in which year?",
+    "options": [
+      "1957",
+      "1960",
+      "1963",
+      "1948"
+    ],
+    "correct": 0,
+    "explanation": "Ghana, led by Kwame Nkrumah, became independent from Britain in March 1957.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Two Nation Theory",
+    "question": "Sir Syed Ahmad Khan first articulated the Two Nation Theory in the wake of which event?",
+    "options": [
+      "The Urdu-Hindi controversy of 1867",
+      "The Revolt of 1857",
+      "The Partition of Bengal 1905",
+      "The Lucknow Pact 1916"
+    ],
+    "correct": 0,
+    "explanation": "After the 1867 Urdu-Hindi controversy in Banaras, Sir Syed declared Hindus and Muslims two separate nations.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Two Nation Theory",
+    "question": "The Allahabad Address of 1930, demanding a separate Muslim state, was delivered by whom?",
+    "options": [
+      "Quaid-e-Azam Jinnah",
+      "Liaquat Ali Khan",
+      "Sir Syed Ahmad Khan",
+      "Allama Iqbal"
+    ],
+    "correct": 3,
+    "explanation": "Allama Iqbal's 1930 Allahabad Address proposed a consolidated Muslim state in north-west India.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Pakistan Movement (1906-1947)",
+    "question": "The All-India Muslim League was founded in 1906 at which city?",
+    "options": [
+      "Lucknow",
+      "Lahore",
+      "Karachi",
+      "Dhaka"
+    ],
+    "correct": 3,
+    "explanation": "The Muslim League was founded on 30 December 1906 at a meeting in Dhaka.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Pakistan Movement (1906-1947)",
+    "question": "The Lahore Resolution was passed on which date?",
+    "options": [
+      "23 March 1940",
+      "14 August 1940",
+      "29 December 1930",
+      "16 August 1946"
+    ],
+    "correct": 0,
+    "explanation": "The Muslim League passed the Lahore Resolution on 23 March 1940, demanding independent Muslim states.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Post-Independence History of Pakistan",
+    "question": "The Objective Resolution was passed by the Constituent Assembly on which date?",
+    "options": [
+      "23 March 1956",
+      "14 August 1947",
+      "9 January 1949",
+      "12 March 1949"
+    ],
+    "correct": 3,
+    "explanation": "The Objective Resolution, moved by Liaquat Ali Khan, was adopted on 12 March 1949.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Post-Independence History of Pakistan",
+    "question": "Pakistan's first constitution was enforced on which date?",
+    "options": [
+      "14 August 1955",
+      "8 June 1962",
+      "23 March 1956",
+      "14 August 1973"
+    ],
+    "correct": 2,
+    "explanation": "Pakistan's first constitution came into force on 23 March 1956, making it an Islamic Republic.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Wars with India (1948, 1965, 1971)",
+    "question": "The 1965 war between Pakistan and India began on which date?",
+    "options": [
+      "6 September 1965",
+      "17 September 1965",
+      "1 September 1965",
+      "22 September 1965"
+    ],
+    "correct": 0,
+    "explanation": "India crossed the international border toward Lahore on 6 September 1965, observed as Defence Day.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Wars with India (1948, 1965, 1971)",
+    "question": "The Tashkent Declaration, ending the 1965 war, was signed in which month and year?",
+    "options": [
+      "December 1965",
+      "July 1972",
+      "January 1966",
+      "March 1966"
+    ],
+    "correct": 2,
+    "explanation": "Ayub Khan and Lal Bahadur Shastri signed the Tashkent Declaration on 10 January 1966.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Separation of East Pakistan (1971)",
+    "question": "East Pakistan separated and Bangladesh was created on which date?",
+    "options": [
+      "3 December 1971",
+      "25 March 1971",
+      "7 December 1971",
+      "16 December 1971"
+    ],
+    "correct": 3,
+    "explanation": "Pakistani forces surrendered in Dhaka on 16 December 1971, and Bangladesh came into being.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Separation of East Pakistan (1971)",
+    "question": "The Simla Agreement between Pakistan and India was signed in which year?",
+    "options": [
+      "1971",
+      "1972",
+      "1974",
+      "1966"
+    ],
+    "correct": 1,
+    "explanation": "Zulfikar Ali Bhutto and Indira Gandhi signed the Simla Agreement in July 1972.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Nuclear Tests 1998",
+    "question": "Pakistan conducted its nuclear tests, celebrated as Youm-e-Takbeer, on which date?",
+    "options": [
+      "11 May 1998",
+      "30 May 1998",
+      "28 May 1998",
+      "18 May 1974"
+    ],
+    "correct": 2,
+    "explanation": "Pakistan tested nuclear devices at Chagai on 28 May 1998, in response to India's Pokhran tests.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "History",
+    "topic": "History of Pakistan (Post 1947)",
+    "subtopic": "Modern Pakistan (2000-present)",
+    "question": "The 18th Amendment to Pakistan's constitution was passed in which year?",
+    "options": [
+      "2008",
+      "2010",
+      "2013",
+      "2012"
+    ],
+    "correct": 1,
+    "explanation": "The 18th Amendment, restoring parliamentary democracy and provincial autonomy, passed in April 2010.",
+    "difficulty": "hard"
+  }
+]

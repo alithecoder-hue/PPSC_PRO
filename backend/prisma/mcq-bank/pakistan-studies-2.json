@@ -1,0 +1,1187 @@
+[
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Location and Boundaries of Pakistan",
+    "question": "The Durand Line forms the international border between Pakistan and which country?",
+    "options": [
+      "India",
+      "Iran",
+      "Afghanistan",
+      "China"
+    ],
+    "explanation": "The Durand Line, demarcated in 1893, is the roughly 2,640 km border between Pakistan and Afghanistan.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Location and Boundaries of Pakistan",
+    "question": "The total area of Pakistan, including Gilgit-Baltistan, is approximately:",
+    "options": [
+      "803,940 square kilometres",
+      "881,913 square kilometres",
+      "945,087 square kilometres",
+      "796,095 square kilometres"
+    ],
+    "explanation": "Pakistan covers about 881,913 sq km including Gilgit-Baltistan (796,095 sq km excluding it).",
+    "difficulty": "hard",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Physical Features (Mountains, Plains, Plateaus, Deserts)",
+    "question": "Which is the largest desert of Pakistan?",
+    "options": [
+      "Thar Desert",
+      "Cholistan Desert",
+      "Kharan Desert",
+      "Thal Desert"
+    ],
+    "explanation": "The Thar Desert in Sindh is the largest desert of Pakistan, extending into Indian Rajasthan.",
+    "difficulty": "easy",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Physical Features (Mountains, Plains, Plateaus, Deserts)",
+    "question": "Tirich Mir, the highest peak of the Hindu Kush range, has a height of:",
+    "options": [
+      "7,202 metres",
+      "8,611 metres",
+      "7,708 metres",
+      "8,126 metres"
+    ],
+    "explanation": "Tirich Mir (7,708 m) in Khyber Pakhtunkhwa is the highest peak of the Hindu Kush range.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Major Rivers and Water System (Indus Basin)",
+    "question": "The Mangla Dam is built on which river?",
+    "options": [
+      "River Indus",
+      "River Chenab",
+      "River Ravi",
+      "River Jhelum"
+    ],
+    "explanation": "Mangla Dam, one of Pakistan's largest dams, is built on the River Jhelum in Azad Jammu and Kashmir.",
+    "difficulty": "easy",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Major Rivers and Water System (Indus Basin)",
+    "question": "Under the Indus Waters Treaty (1960), which three rivers were allocated to Pakistan?",
+    "options": [
+      "Indus, Jhelum and Chenab",
+      "Indus, Ravi and Beas",
+      "Jhelum, Chenab and Sutlej",
+      "Ravi, Beas and Sutlej"
+    ],
+    "explanation": "The western rivers (Indus, Jhelum, Chenab) were allocated to Pakistan, while the eastern rivers (Ravi, Beas, Sutlej) went to India.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Climate Zones of Pakistan",
+    "question": "The monsoon season in Pakistan generally lasts from:",
+    "options": [
+      "March to May",
+      "July to September",
+      "October to December",
+      "January to March"
+    ],
+    "explanation": "The summer monsoon brings most of Pakistan's rainfall between July and September.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Climate Zones of Pakistan",
+    "question": "Which city of Sindh is regularly recorded among the hottest places on Earth?",
+    "options": [
+      "Sukkur",
+      "Mirpur Khas",
+      "Hyderabad",
+      "Jacobabad"
+    ],
+    "explanation": "Jacobabad in Sindh frequently records temperatures above 50 C, ranking among the hottest inhabited places on Earth.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Natural Resources of Pakistan",
+    "question": "The Sui gas field, site of Pakistan's first major natural gas discovery, is located in:",
+    "options": [
+      "Sindh",
+      "Khyber Pakhtunkhwa",
+      "Punjab",
+      "Balochistan"
+    ],
+    "explanation": "Natural gas was discovered at Sui, Balochistan, in 1952, marking the start of Pakistan's gas industry.",
+    "difficulty": "easy",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Natural Resources of Pakistan",
+    "question": "The Khewra Salt Mine, the world's second-largest salt mine, is located in which district of Punjab?",
+    "options": [
+      "Jhelum",
+      "Khushab",
+      "Chakwal",
+      "Mianwali"
+    ],
+    "explanation": "The historic Khewra Salt Mine lies in Jhelum district and has been worked since the era of Alexander the Great.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Provinces and Administrative Divisions",
+    "question": "Which is the largest province of Pakistan by area?",
+    "options": [
+      "Punjab",
+      "Khyber Pakhtunkhwa",
+      "Balochistan",
+      "Sindh"
+    ],
+    "explanation": "Balochistan covers about 44 percent of Pakistan's total area, making it the largest province by area.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Geography of Pakistan",
+    "subtopic": "Provinces and Administrative Divisions",
+    "question": "Gilgit-Baltistan was granted provisional provincial status in which year?",
+    "options": [
+      "2015",
+      "2018",
+      "2020",
+      "2009"
+    ],
+    "explanation": "In November 2020 the federal government announced provisional provincial status for Gilgit-Baltistan.",
+    "difficulty": "hard",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Sir Syed Ahmad Khan and Aligarh Movement",
+    "question": "Sir Syed Ahmad Khan founded the Muhammadan Anglo-Oriental College at Aligarh in:",
+    "options": [
+      "1864",
+      "1898",
+      "1875",
+      "1886"
+    ],
+    "explanation": "The MAO College was founded in 1875 and became Aligarh Muslim University in 1920.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Sir Syed Ahmad Khan and Aligarh Movement",
+    "question": "Which work of Sir Syed Ahmad Khan documented the historical monuments of Delhi?",
+    "options": [
+      "Asar-us-Sanadid",
+      "The Loyal Muhammadans of India",
+      "Khutbat-e-Ahmadiya",
+      "Tahzib-ul-Akhlaq"
+    ],
+    "explanation": "Asar-us-Sanadid (1847) is Sir Syed's pioneering archaeological account of Delhi's monuments.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "All India Muslim League (1906)",
+    "question": "The first president of the All-India Muslim League was:",
+    "options": [
+      "Nawab Salimullah Khan",
+      "Liaquat Ali Khan",
+      "Sir Agha Khan III",
+      "Mohsin-ul-Mulk"
+    ],
+    "explanation": "Sir Sultan Muhammad Shah Agha Khan III became the first president of the Muslim League at its founding in 1906.",
+    "difficulty": "medium",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Lucknow Pact 1916",
+    "question": "The Lucknow Pact of 1916 was an agreement between the All-India Muslim League and:",
+    "options": [
+      "The Khilafat Committee",
+      "The Unionist Party",
+      "The Indian National Congress",
+      "The British Government"
+    ],
+    "explanation": "The 1916 Lucknow Pact brought the Muslim League and Congress together on a common constitutional platform.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Lucknow Pact 1916",
+    "question": "Which Muslim demand was accepted by the Congress in the Lucknow Pact of 1916?",
+    "options": [
+      "Partition of Bengal",
+      "Separate electorates for Muslims",
+      "Complete independence of India",
+      "Boycott of the Simon Commission"
+    ],
+    "explanation": "In the Lucknow Pact, Congress accepted the principle of separate electorates for Muslims.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Khilafat Movement",
+    "question": "The Khilafat Movement (1919-1924) was launched primarily to:",
+    "options": [
+      "Protect the Ottoman Caliphate",
+      "Demand separate electorates",
+      "Support the Cabinet Mission Plan",
+      "Oppose the Simon Commission"
+    ],
+    "explanation": "Indian Muslims launched the Khilafat Movement to protect the Ottoman Caliphate after the First World War.",
+    "difficulty": "easy",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Khilafat Movement",
+    "question": "The leaders of the Khilafat Movement known as the Ali Brothers were:",
+    "options": [
+      "Chaudhry Rahmat Ali and Inayatullah Mashriqi",
+      "Maulana Abul Kalam Azad and Hasrat Mohani",
+      "Maulana Muhammad Ali Jauhar and Maulana Shaukat Ali",
+      "Zafar Ali Khan and Muhammad Ali Jinnah"
+    ],
+    "explanation": "Maulana Muhammad Ali Jauhar and Maulana Shaukat Ali led the Khilafat Movement with Gandhi's support.",
+    "difficulty": "medium",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Simon Commission and Nehru Report",
+    "question": "The Simon Commission was boycotted by Indians mainly because:",
+    "options": [
+      "It rejected separate electorates",
+      "It demanded the partition of India",
+      "It had no Indian member",
+      "It supported the Khilafat Movement"
+    ],
+    "explanation": "All seven members of the 1927 Simon Commission were British, so every Indian party boycotted it.",
+    "difficulty": "medium",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Simon Commission and Nehru Report",
+    "question": "Quaid-e-Azam Muhammad Ali Jinnah presented his famous Fourteen Points in:",
+    "options": [
+      "1930",
+      "1928",
+      "1927",
+      "1929"
+    ],
+    "explanation": "Jinnah announced the Fourteen Points in March 1929 as the Muslim reply to the Nehru Report.",
+    "difficulty": "hard",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Allahabad Address 1930 (Allama Iqbal)",
+    "question": "In his Allahabad Address of 1930, Allama Iqbal proposed:",
+    "options": [
+      "Dominion status for India",
+      "A federation of princely states",
+      "Complete independence for undivided India",
+      "A separate Muslim state in north-western India"
+    ],
+    "explanation": "Iqbal proposed amalgamating Punjab, NWFP, Sindh and Balochistan into a consolidated Muslim state.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Round Table Conferences",
+    "question": "How many Round Table Conferences were held in London between 1930 and 1932?",
+    "options": [
+      "Four",
+      "Three",
+      "Two",
+      "One"
+    ],
+    "explanation": "Three Round Table Conferences were held (1930, 1931 and 1932) to discuss constitutional reforms for India.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Round Table Conferences",
+    "question": "Which Muslim leader attended all three Round Table Conferences?",
+    "options": [
+      "Liaquat Ali Khan",
+      "Allama Muhammad Iqbal",
+      "Maulana Muhammad Ali Jauhar",
+      "Quaid-e-Azam Muhammad Ali Jinnah"
+    ],
+    "explanation": "Jinnah participated in all three conferences; Gandhi attended only the second one.",
+    "difficulty": "hard",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Pakistan Resolution 1940 (Lahore Resolution)",
+    "question": "The Lahore Resolution of 1940 was formally moved by:",
+    "options": [
+      "Chaudhry Khaliq-uz-Zaman",
+      "A. K. Fazlul Haq",
+      "Sikandar Hayat Khan",
+      "Liaquat Ali Khan"
+    ],
+    "explanation": "Sher-e-Bangla A. K. Fazlul Haq moved the resolution on 23 March 1940 at Minto Park, Lahore.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Cabinet Mission Plan 1946",
+    "question": "The Cabinet Mission Plan was announced in:",
+    "options": [
+      "1945",
+      "1947",
+      "1946",
+      "1944"
+    ],
+    "explanation": "The British Cabinet Mission announced its plan for a united India on 16 May 1946.",
+    "difficulty": "medium",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Cabinet Mission Plan 1946",
+    "question": "The Muslim League observed Direct Action Day on:",
+    "options": [
+      "14 August 1947",
+      "3 June 1947",
+      "16 August 1946",
+      "23 March 1940"
+    ],
+    "explanation": "After the collapse of the Cabinet Mission Plan, the League observed Direct Action Day on 16 August 1946.",
+    "difficulty": "hard",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Independence and Partition 1947",
+    "question": "Pakistan came into being on:",
+    "options": [
+      "23 March 1940",
+      "26 January 1950",
+      "14 August 1947",
+      "15 August 1947"
+    ],
+    "explanation": "Pakistan's independence was proclaimed on 14 August 1947, a day before India's.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "History of Pakistan Movement",
+    "subtopic": "Independence and Partition 1947",
+    "question": "The Boundary Commissions that demarcated Punjab and Bengal in 1947 were headed by:",
+    "options": [
+      "Lord Mountbatten",
+      "Lord Wavell",
+      "Sir Stafford Cripps",
+      "Sir Cyril Radcliffe"
+    ],
+    "explanation": "Sir Cyril Radcliffe headed the commissions; the Radcliffe Award was announced on 17 August 1947.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Quaid-e-Azam Muhammad Ali Jinnah — Life and Role",
+    "question": "Quaid-e-Azam Muhammad Ali Jinnah joined the All-India Muslim League in:",
+    "options": [
+      "1913",
+      "1916",
+      "1920",
+      "1906"
+    ],
+    "explanation": "Jinnah joined the Muslim League in 1913, while he remained a member of Congress until 1920.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Quaid-e-Azam Muhammad Ali Jinnah — Life and Role",
+    "question": "Quaid-e-Azam Muhammad Ali Jinnah passed away on:",
+    "options": [
+      "25 December 1948",
+      "16 October 1951",
+      "23 March 1949",
+      "11 September 1948"
+    ],
+    "explanation": "The Quaid died in Karachi on 11 September 1948, just over a year after independence.",
+    "difficulty": "hard",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Allama Muhammad Iqbal — Vision and Philosophy",
+    "question": "Allama Muhammad Iqbal is honoured with the title:",
+    "options": [
+      "Quaid-e-Millat",
+      "Shair-e-Mashriq (Poet of the East)",
+      "Madar-e-Millat",
+      "Shaheed-e-Millat"
+    ],
+    "explanation": "Iqbal is revered as Shair-e-Mashriq and Hakeem-ul-Ummat for his philosophical poetry.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Allama Muhammad Iqbal — Vision and Philosophy",
+    "question": "Allama Iqbal earned his doctoral degree (PhD) from which university?",
+    "options": [
+      "Cambridge University",
+      "University of London",
+      "Oxford University",
+      "University of Munich"
+    ],
+    "explanation": "Iqbal earned his PhD from the University of Munich in 1907 with a thesis on Persian metaphysics.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Liaquat Ali Khan — First Prime Minister",
+    "question": "The first Prime Minister of Pakistan was:",
+    "options": [
+      "Chaudhry Muhammad Ali",
+      "Muhammad Ali Bogra",
+      "Liaquat Ali Khan",
+      "Khawaja Nazimuddin"
+    ],
+    "explanation": "Nawabzada Liaquat Ali Khan became Pakistan's first Prime Minister on 15 August 1947.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Liaquat Ali Khan — First Prime Minister",
+    "question": "Liaquat Ali Khan was assassinated in Rawalpindi on:",
+    "options": [
+      "7 October 1958",
+      "11 September 1948",
+      "17 October 1951",
+      "16 October 1951"
+    ],
+    "explanation": "He was shot while addressing a public meeting at Company Bagh (now Liaquat Bagh) on 16 October 1951.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Fatima Jinnah — Mother of the Nation",
+    "question": "Fatima Jinnah is honoured with the title:",
+    "options": [
+      "Khatoon-e-Pakistan",
+      "Madar-e-Millat (Mother of the Nation)",
+      "Quaid-e-Millat",
+      "Shaheed-e-Millat"
+    ],
+    "explanation": "Fatima Jinnah, the Quaid's sister and close political companion, is revered as Madar-e-Millat.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Fatima Jinnah — Mother of the Nation",
+    "question": "Fatima Jinnah contested the presidential election of 1965 against:",
+    "options": [
+      "Ayub Khan",
+      "Iskander Mirza",
+      "Yahya Khan",
+      "Zulfikar Ali Bhutto"
+    ],
+    "explanation": "She stood as the opposition's presidential candidate against Field Marshal Ayub Khan in January 1965.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Sir Agha Khan III — Role in Muslim League",
+    "question": "The Simla Deputation of 1906, which demanded separate electorates for Muslims, was led by:",
+    "options": [
+      "Mohsin-ul-Mulk",
+      "Nawab Salimullah Khan",
+      "Sir Agha Khan III",
+      "Syed Ameer Ali"
+    ],
+    "explanation": "Agha Khan III led the 35-member Simla Deputation to Viceroy Lord Minto in October 1906.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Founding Fathers",
+    "subtopic": "Sir Agha Khan III — Role in Muslim League",
+    "question": "Sir Agha Khan III served as president of the All-India Muslim League during:",
+    "options": [
+      "1913 to 1920",
+      "1906 to 1924",
+      "1906 to 1913",
+      "1916 to 1929"
+    ],
+    "explanation": "He was the League's first president, serving from its founding in 1906 until 1913.",
+    "difficulty": "hard",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Objectives Resolution 1949",
+    "question": "The Objectives Resolution was adopted by the Constituent Assembly on:",
+    "options": [
+      "23 March 1949",
+      "12 March 1949",
+      "7 March 1949",
+      "14 August 1949"
+    ],
+    "explanation": "Moved by Liaquat Ali Khan, the Objectives Resolution was adopted on 12 March 1949.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Constitution of 1956",
+    "question": "Pakistan's first constitution was enforced in:",
+    "options": [
+      "1973",
+      "1949",
+      "1962",
+      "1956"
+    ],
+    "explanation": "The first constitution was enforced on 23 March 1956, making Pakistan an Islamic republic.",
+    "difficulty": "easy",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Constitution of 1956",
+    "question": "The Constitution of 1956 was abrogated in October 1958 following:",
+    "options": [
+      "The military takeover by Pervez Musharraf",
+      "The third martial law imposed by Zia-ul-Haq",
+      "The first martial law imposed by Ayub Khan",
+      "The second martial law imposed by Yahya Khan"
+    ],
+    "explanation": "President Iskander Mirza abrogated the constitution on 7 October 1958 and imposed martial law under Ayub Khan.",
+    "difficulty": "medium",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Constitution of 1962",
+    "question": "The Constitution of 1962 introduced which system of government in Pakistan?",
+    "options": [
+      "Presidential system",
+      "Confederal system",
+      "Semi-presidential system",
+      "Parliamentary system"
+    ],
+    "explanation": "Ayub Khan's 1962 constitution replaced parliamentarism with a presidential system and indirect elections.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Constitution of 1973 and Key Features",
+    "question": "The Constitution of 1973 was passed by the National Assembly on:",
+    "options": [
+      "14 August 1973",
+      "12 April 1973",
+      "23 March 1973",
+      "10 April 1973"
+    ],
+    "explanation": "It was passed unanimously on 10 April 1973 and enforced on 14 August 1973.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Martial Laws in Pakistan (1958, 1969, 1977, 1999)",
+    "question": "How many times has martial law been imposed in Pakistan?",
+    "options": [
+      "Two times",
+      "Three times",
+      "Five times",
+      "Four times"
+    ],
+    "explanation": "Martial law was imposed in 1958 (Ayub), 1969 (Yahya), 1977 (Zia) and 1999 (Musharraf).",
+    "difficulty": "easy",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Martial Laws in Pakistan (1958, 1969, 1977, 1999)",
+    "question": "General Zia-ul-Haq imposed martial law in Pakistan in:",
+    "options": [
+      "1981",
+      "1975",
+      "1979",
+      "1977"
+    ],
+    "explanation": "Operation Fair Play on 5 July 1977 ousted Zulfikar Ali Bhutto's government.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Major Constitutional Amendments",
+    "question": "The 8th Constitutional Amendment (1985) is best remembered for:",
+    "options": [
+      "Restoring the parliamentary system of government",
+      "Merging FATA into Khyber Pakhtunkhwa",
+      "Article 58(2)(b), empowering the president to dissolve the assemblies",
+      "Establishing military courts for terrorism cases"
+    ],
+    "explanation": "Zia's 8th Amendment inserted Article 58(2)(b), which was used to dismiss four elected governments.",
+    "difficulty": "hard",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Major Constitutional Amendments",
+    "question": "The 18th Constitutional Amendment (2010) is best known for:",
+    "options": [
+      "Announcing the National Finance Commission Award",
+      "Merging FATA with Khyber Pakhtunkhwa",
+      "Introducing the presidential system",
+      "Provincial autonomy and parliamentary supremacy"
+    ],
+    "explanation": "The 18th Amendment devolved 17 ministries to the provinces and renamed NWFP as Khyber Pakhtunkhwa.",
+    "difficulty": "hard",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Constitutional History of Pakistan",
+    "subtopic": "Major Constitutional Amendments",
+    "question": "Through which constitutional amendment was FATA merged into Khyber Pakhtunkhwa?",
+    "options": [
+      "18th Amendment",
+      "21st Amendment",
+      "25th Amendment",
+      "26th Amendment"
+    ],
+    "explanation": "The 25th Amendment, passed in 2018, merged the Federally Administered Tribal Areas into Khyber Pakhtunkhwa.",
+    "difficulty": "medium",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Agriculture Sector of Pakistan",
+    "question": "Which sector employs the largest share of Pakistan's labour force?",
+    "options": [
+      "Manufacturing industry",
+      "Agriculture",
+      "Services",
+      "Construction"
+    ],
+    "explanation": "Agriculture employs roughly 37 to 40 percent of the labour force, the largest share of any sector.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Agriculture Sector of Pakistan",
+    "question": "The staple food crop of Pakistan is:",
+    "options": [
+      "Wheat",
+      "Rice",
+      "Sugarcane",
+      "Maize"
+    ],
+    "explanation": "Wheat is the staple food crop, and Pakistan ranks among the world's leading wheat producers.",
+    "difficulty": "easy",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Industrial Sector of Pakistan",
+    "question": "Faisalabad is called the Manchester of Pakistan because it is the hub of:",
+    "options": [
+      "The textile industry",
+      "The automobile industry",
+      "The steel industry",
+      "The pharmaceutical industry"
+    ],
+    "explanation": "Faisalabad's vast textile mills earned it the title of Manchester of Pakistan.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Industrial Sector of Pakistan",
+    "question": "Sialkot is internationally renowned for the manufacture of:",
+    "options": [
+      "Sports goods and surgical instruments",
+      "Ships and heavy machinery",
+      "Automobiles and tractors",
+      "Fertilizers and cement"
+    ],
+    "explanation": "Sialkot produces a majority of the world's hand-stitched footballs along with world-class surgical instruments.",
+    "difficulty": "hard",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "CPEC and Foreign Investment",
+    "question": "CPEC is the flagship project of which broader international initiative?",
+    "options": [
+      "The Colombo Plan",
+      "China's Belt and Road Initiative",
+      "The Marshall Plan",
+      "The SAARC Development Fund"
+    ],
+    "explanation": "The China-Pakistan Economic Corridor is the flagship project of China's Belt and Road Initiative.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "CPEC and Foreign Investment",
+    "question": "The CPEC framework was formally launched during the visit of the Chinese president in:",
+    "options": [
+      "2015",
+      "2013",
+      "2019",
+      "2017"
+    ],
+    "explanation": "President Xi Jinping's state visit in April 2015 launched CPEC with projects initially worth about 46 billion dollars.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Major Exports and Imports of Pakistan",
+    "question": "Pakistan's largest export category by value is:",
+    "options": [
+      "Sports goods",
+      "Leather goods",
+      "Rice",
+      "Textiles and garments"
+    ],
+    "explanation": "Textiles and garments account for more than half of Pakistan's total export earnings.",
+    "difficulty": "medium",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Major Exports and Imports of Pakistan",
+    "question": "Pakistan's single largest import item by value is:",
+    "options": [
+      "Edible oil",
+      "Machinery and equipment",
+      "Chemical fertilizers",
+      "Petroleum and petroleum products"
+    ],
+    "explanation": "Petroleum products consistently top Pakistan's import bill, straining foreign exchange reserves.",
+    "difficulty": "hard",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Economic Challenges and Reforms",
+    "question": "Pakistan became a member of the International Monetary Fund (IMF) in:",
+    "options": [
+      "1950",
+      "1971",
+      "1947",
+      "1960"
+    ],
+    "explanation": "Pakistan joined the IMF in July 1950 and has since entered multiple loan programmes, including the 2024 Extended Fund Facility.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Economy of Pakistan",
+    "subtopic": "Economic Challenges and Reforms",
+    "question": "The chronic circular debt crisis of Pakistan is most associated with which sector?",
+    "options": [
+      "The textile sector",
+      "The energy and power sector",
+      "The banking sector",
+      "The agriculture sector"
+    ],
+    "explanation": "Circular debt, the pile-up of unpaid dues across the power supply chain, is the energy sector's chronic crisis.",
+    "difficulty": "hard",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Languages of Pakistan",
+    "question": "Which is the most widely spoken first language (mother tongue) in Pakistan?",
+    "options": [
+      "Sindhi",
+      "Urdu",
+      "Punjabi",
+      "Pashto"
+    ],
+    "explanation": "Punjabi is the mother tongue of roughly 40 percent of Pakistanis; Urdu is the national language.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Festivals and Traditions of Pakistan",
+    "question": "Basant, the famous kite-flying festival, is traditionally celebrated in:",
+    "options": [
+      "Sindh",
+      "Gilgit-Baltistan",
+      "Punjab",
+      "Balochistan"
+    ],
+    "explanation": "Basant welcomes spring in Punjab, most famously in Lahore, with kite flying and festive foods.",
+    "difficulty": "easy",
+    "correct": 2
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Festivals and Traditions of Pakistan",
+    "question": "The Shandur Polo Festival is held at the world's highest polo ground, located between:",
+    "options": [
+      "Kaghan and Naran in Hazara",
+      "Chitral and Ghizer in the north",
+      "Ziarat and Quetta in Balochistan",
+      "Swat and Dir in the north-west"
+    ],
+    "explanation": "Shandur Pass, at about 3,700 metres, hosts the annual polo contest between Chitral and Gilgit teams.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Famous Personalities of Pakistan",
+    "question": "Dr. Abdul Qadeer Khan is celebrated as the father of:",
+    "options": [
+      "Pakistan's atomic energy commission",
+      "Pakistan's space programme",
+      "Pakistan's missile industry",
+      "Pakistan's nuclear programme"
+    ],
+    "explanation": "Dr. A. Q. Khan led the uranium enrichment effort that made Pakistan a nuclear power in 1998.",
+    "difficulty": "easy",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Famous Personalities of Pakistan",
+    "question": "Abdul Sattar Edhi, founder of the Edhi Foundation, was born in:",
+    "options": [
+      "1935",
+      "1928",
+      "1947",
+      "1920"
+    ],
+    "explanation": "Edhi (1928-2016) built one of the world's largest volunteer ambulance and charity networks.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Famous Personalities of Pakistan",
+    "question": "Malala Yousafzai won the Nobel Peace Prize in 2014 at the age of:",
+    "options": [
+      "19",
+      "17",
+      "15",
+      "21"
+    ],
+    "explanation": "At 17 she became the youngest Nobel laureate in history, sharing the prize with Kailash Satyarthi.",
+    "difficulty": "hard",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Education System of Pakistan",
+    "question": "The Higher Education Commission (HEC) of Pakistan was established in:",
+    "options": [
+      "2002",
+      "1998",
+      "2010",
+      "1976"
+    ],
+    "explanation": "The HEC replaced the University Grants Commission in 2002 under Dr. Atta-ur-Rahman.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Education System of Pakistan",
+    "question": "Pakistan's first All-Pakistan Educational Conference was held in Karachi in:",
+    "options": [
+      "1947",
+      "1959",
+      "1951",
+      "1972"
+    ],
+    "explanation": "The conference was held in November 1947 and was addressed by Quaid-e-Azam Muhammad Ali Jinnah.",
+    "difficulty": "hard",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Media in Pakistan",
+    "question": "Pakistan Television (PTV) began its broadcasting service in:",
+    "options": [
+      "1964",
+      "1971",
+      "1947",
+      "1990"
+    ],
+    "explanation": "PTV went on air on 26 November 1964, with its first station in Lahore.",
+    "difficulty": "easy",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Culture and Society of Pakistan",
+    "subtopic": "Media in Pakistan",
+    "question": "The regulatory authority for private electronic media in Pakistan is:",
+    "options": [
+      "PTV Corporation",
+      "PEMRA",
+      "Press Information Department",
+      "PTA"
+    ],
+    "explanation": "The Pakistan Electronic Media Regulatory Authority was established in 2002 to license and regulate broadcasters.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan-India Relations",
+    "question": "The Tashkent Declaration of January 1966 ended the Pakistan-India war of:",
+    "options": [
+      "1971",
+      "1999",
+      "1948",
+      "1965"
+    ],
+    "explanation": "After the 1965 war, Ayub Khan and Lal Bahadur Shastri signed the Tashkent Declaration brokered by the USSR.",
+    "difficulty": "easy",
+    "correct": 3
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan-India Relations",
+    "question": "The Simla Agreement of 1972 was signed between:",
+    "options": [
+      "Ayub Khan and Lal Bahadur Shastri",
+      "Zulfikar Ali Bhutto and Indira Gandhi",
+      "Benazir Bhutto and Rajiv Gandhi",
+      "Nawaz Sharif and Atal Bihari Vajpayee"
+    ],
+    "explanation": "Bhutto and Indira Gandhi signed the Simla Agreement on 2 July 1972 following the 1971 war.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan-China Relations (CPEC)",
+    "question": "Pakistan and China signed their boundary agreement in:",
+    "options": [
+      "1963",
+      "1972",
+      "1951",
+      "1965"
+    ],
+    "explanation": "The Sino-Pakistan boundary agreement was signed in March 1963, settling the northern border.",
+    "difficulty": "easy",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan-China Relations (CPEC)",
+    "question": "Which port is the centerpiece of the China-Pakistan Economic Corridor?",
+    "options": [
+      "Gwadar Port",
+      "Port Qasim",
+      "Pasni Port",
+      "Karachi Port"
+    ],
+    "explanation": "Gwadar Port in Balochistan, developed with Chinese assistance, anchors the CPEC trade route.",
+    "difficulty": "medium",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan-USA Relations",
+    "question": "Pakistan was designated a Major Non-NATO Ally (MNNA) of the United States in:",
+    "options": [
+      "2001",
+      "2004",
+      "2009",
+      "1995"
+    ],
+    "explanation": "The United States granted Pakistan MNNA status in June 2004 during the Musharraf era.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan-USA Relations",
+    "question": "The Pressler Amendment of 1990 led the United States to:",
+    "options": [
+      "Suspend military aid to Pakistan over its nuclear programme",
+      "Suspend Pakistan's United Nations membership",
+      "Impose sanctions on Pakistani textiles",
+      "Withdraw Pakistan from SEATO"
+    ],
+    "explanation": "When nuclear certification could not be given, the US suspended military assistance to Pakistan in October 1990.",
+    "difficulty": "hard",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan and OIC",
+    "question": "The headquarters of the Organisation of Islamic Cooperation (OIC) is located in:",
+    "options": [
+      "Cairo",
+      "Jeddah",
+      "Riyadh",
+      "Islamabad"
+    ],
+    "explanation": "The OIC, founded at Rabat in 1969, is headquartered in Jeddah, Saudi Arabia.",
+    "difficulty": "medium",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan and OIC",
+    "question": "Pakistan hosted the second Islamic Summit Conference in Lahore in:",
+    "options": [
+      "1974",
+      "1981",
+      "1969",
+      "1997"
+    ],
+    "explanation": "Zulfikar Ali Bhutto hosted the landmark 1974 Lahore summit, one of the largest gatherings of Muslim leaders.",
+    "difficulty": "hard",
+    "correct": 0
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan and United Nations",
+    "question": "Pakistan became a member of the United Nations in:",
+    "options": [
+      "1949",
+      "1947",
+      "1948",
+      "1950"
+    ],
+    "explanation": "Pakistan joined the United Nations on 30 September 1947, weeks after independence.",
+    "difficulty": "easy",
+    "correct": 1
+  },
+  {
+    "subject": "Pakistan Studies",
+    "topic": "Foreign Policy of Pakistan",
+    "subtopic": "Pakistan and United Nations",
+    "question": "Pakistan is consistently ranked among the largest contributors of troops to:",
+    "options": [
+      "The OIC rapid reaction force",
+      "United Nations peacekeeping missions",
+      "SAARC observer missions",
+      "NATO-led military operations"
+    ],
+    "explanation": "Pakistan has long been one of the top troop-contributing countries to UN peacekeeping missions worldwide.",
+    "difficulty": "medium",
+    "correct": 1
+  }
+]

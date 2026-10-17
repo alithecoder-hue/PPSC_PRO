@@ -1,0 +1,1052 @@
+[
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Definition and Scope of Economics",
+    "question": "Who is known as the \"Father of Economics\"?:",
+    "options": [
+      "Adam Smith",
+      "John Maynard Keynes",
+      "Alfred Marshall",
+      "David Ricardo"
+    ],
+    "correct": 0,
+    "explanation": "Adam Smith's 1776 book \"The Wealth of Nations\" laid the foundations of modern economics.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Definition and Scope of Economics",
+    "question": "Which of the following is the central problem of every economy?:",
+    "options": [
+      "Abundant natural resources",
+      "Unlimited wants and scarce resources",
+      "Full employment",
+      "Perfect competition"
+    ],
+    "correct": 1,
+    "explanation": "Scarcity forces every economy to choose how to allocate limited resources among unlimited wants.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Definition and Scope of Economics",
+    "question": "The \"opportunity cost\" of a decision refers to:",
+    "options": [
+      "The total money spent",
+      "The fixed cost of production",
+      "The next best alternative given up",
+      "The marginal cost of output"
+    ],
+    "correct": 2,
+    "explanation": "Opportunity cost is what you sacrifice — the value of the best alternative you did not choose.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Micro vs Macro Economics",
+    "question": "Which of the following is studied in microeconomics?:",
+    "options": [
+      "The national inflation rate",
+      "The GDP of Pakistan",
+      "The total unemployment in the country",
+      "A household's decision on how much wheat to buy"
+    ],
+    "correct": 3,
+    "explanation": "Microeconomics studies the behaviour of individual units such as households and firms.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Micro vs Macro Economics",
+    "question": "Which of the following is studied in macroeconomics?:",
+    "options": [
+      "The general price level of the economy",
+      "The price of sugar in one shop",
+      "The demand for cars by one family",
+      "The wages of one factory"
+    ],
+    "correct": 0,
+    "explanation": "Macroeconomics studies economy-wide aggregates such as the general price level, national income and total employment.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Micro vs Macro Economics",
+    "question": "Microeconomics is also known as:",
+    "options": [
+      "Income theory",
+      "Price theory",
+      "Employment theory",
+      "Growth theory"
+    ],
+    "correct": 1,
+    "explanation": "Microeconomics mainly explains how prices of individual goods and factors are determined.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Demand and Supply Laws",
+    "question": "The law of demand states that, other things being equal:",
+    "options": [
+      "Quantity demanded rises as price rises",
+      "Demand is unaffected by price",
+      "Quantity demanded falls as price rises",
+      "Supply falls as price rises"
+    ],
+    "correct": 2,
+    "explanation": "There is an inverse relationship between the price of a good and the quantity demanded of it.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Demand and Supply Laws",
+    "question": "The supply curve normally slopes:",
+    "options": [
+      "Downward",
+      "Vertical",
+      "Horizontal",
+      "Upward"
+    ],
+    "correct": 3,
+    "explanation": "The law of supply states that producers offer more of a good at higher prices, so the curve slopes upward.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Demand and Supply Laws",
+    "question": "For a normal good, an increase in consumer income will:",
+    "options": [
+      "Shift the demand curve to the right",
+      "Shift the demand curve to the left",
+      "Cause a movement along the demand curve",
+      "Reduce the supply of the good"
+    ],
+    "correct": 0,
+    "explanation": "Higher income lets consumers buy more of a normal good at every price, shifting demand right.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Market Equilibrium",
+    "question": "Market equilibrium occurs when:",
+    "options": [
+      "Demand exceeds supply",
+      "Quantity demanded equals quantity supplied",
+      "Price is at its maximum",
+      "Government fixes the price"
+    ],
+    "correct": 1,
+    "explanation": "At equilibrium the quantity buyers want equals the quantity sellers offer, so there is no tendency for price to change.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Market Equilibrium",
+    "question": "If the market price is above the equilibrium price, there will be:",
+    "options": [
+      "A shortage of the good",
+      "No effect on the market",
+      "A surplus of the good",
+      "A fall in supply"
+    ],
+    "correct": 2,
+    "explanation": "A price above equilibrium makes quantity supplied exceed quantity demanded, creating a surplus that pushes price down.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Elasticity of Demand and Supply",
+    "question": "Price elasticity of demand is measured as:",
+    "options": [
+      "Change in price divided by change in quantity",
+      "Total revenue divided by price",
+      "Slope of the demand curve",
+      "Percentage change in quantity demanded divided by percentage change in price"
+    ],
+    "correct": 3,
+    "explanation": "Elasticity measures the responsiveness of quantity demanded to a percentage change in price.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Elasticity of Demand and Supply",
+    "question": "Giffen goods are an exception to the law of demand because:",
+    "options": [
+      "Their demand rises when their price rises",
+      "Their supply is perfectly elastic",
+      "They have many close substitutes",
+      "Their demand is perfectly elastic"
+    ],
+    "correct": 0,
+    "explanation": "For strongly inferior Giffen goods, the income effect outweighs the substitution effect, so quantity demanded rises with price.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Consumer and Producer Surplus",
+    "question": "Consumer surplus is:",
+    "options": [
+      "The tax paid by consumers",
+      "The difference between what a consumer is willing to pay and what he actually pays",
+      "The profit earned by sellers",
+      "The discount given by sellers"
+    ],
+    "correct": 1,
+    "explanation": "Consumer surplus is the extra benefit buyers get when they pay less than the maximum they were willing to pay.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Basic Economics Concepts",
+    "subtopic": "Consumer and Producer Surplus",
+    "question": "Producer surplus is the difference between:",
+    "options": [
+      "Total cost and total revenue",
+      "Marginal cost and average cost",
+      "The market price and the minimum price a producer is willing to accept",
+      "Wages and profits"
+    ],
+    "correct": 2,
+    "explanation": "Producer surplus is the extra benefit sellers get when the market price exceeds their minimum acceptable price.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "GDP, GNP, NNP Concepts",
+    "question": "GDP of a country is:",
+    "options": [
+      "The income of its citizens abroad",
+      "The total exports of the country",
+      "The government's total revenue",
+      "The total market value of all final goods and services produced within the country in a year"
+    ],
+    "correct": 3,
+    "explanation": "GDP counts only final output produced inside the country's borders during the year.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "GDP, GNP, NNP Concepts",
+    "question": "GNP differs from GDP because GNP:",
+    "options": [
+      "Includes net income earned from abroad",
+      "Excludes government spending",
+      "Counts only manufactured goods",
+      "Is always smaller than GDP"
+    ],
+    "correct": 0,
+    "explanation": "GNP equals GDP plus net factor income (wages, profits, rents) earned from abroad.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "GDP, GNP, NNP Concepts",
+    "question": "Net National Product (NNP) is calculated as:",
+    "options": [
+      "GNP plus indirect taxes",
+      "GNP minus depreciation",
+      "GDP plus subsidies",
+      "GDP minus net exports"
+    ],
+    "correct": 1,
+    "explanation": "Depreciation (capital consumption) is subtracted from GNP to get the net product.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "GDP, GNP, NNP Concepts",
+    "question": "Transfer payments such as pensions are excluded from GDP because:",
+    "options": [
+      "They are paid in cash",
+      "They are too small to matter",
+      "They do not involve current production of goods and services",
+      "They are paid only to the poor"
+    ],
+    "correct": 2,
+    "explanation": "GDP measures current production; transfer payments merely redistribute existing income.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Methods of Measuring National Income",
+    "question": "The three standard methods of measuring national income are:",
+    "options": [
+      "Primary, secondary and tertiary methods",
+      "Old, new and revised methods",
+      "Rural, urban and national methods",
+      "Output, income and expenditure methods"
+    ],
+    "correct": 3,
+    "explanation": "National income can be measured by the value of output, the income earned, or the expenditure made.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Methods of Measuring National Income",
+    "question": "Double counting is avoided in national income accounts by:",
+    "options": [
+      "Counting only final goods (value-added approach)",
+      "Ignoring government spending",
+      "Excluding exports",
+      "Adding transfer payments"
+    ],
+    "correct": 0,
+    "explanation": "Counting only the value added at each stage (or final goods) prevents the same output being counted twice.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Methods of Measuring National Income",
+    "question": "GDP at market prices differs from GDP at factor cost by:",
+    "options": [
+      "Depreciation",
+      "Net indirect taxes",
+      "Net income from abroad",
+      "Transfer payments"
+    ],
+    "correct": 1,
+    "explanation": "Market prices include indirect taxes and exclude subsidies, while factor cost does not.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Per Capita Income",
+    "question": "Per capita income is calculated by:",
+    "options": [
+      "Dividing exports by imports",
+      "Multiplying GDP by population",
+      "Dividing national income by total population",
+      "Adding GDP and GNP"
+    ],
+    "correct": 2,
+    "explanation": "Per capita income is the average income per person in the country.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Per Capita Income",
+    "question": "The World Bank classifies Pakistan as a:",
+    "options": [
+      "High-income country",
+      "Upper-middle-income country",
+      "Low-income country",
+      "Lower-middle-income country"
+    ],
+    "correct": 3,
+    "explanation": "By World Bank income classification, Pakistan is a lower-middle-income economy.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Economic Growth vs Economic Development",
+    "question": "Economic growth is best measured by:",
+    "options": [
+      "An increase in real GDP over time",
+      "A rise in the literacy rate",
+      "An increase in foreign aid",
+      "A fall in the birth rate"
+    ],
+    "correct": 0,
+    "explanation": "Growth means the economy's real output (GDP) is expanding over time.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Economic Growth vs Economic Development",
+    "question": "Economic development is a broader concept than growth because it also includes:",
+    "options": [
+      "Higher defense spending",
+      "Improvements in living standards, education and health",
+      "Larger exports of raw materials",
+      "Faster population growth"
+    ],
+    "correct": 1,
+    "explanation": "Development covers welfare outcomes such as health, education and living standards, not just output.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Economic Growth vs Economic Development",
+    "question": "Disposable income equals:",
+    "options": [
+      "National income plus taxes",
+      "Personal income minus personal direct taxes",
+      "GDP minus depreciation",
+      "Wages plus rents only"
+    ],
+    "correct": 2,
+    "explanation": "Disposable income is what households can actually spend or save after paying direct taxes.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Human Development Index (HDI)",
+    "question": "The Human Development Index (HDI) is published by:",
+    "options": [
+      "The World Bank",
+      "The IMF",
+      "The WTO",
+      "The UNDP"
+    ],
+    "correct": 3,
+    "explanation": "The United Nations Development Programme publishes the HDI in its annual Human Development Report.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "National Income",
+    "subtopic": "Human Development Index (HDI)",
+    "question": "The three dimensions of the Human Development Index are:",
+    "options": [
+      "Health, education and standard of living",
+      "Income, trade and investment",
+      "Agriculture, industry and services",
+      "Population, area and resources"
+    ],
+    "correct": 0,
+    "explanation": "HDI combines life expectancy (health), schooling (education) and GNI per capita (standard of living).",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Functions of Money",
+    "question": "The two primary functions of money are:",
+    "options": [
+      "Store of value and standard of deferred payment",
+      "Medium of exchange and measure of value",
+      "Source of income and basis of credit",
+      "Unit of labour and store of gold"
+    ],
+    "correct": 1,
+    "explanation": "Money's primary jobs are to serve as a medium of exchange and a common measure of value.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Functions of Money",
+    "question": "The problem of \"double coincidence of wants\" in barter is solved by:",
+    "options": [
+      "Credit cards",
+      "Foreign trade",
+      "The use of money",
+      "Government regulation"
+    ],
+    "correct": 2,
+    "explanation": "Money is generally acceptable, so traders need not find someone who wants exactly what they offer.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Types of Banks",
+    "question": "Which of the following is the central bank of Pakistan?:",
+    "options": [
+      "National Bank of Pakistan",
+      "Habib Bank Limited",
+      "MCB Bank",
+      "The State Bank of Pakistan"
+    ],
+    "correct": 3,
+    "explanation": "The State Bank of Pakistan is the country's central bank, regulating money and the banking system.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Types of Banks",
+    "question": "Islamic banks differ from conventional banks mainly because they avoid:",
+    "options": [
+      "Interest (riba)",
+      "Lending to businesses",
+      "Accepting deposits",
+      "Using computers"
+    ],
+    "correct": 0,
+    "explanation": "Islamic banking follows Shariah principles, prohibiting riba (interest) and using profit-sharing modes instead.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "State Bank of Pakistan (SBP) Role",
+    "question": "The State Bank of Pakistan was established in:",
+    "options": [
+      "1947",
+      "1948",
+      "1949",
+      "1956"
+    ],
+    "correct": 1,
+    "explanation": "The State Bank of Pakistan began operations on 1 July 1948, shortly after independence.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "State Bank of Pakistan (SBP) Role",
+    "question": "The head office of the State Bank of Pakistan is located in:",
+    "options": [
+      "Islamabad",
+      "Lahore",
+      "Karachi",
+      "Peshawar"
+    ],
+    "correct": 2,
+    "explanation": "The SBP's head office has been in Karachi since its establishment.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "State Bank of Pakistan (SBP) Role",
+    "question": "Which of the following is a function of the State Bank of Pakistan?:",
+    "options": [
+      "Collecting income tax",
+      "Lending directly to the public",
+      "Trading shares on the stock exchange",
+      "Issuing currency notes"
+    ],
+    "correct": 3,
+    "explanation": "The SBP has the sole right to issue currency notes in Pakistan.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "State Bank of Pakistan (SBP) Role",
+    "question": "The Governor of the State Bank of Pakistan is appointed by:",
+    "options": [
+      "The President of Pakistan",
+      "The Prime Minister",
+      "The Senate",
+      "The Supreme Court"
+    ],
+    "correct": 0,
+    "explanation": "Under the SBP Act, the Governor is appointed by the President of Pakistan.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Monetary Policy",
+    "question": "Monetary policy in Pakistan is conducted by:",
+    "options": [
+      "The Ministry of Finance",
+      "The State Bank of Pakistan",
+      "The Federal Board of Revenue",
+      "Commercial banks"
+    ],
+    "correct": 1,
+    "explanation": "The central bank formulates and implements monetary policy to control the money supply and prices.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Monetary Policy",
+    "question": "An increase in the central bank's policy rate will:",
+    "options": [
+      "Increase the money supply",
+      "Lower all taxes",
+      "Make borrowing more expensive and reduce spending",
+      "Increase exports directly"
+    ],
+    "correct": 2,
+    "explanation": "A higher policy rate raises borrowing costs, which cools spending and helps control inflation.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Monetary Policy",
+    "question": "Open market operations of a central bank refer to:",
+    "options": [
+      "Buying and selling foreign currency only",
+      "Fixing the exchange rate",
+      "Printing new currency notes",
+      "Buying and selling government securities"
+    ],
+    "correct": 3,
+    "explanation": "By buying securities the central bank injects money; by selling them it withdraws money from the system.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Inflation and Deflation",
+    "question": "Inflation means:",
+    "options": [
+      "A general rise in the price level over time",
+      "A fall in the money supply",
+      "A rise in unemployment",
+      "A fall in national income"
+    ],
+    "correct": 0,
+    "explanation": "Inflation is a sustained increase in the general price level, reducing money's purchasing power.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Inflation and Deflation",
+    "question": "Demand-pull inflation is caused when:",
+    "options": [
+      "Costs of production rise",
+      "Aggregate demand exceeds aggregate supply",
+      "The money supply falls",
+      "Taxes are increased"
+    ],
+    "correct": 1,
+    "explanation": "\"Too much money chasing too few goods\" pulls prices upward when demand outruns supply.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Inflation and Deflation",
+    "question": "Inflation in Pakistan is officially measured through the:",
+    "options": [
+      "Wholesale Price Index only",
+      "Stock market index",
+      "Consumer Price Index (CPI)",
+      "Human Development Index"
+    ],
+    "correct": 2,
+    "explanation": "Pakistan Bureau of Statistics measures inflation using the Consumer Price Index.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Money and Banking",
+    "subtopic": "Credit and Interest Rates",
+    "question": "KIBOR stands for:",
+    "options": [
+      "Karachi Investment Board of Revenue",
+      "Khanewal Industrial Bank of Reserves",
+      "Kashmir International Bank Order",
+      "Karachi Interbank Offered Rate"
+    ],
+    "correct": 3,
+    "explanation": "KIBOR is the benchmark rate at which banks lend to each other in Pakistan's interbank market.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "World Trade Organization (WTO)",
+    "question": "The World Trade Organization (WTO) was established in:",
+    "options": [
+      "1995",
+      "1945",
+      "1975",
+      "2000"
+    ],
+    "correct": 0,
+    "explanation": "The WTO began on 1 January 1995, replacing the GATT as the global trade body.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "World Trade Organization (WTO)",
+    "question": "The WTO replaced which earlier trade arrangement?:",
+    "options": [
+      "The IMF",
+      "GATT",
+      "The World Bank",
+      "UNCTAD"
+    ],
+    "correct": 1,
+    "explanation": "The General Agreement on Tariffs and Trade (GATT, 1948) was superseded by the WTO.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "IMF and World Bank Role",
+    "question": "The IMF was created at the Bretton Woods Conference held in:",
+    "options": [
+      "1919",
+      "1935",
+      "1944",
+      "1955"
+    ],
+    "correct": 2,
+    "explanation": "The 1944 Bretton Woods Conference created both the IMF and the World Bank.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "IMF and World Bank Role",
+    "question": "The main function of the IMF is to:",
+    "options": [
+      "Fund long-term development projects",
+      "Regulate world trade rules",
+      "Finance wars",
+      "Provide short-term assistance to countries facing balance-of-payments problems"
+    ],
+    "correct": 3,
+    "explanation": "The IMF lends to member countries facing short-term balance-of-payments difficulties.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "IMF and World Bank Role",
+    "question": "The World Bank mainly provides:",
+    "options": [
+      "Long-term loans for development projects",
+      "Short-term emergency loans",
+      "Military aid",
+      "Grants only, never loans"
+    ],
+    "correct": 0,
+    "explanation": "The World Bank finances long-term development projects such as dams, roads and schools.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "IMF and World Bank Role",
+    "question": "The headquarters of both the IMF and the World Bank are located in:",
+    "options": [
+      "New York",
+      "Washington D.C.",
+      "Geneva",
+      "London"
+    ],
+    "correct": 1,
+    "explanation": "Both Bretton Woods institutions are headquartered in Washington D.C., USA.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Balance of Payments",
+    "question": "A country's balance of payments records:",
+    "options": [
+      "Only its exports and imports of goods",
+      "Its government budget",
+      "All its economic transactions with the rest of the world",
+      "Only foreign investment inflows"
+    ],
+    "correct": 2,
+    "explanation": "The BOP is a systematic record of all economic transactions between residents and the rest of the world.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Balance of Payments",
+    "question": "A trade deficit means:",
+    "options": [
+      "Exports equal imports",
+      "The budget is in surplus",
+      "Exports exceed imports",
+      "Imports exceed exports"
+    ],
+    "correct": 3,
+    "explanation": "A trade deficit occurs when a country imports more goods than it exports.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Balance of Payments",
+    "question": "Remittances sent home by overseas Pakistanis appear in the balance of payments under the:",
+    "options": [
+      "Current account",
+      "Capital account",
+      "Financial account",
+      "Trade account"
+    ],
+    "correct": 0,
+    "explanation": "Workers' remittances are current transfers, recorded in the current account.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Foreign Direct Investment (FDI)",
+    "question": "FDI stands for:",
+    "options": [
+      "Federal Development Initiative",
+      "Foreign Direct Investment",
+      "Fiscal Deficit Index",
+      "Free Domestic Industry"
+    ],
+    "correct": 1,
+    "explanation": "FDI is investment by a foreign entity that gains lasting control or influence in a domestic enterprise.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Foreign Direct Investment (FDI)",
+    "question": "Which of the following is an example of foreign direct investment in Pakistan?:",
+    "options": [
+      "A Pakistani buying imported shoes",
+      "A tourist visiting Lahore",
+      "A Chinese company building a factory in Pakistan",
+      "The government borrowing from a local bank"
+    ],
+    "correct": 2,
+    "explanation": "Building and operating a factory gives the foreign investor a lasting stake in the host economy.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Economic Integration (SAARC, ECO)",
+    "question": "SAARC was founded in:",
+    "options": [
+      "1975",
+      "1980",
+      "1990",
+      "1985"
+    ],
+    "correct": 3,
+    "explanation": "The South Asian Association for Regional Cooperation was founded in Dhaka in December 1985.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "International Economics",
+    "subtopic": "Economic Integration (SAARC, ECO)",
+    "question": "The headquarters of the Economic Cooperation Organization (ECO) is located in:",
+    "options": [
+      "Tehran",
+      "Islamabad",
+      "Ankara",
+      "Riyadh"
+    ],
+    "correct": 0,
+    "explanation": "ECO, a regional trade bloc of ten Asian countries, is headquartered in Tehran, Iran.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Poverty and Inequality",
+    "question": "The poverty line is defined as:",
+    "options": [
+      "The average income of a country",
+      "The minimum income needed to meet basic needs",
+      "The income of the richest 10 percent",
+      "The total aid received by the poor"
+    ],
+    "correct": 1,
+    "explanation": "People earning below the poverty line cannot afford the minimum basket of basic necessities.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Poverty and Inequality",
+    "question": "Which of the following is used to measure income inequality in a country?:",
+    "options": [
+      "Consumer Price Index",
+      "GDP growth rate",
+      "Gini coefficient",
+      "Literacy rate"
+    ],
+    "correct": 2,
+    "explanation": "The Gini coefficient ranges from 0 (perfect equality) to 1 (perfect inequality).",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Types of Unemployment",
+    "question": "Frictional unemployment arises from:",
+    "options": [
+      "Recessions in the economy",
+      "Automation of factories",
+      "A rise in interest rates",
+      "Normal job search and movement between jobs"
+    ],
+    "correct": 3,
+    "explanation": "Frictional unemployment is the short-term joblessness of people moving between jobs or entering the workforce.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Types of Unemployment",
+    "question": "Structural unemployment is caused by:",
+    "options": [
+      "A mismatch between workers' skills and available jobs",
+      "Seasonal changes in demand",
+      "A fall in aggregate demand",
+      "Workers voluntarily quitting"
+    ],
+    "correct": 0,
+    "explanation": "Structural unemployment persists when workers' skills do not match the jobs the economy offers.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Types of Unemployment",
+    "question": "Cyclical unemployment occurs mainly during:",
+    "options": [
+      "Booms",
+      "Economic recessions",
+      "Periods of low inflation",
+      "Harvest seasons"
+    ],
+    "correct": 1,
+    "explanation": "Cyclical unemployment rises in recessions when aggregate demand falls and firms lay off workers.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Five Year Plans of Pakistan",
+    "question": "Pakistan's First Five Year Plan covered the period:",
+    "options": [
+      "1948-53",
+      "1950-55",
+      "1955-60",
+      "1960-65"
+    ],
+    "correct": 2,
+    "explanation": "Pakistan's First Five Year Plan ran from 1955 to 1960.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Five Year Plans of Pakistan",
+    "question": "The \"Decade of Development\" in Pakistan is associated with the:",
+    "options": [
+      "First Five Year Plan",
+      "Third Five Year Plan",
+      "Fourth Five Year Plan",
+      "Second Five Year Plan (1960-65)"
+    ],
+    "correct": 3,
+    "explanation": "The Second Five Year Plan (1960-65) under Ayub Khan saw rapid growth and is called the Decade of Development.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Privatization in Pakistan",
+    "question": "Privatization means:",
+    "options": [
+      "Transfer of state-owned enterprises to the private sector",
+      "Nationalization of private banks",
+      "Government control of all industries",
+      "Closing down loss-making firms"
+    ],
+    "correct": 0,
+    "explanation": "Privatization transfers ownership and control of public enterprises to private hands.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Privatization in Pakistan",
+    "question": "The Privatization Commission of Pakistan was established in:",
+    "options": [
+      "1985",
+      "1991",
+      "1999",
+      "2002"
+    ],
+    "correct": 1,
+    "explanation": "The Privatization Commission was set up in 1991 to manage the sale of state-owned enterprises.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "Privatization in Pakistan",
+    "question": "Which of the following Pakistani banks was privatized in the 1990s?:",
+    "options": [
+      "State Bank of Pakistan",
+      "National Bank of Pakistan",
+      "Muslim Commercial Bank (MCB)",
+      "Bank of Punjab"
+    ],
+    "correct": 2,
+    "explanation": "Muslim Commercial Bank was privatized in 1991 and acquired by the Nishat Group.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "CPEC Economic Impact",
+    "question": "CPEC is the flagship project of:",
+    "options": [
+      "The World Bank",
+      "The Asian Development Bank",
+      "The European Union",
+      "China's Belt and Road Initiative"
+    ],
+    "correct": 3,
+    "explanation": "The China-Pakistan Economic Corridor is the flagship corridor of China's Belt and Road Initiative.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "CPEC Economic Impact",
+    "question": "The China-Pakistan Economic Corridor was formally launched in:",
+    "options": [
+      "2015",
+      "2008",
+      "2020",
+      "2005"
+    ],
+    "correct": 0,
+    "explanation": "CPEC was formally launched during the Chinese President's visit to Pakistan in April 2015.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Economics",
+    "topic": "Development Economics",
+    "subtopic": "CPEC Economic Impact",
+    "question": "Gwadar Port, a key part of CPEC, is located in:",
+    "options": [
+      "Sindh",
+      "Balochistan",
+      "Punjab",
+      "Khyber Pakhtunkhwa"
+    ],
+    "correct": 1,
+    "explanation": "Gwadar Port lies on the Arabian Sea coast in Pakistan's Balochistan province.",
+    "difficulty": "easy"
+  }
+]

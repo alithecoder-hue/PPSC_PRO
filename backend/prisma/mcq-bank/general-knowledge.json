@@ -1,91 +1,1352 @@
-[{"correct": 0, "difficulty": "easy", "explanation": "Asia covers about 44.6 million sq km — nearly 30% of Earth's total land area.", "options": ["Asia", "Africa", "North America", "Europe"], "question": "Which is the largest continent in the world by area?", "subject": "General Knowledge", "subtopic": "Continents and Oceans", "topic": "World Geography (GK)"},
-{"correct": 2, "difficulty": "easy", "explanation": "The Pacific Ocean covers about 165 million sq km, larger than all landmasses combined.", "options": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"], "question": "Which is the largest ocean in the world?", "subject": "General Knowledge", "subtopic": "Continents and Oceans", "topic": "World Geography (GK)"},
-{"correct": 0, "difficulty": "hard", "explanation": "Europe is the only continent with no true desert; even Antarctica holds the world's largest (polar) desert.", "options": ["Europe", "Australia", "Africa", "Asia"], "question": "Which continent has no desert?", "subject": "General Knowledge", "subtopic": "Continents and Oceans", "topic": "World Geography (GK)"},
-{"correct": 2, "difficulty": "easy", "explanation": "Canberra has been Australia's capital since 1913; Sydney and Melbourne are larger but not the capital.", "options": ["Sydney", "Melbourne", "Canberra", "Perth"], "question": "The capital of Australia is:", "subject": "General Knowledge", "subtopic": "Important Countries and Capitals", "topic": "World Geography (GK)"},
-{"correct": 0, "difficulty": "medium", "explanation": "Ankara became Turkey's capital in 1923, replacing Istanbul.", "options": ["Turkey", "Greece", "Egypt", "Iran"], "question": "Ankara is the capital of:", "subject": "General Knowledge", "subtopic": "Important Countries and Capitals", "topic": "World Geography (GK)"},
-{"correct": 0, "difficulty": "hard", "explanation": "Kazakhstan's capital is Astana (renamed Nur-Sultan from 2019 to 2022, then back to Astana).", "options": ["Astana", "Almaty", "Tashkent", "Bishkek"], "question": "The capital of Kazakhstan is:", "subject": "General Knowledge", "subtopic": "Important Countries and Capitals", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "easy", "explanation": "The Nile (about 6,650 km) is traditionally regarded as the world's longest river.", "options": ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"], "question": "Which is the longest river in the world?", "subject": "General Knowledge", "subtopic": "Longest/Highest/Largest in the World", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "The Sahara spans about 9.2 million sq km across North Africa.", "options": ["Gobi Desert", "Sahara Desert", "Kalahari Desert", "Thar Desert"], "question": "Which is the largest hot desert in the world?", "subject": "General Knowledge", "subtopic": "Longest/Highest/Largest in the World", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "Mount Everest (8,849 m) stands in the Himalayas on the Nepal-China border.", "options": ["Karakoram", "Himalayas", "Andes", "Alps"], "question": "Mount Everest is part of which mountain range?", "subject": "General Knowledge", "subtopic": "Longest/Highest/Largest in the World", "topic": "World Geography (GK)"},
-{"correct": 0, "difficulty": "easy", "explanation": "Opened in 1869, the Suez Canal links the Mediterranean Sea to the Red Sea.", "options": ["Mediterranean Sea and Red Sea", "Black Sea and Caspian Sea", "Arabian Sea and Bay of Bengal", "North Sea and Baltic Sea"], "question": "The Suez Canal connects which two seas?", "subject": "General Knowledge", "subtopic": "Important Seas, Straits and Canals", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "The Strait of Gibraltar links the Atlantic Ocean to the Mediterranean Sea between Spain and Morocco.", "options": ["Red Sea", "Mediterranean Sea", "Black Sea", "Caribbean Sea"], "question": "The Strait of Gibraltar connects the Atlantic Ocean with the:", "subject": "General Knowledge", "subtopic": "Important Seas, Straits and Canals", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "hard", "explanation": "The Andes stretch about 8,900 km along the western coast of South America.", "options": ["Himalayas", "Andes", "Rockies", "Alps"], "question": "Which is the longest mountain range in the world?", "subject": "General Knowledge", "subtopic": "Mountain Ranges of the World", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "K-2 (8,611 m) lies in the Karakoram range in Gilgit-Baltistan, Pakistan.", "options": ["Nepal", "Pakistan", "China", "India"], "question": "K-2, the second-highest peak in the world, is located in:", "subject": "General Knowledge", "subtopic": "Mountain Ranges of the World", "topic": "World Geography (GK)"},
-{"correct": 1, "difficulty": "easy", "explanation": "The UN headquarters has stood on the East River in New York since 1952.", "options": ["Geneva", "New York", "Paris", "Vienna"], "question": "The headquarters of the United Nations is located in:", "subject": "General Knowledge", "subtopic": "United Nations (UN) and its Agencies", "topic": "World Organizations"},
-{"correct": 0, "difficulty": "medium", "explanation": "The UN Charter was signed in June 1945 and the UN officially came into existence on 24 October 1945.", "options": ["1945", "1919", "1950", "1948"], "question": "The United Nations was founded in:", "subject": "General Knowledge", "subtopic": "United Nations (UN) and its Agencies", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "medium", "explanation": "The World Health Organization (WHO), headquartered in Geneva, coordinates international public health.", "options": ["UNESCO", "WHO", "FAO", "ILO"], "question": "Which UN agency deals with global public health?", "subject": "General Knowledge", "subtopic": "United Nations (UN) and its Agencies", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "medium", "explanation": "The ICJ, the UN's principal judicial organ, sits at the Peace Palace in The Hague, Netherlands.", "options": ["Geneva", "The Hague", "New York", "Vienna"], "question": "The International Court of Justice is headquartered at:", "subject": "General Knowledge", "subtopic": "United Nations (UN) and its Agencies", "topic": "World Organizations"},
-{"correct": 0, "difficulty": "easy", "explanation": "The South Asian Association for Regional Cooperation was founded in Dhaka in December 1985.", "options": ["1985", "1990", "1975", "2000"], "question": "SAARC was established in:", "subject": "General Knowledge", "subtopic": "NATO, SAARC, SCO, OIC", "topic": "World Organizations"},
-{"correct": 0, "difficulty": "medium", "explanation": "NATO's headquarters is in Brussels, Belgium.", "options": ["Brussels", "Washington, D.C.", "London", "Paris"], "question": "The headquarters of NATO is located in:", "subject": "General Knowledge", "subtopic": "NATO, SAARC, SCO, OIC", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "medium", "explanation": "SAARC's eight members are Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan and Sri Lanka — Myanmar is not one.", "options": ["Afghanistan", "Myanmar", "Nepal", "Bhutan"], "question": "Which of the following is NOT a member of SAARC?", "subject": "General Knowledge", "subtopic": "NATO, SAARC, SCO, OIC", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "easy", "explanation": "The World Bank Group is headquartered in Washington, D.C.", "options": ["New York", "Washington, D.C.", "Geneva", "London"], "question": "The headquarters of the World Bank is in:", "subject": "General Knowledge", "subtopic": "World Bank, IMF, WTO", "topic": "World Organizations"},
-{"correct": 0, "difficulty": "hard", "explanation": "The IMF was conceived at the 1944 Bretton Woods Conference and began operations in 1947.", "options": ["1944", "1945", "1971", "1980"], "question": "The International Monetary Fund (IMF) was established in:", "subject": "General Knowledge", "subtopic": "World Bank, IMF, WTO", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "hard", "explanation": "The WTO succeeded the General Agreement on Tariffs and Trade (GATT) on 1 January 1995.", "options": ["NAFTA", "GATT", "EFTA", "OPEC"], "question": "The World Trade Organization (WTO) replaced which agreement in 1995?", "subject": "General Knowledge", "subtopic": "World Bank, IMF, WTO", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "hard", "explanation": "South Africa joined the BRIC grouping in 2010, turning it into BRICS.", "options": ["Singapore", "South Africa", "Spain", "Sweden"], "question": "The 'S' in BRICS originally stood for:", "subject": "General Knowledge", "subtopic": "G7, G20, BRICS", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "hard", "explanation": "The inaugural G20 summit on the financial crisis was held in Washington, D.C., in November 2008.", "options": ["London", "Washington, D.C.", "Pittsburgh", "Toronto"], "question": "The first G20 leaders' summit (2008) was held in:", "subject": "General Knowledge", "subtopic": "G7, G20, BRICS", "topic": "World Organizations"},
-{"correct": 0, "difficulty": "easy", "explanation": "The Commonwealth Secretariat is based at Marlborough House in London.", "options": ["London", "Canberra", "Ottawa", "New Delhi"], "question": "The headquarters of the Commonwealth of Nations is in:", "subject": "General Knowledge", "subtopic": "Commonwealth of Nations", "topic": "World Organizations"},
-{"correct": 1, "difficulty": "easy", "explanation": "Alexander Graham Bell patented the telephone in 1876.", "options": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Guglielmo Marconi"], "question": "Who invented the telephone?", "subject": "General Knowledge", "subtopic": "Famous Scientists and Inventions", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "Einstein published the special theory of relativity in 1905 and general relativity in 1915.", "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Niels Bohr"], "question": "The theory of relativity was proposed by:", "subject": "General Knowledge", "subtopic": "Famous Scientists and Inventions", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "hard", "explanation": "Antoine Lavoisier's work on conservation of mass founded modern chemistry.", "options": ["Dmitri Mendeleev", "Antoine Lavoisier", "John Dalton", "Robert Boyle"], "question": "Who is known as the father of modern chemistry?", "subject": "General Knowledge", "subtopic": "Famous Scientists and Inventions", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "easy", "explanation": "Alexander Fleming discovered penicillin in 1928 at St Mary's Hospital, London.", "options": ["Louis Pasteur", "Alexander Fleming", "Robert Koch", "Joseph Lister"], "question": "Penicillin was discovered by:", "subject": "General Knowledge", "subtopic": "Important Discoveries in History", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "Johannes Kepler formulated the three laws of planetary motion in the early 1600s.", "options": ["Galileo Galilei", "Johannes Kepler", "Nicolaus Copernicus", "Tycho Brahe"], "question": "The laws of planetary motion were discovered by:", "subject": "General Knowledge", "subtopic": "Important Discoveries in History", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "hard", "explanation": "J.J. Thomson discovered the electron in 1897 through cathode-ray experiments.", "options": ["Ernest Rutherford", "J.J. Thomson", "Niels Bohr", "James Chadwick"], "question": "The electron was discovered by:", "subject": "General Knowledge", "subtopic": "Important Discoveries in History", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "easy", "explanation": "Soviet cosmonaut Yuri Gagarin orbited the Earth aboard Vostok 1 on 12 April 1961.", "options": ["Neil Armstrong", "Yuri Gagarin", "Valentina Tereshkova", "Alan Shepard"], "question": "The first human to travel into space was:", "subject": "General Knowledge", "subtopic": "Space Exploration Milestones", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "Neil Armstrong and Buzz Aldrin landed on the Moon on 20 July 1969.", "options": ["1965", "1969", "1972", "1975"], "question": "Apollo 11 landed on the Moon in:", "subject": "General Knowledge", "subtopic": "Space Exploration Milestones", "topic": "Science & Technology (GK)"},
-{"correct": 0, "difficulty": "medium", "explanation": "The USSR launched Sputnik 1 on 4 October 1957, starting the space age.", "options": ["1957", "1961", "1965", "1969"], "question": "Sputnik 1, the first artificial satellite, was launched in:", "subject": "General Knowledge", "subtopic": "Space Exploration Milestones", "topic": "Science & Technology (GK)"},
-{"correct": 0, "difficulty": "hard", "explanation": "Marie Curie won the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.", "options": ["Physics and Chemistry", "Physics and Medicine", "Chemistry and Peace", "Physics and Literature"], "question": "Marie Curie won Nobel Prizes in:", "subject": "General Knowledge", "subtopic": "Nobel Prize Winners (Major)", "topic": "Science & Technology (GK)"},
-{"correct": 0, "difficulty": "medium", "explanation": "Rabindranath Tagore won the 1913 Nobel Prize in Literature, the first awarded to an Asian.", "options": ["Rabindranath Tagore", "C.V. Raman", "Mother Teresa", "Amartya Sen"], "question": "Who was the first Asian Nobel laureate?", "subject": "General Knowledge", "subtopic": "Nobel Prize Winners (Major)", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "easy", "explanation": "Tim Berners-Lee invented the World Wide Web in 1990 while at CERN.", "options": ["Bill Gates", "Tim Berners-Lee", "Steve Jobs", "Vint Cerf"], "question": "The World Wide Web was invented by:", "subject": "General Knowledge", "subtopic": "Technology Milestones", "topic": "Science & Technology (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "Intel released the 4004, the first commercial microprocessor, in 1971.", "options": ["IBM", "Intel", "Microsoft", "Apple"], "question": "Which company developed the first commercial microprocessor (Intel 4004)?", "subject": "General Knowledge", "subtopic": "Technology Milestones", "topic": "Science & Technology (GK)"},
-{"correct": 0, "difficulty": "easy", "explanation": "World War I began in July 1914 after the assassination of Archduke Franz Ferdinand.", "options": ["1914", "1918", "1939", "1941"], "question": "World War I began in:", "subject": "General Knowledge", "subtopic": "World War I and II Summary", "topic": "World History (GK)"},
-{"correct": 2, "difficulty": "medium", "explanation": "World War II ended in 1945 with Germany's surrender in May and Japan's in September.", "options": ["1943", "1944", "1945", "1946"], "question": "World War II ended in:", "subject": "General Knowledge", "subtopic": "World War I and II Summary", "topic": "World History (GK)"},
-{"correct": 0, "difficulty": "medium", "explanation": "The Treaty of Versailles, signed on 28 June 1919, formally ended World War I.", "options": ["World War I", "World War II", "The Crimean War", "The Franco-Prussian War"], "question": "The Treaty of Versailles (1919) formally ended:", "subject": "General Knowledge", "subtopic": "World War I and II Summary", "topic": "World History (GK)"},
-{"correct": 1, "difficulty": "hard", "explanation": "Nazi Germany launched Operation Barbarossa against the Soviet Union on 22 June 1941.", "options": ["France", "The Soviet Union", "Poland", "Britain"], "question": "Operation Barbarossa (1941) was Germany's invasion of:", "subject": "General Knowledge", "subtopic": "World War I and II Summary", "topic": "World History (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "The Cold War (1947-1991) was the geopolitical rivalry between the USA and the Soviet Union.", "options": ["USA and China", "USA and USSR", "Britain and France", "USSR and China"], "question": "The Cold War was primarily a rivalry between:", "subject": "General Knowledge", "subtopic": "Cold War Summary", "topic": "World History (GK)"},
-{"correct": 0, "difficulty": "easy", "explanation": "The Berlin Wall fell on 9 November 1989, hastening the end of the Cold War.", "options": ["1989", "1991", "1985", "1979"], "question": "The Berlin Wall fell in:", "subject": "General Knowledge", "subtopic": "Cold War Summary", "topic": "World History (GK)"},
-{"correct": 1, "difficulty": "hard", "explanation": "The 13-day US-Soviet standoff over missiles in Cuba occurred in October 1962.", "options": ["1959", "1962", "1965", "1968"], "question": "The Cuban Missile Crisis took place in:", "subject": "General Knowledge", "subtopic": "Cold War Summary", "topic": "World History (GK)"},
-{"correct": 1, "difficulty": "medium", "explanation": "The French Revolution began in 1789 with the storming of the Bastille on 14 July.", "options": ["1776", "1789", "1848", "1917"], "question": "The French Revolution began in:", "subject": "General Knowledge", "subtopic": "French Revolution", "topic": "World History (GK)"},
-{"correct": 0, "difficulty": "medium", "explanation": "Liberty, Equality, Fraternity became the rallying cry of the French Revolution.", "options": ["French Revolution", "American Revolution", "Russian Revolution", "Glorious Revolution"], "question": "The motto 'Liberty, Equality, Fraternity' is associated with the:", "subject": "General Knowledge", "subtopic": "French Revolution", "topic": "World History (GK)"},
-{"correct": 0, "difficulty": "easy", "explanation": "The Declaration of Independence was adopted on 4 July 1776.", "options": ["1776", "1789", "1783", "1800"], "question": "The American Declaration of Independence was adopted in:", "subject": "General Knowledge", "subtopic": "American Revolution", "topic": "World History (GK)"},
-{"correct": 2, "difficulty": "easy", "explanation": "George Washington became the first US President in 1789.", "options": ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John Adams"], "question": "The first President of the United States was:", "subject": "General Knowledge", "subtopic": "American Revolution", "topic": "World History (GK)"},
-{"correct": 0, "difficulty": "medium", "explanation": "The UN replaced the League of Nations, which had failed to prevent World War II.", "options": ["League of Nations", "Warsaw Pact", "NATO", "SEATO"], "question": "The United Nations replaced which international organization?", "subject": "General Knowledge", "subtopic": "United Nations Formation", "topic": "World History (GK)"},
-{"correct": 2, "difficulty": "hard", "explanation": "Delegates from 50 nations signed the UN Charter in San Francisco on 26 June 1945.", "options": ["New York", "Geneva", "San Francisco", "London"], "question": "The UN Charter was signed in 1945 in:", "subject": "General Knowledge", "subtopic": "United Nations Formation", "topic": "World History (GK)"},
-{"correct": 1, "difficulty": "easy", "explanation": "The revived Olympic Games of 1896 were held in Athens, Greece.", "options": ["Paris", "Athens", "London", "Rome"], "question": "The first modern Olympic Games were held in 1896 in:", "subject": "General Knowledge", "subtopic": "Olympic Games History", "topic": "Sports & Games"},
-{"correct": 2, "difficulty": "easy", "explanation": "The Summer and Winter Olympics are each held every four years, staggered two years apart.", "options": ["2 years", "3 years", "4 years", "5 years"], "question": "The Olympic Games are held every:", "subject": "General Knowledge", "subtopic": "Olympic Games History", "topic": "Sports & Games"},
-{"correct": 0, "difficulty": "medium", "explanation": "The Latin motto translates as 'Faster, Higher, Stronger'.", "options": ["Faster, Higher, Stronger", "Peace, Unity, Friendship", "Strength, Honour, Glory", "Run, Jump, Throw"], "question": "The Olympic motto 'Citius, Altius, Fortius' means:", "subject": "General Knowledge", "subtopic": "Olympic Games History", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "easy", "explanation": "Pakistan, captained by Imran Khan, won the 1992 World Cup in Australia.", "options": ["1987", "1992", "1996", "1999"], "question": "Pakistan won the Cricket World Cup in:", "subject": "General Knowledge", "subtopic": "Cricket World Cup", "topic": "Sports & Games"},
-{"correct": 2, "difficulty": "medium", "explanation": "England hosted the inaugural Cricket World Cup in 1975, won by the West Indies.", "options": ["Australia", "West Indies", "England", "India"], "question": "The first Cricket World Cup (1975) was hosted by:", "subject": "General Knowledge", "subtopic": "Cricket World Cup", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "medium", "explanation": "Australia has won six ODI World Cups (1987, 1999, 2003, 2007, 2015, 2023).", "options": ["India", "Australia", "West Indies", "England"], "question": "Which country has won the most ICC Cricket World Cups?", "subject": "General Knowledge", "subtopic": "Cricket World Cup", "topic": "Sports & Games"},
-{"correct": 2, "difficulty": "easy", "explanation": "The FIFA World Cup has been held every four years since 1930 (except 1942 and 1946).", "options": ["2 years", "3 years", "4 years", "5 years"], "question": "The FIFA World Cup is held every:", "subject": "General Knowledge", "subtopic": "FIFA World Cup", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "easy", "explanation": "Brazil has won five World Cups (1958, 1962, 1970, 1994, 2002).", "options": ["Germany", "Brazil", "Argentina", "Italy"], "question": "Which country has won the most FIFA World Cups?", "subject": "General Knowledge", "subtopic": "FIFA World Cup", "topic": "Sports & Games"},
-{"correct": 2, "difficulty": "hard", "explanation": "Uruguay hosted and won the inaugural 1930 World Cup, beating Argentina in the final.", "options": ["Brazil", "Italy", "Uruguay", "Argentina"], "question": "The first FIFA World Cup (1930) was hosted and won by:", "subject": "General Knowledge", "subtopic": "FIFA World Cup", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "easy", "explanation": "Jamaican sprinter Usain Bolt holds the world records in the 100 m and 200 m.", "options": ["Swimming", "Athletics", "Boxing", "Tennis"], "question": "Usain Bolt is associated with which sport?", "subject": "General Knowledge", "subtopic": "Famous Sports Personalities", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "medium", "explanation": "Roger Federer won 20 Grand Slam singles titles between 2003 and 2018.", "options": ["18", "20", "22", "24"], "question": "Roger Federer won how many Grand Slam singles titles?", "subject": "General Knowledge", "subtopic": "Famous Sports Personalities", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "easy", "explanation": "Pakistan won hockey gold at the 1960 Rome Olympics — its first Olympic gold.", "options": ["1956", "1960", "1964", "1984"], "question": "Pakistan won its first Olympic gold medal in:", "subject": "General Knowledge", "subtopic": "Pakistan in International Sports", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "easy", "explanation": "Arshad Nadeem won Pakistan's first individual Olympic gold at Paris 2024 with an Olympic record of 92.97 m.", "options": ["Tokyo 2020", "Paris 2024", "Rio 2016", "London 2012"], "question": "Arshad Nadeem won Olympic gold in javelin throw at:", "subject": "General Knowledge", "subtopic": "Pakistan in International Sports", "topic": "Sports & Games"},
-{"correct": 1, "difficulty": "easy", "explanation": "'Pride and Prejudice' (1813) is Jane Austen's most famous novel.", "options": ["Charlotte Brontë", "Jane Austen", "Emily Brontë", "Charles Dickens"], "question": "'Pride and Prejudice' was written by:", "subject": "General Knowledge", "subtopic": "Famous Books and their Authors", "topic": "Books & Authors"},
-{"correct": 1, "difficulty": "medium", "explanation": "George Orwell's dystopian novel '1984' was published in 1949.", "options": ["Aldous Huxley", "George Orwell", "Franz Kafka", "Ernest Hemingway"], "question": "The novel '1984' was written by:", "subject": "General Knowledge", "subtopic": "Famous Books and their Authors", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "medium", "explanation": "Harper Lee's 'To Kill a Mockingbird' was published in 1960.", "options": ["Harper Lee", "Mark Twain", "John Steinbeck", "Toni Morrison"], "question": "'To Kill a Mockingbird' was written by:", "subject": "General Knowledge", "subtopic": "Famous Books and their Authors", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "hard", "explanation": "Colombian author Gabriel Garcia Marquez published it in 1967; he won the Nobel Prize in 1982.", "options": ["Gabriel Garcia Marquez", "Mario Vargas Llosa", "Isabel Allende", "Jorge Luis Borges"], "question": "'One Hundred Years of Solitude' is a novel by:", "subject": "General Knowledge", "subtopic": "Famous Books and their Authors", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "medium", "explanation": "Tagore won the 1913 prize for 'Gitanjali', becoming the first Asian Nobel laureate.", "options": ["1913", "1921", "1930", "1905"], "question": "Rabindranath Tagore won the Nobel Prize in Literature in:", "subject": "General Knowledge", "subtopic": "Nobel Prize in Literature", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "hard", "explanation": "French poet Sully Prudhomme was the first Literature laureate in 1901.", "options": ["Sully Prudhomme", "Rabindranath Tagore", "Rudyard Kipling", "W.B. Yeats"], "question": "Who received the first Nobel Prize in Literature (1901)?", "subject": "General Knowledge", "subtopic": "Nobel Prize in Literature", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "easy", "explanation": "'Gitanjali', the poetry collection that won Tagore the Nobel Prize, means 'Song Offerings'.", "options": ["Rabindranath Tagore", "Sarojini Naidu", "Mulk Raj Anand", "R.K. Narayan"], "question": "The author of 'Gitanjali' is:", "subject": "General Knowledge", "subtopic": "Nobel Prize in Literature", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "easy", "explanation": "Allama Muhammad Iqbal is officially recognized as Pakistan's national poet.", "options": ["Allama Iqbal", "Faiz Ahmed Faiz", "Ahmed Faraz", "Mir Taqi Mir"], "question": "The national poet of Pakistan is:", "subject": "General Knowledge", "subtopic": "Pakistani Writers and Poets", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "easy", "explanation": "'Shah Jo Risalo' is the celebrated Sindhi poetry collection of Shah Abdul Latif Bhittai.", "options": ["Shah Abdul Latif Bhittai", "Sachal Sarmast", "Bulleh Shah", "Sultan Bahu"], "question": "'Shah Jo Risalo' was written by:", "subject": "General Knowledge", "subtopic": "Pakistani Writers and Poets", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "medium", "explanation": "Mohsin Hamid's 'The Reluctant Fundamentalist' (2007) was shortlisted for the Man Booker Prize.", "options": ["Mohsin Hamid", "Kamila Shamsie", "Mohammed Hanif", "Daniyal Mueenuddin"], "question": "The novel 'The Reluctant Fundamentalist' was written by:", "subject": "General Knowledge", "subtopic": "Pakistani Writers and Poets", "topic": "Books & Authors"},
-{"correct": 1, "difficulty": "easy", "explanation": "'Diwan-e-Ghalib' collects the Urdu and Persian ghazals of Mirza Asadullah Khan Ghalib.", "options": ["Mir Taqi Mir", "Mirza Ghalib", "Ibrahim Zauq", "Momin Khan Momin"], "question": "'Diwan-e-Ghalib' is the poetry collection of:", "subject": "General Knowledge", "subtopic": "Famous Urdu Literature", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "medium", "explanation": "Iqbal's Persian philosophical poem 'Asrar-e-Khudi' appeared in 1915.", "options": ["1915", "1923", "1930", "1935"], "question": "Allama Iqbal's 'Asrar-e-Khudi' (Secrets of the Self) was published in:", "subject": "General Knowledge", "subtopic": "Famous Urdu Literature", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "hard", "explanation": "Deputy Nazir Ahmad's 'Mirat-ul-Uroos' (1869) is regarded as the first Urdu novel.", "options": ["Deputy Nazir Ahmad", "Ratan Nath Sarshar", "Abdul Halim Sharar", "Munshi Premchand"], "question": "The first Urdu novel, 'Mirat-ul-Uroos', was written by:", "subject": "General Knowledge", "subtopic": "Famous Urdu Literature", "topic": "Books & Authors"},
-{"correct": 0, "difficulty": "easy", "explanation": "Swedish inventor Alfred Nobel's 1895 will established the prizes, first awarded in 1901.", "options": ["Alfred Nobel", "Albert Einstein", "Andrew Carnegie", "John D. Rockefeller"], "question": "The Nobel Prizes were established by the will of:", "subject": "General Knowledge", "subtopic": "Nobel Prize Categories and History", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "easy", "explanation": "The original five were Physics, Chemistry, Medicine, Literature and Peace; Economics was added in 1968.", "options": ["5", "6", "7", "4"], "question": "How many Nobel Prize categories were there originally?", "subject": "General Knowledge", "subtopic": "Nobel Prize Categories and History", "topic": "Awards & Honors"},
-{"correct": 1, "difficulty": "medium", "explanation": "While other Nobels are awarded in Stockholm, the Peace Prize is presented in Oslo, Norway.", "options": ["Stockholm", "Oslo", "Geneva", "Copenhagen"], "question": "The Nobel Peace Prize is awarded in:", "subject": "General Knowledge", "subtopic": "Nobel Prize Categories and History", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "easy", "explanation": "Abdus Salam shared the 1979 Physics prize for the electroweak unification theory.", "options": ["1979", "1984", "1975", "1988"], "question": "Dr. Abdus Salam won the Nobel Prize in Physics in:", "subject": "General Knowledge", "subtopic": "Nobel Prize Categories and History", "topic": "Awards & Honors"},
-{"correct": 1, "difficulty": "medium", "explanation": "Sweden's central bank established the economics prize in 1968; it was first awarded in 1969.", "options": ["1901", "1968", "1945", "2001"], "question": "The Nobel Prize in Economic Sciences was established in:", "subject": "General Knowledge", "subtopic": "Nobel Prize Categories and History", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "easy", "explanation": "Malala Yousafzai won the 2014 Nobel Peace Prize at age 17, the youngest laureate ever.", "options": ["Malala Yousafzai", "Nadia Murad", "Lawrence Bragg", "Werner Heisenberg"], "question": "Who is the youngest Nobel laureate in history?", "subject": "General Knowledge", "subtopic": "Nobel Prize Categories and History", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "easy", "explanation": "The Academy of Motion Picture Arts and Sciences has presented the Oscars since 1929.", "options": ["Academy of Motion Picture Arts and Sciences", "Hollywood Foreign Press Association", "British Film Institute", "Cannes Film Festival"], "question": "The Oscar awards are presented by the:", "subject": "General Knowledge", "subtopic": "Oscar Award History", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "medium", "explanation": "The first Oscars ceremony took place in Hollywood in May 1929.", "options": ["1929", "1935", "1927", "1940"], "question": "The first Academy Awards ceremony was held in:", "subject": "General Knowledge", "subtopic": "Oscar Award History", "topic": "Awards & Honors"},
-{"correct": 2, "difficulty": "medium", "explanation": "'Titanic' won 11 Oscars, tying the all-time record.", "options": ["9", "10", "11", "12"], "question": "The film 'Titanic' (1997) won how many Academy Awards?", "subject": "General Knowledge", "subtopic": "Oscar Award History", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "medium", "explanation": "The statuette's official name is the Academy Award of Merit.", "options": ["Academy Award of Merit", "Golden Globe Trophy", "The Oscar Trophy", "Filmfare Statue"], "question": "The Oscar statuette is officially known as the:", "subject": "General Knowledge", "subtopic": "Oscar Award History", "topic": "Awards & Honors"},
-{"correct": 2, "difficulty": "easy", "explanation": "The Commonwealth Games are held every four years.", "options": ["2 years", "3 years", "4 years", "5 years"], "question": "The Commonwealth Games are held every:", "subject": "General Knowledge", "subtopic": "Commonwealth Awards", "topic": "Awards & Honors"},
-{"correct": 0, "difficulty": "hard", "explanation": "The 1930 British Empire Games in Hamilton, Ontario, were the first Commonwealth Games.", "options": ["Hamilton, Canada", "London, England", "Sydney, Australia", "Auckland, New Zealand"], "question": "The first Commonwealth Games (1930) were held in:", "subject": "General Knowledge", "subtopic": "Commonwealth Awards", "topic": "Awards & Honors"}
+[
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Asia covers about 44.6 million sq km — nearly 30% of Earth's total land area.",
+    "options": [
+      "Asia",
+      "Africa",
+      "North America",
+      "Europe"
+    ],
+    "question": "Which is the largest continent in the world by area?",
+    "subject": "General Knowledge",
+    "subtopic": "Continents and Oceans",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The Pacific Ocean covers about 165 million sq km, larger than all landmasses combined.",
+    "options": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Pacific Ocean",
+      "Arctic Ocean"
+    ],
+    "question": "Which is the largest ocean in the world?",
+    "subject": "General Knowledge",
+    "subtopic": "Continents and Oceans",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Europe is the only continent with no true desert; even Antarctica holds the world's largest (polar) desert.",
+    "options": [
+      "Europe",
+      "Australia",
+      "Africa",
+      "Asia"
+    ],
+    "question": "Which continent has no desert?",
+    "subject": "General Knowledge",
+    "subtopic": "Continents and Oceans",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Canberra has been Australia's capital since 1913; Sydney and Melbourne are larger but not the capital.",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Canberra",
+      "Perth"
+    ],
+    "question": "The capital of Australia is:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Countries and Capitals",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Ankara became Turkey's capital in 1923, replacing Istanbul.",
+    "options": [
+      "Turkey",
+      "Greece",
+      "Egypt",
+      "Iran"
+    ],
+    "question": "Ankara is the capital of:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Countries and Capitals",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Kazakhstan's capital is Astana (renamed Nur-Sultan from 2019 to 2022, then back to Astana).",
+    "options": [
+      "Astana",
+      "Almaty",
+      "Tashkent",
+      "Bishkek"
+    ],
+    "question": "The capital of Kazakhstan is:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Countries and Capitals",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The Nile (about 6,650 km) is traditionally regarded as the world's longest river.",
+    "options": [
+      "Amazon River",
+      "Nile River",
+      "Yangtze River",
+      "Mississippi River"
+    ],
+    "question": "Which is the longest river in the world?",
+    "subject": "General Knowledge",
+    "subtopic": "Longest/Highest/Largest in the World",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The Sahara spans about 9.2 million sq km across North Africa.",
+    "options": [
+      "Gobi Desert",
+      "Sahara Desert",
+      "Kalahari Desert",
+      "Thar Desert"
+    ],
+    "question": "Which is the largest hot desert in the world?",
+    "subject": "General Knowledge",
+    "subtopic": "Longest/Highest/Largest in the World",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Mount Everest (8,849 m) stands in the Himalayas on the Nepal-China border.",
+    "options": [
+      "Karakoram",
+      "Himalayas",
+      "Andes",
+      "Alps"
+    ],
+    "question": "Mount Everest is part of which mountain range?",
+    "subject": "General Knowledge",
+    "subtopic": "Longest/Highest/Largest in the World",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Opened in 1869, the Suez Canal links the Mediterranean Sea to the Red Sea.",
+    "options": [
+      "Mediterranean Sea and Red Sea",
+      "Black Sea and Caspian Sea",
+      "Arabian Sea and Bay of Bengal",
+      "North Sea and Baltic Sea"
+    ],
+    "question": "The Suez Canal connects which two seas?",
+    "subject": "General Knowledge",
+    "subtopic": "Important Seas, Straits and Canals",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "The Kiel Canal in Germany connects the North Sea to the Baltic Sea.",
+    "options": [
+      "Black Sea",
+      "Mediterranean Sea",
+      "Baltic Sea",
+      "Norwegian Sea"
+    ],
+    "question": "The Kiel Canal connects the North Sea with the:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Seas, Straits and Canals",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The Andes stretch about 8,900 km along the western coast of South America.",
+    "options": [
+      "Himalayas",
+      "Andes",
+      "Rockies",
+      "Alps"
+    ],
+    "question": "Which is the longest mountain range in the world?",
+    "subject": "General Knowledge",
+    "subtopic": "Mountain Ranges of the World",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "K-2 (8,611 m) lies in the Karakoram range in Gilgit-Baltistan, Pakistan.",
+    "options": [
+      "Nepal",
+      "Pakistan",
+      "China",
+      "India"
+    ],
+    "question": "K-2, the second-highest peak in the world, is located in:",
+    "subject": "General Knowledge",
+    "subtopic": "Mountain Ranges of the World",
+    "topic": "World Geography (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The UN headquarters has stood on the East River in New York since 1952.",
+    "options": [
+      "Geneva",
+      "New York",
+      "Paris",
+      "Vienna"
+    ],
+    "question": "The headquarters of the United Nations is located in:",
+    "subject": "General Knowledge",
+    "subtopic": "United Nations (UN) and its Agencies",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The UN Charter was signed in June 1945 and the UN officially came into existence on 24 October 1945.",
+    "options": [
+      "1945",
+      "1919",
+      "1950",
+      "1948"
+    ],
+    "question": "The United Nations was founded in:",
+    "subject": "General Knowledge",
+    "subtopic": "United Nations (UN) and its Agencies",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The World Health Organization (WHO), headquartered in Geneva, coordinates international public health.",
+    "options": [
+      "UNESCO",
+      "WHO",
+      "FAO",
+      "ILO"
+    ],
+    "question": "Which UN agency deals with global public health?",
+    "subject": "General Knowledge",
+    "subtopic": "United Nations (UN) and its Agencies",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The ICJ, the UN's principal judicial organ, sits at the Peace Palace in The Hague, Netherlands.",
+    "options": [
+      "Geneva",
+      "The Hague",
+      "New York",
+      "Vienna"
+    ],
+    "question": "The International Court of Justice is headquartered at:",
+    "subject": "General Knowledge",
+    "subtopic": "United Nations (UN) and its Agencies",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The South Asian Association for Regional Cooperation was founded in Dhaka in December 1985.",
+    "options": [
+      "1985",
+      "1990",
+      "1975",
+      "2000"
+    ],
+    "question": "SAARC was established in:",
+    "subject": "General Knowledge",
+    "subtopic": "NATO, SAARC, SCO, OIC",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "NATO's headquarters is in Brussels, Belgium.",
+    "options": [
+      "Brussels",
+      "Washington, D.C.",
+      "London",
+      "Paris"
+    ],
+    "question": "The headquarters of NATO is located in:",
+    "subject": "General Knowledge",
+    "subtopic": "NATO, SAARC, SCO, OIC",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "SAARC's eight members are Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan and Sri Lanka — Myanmar is not one.",
+    "options": [
+      "Afghanistan",
+      "Myanmar",
+      "Nepal",
+      "Bhutan"
+    ],
+    "question": "Which of the following is NOT a member of SAARC?",
+    "subject": "General Knowledge",
+    "subtopic": "NATO, SAARC, SCO, OIC",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The World Bank Group is headquartered in Washington, D.C.",
+    "options": [
+      "New York",
+      "Washington, D.C.",
+      "Geneva",
+      "London"
+    ],
+    "question": "The headquarters of the World Bank is in:",
+    "subject": "General Knowledge",
+    "subtopic": "World Bank, IMF, WTO",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "The IMF was conceived at the 1944 Bretton Woods Conference and began operations in 1947.",
+    "options": [
+      "1944",
+      "1945",
+      "1971",
+      "1980"
+    ],
+    "question": "The International Monetary Fund (IMF) was established in:",
+    "subject": "General Knowledge",
+    "subtopic": "World Bank, IMF, WTO",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The WTO succeeded the General Agreement on Tariffs and Trade (GATT) on 1 January 1995.",
+    "options": [
+      "NAFTA",
+      "GATT",
+      "EFTA",
+      "OPEC"
+    ],
+    "question": "The World Trade Organization (WTO) replaced which agreement in 1995?",
+    "subject": "General Knowledge",
+    "subtopic": "World Bank, IMF, WTO",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "South Africa joined the BRIC grouping in 2010, turning it into BRICS.",
+    "options": [
+      "Singapore",
+      "South Africa",
+      "Spain",
+      "Sweden"
+    ],
+    "question": "The 'S' in BRICS originally stood for:",
+    "subject": "General Knowledge",
+    "subtopic": "G7, G20, BRICS",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The inaugural G20 summit on the financial crisis was held in Washington, D.C., in November 2008.",
+    "options": [
+      "London",
+      "Washington, D.C.",
+      "Pittsburgh",
+      "Toronto"
+    ],
+    "question": "The first G20 leaders' summit (2008) was held in:",
+    "subject": "General Knowledge",
+    "subtopic": "G7, G20, BRICS",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Commonwealth Secretariat is based at Marlborough House in London.",
+    "options": [
+      "London",
+      "Canberra",
+      "Ottawa",
+      "New Delhi"
+    ],
+    "question": "The headquarters of the Commonwealth of Nations is in:",
+    "subject": "General Knowledge",
+    "subtopic": "Commonwealth of Nations",
+    "topic": "World Organizations"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Alexander Graham Bell patented the telephone in 1876.",
+    "options": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Nikola Tesla",
+      "Guglielmo Marconi"
+    ],
+    "question": "Who invented the telephone?",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Scientists and Inventions",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Einstein published the special theory of relativity in 1905 and general relativity in 1915.",
+    "options": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Galileo Galilei",
+      "Niels Bohr"
+    ],
+    "question": "The theory of relativity was proposed by:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Scientists and Inventions",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "Antoine Lavoisier's work on conservation of mass founded modern chemistry.",
+    "options": [
+      "Dmitri Mendeleev",
+      "Antoine Lavoisier",
+      "John Dalton",
+      "Robert Boyle"
+    ],
+    "question": "Who is known as the father of modern chemistry?",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Scientists and Inventions",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Alexander Fleming discovered penicillin in 1928 at St Mary's Hospital, London.",
+    "options": [
+      "Louis Pasteur",
+      "Alexander Fleming",
+      "Robert Koch",
+      "Joseph Lister"
+    ],
+    "question": "Penicillin was discovered by:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Discoveries in History",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Johannes Kepler formulated the three laws of planetary motion in the early 1600s.",
+    "options": [
+      "Galileo Galilei",
+      "Johannes Kepler",
+      "Nicolaus Copernicus",
+      "Tycho Brahe"
+    ],
+    "question": "The laws of planetary motion were discovered by:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Discoveries in History",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "J.J. Thomson discovered the electron in 1897 through cathode-ray experiments.",
+    "options": [
+      "Ernest Rutherford",
+      "J.J. Thomson",
+      "Niels Bohr",
+      "James Chadwick"
+    ],
+    "question": "The electron was discovered by:",
+    "subject": "General Knowledge",
+    "subtopic": "Important Discoveries in History",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Soviet cosmonaut Yuri Gagarin orbited the Earth aboard Vostok 1 on 12 April 1961.",
+    "options": [
+      "Neil Armstrong",
+      "Yuri Gagarin",
+      "Valentina Tereshkova",
+      "Alan Shepard"
+    ],
+    "question": "The first human to travel into space was:",
+    "subject": "General Knowledge",
+    "subtopic": "Space Exploration Milestones",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Neil Armstrong and Buzz Aldrin landed on the Moon on 20 July 1969.",
+    "options": [
+      "1965",
+      "1969",
+      "1972",
+      "1975"
+    ],
+    "question": "Apollo 11 landed on the Moon in:",
+    "subject": "General Knowledge",
+    "subtopic": "Space Exploration Milestones",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The USSR launched Sputnik 1 on 4 October 1957, starting the space age.",
+    "options": [
+      "1957",
+      "1961",
+      "1965",
+      "1969"
+    ],
+    "question": "Sputnik 1, the first artificial satellite, was launched in:",
+    "subject": "General Knowledge",
+    "subtopic": "Space Exploration Milestones",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Marie Curie won the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.",
+    "options": [
+      "Physics and Chemistry",
+      "Physics and Medicine",
+      "Chemistry and Peace",
+      "Physics and Literature"
+    ],
+    "question": "Marie Curie won Nobel Prizes in:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Winners (Major)",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Rabindranath Tagore won the 1913 Nobel Prize in Literature, the first awarded to an Asian.",
+    "options": [
+      "Rabindranath Tagore",
+      "C.V. Raman",
+      "Mother Teresa",
+      "Amartya Sen"
+    ],
+    "question": "Who was the first Asian Nobel laureate?",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Winners (Major)",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Tim Berners-Lee invented the World Wide Web in 1990 while at CERN.",
+    "options": [
+      "Bill Gates",
+      "Tim Berners-Lee",
+      "Steve Jobs",
+      "Vint Cerf"
+    ],
+    "question": "The World Wide Web was invented by:",
+    "subject": "General Knowledge",
+    "subtopic": "Technology Milestones",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Intel released the 4004, the first commercial microprocessor, in 1971.",
+    "options": [
+      "IBM",
+      "Intel",
+      "Microsoft",
+      "Apple"
+    ],
+    "question": "Which company developed the first commercial microprocessor (Intel 4004)?",
+    "subject": "General Knowledge",
+    "subtopic": "Technology Milestones",
+    "topic": "Science & Technology (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "World War I began in July 1914 after the assassination of Archduke Franz Ferdinand.",
+    "options": [
+      "1914",
+      "1918",
+      "1939",
+      "1941"
+    ],
+    "question": "World War I began in:",
+    "subject": "General Knowledge",
+    "subtopic": "World War I and II Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "World War II ended in 1945 with Germany's surrender in May and Japan's in September.",
+    "options": [
+      "1943",
+      "1944",
+      "1945",
+      "1946"
+    ],
+    "question": "World War II ended in:",
+    "subject": "General Knowledge",
+    "subtopic": "World War I and II Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The Treaty of Versailles, signed on 28 June 1919, formally ended World War I.",
+    "options": [
+      "World War I",
+      "World War II",
+      "The Crimean War",
+      "The Franco-Prussian War"
+    ],
+    "question": "The Treaty of Versailles (1919) formally ended:",
+    "subject": "General Knowledge",
+    "subtopic": "World War I and II Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "Nazi Germany launched Operation Barbarossa against the Soviet Union on 22 June 1941.",
+    "options": [
+      "France",
+      "The Soviet Union",
+      "Poland",
+      "Britain"
+    ],
+    "question": "Operation Barbarossa (1941) was Germany's invasion of:",
+    "subject": "General Knowledge",
+    "subtopic": "World War I and II Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The Cold War (1947-1991) was the geopolitical rivalry between the USA and the Soviet Union.",
+    "options": [
+      "USA and China",
+      "USA and USSR",
+      "Britain and France",
+      "USSR and China"
+    ],
+    "question": "The Cold War was primarily a rivalry between:",
+    "subject": "General Knowledge",
+    "subtopic": "Cold War Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Berlin Wall fell on 9 November 1989, hastening the end of the Cold War.",
+    "options": [
+      "1989",
+      "1991",
+      "1985",
+      "1979"
+    ],
+    "question": "The Berlin Wall fell in:",
+    "subject": "General Knowledge",
+    "subtopic": "Cold War Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The 13-day US-Soviet standoff over missiles in Cuba occurred in October 1962.",
+    "options": [
+      "1959",
+      "1962",
+      "1965",
+      "1968"
+    ],
+    "question": "The Cuban Missile Crisis took place in:",
+    "subject": "General Knowledge",
+    "subtopic": "Cold War Summary",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The French Revolution began in 1789 with the storming of the Bastille on 14 July.",
+    "options": [
+      "1776",
+      "1789",
+      "1848",
+      "1917"
+    ],
+    "question": "The French Revolution began in:",
+    "subject": "General Knowledge",
+    "subtopic": "French Revolution",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Liberty, Equality, Fraternity became the rallying cry of the French Revolution.",
+    "options": [
+      "French Revolution",
+      "American Revolution",
+      "Russian Revolution",
+      "Glorious Revolution"
+    ],
+    "question": "The motto 'Liberty, Equality, Fraternity' is associated with the:",
+    "subject": "General Knowledge",
+    "subtopic": "French Revolution",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Declaration of Independence was adopted on 4 July 1776.",
+    "options": [
+      "1776",
+      "1789",
+      "1783",
+      "1800"
+    ],
+    "question": "The American Declaration of Independence was adopted in:",
+    "subject": "General Knowledge",
+    "subtopic": "American Revolution",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "George Washington became the first US President in 1789.",
+    "options": [
+      "Thomas Jefferson",
+      "Abraham Lincoln",
+      "George Washington",
+      "John Adams"
+    ],
+    "question": "The first President of the United States was:",
+    "subject": "General Knowledge",
+    "subtopic": "American Revolution",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The UN replaced the League of Nations, which had failed to prevent World War II.",
+    "options": [
+      "League of Nations",
+      "Warsaw Pact",
+      "NATO",
+      "SEATO"
+    ],
+    "question": "The United Nations replaced which international organization?",
+    "subject": "General Knowledge",
+    "subtopic": "United Nations Formation",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "Delegates from 50 nations signed the UN Charter in San Francisco on 26 June 1945.",
+    "options": [
+      "New York",
+      "Geneva",
+      "San Francisco",
+      "London"
+    ],
+    "question": "The UN Charter was signed in 1945 in:",
+    "subject": "General Knowledge",
+    "subtopic": "United Nations Formation",
+    "topic": "World History (GK)"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The revived Olympic Games of 1896 were held in Athens, Greece.",
+    "options": [
+      "Paris",
+      "Athens",
+      "London",
+      "Rome"
+    ],
+    "question": "The first modern Olympic Games were held in 1896 in:",
+    "subject": "General Knowledge",
+    "subtopic": "Olympic Games History",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The Summer and Winter Olympics are each held every four years, staggered two years apart.",
+    "options": [
+      "2 years",
+      "3 years",
+      "4 years",
+      "5 years"
+    ],
+    "question": "The Olympic Games are held every:",
+    "subject": "General Knowledge",
+    "subtopic": "Olympic Games History",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The Latin motto translates as 'Faster, Higher, Stronger'.",
+    "options": [
+      "Faster, Higher, Stronger",
+      "Peace, Unity, Friendship",
+      "Strength, Honour, Glory",
+      "Run, Jump, Throw"
+    ],
+    "question": "The Olympic motto 'Citius, Altius, Fortius' means:",
+    "subject": "General Knowledge",
+    "subtopic": "Olympic Games History",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Pakistan, captained by Imran Khan, won the 1992 World Cup in Australia.",
+    "options": [
+      "1987",
+      "1992",
+      "1996",
+      "1999"
+    ],
+    "question": "Pakistan won the Cricket World Cup in:",
+    "subject": "General Knowledge",
+    "subtopic": "Cricket World Cup",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "England hosted the inaugural Cricket World Cup in 1975, won by the West Indies.",
+    "options": [
+      "Australia",
+      "West Indies",
+      "England",
+      "India"
+    ],
+    "question": "The first Cricket World Cup (1975) was hosted by:",
+    "subject": "General Knowledge",
+    "subtopic": "Cricket World Cup",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Australia has won six ODI World Cups (1987, 1999, 2003, 2007, 2015, 2023).",
+    "options": [
+      "India",
+      "Australia",
+      "West Indies",
+      "England"
+    ],
+    "question": "Which country has won the most ICC Cricket World Cups?",
+    "subject": "General Knowledge",
+    "subtopic": "Cricket World Cup",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The FIFA World Cup has been held every four years since 1930 (except 1942 and 1946).",
+    "options": [
+      "2 years",
+      "3 years",
+      "4 years",
+      "5 years"
+    ],
+    "question": "The FIFA World Cup is held every:",
+    "subject": "General Knowledge",
+    "subtopic": "FIFA World Cup",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Brazil has won five World Cups (1958, 1962, 1970, 1994, 2002).",
+    "options": [
+      "Germany",
+      "Brazil",
+      "Argentina",
+      "Italy"
+    ],
+    "question": "Which country has won the most FIFA World Cups?",
+    "subject": "General Knowledge",
+    "subtopic": "FIFA World Cup",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "Uruguay hosted and won the inaugural 1930 World Cup, beating Argentina in the final.",
+    "options": [
+      "Brazil",
+      "Italy",
+      "Uruguay",
+      "Argentina"
+    ],
+    "question": "The first FIFA World Cup (1930) was hosted and won by:",
+    "subject": "General Knowledge",
+    "subtopic": "FIFA World Cup",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Jamaican sprinter Usain Bolt holds the world records in the 100 m and 200 m.",
+    "options": [
+      "Swimming",
+      "Athletics",
+      "Boxing",
+      "Tennis"
+    ],
+    "question": "Usain Bolt is associated with which sport?",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Sports Personalities",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Roger Federer won 20 Grand Slam singles titles between 2003 and 2018.",
+    "options": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "question": "Roger Federer won how many Grand Slam singles titles?",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Sports Personalities",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Pakistan won hockey gold at the 1960 Rome Olympics — its first Olympic gold.",
+    "options": [
+      "1956",
+      "1960",
+      "1964",
+      "1984"
+    ],
+    "question": "Pakistan won its first Olympic gold medal in:",
+    "subject": "General Knowledge",
+    "subtopic": "Pakistan in International Sports",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Arshad Nadeem won Pakistan's first individual Olympic gold at Paris 2024 with an Olympic record of 92.97 m.",
+    "options": [
+      "Tokyo 2020",
+      "Paris 2024",
+      "Rio 2016",
+      "London 2012"
+    ],
+    "question": "Arshad Nadeem won Olympic gold in javelin throw at:",
+    "subject": "General Knowledge",
+    "subtopic": "Pakistan in International Sports",
+    "topic": "Sports & Games"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "'Pride and Prejudice' (1813) is Jane Austen's most famous novel.",
+    "options": [
+      "Charlotte Brontë",
+      "Jane Austen",
+      "Emily Brontë",
+      "Charles Dickens"
+    ],
+    "question": "'Pride and Prejudice' was written by:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Books and their Authors",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "George Orwell's dystopian novel '1984' was published in 1949.",
+    "options": [
+      "Aldous Huxley",
+      "George Orwell",
+      "Franz Kafka",
+      "Ernest Hemingway"
+    ],
+    "question": "The novel '1984' was written by:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Books and their Authors",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Harper Lee's 'To Kill a Mockingbird' was published in 1960.",
+    "options": [
+      "Harper Lee",
+      "Mark Twain",
+      "John Steinbeck",
+      "Toni Morrison"
+    ],
+    "question": "'To Kill a Mockingbird' was written by:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Books and their Authors",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Colombian author Gabriel Garcia Marquez published it in 1967; he won the Nobel Prize in 1982.",
+    "options": [
+      "Gabriel Garcia Marquez",
+      "Mario Vargas Llosa",
+      "Isabel Allende",
+      "Jorge Luis Borges"
+    ],
+    "question": "'One Hundred Years of Solitude' is a novel by:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Books and their Authors",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Tagore won the 1913 prize for 'Gitanjali', becoming the first Asian Nobel laureate.",
+    "options": [
+      "1913",
+      "1921",
+      "1930",
+      "1905"
+    ],
+    "question": "Rabindranath Tagore won the Nobel Prize in Literature in:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize in Literature",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "French poet Sully Prudhomme was the first Literature laureate in 1901.",
+    "options": [
+      "Sully Prudhomme",
+      "Rabindranath Tagore",
+      "Rudyard Kipling",
+      "W.B. Yeats"
+    ],
+    "question": "Who received the first Nobel Prize in Literature (1901)?",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize in Literature",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "'Gitanjali', the poetry collection that won Tagore the Nobel Prize, means 'Song Offerings'.",
+    "options": [
+      "Rabindranath Tagore",
+      "Sarojini Naidu",
+      "Mulk Raj Anand",
+      "R.K. Narayan"
+    ],
+    "question": "The author of 'Gitanjali' is:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize in Literature",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Allama Muhammad Iqbal is officially recognized as Pakistan's national poet.",
+    "options": [
+      "Allama Iqbal",
+      "Faiz Ahmed Faiz",
+      "Ahmed Faraz",
+      "Mir Taqi Mir"
+    ],
+    "question": "The national poet of Pakistan is:",
+    "subject": "General Knowledge",
+    "subtopic": "Pakistani Writers and Poets",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "'Shah Jo Risalo' is the celebrated Sindhi poetry collection of Shah Abdul Latif Bhittai.",
+    "options": [
+      "Shah Abdul Latif Bhittai",
+      "Sachal Sarmast",
+      "Bulleh Shah",
+      "Sultan Bahu"
+    ],
+    "question": "'Shah Jo Risalo' was written by:",
+    "subject": "General Knowledge",
+    "subtopic": "Pakistani Writers and Poets",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Mohsin Hamid's 'The Reluctant Fundamentalist' (2007) was shortlisted for the Man Booker Prize.",
+    "options": [
+      "Mohsin Hamid",
+      "Kamila Shamsie",
+      "Mohammed Hanif",
+      "Daniyal Mueenuddin"
+    ],
+    "question": "The novel 'The Reluctant Fundamentalist' was written by:",
+    "subject": "General Knowledge",
+    "subtopic": "Pakistani Writers and Poets",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "'Diwan-e-Ghalib' collects the Urdu and Persian ghazals of Mirza Asadullah Khan Ghalib.",
+    "options": [
+      "Mir Taqi Mir",
+      "Mirza Ghalib",
+      "Ibrahim Zauq",
+      "Momin Khan Momin"
+    ],
+    "question": "'Diwan-e-Ghalib' is the poetry collection of:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Urdu Literature",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Iqbal's Persian philosophical poem 'Asrar-e-Khudi' appeared in 1915.",
+    "options": [
+      "1915",
+      "1923",
+      "1930",
+      "1935"
+    ],
+    "question": "Allama Iqbal's 'Asrar-e-Khudi' (Secrets of the Self) was published in:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Urdu Literature",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Deputy Nazir Ahmad's 'Mirat-ul-Uroos' (1869) is regarded as the first Urdu novel.",
+    "options": [
+      "Deputy Nazir Ahmad",
+      "Ratan Nath Sarshar",
+      "Abdul Halim Sharar",
+      "Munshi Premchand"
+    ],
+    "question": "The first Urdu novel, 'Mirat-ul-Uroos', was written by:",
+    "subject": "General Knowledge",
+    "subtopic": "Famous Urdu Literature",
+    "topic": "Books & Authors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Swedish inventor Alfred Nobel's 1895 will established the prizes, first awarded in 1901.",
+    "options": [
+      "Alfred Nobel",
+      "Albert Einstein",
+      "Andrew Carnegie",
+      "John D. Rockefeller"
+    ],
+    "question": "The Nobel Prizes were established by the will of:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Categories and History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The original five were Physics, Chemistry, Medicine, Literature and Peace; Economics was added in 1968.",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "4"
+    ],
+    "question": "How many Nobel Prize categories were there originally?",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Categories and History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "While other Nobels are awarded in Stockholm, the Peace Prize is presented in Oslo, Norway.",
+    "options": [
+      "Stockholm",
+      "Oslo",
+      "Geneva",
+      "Copenhagen"
+    ],
+    "question": "The Nobel Peace Prize is awarded in:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Categories and History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Abdus Salam shared the 1979 Physics prize for the electroweak unification theory.",
+    "options": [
+      "1979",
+      "1984",
+      "1975",
+      "1988"
+    ],
+    "question": "Dr. Abdus Salam won the Nobel Prize in Physics in:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Categories and History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Sweden's central bank established the economics prize in 1968; it was first awarded in 1969.",
+    "options": [
+      "1901",
+      "1968",
+      "1945",
+      "2001"
+    ],
+    "question": "The Nobel Prize in Economic Sciences was established in:",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Categories and History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Malala Yousafzai won the 2014 Nobel Peace Prize at age 17, the youngest laureate ever.",
+    "options": [
+      "Malala Yousafzai",
+      "Nadia Murad",
+      "Lawrence Bragg",
+      "Werner Heisenberg"
+    ],
+    "question": "Who is the youngest Nobel laureate in history?",
+    "subject": "General Knowledge",
+    "subtopic": "Nobel Prize Categories and History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Academy of Motion Picture Arts and Sciences has presented the Oscars since 1929.",
+    "options": [
+      "Academy of Motion Picture Arts and Sciences",
+      "Hollywood Foreign Press Association",
+      "British Film Institute",
+      "Cannes Film Festival"
+    ],
+    "question": "The Oscar awards are presented by the:",
+    "subject": "General Knowledge",
+    "subtopic": "Oscar Award History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The first Oscars ceremony took place in Hollywood in May 1929.",
+    "options": [
+      "1929",
+      "1935",
+      "1927",
+      "1940"
+    ],
+    "question": "The first Academy Awards ceremony was held in:",
+    "subject": "General Knowledge",
+    "subtopic": "Oscar Award History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "'Titanic' won 11 Oscars, tying the all-time record.",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "question": "The film 'Titanic' (1997) won how many Academy Awards?",
+    "subject": "General Knowledge",
+    "subtopic": "Oscar Award History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The statuette's official name is the Academy Award of Merit.",
+    "options": [
+      "Academy Award of Merit",
+      "Golden Globe Trophy",
+      "The Oscar Trophy",
+      "Filmfare Statue"
+    ],
+    "question": "The Oscar statuette is officially known as the:",
+    "subject": "General Knowledge",
+    "subtopic": "Oscar Award History",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The Commonwealth Games are held every four years.",
+    "options": [
+      "2 years",
+      "3 years",
+      "4 years",
+      "5 years"
+    ],
+    "question": "The Commonwealth Games are held every:",
+    "subject": "General Knowledge",
+    "subtopic": "Commonwealth Awards",
+    "topic": "Awards & Honors"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "The 1930 British Empire Games in Hamilton, Ontario, were the first Commonwealth Games.",
+    "options": [
+      "Hamilton, Canada",
+      "London, England",
+      "Sydney, Australia",
+      "Auckland, New Zealand"
+    ],
+    "question": "The first Commonwealth Games (1930) were held in:",
+    "subject": "General Knowledge",
+    "subtopic": "Commonwealth Awards",
+    "topic": "Awards & Honors"
+  }
 ]

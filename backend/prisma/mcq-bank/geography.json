@@ -1,0 +1,1202 @@
+[
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Mount Everest (8,848.86 m) on the Nepal–China border is the world's highest peak above sea level.",
+    "options": [
+      "Kangchenjunga",
+      "K2",
+      "Lhotse",
+      "Mount Everest"
+    ],
+    "question": "Which is the highest mountain peak in the world?",
+    "subject": "Geography",
+    "subtopic": "Landforms (Mountains, Valleys, Plains, Plateaus)",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "A plateau is an elevated flat region; a valley is low land lying between hills or mountains.",
+    "options": [
+      "A basin",
+      "A plain",
+      "A plateau",
+      "A valley"
+    ],
+    "question": "A broad, elevated, flat-topped area of land is called:",
+    "subject": "Geography",
+    "subtopic": "Landforms (Mountains, Valleys, Plains, Plateaus)",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "The Deccan Plateau covers much of southern and central India.",
+    "options": [
+      "Pakistan",
+      "Turkey",
+      "Iran",
+      "India"
+    ],
+    "question": "The Deccan Plateau is located in:",
+    "subject": "Geography",
+    "subtopic": "Landforms (Mountains, Valleys, Plains, Plateaus)",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "The focus (hypocenter) is the underground point where the quake starts; the epicenter is the point on the surface directly above it.",
+    "options": [
+      "Epicenter",
+      "Crater",
+      "Hypocenter",
+      "Fault line"
+    ],
+    "question": "The point on the Earth's surface directly above the focus of an earthquake is called the:",
+    "subject": "Geography",
+    "subtopic": "Volcanoes and Earthquakes",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Krakatoa (Krakatau) in Indonesia erupted in August 1883, one of the most violent eruptions in recorded history.",
+    "options": [
+      "Indonesia",
+      "Italy",
+      "Iceland",
+      "Japan"
+    ],
+    "question": "The catastrophic 1883 eruption of Krakatoa occurred in:",
+    "subject": "Geography",
+    "subtopic": "Volcanoes and Earthquakes",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "A seismograph detects and records seismic waves; the record it produces is called a seismogram.",
+    "options": [
+      "Seismograph",
+      "Hygrometer",
+      "Anemometer",
+      "Barometer"
+    ],
+    "question": "Earthquakes are recorded with an instrument called the:",
+    "subject": "Geography",
+    "subtopic": "Volcanoes and Earthquakes",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Marble forms when limestone is transformed by heat and pressure, making it a metamorphic rock.",
+    "options": [
+      "A metamorphic rock",
+      "A sedimentary rock",
+      "An igneous rock",
+      "A volcanic glass"
+    ],
+    "question": "Marble is an example of:",
+    "subject": "Geography",
+    "subtopic": "Types of Rocks",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Sedimentary rocks form in layers that preserve plant and animal remains as fossils.",
+    "options": [
+      "Sedimentary rocks",
+      "Mineral ores",
+      "Igneous rocks",
+      "Metamorphic rocks"
+    ],
+    "question": "Fossils are most commonly found in:",
+    "subject": "Geography",
+    "subtopic": "Types of Rocks",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Granite forms from slowly cooled magma beneath the surface, making it an intrusive igneous rock.",
+    "options": [
+      "A sedimentary rock",
+      "A metamorphic rock",
+      "An igneous rock",
+      "A fossil fuel"
+    ],
+    "question": "Granite is classified as:",
+    "subject": "Geography",
+    "subtopic": "Types of Rocks",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "The ozone layer sits about 15–35 km above the Earth, within the stratosphere.",
+    "options": [
+      "Mesosphere",
+      "Thermosphere",
+      "Troposphere",
+      "Stratosphere"
+    ],
+    "question": "The ozone layer, which absorbs most ultraviolet radiation, is located in the:",
+    "subject": "Geography",
+    "subtopic": "Atmosphere Layers",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The troposphere, the lowest layer, holds most of the atmosphere's water vapor, so nearly all weather happens there.",
+    "options": [
+      "Mesosphere",
+      "Troposphere",
+      "Exosphere",
+      "Stratosphere"
+    ],
+    "question": "Almost all weather phenomena such as clouds, rain and storms occur in the:",
+    "subject": "Geography",
+    "subtopic": "Atmosphere Layers",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "The exosphere is the outermost layer of the atmosphere, gradually merging into outer space.",
+    "options": [
+      "Exosphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "question": "The outermost layer of the Earth's atmosphere is the:",
+    "subject": "Geography",
+    "subtopic": "Atmosphere Layers",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Climate is the long-term average (usually 30 years) of weather conditions in a region, while weather is short-term.",
+    "options": [
+      "The wind direction on a given day",
+      "The average weather of a place over about 30 years",
+      "The daily state of the atmosphere",
+      "A sudden change in temperature"
+    ],
+    "question": "Climate is best defined as:",
+    "subject": "Geography",
+    "subtopic": "Weather vs Climate",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "A barometer measures air pressure; an anemometer measures wind speed and a hygrometer measures humidity.",
+    "options": [
+      "Barometer",
+      "Anemometer",
+      "Hygrometer",
+      "Thermometer"
+    ],
+    "question": "Atmospheric pressure is measured with a:",
+    "subject": "Geography",
+    "subtopic": "Weather vs Climate",
+    "topic": "Physical Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "India overtook China in 2023 to become the world's most populous country.",
+    "options": [
+      "China",
+      "India",
+      "Indonesia",
+      "United States"
+    ],
+    "question": "Which country became the world's most populous in 2023?",
+    "subject": "Geography",
+    "subtopic": "World Population Distribution",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Asia holds about 60% of the world's population.",
+    "options": [
+      "North America",
+      "Africa",
+      "Europe",
+      "Asia"
+    ],
+    "question": "The continent with the largest share of the world's population is:",
+    "subject": "Geography",
+    "subtopic": "World Population Distribution",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Australia has a large land area but a small population, giving it the lowest density of any inhabited continent.",
+    "options": [
+      "South America",
+      "Europe",
+      "Australia",
+      "Africa"
+    ],
+    "question": "The least densely populated inhabited continent is:",
+    "subject": "Geography",
+    "subtopic": "World Population Distribution",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Urbanization is the increasing proportion of people living in towns and cities.",
+    "options": [
+      "Urbanization",
+      "Nomadism",
+      "Migration",
+      "Emigration"
+    ],
+    "question": "The large-scale movement of people from rural areas to cities is called:",
+    "subject": "Geography",
+    "subtopic": "Urbanization and Migration",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Push factors (poverty, conflict, disasters) drive people away from a place, while pull factors attract them to a destination.",
+    "options": [
+      "Seasonal job offers abroad",
+      "Government immigration quotas",
+      "Conditions that force people to leave their home area",
+      "Attractions of the destination"
+    ],
+    "question": "In migration studies, 'push factors' are:",
+    "subject": "Geography",
+    "subtopic": "Urbanization and Migration",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Shifting cultivation clears forest by cutting and burning, farms the plot briefly, then moves on to a new area.",
+    "options": [
+      "Plantation farming",
+      "Shifting cultivation",
+      "Mixed farming",
+      "Terrace farming"
+    ],
+    "question": "The slash-and-burn method of farming is also known as:",
+    "subject": "Geography",
+    "subtopic": "Agriculture Types Worldwide",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "The Green Revolution spread high-yield wheat and rice varieties along with fertilizers and expanded irrigation.",
+    "options": [
+      "Organic farming methods",
+      "Mechanized fishing fleets",
+      "Greenhouse floriculture",
+      "High-yield crop varieties and chemical fertilizers"
+    ],
+    "question": "The Green Revolution of the 1960s is mainly associated with:",
+    "subject": "Geography",
+    "subtopic": "Agriculture Types Worldwide",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "China is the world's largest wheat producer, followed by India and Russia.",
+    "options": [
+      "India",
+      "United States",
+      "China",
+      "Russia"
+    ],
+    "question": "The largest producer of wheat in the world is:",
+    "subject": "Geography",
+    "subtopic": "Agriculture Types Worldwide",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "The WTO, established in 1995, is headquartered in Geneva, Switzerland.",
+    "options": [
+      "New York",
+      "Paris",
+      "Geneva",
+      "Rome"
+    ],
+    "question": "The headquarters of the World Trade Organization (WTO) is located in:",
+    "subject": "Geography",
+    "subtopic": "Industries and Trade",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "A trade surplus (favorable balance) occurs when a country's exports are worth more than its imports.",
+    "options": [
+      "The currency is devalued",
+      "All import tariffs are removed",
+      "Imports exceed exports",
+      "Exports exceed imports"
+    ],
+    "question": "A favorable balance of trade means that a country's:",
+    "subject": "Geography",
+    "subtopic": "Industries and Trade",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The Karakoram Highway links Pakistan to China through the Khunjerab Pass.",
+    "options": [
+      "Iran",
+      "Afghanistan",
+      "China",
+      "Tajikistan"
+    ],
+    "question": "The Karakoram Highway connects Pakistan with:",
+    "subject": "Geography",
+    "subtopic": "Transport and Communication",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Suez Canal, opened in 1869, links the Mediterranean Sea to the Red Sea.",
+    "options": [
+      "Red Sea",
+      "Caspian Sea",
+      "Black Sea",
+      "Persian Gulf"
+    ],
+    "question": "The Suez Canal connects the Mediterranean Sea with the:",
+    "subject": "Geography",
+    "subtopic": "Transport and Communication",
+    "topic": "Human Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Pakistan's commonly cited area is 796,096 sq km (881,913 sq km including Gilgit-Baltistan and AJK).",
+    "options": [
+      "350,000 sq km",
+      "503,000 sq km",
+      "1,046,000 sq km",
+      "796,096 sq km"
+    ],
+    "question": "The total area of Pakistan is approximately:",
+    "subject": "Geography",
+    "subtopic": "Location and Boundaries of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The 2,640 km Durand Line, drawn in 1893, separates Pakistan from Afghanistan.",
+    "options": [
+      "Afghanistan",
+      "India",
+      "Iran",
+      "China"
+    ],
+    "question": "The Durand Line is the border between Pakistan and:",
+    "subject": "Geography",
+    "subtopic": "Location and Boundaries of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The narrow Wakhan strip of Afghanistan separates Pakistan from Tajikistan.",
+    "options": [
+      "Kyrgyzstan",
+      "Tajikistan",
+      "Turkmenistan",
+      "Uzbekistan"
+    ],
+    "question": "The Wakhan Corridor separates Pakistan from:",
+    "subject": "Geography",
+    "subtopic": "Location and Boundaries of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "K2 (8,611 m) stands in the Karakoram Range of Gilgit-Baltistan, Pakistan.",
+    "options": [
+      "Himalayas",
+      "Karakoram Range",
+      "Hindu Kush",
+      "Sulaiman Range"
+    ],
+    "question": "K2 (8,611 m), the world's second-highest peak, lies in the:",
+    "subject": "Geography",
+    "subtopic": "Mountain Ranges (Himalayas, Karakoram, Hindu Kush)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 3,
+    "difficulty": "hard",
+    "explanation": "Tirich Mir (7,708 m) rises in the Chitral district of Khyber Pakhtunkhwa.",
+    "options": [
+      "Hunza",
+      "Skardu",
+      "Swat",
+      "Chitral"
+    ],
+    "question": "Tirich Mir (7,708 m), the highest peak of the Hindu Kush, is located in:",
+    "subject": "Geography",
+    "subtopic": "Mountain Ranges (Himalayas, Karakoram, Hindu Kush)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "The Siachen Glacier (about 76 km), among the longest non-polar glaciers on Earth, lies in the Karakoram Range.",
+    "options": [
+      "Himalayas",
+      "Hindu Kush",
+      "Karakoram Range",
+      "Pamir Mountains"
+    ],
+    "question": "The Siachen Glacier lies in the:",
+    "subject": "Geography",
+    "subtopic": "Mountain Ranges (Himalayas, Karakoram, Hindu Kush)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Tarbela, one of the world's largest earth-filled dams, stands on the Indus River in Khyber Pakhtunkhwa.",
+    "options": [
+      "Jhelum",
+      "Indus",
+      "Chenab",
+      "Kabul"
+    ],
+    "question": "The Tarbela Dam is built on the river:",
+    "subject": "Geography",
+    "subtopic": "Rivers and Dams of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Mangla Dam stands on the Jhelum River at Mirpur, Azad Jammu and Kashmir.",
+    "options": [
+      "Chenab",
+      "Ravi",
+      "Indus",
+      "Jhelum"
+    ],
+    "question": "The Mangla Dam is built on the river:",
+    "subject": "Geography",
+    "subtopic": "Rivers and Dams of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The 1960 treaty gave Pakistan the three western rivers — Indus, Jhelum and Chenab — and India the three eastern rivers.",
+    "options": [
+      "Indus, Jhelum and Chenab",
+      "Indus, Ravi and Beas",
+      "Ravi, Beas and Sutlej",
+      "Jhelum, Chenab and Sutlej"
+    ],
+    "question": "Under the Indus Waters Treaty (1960), the rivers allocated to Pakistan are the:",
+    "subject": "Geography",
+    "subtopic": "Rivers and Dams of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Diamer-Bhasha, a major under-construction hydropower project, is being built on the Indus in Gilgit-Baltistan/KP.",
+    "options": [
+      "Swat",
+      "Indus",
+      "Kabul",
+      "Jhelum"
+    ],
+    "question": "The Diamer-Bhasha Dam is being constructed on the river:",
+    "subject": "Geography",
+    "subtopic": "Rivers and Dams of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "The Thal Desert occupies the Sindh Sagar Doab between the Indus and the Jhelum rivers in Punjab.",
+    "options": [
+      "Indus and Jhelum",
+      "Jhelum and Chenab",
+      "Chenab and Ravi",
+      "Ravi and Sutlej"
+    ],
+    "question": "The Thal Desert lies between the rivers:",
+    "subject": "Geography",
+    "subtopic": "Deserts of Pakistan (Thar, Cholistan, Thal)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The Cholistan Desert lies in the Bahawalpur region of Punjab, adjoining the Thar Desert.",
+    "options": [
+      "Sindh",
+      "Punjab",
+      "Balochistan",
+      "Khyber Pakhtunkhwa"
+    ],
+    "question": "The Cholistan Desert is located in the province of:",
+    "subject": "Geography",
+    "subtopic": "Deserts of Pakistan (Thar, Cholistan, Thal)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Pakistan's coastline stretches about 1,046 km from Karachi to Gwadar along the Arabian Sea.",
+    "options": [
+      "1,046 km",
+      "660 km",
+      "2,000 km",
+      "1,500 km"
+    ],
+    "question": "The length of Pakistan's coastline along the Arabian Sea is approximately:",
+    "subject": "Geography",
+    "subtopic": "Coastal Areas (Arabian Sea)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Gwadar, Pakistan's deep-sea port and a CPEC hub, lies on the coast of Balochistan.",
+    "options": [
+      "Khyber Pakhtunkhwa",
+      "Punjab",
+      "Balochistan",
+      "Sindh"
+    ],
+    "question": "Gwadar Port is located in the province of:",
+    "subject": "Geography",
+    "subtopic": "Coastal Areas (Arabian Sea)",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "The summer monsoon brings most of Pakistan's rainfall from July to September.",
+    "options": [
+      "October to December",
+      "April to June",
+      "January to March",
+      "July to September"
+    ],
+    "question": "The monsoon season in Pakistan generally occurs during:",
+    "subject": "Geography",
+    "subtopic": "Climate of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Nok Kundi in the Chagai district of Balochistan is among the driest places in Pakistan.",
+    "options": [
+      "Nok Kundi (Chagai)",
+      "Sialkot",
+      "Murree",
+      "Abbottabad"
+    ],
+    "question": "The area receiving the lowest rainfall in Pakistan is:",
+    "subject": "Geography",
+    "subtopic": "Climate of Pakistan",
+    "topic": "Geography of Pakistan"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Asia covers about 44.6 million sq km, nearly one-third of Earth's total land area.",
+    "options": [
+      "Antarctica",
+      "Asia",
+      "North America",
+      "Africa"
+    ],
+    "question": "The largest continent by area is:",
+    "subject": "Geography",
+    "subtopic": "Continents and their Features",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Australia (about 8.6 million sq km under common continent definitions) is the smallest continent.",
+    "options": [
+      "South America",
+      "Europe",
+      "Australia",
+      "Antarctica"
+    ],
+    "question": "The smallest continent by area is:",
+    "subject": "Geography",
+    "subtopic": "Continents and their Features",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Africa is crossed by both the Equator and the Prime Meridian, placing it in all four hemispheres.",
+    "options": [
+      "Africa",
+      "Asia",
+      "Europe",
+      "South America"
+    ],
+    "question": "The only continent situated in all four hemispheres is:",
+    "subject": "Geography",
+    "subtopic": "Continents and their Features",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Pacific Ocean covers about 165 million sq km — more than all of Earth's land combined.",
+    "options": [
+      "Pacific Ocean",
+      "Atlantic Ocean",
+      "Arctic Ocean",
+      "Indian Ocean"
+    ],
+    "question": "The largest ocean in the world is the:",
+    "subject": "Geography",
+    "subtopic": "Important Oceans and Seas",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The Mariana Trench (about 10,911 m deep) lies in the western Pacific Ocean.",
+    "options": [
+      "Southern Ocean",
+      "Pacific Ocean",
+      "Indian Ocean",
+      "Atlantic Ocean"
+    ],
+    "question": "The Mariana Trench, the deepest point on Earth, lies in the:",
+    "subject": "Geography",
+    "subtopic": "Important Oceans and Seas",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The Caspian Sea is bordered by five states: Russia, Iran, Kazakhstan, Turkmenistan and Azerbaijan.",
+    "options": [
+      "Four",
+      "Five",
+      "Three",
+      "Six"
+    ],
+    "question": "The Caspian Sea, the world's largest lake, is bordered by how many countries?",
+    "subject": "Geography",
+    "subtopic": "Important Oceans and Seas",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "The Strait of Gibraltar links the Atlantic Ocean to the Mediterranean Sea between Spain and Morocco.",
+    "options": [
+      "North Sea",
+      "Red Sea",
+      "Black Sea",
+      "Mediterranean Sea"
+    ],
+    "question": "The Strait of Gibraltar connects the Atlantic Ocean with the:",
+    "subject": "Geography",
+    "subtopic": "Important Straits and Canals",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The Panama Canal, opened in 1914, joins the Atlantic and Pacific oceans across Panama.",
+    "options": [
+      "Arctic Ocean",
+      "Pacific Ocean",
+      "Mediterranean Sea",
+      "Indian Ocean"
+    ],
+    "question": "The Panama Canal connects the Atlantic Ocean with the:",
+    "subject": "Geography",
+    "subtopic": "Important Straits and Canals",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The Strait of Hormuz links the Persian Gulf to the Gulf of Oman.",
+    "options": [
+      "Mediterranean Sea",
+      "Gulf of Oman",
+      "Arabian Sea directly",
+      "Red Sea"
+    ],
+    "question": "The Strait of Hormuz connects the Persian Gulf with the:",
+    "subject": "Geography",
+    "subtopic": "Important Straits and Canals",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Pakistan follows Pakistan Standard Time (GMT+5) throughout the year.",
+    "options": [
+      "GMT+5",
+      "GMT+6",
+      "GMT+5:30",
+      "GMT+4"
+    ],
+    "question": "Pakistan Standard Time is:",
+    "subject": "Geography",
+    "subtopic": "Time Zones and International Date Line",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "The International Date Line follows approximately the 180° meridian in the Pacific Ocean.",
+    "options": [
+      "0°",
+      "90° W",
+      "180°",
+      "90° E"
+    ],
+    "question": "The International Date Line roughly follows the meridian of:",
+    "subject": "Geography",
+    "subtopic": "Time Zones and International Date Line",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "The Andes run about 7,000 km along the western edge of South America.",
+    "options": [
+      "North America",
+      "Asia",
+      "Africa",
+      "South America"
+    ],
+    "question": "The Andes, the longest continental mountain range in the world, are located in:",
+    "subject": "Geography",
+    "subtopic": "Major Mountain Ranges of the World",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Mount Kilimanjaro (5,895 m) stands in northeastern Tanzania.",
+    "options": [
+      "Uganda",
+      "Kenya",
+      "Tanzania",
+      "Ethiopia"
+    ],
+    "question": "Mount Kilimanjaro, the highest peak in Africa, is located in:",
+    "subject": "Geography",
+    "subtopic": "Major Mountain Ranges of the World",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The Nile (about 6,650 km) is traditionally cited as the world's longest river.",
+    "options": [
+      "Amazon",
+      "Mississippi",
+      "Nile",
+      "Yangtze"
+    ],
+    "question": "Which river is traditionally regarded as the longest river in the world?",
+    "subject": "Geography",
+    "subtopic": "Important Rivers of the World",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "The Amazon drains the rainforests of South America and empties into the Atlantic Ocean.",
+    "options": [
+      "Africa",
+      "Asia",
+      "North America",
+      "South America"
+    ],
+    "question": "The Amazon River flows through the continent of:",
+    "subject": "Geography",
+    "subtopic": "Important Rivers of the World",
+    "topic": "World Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Isotherms join places of equal temperature; isobars join equal pressure and isohyets equal rainfall.",
+    "options": [
+      "Isohyets",
+      "Isotherms",
+      "Contours",
+      "Isobars"
+    ],
+    "question": "Lines on a map joining places of equal temperature are called:",
+    "subject": "Geography",
+    "subtopic": "Types of Maps",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Thematic maps display a particular theme or subject, such as population density, crops or rainfall.",
+    "options": [
+      "Thematic map",
+      "Physical map",
+      "Political map",
+      "Topographic map"
+    ],
+    "question": "A map showing the distribution of population or crops is an example of a:",
+    "subject": "Geography",
+    "subtopic": "Types of Maps",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Contour lines connect points of equal height above sea level.",
+    "options": [
+      "Rainfall",
+      "Temperature",
+      "Elevation",
+      "Pressure"
+    ],
+    "question": "Contour lines on a map join places of equal:",
+    "subject": "Geography",
+    "subtopic": "Types of Maps",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "The Equator is the 0° latitude line dividing the Earth into the northern and southern hemispheres.",
+    "options": [
+      "0° latitude",
+      "23.5° N latitude",
+      "66.5° S latitude",
+      "0° longitude"
+    ],
+    "question": "The Equator is the line of:",
+    "subject": "Geography",
+    "subtopic": "Latitude and Longitude",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "The 0° longitude line runs through Greenwich in London, England.",
+    "options": [
+      "Madrid",
+      "Rome",
+      "Paris",
+      "Greenwich, England"
+    ],
+    "question": "The Prime Meridian passes through:",
+    "subject": "Geography",
+    "subtopic": "Latitude and Longitude",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The Earth rotates 360° in 24 hours, so each hour of time difference equals 15° of longitude.",
+    "options": [
+      "15°",
+      "30°",
+      "10°",
+      "24°"
+    ],
+    "question": "A time difference of one hour corresponds to how many degrees of longitude?",
+    "subject": "Geography",
+    "subtopic": "Latitude and Longitude",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "South lies 180° from North on the compass rose.",
+    "options": [
+      "East",
+      "West",
+      "Northeast",
+      "South"
+    ],
+    "question": "On a compass, the direction exactly opposite to North is:",
+    "subject": "Geography",
+    "subtopic": "Scale and Compass",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "A representative fraction expresses map-to-ground distance in the same units on both sides.",
+    "options": [
+      "The mapped area is 50,000 sq km",
+      "1 cm on the map equals 50,000 cm on the ground",
+      "The map is 50,000 cm wide",
+      "1 cm on the map equals 50,000 km on the ground"
+    ],
+    "question": "A map scale of 1:50,000 (representative fraction) means:",
+    "subject": "Geography",
+    "subtopic": "Scale and Compass",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "A compass needle aligns with Earth's magnetic field, pointing toward magnetic north, which differs slightly from true north.",
+    "options": [
+      "Magnetic north",
+      "Geographic south",
+      "True north",
+      "The Equator"
+    ],
+    "question": "The needle of a magnetic compass points toward:",
+    "subject": "Geography",
+    "subtopic": "Scale and Compass",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "On physical maps, blue denotes water, green lowlands and brown highlands.",
+    "options": [
+      "Brown",
+      "Blue",
+      "Green",
+      "Red"
+    ],
+    "question": "On a physical map, water bodies are conventionally shown in:",
+    "subject": "Geography",
+    "subtopic": "Types of Maps",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "By cartographic convention, north is placed at the top of a map unless stated otherwise.",
+    "options": [
+      "Top",
+      "Left side",
+      "Right side",
+      "Bottom"
+    ],
+    "question": "On most maps, north is conventionally shown at the:",
+    "subject": "Geography",
+    "subtopic": "Map Reading Basics",
+    "topic": "Maps and Directions"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "The 7.6-magnitude earthquake of 8 October 2005 devastated AJK and northern KP, especially Muzaffarabad and Balakot.",
+    "options": [
+      "Coastal Sindh",
+      "Southern Balochistan",
+      "Azad Jammu and Kashmir and northern Khyber Pakhtunkhwa",
+      "Central Punjab"
+    ],
+    "question": "The devastating earthquake of 8 October 2005 in Pakistan mainly affected:",
+    "subject": "Geography",
+    "subtopic": "Natural Disasters (Floods, Earthquakes, Droughts)",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "Each whole-number step on the Richter scale means about 10 times the wave amplitude and roughly 32 times the energy released.",
+    "options": [
+      "10 times",
+      "2 times",
+      "32 times",
+      "100 times"
+    ],
+    "question": "On the Richter scale, each whole-number increase represents roughly how many times more energy released?",
+    "subject": "Geography",
+    "subtopic": "Natural Disasters (Floods, Earthquakes, Droughts)",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Most tsunamis are triggered by undersea earthquakes that suddenly displace large volumes of ocean water.",
+    "options": [
+      "Ocean tides",
+      "Undersea earthquakes",
+      "Lightning strikes",
+      "Cyclones"
+    ],
+    "question": "A tsunami is most commonly caused by:",
+    "subject": "Geography",
+    "subtopic": "Natural Disasters (Floods, Earthquakes, Droughts)",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "About 60% of the Amazon rainforest lies within Brazil's borders.",
+    "options": [
+      "Indonesia",
+      "Peru",
+      "Congo",
+      "Brazil"
+    ],
+    "question": "The Amazon, the world's largest rainforest, lies mainly in:",
+    "subject": "Geography",
+    "subtopic": "Deforestation and its Effects",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Trees absorb carbon dioxide; cutting them releases stored carbon and removes an important carbon sink.",
+    "options": [
+      "Block sunlight completely",
+      "Consume groundwater only",
+      "Release oxygen at night",
+      "Absorb carbon dioxide from the air"
+    ],
+    "question": "Deforestation worsens climate change mainly because trees:",
+    "subject": "Geography",
+    "subtopic": "Deforestation and its Effects",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Terraces slow down water runoff on slopes, which reduces the washing away of topsoil.",
+    "options": [
+      "Grow aquatic plants",
+      "Increase rainfall",
+      "Reduce sunlight exposure",
+      "Prevent soil erosion"
+    ],
+    "question": "Terrace farming on hill slopes is mainly practiced to:",
+    "subject": "Geography",
+    "subtopic": "Soil Erosion",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "In arid regions with sparse vegetation, wind is the dominant agent of soil erosion.",
+    "options": [
+      "Earthquakes",
+      "Running water",
+      "Wind",
+      "Glaciers"
+    ],
+    "question": "The main agent of soil erosion in desert regions is:",
+    "subject": "Geography",
+    "subtopic": "Soil Erosion",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "The Indus Basin system irrigates over 16 million hectares, the largest contiguous irrigation network in the world.",
+    "options": [
+      "A purely rain-fed farming system",
+      "A coastal desalination project",
+      "The largest contiguous irrigation system in the world",
+      "The oldest dam network in Asia"
+    ],
+    "question": "Pakistan's Indus Basin Irrigation System is known as:",
+    "subject": "Geography",
+    "subtopic": "Water Resources",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Drip irrigation delivers water directly to plant roots, minimizing losses from evaporation and runoff.",
+    "options": [
+      "Furrow irrigation",
+      "Drip irrigation",
+      "Sprinkler irrigation",
+      "Flood irrigation"
+    ],
+    "question": "Which irrigation method is the most water-efficient?",
+    "subject": "Geography",
+    "subtopic": "Water Resources",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Tarbela Dam on the Indus has the largest live water storage capacity of any dam in Pakistan.",
+    "options": [
+      "Warsak Dam",
+      "Tarbela Dam",
+      "Hub Dam",
+      "Mangla Dam"
+    ],
+    "question": "The largest dam in Pakistan by water storage capacity is:",
+    "subject": "Geography",
+    "subtopic": "Water Resources",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "In the Köppen system, 'Af' denotes the tropical rainforest climate — hot and wet throughout the year.",
+    "options": [
+      "Arid desert climate",
+      "Polar ice-cap climate",
+      "Tropical rainforest climate",
+      "Mediterranean climate"
+    ],
+    "question": "In the Köppen climate classification, the code 'Af' denotes:",
+    "subject": "Geography",
+    "subtopic": "Climate Zones of the World",
+    "topic": "Environmental Geography"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Mediterranean climates are defined by hot, dry summers and mild, wet winters.",
+    "options": [
+      "Freezing winters and cool summers",
+      "Year-round heavy rainfall",
+      "Even rainfall in every season",
+      "Hot, dry summers and mild, wet winters"
+    ],
+    "question": "A Mediterranean climate is characterized by:",
+    "subject": "Geography",
+    "subtopic": "Climate Zones of the World",
+    "topic": "Environmental Geography"
+  }
+]

@@ -66,34 +66,44 @@ async function main(): Promise<void> {
   const subCache = new Map<string, number>();
   const topCache = new Map<string, number>();
 
+  async function getOrFetch(
+    cache: Map<string, number>,
+    key: string,
+    fetcher: () => Promise<number | null>,
+  ): Promise<number | null> {
+    const hit = cache.get(key);
+    if (hit !== undefined) return hit;
+    const id = await fetcher();
+    if (id === null) return null;
+    cache.set(key, id);
+    return id;
+  }
+
   async function resolveIds(q: BankQuestion): Promise<{ categoryId: number; subCategoryId: number; topicId: number } | null> {
-    let categoryId = catCache.get(q.subject);
-    if (categoryId === undefined) {
+    const categoryId = await getOrFetch(catCache, q.subject, async () => {
       const c = await prisma.category.findFirst({ where: { name: q.subject } });
-      if (!c) return null;
-      categoryId = c.id;
-      catCache.set(q.subject, categoryId);
-    }
+      return c ? c.id : null;
+    });
+    if (categoryId === null) return null;
+
     const subKey = `${q.subject}||${q.topic}`;
-    let subCategoryId = subCache.get(subKey);
-    if (subCategoryId === undefined) {
+    const subCategoryId = await getOrFetch(subCache, subKey, async () => {
       const s = await prisma.subCategory.findFirst({
         where: { name: q.topic, categoryId },
       });
-      if (!s) return null;
-      subCategoryId = s.id;
-      subCache.set(subKey, subCategoryId);
-    }
+      return s ? s.id : null;
+    });
+    if (subCategoryId === null) return null;
+
     const topKey = `${subKey}||${q.subtopic}`;
-    let topicId = topCache.get(topKey);
-    if (topicId === undefined) {
+    const topicId = await getOrFetch(topCache, topKey, async () => {
       const t = await prisma.topic.findFirst({
         where: { name: q.subtopic, subCategoryId },
       });
-      if (!t) return null;
-      topicId = t.id;
-      topCache.set(topKey, topicId);
-    }
+      return t ? t.id : null;
+    });
+    if (topicId === null) return null;
+
     return { categoryId, subCategoryId, topicId };
   }
 

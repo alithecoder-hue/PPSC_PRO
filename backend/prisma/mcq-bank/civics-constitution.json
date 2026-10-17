@@ -1,0 +1,1202 @@
+[
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Definition and Importance of Civics",
+    "question": "The word 'civics' is derived from the Latin word 'civis', which means:",
+    "options": [
+      "City-state",
+      "Citizen",
+      "Law",
+      "Ruler"
+    ],
+    "correct": 1,
+    "explanation": "Civics comes from the Latin 'civis' (citizen) and 'civitas' (city-state); it is the study of the rights and duties of citizens.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Definition and Importance of Civics",
+    "question": "Which of the following best describes the subject matter of civics?",
+    "options": [
+      "The rights and duties of citizens",
+      "Industrial production",
+      "Military strategy",
+      "International trade"
+    ],
+    "correct": 0,
+    "explanation": "Civics studies citizenship — the rights citizens enjoy and the duties they owe to the state and to fellow citizens.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Rights and Responsibilities of Citizens",
+    "question": "Which of the following is a fundamental duty of a Pakistani citizen under the Constitution?",
+    "options": [
+      "Owning property abroad",
+      "Avoiding taxes",
+      "Loyalty to the state",
+      "Criticizing the judiciary"
+    ],
+    "correct": 2,
+    "explanation": "Article 5 of the Constitution declares loyalty to the state and obedience to the Constitution as the basic duty of every citizen.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Rights and Responsibilities of Citizens",
+    "question": "The right to vote in Pakistan is best described as:",
+    "options": [
+      "A duty punishable by law if ignored",
+      "A right limited to graduates",
+      "A privilege of landowners only",
+      "Both a right and a responsibility"
+    ],
+    "correct": 3,
+    "explanation": "Voting is a democratic right, and exercising it wisely is considered a civic responsibility of every eligible citizen.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Rights and Responsibilities of Citizens",
+    "question": "Which article of the 1973 Constitution declares loyalty to the state to be the basic duty of every citizen?",
+    "options": [
+      "Article 5",
+      "Article 25",
+      "Article 184",
+      "Article 9"
+    ],
+    "correct": 0,
+    "explanation": "Article 5(1) states that loyalty to the State is the basic duty of every citizen, and obedience to the Constitution and law is the obligation of every citizen.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Concept of State and Government",
+    "question": "Which of the following is NOT an essential element of a state?",
+    "options": [
+      "Territory",
+      "A national cricket team",
+      "Population",
+      "Sovereignty"
+    ],
+    "correct": 1,
+    "explanation": "The four essential elements of a state are population, territory, government, and sovereignty.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Concept of State and Government",
+    "question": "What distinguishes a state from a government?",
+    "options": [
+      "The state has no defined territory",
+      "The government is permanent while states change",
+      "They are exactly the same thing",
+      "The state is permanent while governments change"
+    ],
+    "correct": 3,
+    "explanation": "The state is the permanent political community; a government is the temporary set of institutions that exercises the state's authority and changes through elections.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Democracy and its Types",
+    "question": "The term 'democracy' comes from the Greek words 'demos' and 'kratia', meaning:",
+    "options": [
+      "Rule by priests",
+      "Rule by a single king",
+      "Rule by the rich",
+      "Rule by the people"
+    ],
+    "correct": 3,
+    "explanation": "Democracy derives from Greek 'demokratia' — 'demos' (the people) and 'kratia' (rule) — literally meaning rule by the people.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Democracy and its Types",
+    "question": "In a direct democracy, laws are made by:",
+    "options": [
+      "The citizens themselves",
+      "Foreign advisors",
+      "A hereditary monarch",
+      "Military rulers"
+    ],
+    "correct": 0,
+    "explanation": "In direct democracy citizens participate personally in making laws (as in ancient Athens); in indirect democracy they elect representatives to legislate for them.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Democracy and its Types",
+    "question": "Pakistan follows which type of democracy?",
+    "options": [
+      "Direct democracy",
+      "Absolute monarchy",
+      "One-party rule",
+      "Indirect (representative) democracy"
+    ],
+    "correct": 3,
+    "explanation": "Pakistan is a parliamentary democracy where citizens elect representatives to the National and Provincial Assemblies who legislate on their behalf.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Citizenship",
+    "question": "A person born in Pakistan generally acquires citizenship under:",
+    "options": [
+      "The Objectives Resolution",
+      "The Universal Declaration of Human Rights",
+      "The 18th Amendment",
+      "The Pakistan Citizenship Act, 1951"
+    ],
+    "correct": 3,
+    "explanation": "Citizenship in Pakistan is governed by the Pakistan Citizenship Act, 1951, which provides for citizenship by birth, descent, and migration.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Introduction to Civics",
+    "subtopic": "Citizenship",
+    "question": "Which of the following can lead to loss of Pakistani citizenship?",
+    "options": [
+      "Voluntarily acquiring the citizenship of another country",
+      "Owning property in Pakistan",
+      "Voting in general elections",
+      "Marrying a Pakistani citizen"
+    ],
+    "correct": 0,
+    "explanation": "Under the Citizenship Act, a Pakistani who voluntarily acquires foreign citizenship generally ceases to be a Pakistani citizen, except where dual nationality is permitted by agreement.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Features of 1973 Constitution",
+    "question": "The Constitution of Pakistan, 1973 was enforced on:",
+    "options": [
+      "25 December 1947",
+      "23 March 1956",
+      "14 August 1973",
+      "8 June 1962"
+    ],
+    "correct": 2,
+    "explanation": "The 1973 Constitution was adopted by the National Assembly in April 1973 and came into force on 14 August 1973.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Features of 1973 Constitution",
+    "question": "Which of the following is a salient feature of the 1973 Constitution?",
+    "options": [
+      "A unitary one-party system",
+      "A constitutional monarchy",
+      "A parliamentary, federal system with a bicameral legislature",
+      "A presidential system with a single house"
+    ],
+    "correct": 2,
+    "explanation": "The 1973 Constitution establishes a federal parliamentary republic with a bicameral Parliament consisting of the National Assembly and the Senate.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Features of 1973 Constitution",
+    "question": "The 1973 Constitution, as originally adopted, contained:",
+    "options": [
+      "250 articles and 5 schedules",
+      "280 articles and 7 schedules",
+      "200 articles and 3 schedules",
+      "300 articles and 10 schedules"
+    ],
+    "correct": 1,
+    "explanation": "As originally adopted, the Constitution contained 280 articles divided into 12 parts, together with 7 schedules.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Islamic Provisions of the Constitution",
+    "question": "Which article of the 1973 Constitution declares Islam as the state religion of Pakistan?",
+    "options": [
+      "Article 2",
+      "Article 1",
+      "Article 25",
+      "Article 41"
+    ],
+    "correct": 0,
+    "explanation": "Article 2 of the Constitution declares Islam to be the state religion of Pakistan.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Islamic Provisions of the Constitution",
+    "question": "Under the 1973 Constitution, the President and the Prime Minister of Pakistan must be:",
+    "options": [
+      "University graduates",
+      "Muslims",
+      "Retired judges",
+      "At least 60 years old"
+    ],
+    "correct": 1,
+    "explanation": "The Constitution requires both the President and the Prime Minister to be Muslims, reflecting its Islamic provisions.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Fundamental Rights (Articles 8-28)",
+    "question": "Fundamental rights in the 1973 Constitution are guaranteed in:",
+    "options": [
+      "Articles 8 to 28",
+      "Articles 232 to 237",
+      "Articles 41 to 50",
+      "Articles 29 to 40"
+    ],
+    "correct": 0,
+    "explanation": "Articles 8–28 of the Constitution guarantee fundamental rights, which — unlike the Principles of Policy — are enforceable by the courts.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Fundamental Rights (Articles 8-28)",
+    "question": "Which article guarantees free and compulsory education for children aged 5 to 16 as a fundamental right?",
+    "options": [
+      "Article 25-A",
+      "Article 19",
+      "Article 9",
+      "Article 14"
+    ],
+    "correct": 0,
+    "explanation": "Article 25-A, inserted by the 18th Amendment, makes free and compulsory education for children aged 5–16 a fundamental right.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Fundamental Rights (Articles 8-28)",
+    "question": "Which article protects a person from retrospective punishment — being punished for an act that was not an offence when it was committed?",
+    "options": [
+      "Article 13",
+      "Article 12",
+      "Article 9",
+      "Article 10"
+    ],
+    "correct": 1,
+    "explanation": "Article 12 bars retrospective punishment: no one can be convicted for an act that was not an offence under the law in force when the act was done.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Fundamental Duties",
+    "question": "Unlike fundamental rights, the Principles of Policy (Articles 29–40) are:",
+    "options": [
+      "Enforceable by the Supreme Court",
+      "Applicable only to non-Muslims",
+      "Superior to fundamental rights",
+      "Not enforceable by any court"
+    ],
+    "correct": 3,
+    "explanation": "The Principles of Policy guide the state in making laws but, unlike fundamental rights, they cannot be enforced through the courts.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Fundamental Duties",
+    "question": "Which article makes it a duty of the state to promote the Islamic way of life?",
+    "options": [
+      "Article 25",
+      "Article 19",
+      "Article 9",
+      "Article 31"
+    ],
+    "correct": 3,
+    "explanation": "Article 31 requires the state to take steps enabling Muslims to order their lives according to Islamic teachings, including compulsory teaching of the Quran.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Emergency Provisions",
+    "question": "A proclamation of emergency in Pakistan is issued by:",
+    "options": [
+      "The Chief Justice",
+      "The President",
+      "The Army Chief",
+      "The Speaker of the National Assembly"
+    ],
+    "correct": 1,
+    "explanation": "Under Article 232, the President may proclaim an emergency if satisfied that a grave emergency exists due to war, external aggression, or internal disturbance.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Emergency Provisions",
+    "question": "A proclamation of emergency must be approved by Parliament within:",
+    "options": [
+      "Two months",
+      "One week",
+      "One year",
+      "Six months"
+    ],
+    "correct": 0,
+    "explanation": "Under Article 232, a proclamation of emergency ceases to operate after two months unless it is approved by a resolution of Parliament.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitution of Pakistan 1973",
+    "subtopic": "Emergency Provisions",
+    "question": "Which article empowers the President to take over a province's administration when its constitutional machinery has failed?",
+    "options": [
+      "Article 62",
+      "Article 199",
+      "Article 184",
+      "Article 234"
+    ],
+    "correct": 3,
+    "explanation": "Article 234 allows the President, on the Governor's report or otherwise, to assume a province's executive functions when its constitutional machinery breaks down (Governor's rule).",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Federal Government (Executive, Legislature, Judiciary)",
+    "question": "The three organs of government in Pakistan's federal system are:",
+    "options": [
+      "President, Governor, and Mayor",
+      "Army, police, and bureaucracy",
+      "Executive, legislature, and judiciary",
+      "Federal, provincial, and local tiers"
+    ],
+    "correct": 2,
+    "explanation": "Like most democracies, Pakistan's government has three organs: the executive (President, Prime Minister and cabinet), the legislature (Parliament), and the judiciary.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Federal Government (Executive, Legislature, Judiciary)",
+    "question": "The executive authority of the Federation of Pakistan vests in:",
+    "options": [
+      "The Chairman of the Senate",
+      "The provincial governors jointly",
+      "The President, exercised on the advice of the Prime Minister and Cabinet",
+      "The Chief Justice of Pakistan"
+    ],
+    "correct": 2,
+    "explanation": "Under the Constitution, executive authority vests in the President but is exercised on the binding advice of the Prime Minister and the federal cabinet.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Federal Government (Executive, Legislature, Judiciary)",
+    "question": "The Council of Common Interests (CCI), which settles disputes between the Federation and the provinces, is chaired by:",
+    "options": [
+      "The Chief Justice",
+      "The President",
+      "The Chairman Senate",
+      "The Prime Minister"
+    ],
+    "correct": 3,
+    "explanation": "The CCI, established under Article 153, is chaired by the Prime Minister and includes the provincial chief ministers; it decides matters such as water and natural resources.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Provincial Government Structure",
+    "question": "The constitutional head of a province in Pakistan is the:",
+    "options": [
+      "Chief Minister",
+      "Governor",
+      "Mayor",
+      "Commissioner"
+    ],
+    "correct": 1,
+    "explanation": "The Governor is the constitutional head of a province and is appointed by the President, while the Chief Minister heads the provincial government.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Provincial Government Structure",
+    "question": "The Provincial Assembly of the Punjab consists of how many seats?",
+    "options": [
+      "297",
+      "336",
+      "371",
+      "168"
+    ],
+    "correct": 2,
+    "explanation": "The Punjab Assembly has 371 seats (297 general, 66 reserved for women, 8 for non-Muslims), making it the largest provincial legislature in Pakistan.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Local Government System",
+    "question": "Which amendment made it mandatory for provinces to establish a local government system and devolve powers to it?",
+    "options": [
+      "The 8th Amendment",
+      "The 21st Amendment",
+      "The 14th Amendment",
+      "The 18th Amendment (Article 140-A)"
+    ],
+    "correct": 3,
+    "explanation": "Article 140-A, inserted by the 18th Amendment, obliges each province to establish a local government system with devolved political, administrative, and financial authority.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Local Government System",
+    "question": "The grassroots tier of local government in Pakistan, directly elected by voters in both urban and rural areas, is the:",
+    "options": [
+      "Tehsil council",
+      "District council",
+      "Provincial assembly",
+      "Union council"
+    ],
+    "correct": 3,
+    "explanation": "The union council is the lowest tier of local government, directly elected by the voters of its area.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Relationship between Federal and Provincial Governments",
+    "question": "The distribution of legislative powers between the Federation and the provinces is laid down in:",
+    "options": [
+      "The First Schedule",
+      "The Seventh Schedule",
+      "The Fourth Schedule",
+      "The Preamble"
+    ],
+    "correct": 2,
+    "explanation": "The Fourth Schedule contains the Federal Legislative List, defining the subjects on which Parliament may legislate.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Government Structure of Pakistan",
+    "subtopic": "Relationship between Federal and Provincial Governments",
+    "question": "After the 18th Amendment abolished the Concurrent Legislative List, subjects like education and health became:",
+    "options": [
+      "Exclusively federal subjects",
+      "Unregulated subjects",
+      "Exclusively provincial subjects",
+      "Subjects shared with the armed forces"
+    ],
+    "correct": 2,
+    "explanation": "The 18th Amendment abolished the Concurrent List, devolving 17 ministries — including education and health — entirely to the provinces.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "National Assembly — Composition and Powers",
+    "question": "The National Assembly of Pakistan currently has how many total seats?",
+    "options": [
+      "300",
+      "336",
+      "342",
+      "272"
+    ],
+    "correct": 1,
+    "explanation": "The National Assembly has 336 seats: 266 general, 60 reserved for women, and 10 for non-Muslims.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "National Assembly — Composition and Powers",
+    "question": "A person is qualified to be elected as a member of the National Assembly if they are a citizen of Pakistan and at least:",
+    "options": [
+      "25 years old",
+      "18 years old",
+      "35 years old",
+      "30 years old"
+    ],
+    "correct": 0,
+    "explanation": "Article 62 requires a National Assembly candidate to be a citizen of Pakistan, at least 25 years old, and enrolled as a voter.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "National Assembly — Composition and Powers",
+    "question": "The National Assembly's term is five years, but it can be dissolved earlier by:",
+    "options": [
+      "The Senate",
+      "The President on the Prime Minister's advice",
+      "The Election Commission",
+      "The Chief Justice"
+    ],
+    "correct": 1,
+    "explanation": "Under Article 58, the President dissolves the National Assembly on the Prime Minister's advice; the old unilateral power under 58(2)(b) was removed by the 18th Amendment.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Senate — Composition and Powers",
+    "question": "The Senate of Pakistan currently has how many members?",
+    "options": [
+      "96",
+      "100",
+      "104",
+      "63"
+    ],
+    "correct": 0,
+    "explanation": "After the 25th Amendment merged FATA with Khyber Pakhtunkhwa, the Senate's strength became 96 — 23 from each province plus 4 from Islamabad.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Senate — Composition and Powers",
+    "question": "Members of the Senate are elected by:",
+    "options": [
+      "The Prime Minister",
+      "Members of the provincial assemblies and the National Assembly",
+      "The President",
+      "Direct vote of the public"
+    ],
+    "correct": 1,
+    "explanation": "Senators are elected indirectly: provincial assemblies elect senators from each province, and the National Assembly elects those from Islamabad.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Senate — Composition and Powers",
+    "question": "The term of a Senator in Pakistan is:",
+    "options": [
+      "4 years",
+      "5 years",
+      "6 years, with half retiring every 3 years",
+      "For life"
+    ],
+    "correct": 2,
+    "explanation": "Senators serve six-year terms, with half of the Senate's membership retiring every three years, which gives the upper house continuity.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Senate — Composition and Powers",
+    "question": "Which of the following statements about the Senate is correct?",
+    "options": [
+      "The Senate's term is five years",
+      "The Senate is a permanent body and cannot be dissolved",
+      "The Senate passes money bills first",
+      "The Senate can be dissolved by the President"
+    ],
+    "correct": 1,
+    "explanation": "Unlike the National Assembly, the Senate is a continuing, permanent body and cannot be dissolved.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Law Making Process in Pakistan",
+    "question": "A bill becomes an Act of Parliament after it is:",
+    "options": [
+      "Passed by the Senate alone",
+      "Signed by the Prime Minister only",
+      "Passed by both houses and assented to by the President",
+      "Approved by the Supreme Court"
+    ],
+    "correct": 2,
+    "explanation": "An ordinary bill must be passed by the National Assembly and the Senate — or by a joint sitting in case of deadlock — and then receive the President's assent to become law.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Law Making Process in Pakistan",
+    "question": "If the Senate rejects a bill passed by the National Assembly, the deadlock is resolved by:",
+    "options": [
+      "A public referendum",
+      "A presidential ordinance",
+      "A joint sitting of Parliament",
+      "The Supreme Court"
+    ],
+    "correct": 2,
+    "explanation": "When the two houses disagree, the President may summon a joint sitting, where the bill is passed by a majority of the members present and voting.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Budget Process in Parliament",
+    "question": "The annual budget (Annual Budget Statement) is presented in the National Assembly by the:",
+    "options": [
+      "Finance Minister",
+      "Chairman Senate",
+      "Chief Justice",
+      "Auditor General"
+    ],
+    "correct": 0,
+    "explanation": "The federal budget is presented each year in the National Assembly by the Finance Minister under Articles 80–84 of the Constitution.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Parliament of Pakistan",
+    "subtopic": "Budget Process in Parliament",
+    "question": "A money bill in Pakistan can only be introduced in the:",
+    "options": [
+      "Joint sitting",
+      "National Assembly",
+      "Provincial assembly",
+      "Senate"
+    ],
+    "correct": 1,
+    "explanation": "Money bills originate only in the National Assembly; the Senate may make recommendations within 14 days, but the Assembly is not bound to accept them.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Supreme Court of Pakistan",
+    "question": "The highest court of Pakistan is the:",
+    "options": [
+      "Federal Shariat Court",
+      "Lahore High Court",
+      "Council of Islamic Ideology",
+      "Supreme Court of Pakistan"
+    ],
+    "correct": 3,
+    "explanation": "The Supreme Court, seated in Islamabad, is the apex court and the final court of appeal in Pakistan.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Supreme Court of Pakistan",
+    "question": "Under Article 184(3), the Supreme Court can take up a matter of public importance involving:",
+    "options": [
+      "Enforcement of fundamental rights",
+      "Fixing traffic fines",
+      "Private property disputes between individuals",
+      "Customs valuation cases"
+    ],
+    "correct": 0,
+    "explanation": "Article 184(3) gives the Supreme Court original jurisdiction in cases of public importance relating to the enforcement of fundamental rights — the basis of suo motu action.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Supreme Court of Pakistan",
+    "question": "The retirement age of a judge of the Supreme Court of Pakistan is:",
+    "options": [
+      "62 years",
+      "65 years",
+      "70 years",
+      "60 years"
+    ],
+    "correct": 1,
+    "explanation": "Supreme Court judges retire at 65, while judges of the High Courts retire at 62.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "High Courts (Punjab, Sindh, KPK, Balochistan)",
+    "question": "How many High Courts are there in Pakistan?",
+    "options": [
+      "5",
+      "7",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Pakistan has five High Courts: Lahore, Sindh, Peshawar, Balochistan, and Islamabad High Courts.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "High Courts (Punjab, Sindh, KPK, Balochistan)",
+    "question": "Under Article 199, a High Court can issue writs for:",
+    "options": [
+      "Dissolving assemblies",
+      "Appointing federal ministers",
+      "Enforcing fundamental rights and for any other purpose",
+      "Collecting taxes"
+    ],
+    "correct": 2,
+    "explanation": "Article 199 empowers High Courts to issue writs — habeas corpus, mandamus, certiorari, prohibition, and quo warranto — for enforcing fundamental rights.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Federal Shariat Court",
+    "question": "The Federal Shariat Court examines whether laws are:",
+    "options": [
+      "Too expensive to enforce",
+      "Written in English",
+      "Older than fifty years",
+      "Repugnant to the injunctions of Islam"
+    ],
+    "correct": 3,
+    "explanation": "The Federal Shariat Court (established in 1980) can declare any law void if it finds it repugnant to the injunctions of Islam as laid down in the Quran and Sunnah.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Federal Shariat Court",
+    "question": "An appeal against a decision of the Federal Shariat Court lies to the:",
+    "options": [
+      "Lahore High Court",
+      "Shariat Appellate Bench of the Supreme Court",
+      "President of Pakistan",
+      "Council of Islamic Ideology"
+    ],
+    "correct": 1,
+    "explanation": "Appeals from the Federal Shariat Court go to the Shariat Appellate Bench of the Supreme Court, which includes Muslim judges and ulema.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Judicial Review",
+    "question": "The power of courts to strike down a law that violates the Constitution is called:",
+    "options": [
+      "Judicial restraint",
+      "Judicial precedent",
+      "Judicial activism",
+      "Judicial review"
+    ],
+    "correct": 3,
+    "explanation": "Judicial review is the courts' power to examine laws and executive actions and declare void those inconsistent with the Constitution.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Judicial Review",
+    "question": "In Pakistan, the trichotomy (separation) of powers means:",
+    "options": [
+      "The legislature, executive, and judiciary function independently within their spheres",
+      "The provinces have no powers of their own",
+      "The courts make all the laws",
+      "The armed forces control all state powers"
+    ],
+    "correct": 0,
+    "explanation": "The Constitution distributes state power among three independent organs so that each checks the others and no single organ becomes absolute.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Independence of Judiciary",
+    "question": "The independence of the judiciary is protected by the Constitution mainly through:",
+    "options": [
+      "Judges contesting elections",
+      "Security of tenure and fixed service conditions of judges",
+      "Parliament appointing all judges directly",
+      "Judges serving at the President's pleasure"
+    ],
+    "correct": 1,
+    "explanation": "Judges enjoy constitutionally protected tenure, and their terms of service cannot be varied to their disadvantage, shielding them from executive pressure.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Independence of Judiciary",
+    "question": "The Judicial Commission of Pakistan, which nominates judges of the superior courts, is headed by the:",
+    "options": [
+      "Chief Justice of Pakistan",
+      "Law Minister",
+      "Prime Minister",
+      "President"
+    ],
+    "correct": 0,
+    "explanation": "The Judicial Commission, headed by the Chief Justice of Pakistan, nominates judges for the superior courts — a key safeguard of judicial independence.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Judiciary of Pakistan",
+    "subtopic": "Independence of Judiciary",
+    "question": "A judge of the superior judiciary in Pakistan can be removed only through:",
+    "options": [
+      "An order of the Prime Minister",
+      "A presidential ordinance",
+      "Proceedings of the Supreme Judicial Council",
+      "A vote of the federal cabinet"
+    ],
+    "correct": 2,
+    "explanation": "Under Article 209, a superior court judge can be removed only on the Supreme Judicial Council's recommendation, on grounds of incapacity or misconduct.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "8th Amendment (1985)",
+    "question": "The 8th Amendment (1985) is best known for:",
+    "options": [
+      "Lowering the voting age to 18",
+      "Merging FATA with KPK",
+      "Creating the Senate",
+      "Giving the President power to dissolve the National Assembly under Article 58(2)(b)"
+    ],
+    "correct": 3,
+    "explanation": "The 8th Amendment validated General Zia-ul-Haq's actions and inserted Article 58(2)(b), empowering the President to dissolve the National Assembly at his discretion.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "8th Amendment (1985)",
+    "question": "The 8th Amendment also made the Objectives Resolution:",
+    "options": [
+      "A substantive part of the Constitution (Article 2-A)",
+      "Part of the Preamble only",
+      "An ordinary act of Parliament",
+      "A schedule of the Constitution"
+    ],
+    "correct": 0,
+    "explanation": "The 8th Amendment inserted Article 2-A, making the Objectives Resolution an enforceable, substantive part of the Constitution rather than merely a preamble.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "8th Amendment (1985)",
+    "question": "Which amendment repealed Article 58(2)(b), the President's power to dissolve the National Assembly?",
+    "options": [
+      "The 19th Amendment",
+      "The 13th Amendment (1997)",
+      "The 16th Amendment",
+      "The 14th Amendment"
+    ],
+    "correct": 1,
+    "explanation": "The 13th Amendment, passed under Nawaz Sharif in 1997, repealed 58(2)(b) and stripped the President of discretionary dissolution power.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "17th Amendment (2003)",
+    "question": "The 17th Amendment (2003) is associated with:",
+    "options": [
+      "The creation of military courts",
+      "The merger of FATA",
+      "The adoption of the 1973 Constitution",
+      "General Pervez Musharraf's Legal Framework Order"
+    ],
+    "correct": 3,
+    "explanation": "The 17th Amendment incorporated Musharraf's Legal Framework Order into the Constitution, reviving presidential powers including a modified power to dissolve the Assembly.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "17th Amendment (2003)",
+    "question": "Under the 17th Amendment, the President's power to dissolve the National Assembly was:",
+    "options": [
+      "Restored but made subject to Supreme Court approval",
+      "Made absolute and unchallengeable",
+      "Abolished permanently",
+      "Transferred to the Prime Minister"
+    ],
+    "correct": 0,
+    "explanation": "The 17th Amendment revived the dissolution power in diluted form — a presidential dissolution required reference to, and approval by, the Supreme Court.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "18th Amendment (2010) — Devolution of Power",
+    "question": "The 18th Amendment (2010) is regarded as a landmark because it:",
+    "options": [
+      "Introduced military courts",
+      "Restored parliamentary supremacy and devolved powers to the provinces",
+      "Lowered the voting age",
+      "Created new provinces"
+    ],
+    "correct": 1,
+    "explanation": "The 18th Amendment removed 58(2)(b), abolished the Concurrent List, renamed NWFP as Khyber Pakhtunkhwa, and devolved 17 ministries to the provinces.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "18th Amendment (2010) — Devolution of Power",
+    "question": "Which province was renamed by the 18th Amendment?",
+    "options": [
+      "Punjab, renamed Lahore Province",
+      "NWFP, renamed Khyber Pakhtunkhwa",
+      "Sindh, renamed Mehran",
+      "Balochistan, renamed Quetta Province"
+    ],
+    "correct": 1,
+    "explanation": "The 18th Amendment renamed the North-West Frontier Province (NWFP) as Khyber Pakhtunkhwa.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "18th Amendment (2010) — Devolution of Power",
+    "question": "The 18th Amendment inserted Articles 19-A and 25-A, which guarantee respectively:",
+    "options": [
+      "The right to information and the right to free education",
+      "Local government and the right to fair trial",
+      "The right to vote and the right to work",
+      "Press freedom and minority job quotas"
+    ],
+    "correct": 0,
+    "explanation": "The 18th Amendment added Article 19-A (right to information) and Article 25-A (free, compulsory education for ages 5–16) as fundamental rights.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "21st Amendment — Military Courts",
+    "question": "The 21st Amendment (2015) provided for:",
+    "options": [
+      "Direct election of Senators",
+      "Military courts to try terrorism suspects",
+      "The merger of FATA with KPK",
+      "Reserved seats for women"
+    ],
+    "correct": 1,
+    "explanation": "Passed after the APS Peshawar attack, the 21st Amendment established military courts for the speedy trial of terrorism cases.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "21st Amendment — Military Courts",
+    "question": "The military courts established under the 21st Amendment operated for an initial period of:",
+    "options": [
+      "5 years",
+      "2 years",
+      "1 year",
+      "10 years"
+    ],
+    "correct": 1,
+    "explanation": "The 21st Amendment authorized military courts for two years (2015–2017); their tenure was later extended by the 23rd Amendment in 2017.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "26th Amendment — Recent Changes",
+    "question": "The 26th Constitutional Amendment (2024) mainly concerns:",
+    "options": [
+      "The creation of military courts",
+      "The merger of FATA with KPK",
+      "Judicial reforms, including the appointment and tenure of the Chief Justice",
+      "The voting age"
+    ],
+    "correct": 2,
+    "explanation": "The 26th Amendment (October 2024) changed how the Chief Justice is appointed and fixed the office's tenure, among other judicial reforms.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Constitutional Amendments",
+    "subtopic": "26th Amendment — Recent Changes",
+    "question": "Under the 26th Amendment, the Chief Justice of Pakistan is appointed by:",
+    "options": [
+      "The Prime Minister acting alone",
+      "The President acting alone",
+      "A special parliamentary committee from among the three senior-most Supreme Court judges",
+      "Automatic seniority, as before"
+    ],
+    "correct": 2,
+    "explanation": "The 26th Amendment replaced automatic appointment of the senior-most judge with selection by a 12-member parliamentary committee from the three senior-most judges, with a fixed three-year tenure.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Universal Declaration of Human Rights",
+    "question": "The Universal Declaration of Human Rights was adopted by the UN General Assembly in:",
+    "options": [
+      "1948",
+      "1966",
+      "1919",
+      "1991"
+    ],
+    "correct": 0,
+    "explanation": "The UDHR was adopted on 10 December 1948 in Paris; Human Rights Day is observed every year on 10 December.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Universal Declaration of Human Rights",
+    "question": "How many articles does the Universal Declaration of Human Rights contain?",
+    "options": [
+      "50",
+      "10",
+      "30",
+      "100"
+    ],
+    "correct": 2,
+    "explanation": "The UDHR comprises a preamble and 30 articles covering civil, political, economic, social, and cultural rights.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Women Rights in Pakistan",
+    "question": "In the National Assembly, the number of seats reserved for women is:",
+    "options": [
+      "33",
+      "50",
+      "17",
+      "60"
+    ],
+    "correct": 3,
+    "explanation": "60 of the National Assembly's 336 seats are reserved for women, filled through proportional representation on party lists.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Women Rights in Pakistan",
+    "question": "The Protection against Harassment of Women at the Workplace Act was passed in Pakistan in:",
+    "options": [
+      "2020",
+      "2005",
+      "2010",
+      "1995"
+    ],
+    "correct": 2,
+    "explanation": "The Protection against Harassment of Women at the Workplace Act, 2010 made workplace harassment a punishable offence and required internal inquiry committees.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Minority Rights in Pakistan",
+    "question": "In the National Assembly, the number of seats reserved for non-Muslims (minorities) is:",
+    "options": [
+      "8",
+      "5",
+      "10",
+      "12"
+    ],
+    "correct": 2,
+    "explanation": "10 National Assembly seats are reserved for non-Muslims, filled through proportional representation on party lists.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Minority Rights in Pakistan",
+    "question": "Which article of the Constitution requires the state to safeguard the legitimate rights and interests of minorities?",
+    "options": [
+      "Article 184",
+      "Article 19",
+      "Article 9",
+      "Article 36"
+    ],
+    "correct": 3,
+    "explanation": "Article 36 requires the state to safeguard the legitimate rights and interests of minorities, including due representation in the federal and provincial services.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Child Rights in Pakistan",
+    "question": "Under Article 25-A, the state must provide free and compulsory education to children aged:",
+    "options": [
+      "5 to 12 years",
+      "3 to 10 years",
+      "10 to 18 years",
+      "5 to 16 years"
+    ],
+    "correct": 3,
+    "explanation": "Article 25-A (inserted by the 18th Amendment) obliges the state to provide free and compulsory education to all children between the ages of 5 and 16.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Child Rights in Pakistan",
+    "question": "Pakistan ratified the UN Convention on the Rights of the Child (CRC) in:",
+    "options": [
+      "1980",
+      "1990",
+      "2010",
+      "2000"
+    ],
+    "correct": 1,
+    "explanation": "Pakistan ratified the CRC in 1990, committing itself to protect children's rights to survival, development, protection, and participation.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Press Freedom in Pakistan",
+    "question": "Freedom of the press in Pakistan is guaranteed under:",
+    "options": [
+      "Article 19",
+      "Article 14",
+      "Article 25",
+      "Article 9"
+    ],
+    "correct": 0,
+    "explanation": "Article 19 guarantees every citizen the right to freedom of speech and expression, which includes freedom of the press.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Press Freedom in Pakistan",
+    "question": "Which of the following is a reasonable restriction on press freedom permitted by Article 19?",
+    "options": [
+      "Banning all private television channels",
+      "A total ban on criticizing any government policy",
+      "Restrictions in the interest of the security of Pakistan",
+      "Requiring government approval of every article"
+    ],
+    "correct": 2,
+    "explanation": "Article 19 allows reasonable restrictions on speech in the interests of state security, public order, decency, morality, and contempt of court — not blanket censorship.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Civics & Constitution",
+    "topic": "Human Rights",
+    "subtopic": "Universal Declaration of Human Rights",
+    "question": "The Human Rights Commission of Pakistan (HRCP), an independent civil-society body, was founded in:",
+    "options": [
+      "1999",
+      "2010",
+      "1973",
+      "1987"
+    ],
+    "correct": 3,
+    "explanation": "The HRCP was founded in 1987 as an independent, non-governmental organization working for the promotion of human rights in Pakistan.",
+    "difficulty": "hard"
+  }
+]
