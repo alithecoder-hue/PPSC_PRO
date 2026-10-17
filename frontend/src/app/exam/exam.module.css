@@ -1,0 +1,112 @@
+.container {
+  padding: 40px 0;
+  max-width: 800px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  color: #000;
+}
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.timerWarning {
+  color: #ef4444;
+}
+
+.timerSafe {
+  color: #10b981;
+}
+
+.mainCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: white;
+  color: #000;
+}
+
+.progress {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.questionText {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.optionLabel:hover {
+  background-color: #f9fafb;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.prevBtn {
+  padding: 10px 20px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.prevBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nextBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #10b981;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nextBtn:hover {
+  background-color: #059669;
+}
+
+.submitBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.submitBtn:hover {
+  background-color: #2563eb;
+}

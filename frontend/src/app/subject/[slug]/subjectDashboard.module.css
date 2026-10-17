@@ -1,0 +1,177 @@
+.dashboardContainer {
+  padding: 120px 0 100px;
+  position: relative;
+  z-index: 10;
+  min-height: 80vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.backLink {
+  color: #F59E0B;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.backLink:hover {
+  color: #FFF;
+  text-shadow: 0 0 10px #F59E0B;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.title span {
+  background: linear-gradient(90deg, #F59E0B, #0088FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: rgba(20, 24, 28, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Card 1: Topics */
+.cardTopics::before { background: linear-gradient(90deg, #F59E0B, #0088FF); }
+.cardTopics:hover { border-color: rgba(245, 158, 11, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(245, 158, 11, 0.05); transform: translateY(-10px); }
+.cardTopics .iconWrapper { color: #F59E0B; background: rgba(245, 158, 11, 0.1); }
+.cardTopics:hover .iconWrapper { box-shadow: 0 0 30px rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.2); }
+
+/* Card 2: Practice */
+.cardPractice::before { background: linear-gradient(90deg, #FF3366, #FF6B6B); }
+.cardPractice:hover { border-color: rgba(255, 51, 102, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(255, 51, 102, 0.05); transform: translateY(-10px); }
+.cardPractice .iconWrapper { color: #FF3366; background: rgba(255, 51, 102, 0.1); }
+.cardPractice:hover .iconWrapper { box-shadow: 0 0 30px rgba(255, 51, 102, 0.4); background: rgba(255, 51, 102, 0.2); }
+
+/* Card 3: Exam */
+.cardExam::before { background: linear-gradient(90deg, #D97706, #C77DFF); }
+.cardExam:hover { border-color: rgba(157, 78, 221, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(157, 78, 221, 0.05); transform: translateY(-10px); }
+.cardExam .iconWrapper { color: #D97706; background: rgba(157, 78, 221, 0.1); }
+.cardExam:hover .iconWrapper { box-shadow: 0 0 30px rgba(157, 78, 221, 0.4); background: rgba(157, 78, 221, 0.2); }
+
+.card:hover::before { opacity: 1; }
+
+.iconWrapper {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.1);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.cardDesc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardTopics:hover .btn { background: #F59E0B; color: #000; border-color: transparent; }
+.cardPractice:hover .btn { background: #FF3366; color: #FFF; border-color: transparent; }
+.cardExam:hover .btn { background: #D97706; color: #FFF; border-color: transparent; }
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 40px 0 20px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+  .card {
+    flex: 0 0 75%;
+    scroll-snap-align: center;
+    padding: 20px 15px;
+  }
+}

@@ -1,0 +1,531 @@
+/* ================================================================
+   SUBSCRIPTION STYLES — Premium Dark Aesthetic
+   ================================================================ */
+
+.pageContainer {
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0d0f14;
+  background-image: 
+    radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  color: #f9fafb;
+}
+
+/* Background Glowing Orbs */
+.heroGlow,
+.heroGlowSecondary {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.heroGlow {
+  width: 500px;
+  height: 400px;
+  background: rgba(245, 158, 11, 0.12);
+  top: -80px;
+  right: -100px;
+}
+
+.heroGlowSecondary {
+  width: 400px;
+  height: 400px;
+  background: rgba(59, 130, 246, 0.08);
+  bottom: -100px;
+  left: -80px;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 1. Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeCapsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #f59e0b;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.badgeIcon {
+  color: #f59e0b;
+}
+
+.title {
+  font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Billing Toggle */
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 36px;
+}
+
+.toggleLabel {
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 700;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.activeLabel {
+  color: #ffffff;
+}
+
+.saveBadgeSmall {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.toggleBtn {
+  width: 58px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.toggleBtn.toggled {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.toggleCircle {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toggleBtn.toggled .toggleCircle {
+  transform: translateX(25px);
+}
+
+/* 2. Pricing Grid */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  align-items: stretch;
+}
+
+.pricingCard {
+  background: rgba(17, 20, 24, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pricingCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Free Card Card specifics */
+.freeCard {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Premium Card specifics */
+.premiumCard {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.02);
+  box-shadow: 
+    0 10px 30px rgba(245, 158, 11, 0.02),
+    0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.premiumCard:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 
+    0 15px 35px rgba(245, 158, 11, 0.04),
+    0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tierName {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.proSparkleIcon {
+  color: #f59e0b;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0px); }
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.currency {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.period {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 600;
+}
+
+.cardDesc {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+/* Features List */
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.featuresList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.crossIcon {
+  color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.excluded {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Action Buttons */
+.actionBtn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.actionBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.primaryBtn {
+  background: #f59e0b;
+  color: #000000;
+  border: none;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+.primaryBtn:hover {
+  background: #fbbf24;
+  color: #000000;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* 3. Secure Trust Section */
+.trustSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: rgba(17, 20, 24, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 24px 30px;
+  border-radius: 16px;
+  margin-bottom: 80px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trustIcon {
+  color: rgba(245, 158, 11, 0.8);
+}
+
+.trustText {
+  text-align: left;
+}
+
+.trustText h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.trustText p {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+/* 4. Interactive FAQ Section */
+.faqSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.faqIconHeading {
+  color: #f59e0b;
+}
+
+.faqTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: rgba(17, 20, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.faqItem:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(22, 26, 32, 0.65);
+}
+
+.faqQuestionRow {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-align: left;
+  outline: none;
+}
+
+.faqQuestionRow svg {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s ease;
+}
+
+.faqItem:hover .faqQuestionRow svg {
+  color: #f59e0b;
+}
+
+.faqItemOpen {
+  border-color: rgba(245, 158, 11, 0.25);
+  background: rgba(22, 26, 32, 0.75);
+}
+
+.faqAnswer {
+  padding: 0 24px 20px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faqAnswer p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 12px 0 0 0;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================================================
+   RESPONSIVE DESIGN
+   ================================================================ */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .pricingCard {
+    padding: 32px 24px;
+  }
+
+  .trustSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .faqQuestionRow {
+    padding: 16px;
+    font-size: 0.9rem;
+  }
+
+  .faqAnswer {
+    padding: 0 16px 16px 16px;
+  }
+}

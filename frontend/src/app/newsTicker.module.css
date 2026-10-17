@@ -1,0 +1,185 @@
+.tickerWrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1), inset 0 0 10px rgba(245, 158, 11, 0.05);
+  animation: borderGlow 3s infinite alternate;
+}
+
+@keyframes borderGlow {
+  from { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1), inset 0 0 10px rgba(245, 158, 11, 0.05); border-color: rgba(245, 158, 11, 0.2); }
+  to { box-shadow: 0 4px 30px rgba(245, 158, 11, 0.4), inset 0 0 20px rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.6); }
+}
+
+.tickerWrapper:hover {
+  background: rgba(245, 158, 11, 0.05);
+  transform: translateY(-2px);
+}
+
+.liveIndicator {
+  width: 8px;
+  height: 8px;
+  background-color: #FF3366;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #FF3366;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 51, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 102, 0); }
+}
+
+.tickerContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.newsItem {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: calc(100% - 32px);
+}
+
+.tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.tagUrgent {
+  background: #FF3366;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.4);
+}
+
+.tagUpdate {
+  background: #F59E0B;
+  color: #000;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+.tagAlert {
+  background: #FFAA00;
+  color: #000;
+  box-shadow: 0 0 10px rgba(255, 170, 0, 0.4);
+}
+
+.tagNew {
+  background: #00FF80;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.4);
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  text-align: left;
+}
+
+/* Add a tiny arrow at the end to indicate clickability */
+.title::after {
+  content: '→';
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s ease;
+}
+
+.tickerWrapper:hover .title::after {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .tickerWrapper {
+    max-width: 90%;
+    height: 38px;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 0.75rem;
+  }
+  .tag {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+}
+
+/* ---- PREMIUM THEME OVERRIDES ---- */
+.premiumTheme.tickerWrapper {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1), inset 0 0 10px rgba(245, 158, 11, 0.05);
+  animation: borderGlowPremium 3s infinite alternate;
+}
+
+@keyframes borderGlowPremium {
+  from { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.1), inset 0 0 10px rgba(245, 158, 11, 0.05); border-color: rgba(245, 158, 11, 0.2); }
+  to { box-shadow: 0 4px 30px rgba(245, 158, 11, 0.3), inset 0 0 20px rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.5); }
+}
+
+.premiumTheme.tickerWrapper:hover {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.premiumTheme .liveIndicator {
+  background-color: #F59E0B;
+  box-shadow: 0 0 10px #F59E0B;
+  animation: pulsePremium 1.5s infinite;
+}
+
+@keyframes pulsePremium {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.premiumTheme .tagUrgent {
+  background: #DC2626;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
+}
+
+.premiumTheme .tagUpdate {
+  background: #F59E0B;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+.premiumTheme .tagAlert {
+  background: #D97706;
+  box-shadow: 0 0 10px rgba(217, 119, 6, 0.4);
+}
+
+.premiumTheme .tagNew {
+  background: #FBBF24;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}

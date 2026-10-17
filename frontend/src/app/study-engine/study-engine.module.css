@@ -1,0 +1,205 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.workspaceGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Sidebar: Table of Contents */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebarCard {
+  background: rgba(20, 24, 28, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sidebarTitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.tocList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tocBtn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 12px 15px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tocBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFF;
+}
+
+.tocBtn.active {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: #F59E0B;
+  color: #F59E0B;
+  font-weight: 700;
+}
+
+.tocNum {
+  background: rgba(255, 255, 255, 0.1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.tocBtn.active .tocNum {
+  background: #F59E0B;
+  color: #000;
+}
+
+.exitBtn {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFF;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.exitBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #FFF;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FFF;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+}
+
+.topicCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  min-height: 400px;
+}
+
+.topicName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.topicContent {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.topicNotes {
+  background: rgba(255, 215, 0, 0.05);
+  border-left: 4px solid #FFD700;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.topicNotes strong {
+  color: #FFD700;
+}
+
+.practiceBtn {
+  background: linear-gradient(90deg, #F59E0B, #0088FF);
+  color: #FFF;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
+}
+
+.practiceBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(245, 158, 11, 0.3);
+}
+
+.noData {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.5);
+  padding: 100px 0;
+}
+
+@media (max-width: 992px) {
+  .workspaceGrid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+}

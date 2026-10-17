@@ -1,0 +1,246 @@
+.container {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lockedContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 20px 20px !important;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, #FF3366, #FF9933);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.lockedState {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.lockedState h2 {
+  font-size: 1.8rem;
+  color: #FFF;
+  margin: 20px 0 10px;
+}
+
+.lockedState p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upgradeBtn {
+  background: linear-gradient(90deg, #FF3366, #FF9933);
+  color: #FFF;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3);
+}
+
+.upgradeBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 51, 102, 0.5);
+}
+
+.builderCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.categoryItem:last-child {
+  border-bottom: none;
+}
+
+.catInfo {
+  flex: 1;
+}
+
+.catName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 5px;
+}
+
+.catDesc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.catControl {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rangeSlider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  outline: none;
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #F59E0B;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.countBox {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  min-width: 60px;
+  text-align: center;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.footerBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.footerContent {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalCounter {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.totalLabel {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.totalValue {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #FFF;
+}
+
+.totalValue.error {
+  color: #FF3366;
+}
+
+.startBtn {
+  background: linear-gradient(90deg, #F59E0B, #0088FF);
+  color: #FFF;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+.startBtn:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .categoryItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .catControl {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .rangeSlider {
+    flex: 1;
+  }
+  .footerContent {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .startBtn {
+    width: 100%;
+  }
+  .container {
+    padding: 80px 20px 40px;
+  }
+  .lockedContainer {
+    justify-content: flex-start;
+    margin-top: -150px;
+  }
+}

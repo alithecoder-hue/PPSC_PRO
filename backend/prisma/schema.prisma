@@ -1,0 +1,320 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  email      String   @unique
+  password   String
+  name       String
+  role       Role     @default(USER)
+  xp         Int      @default(0)
+  streak     Int      @default(0)
+  testsTaken Int      @default(0)
+  hoursStudied Float  @default(0.0)
+  lastActive DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  results       ExamResult[]
+  subscriptions Subscription[]
+  badges        UserBadge[]
+  ActivityLog   ActivityLog[]
+  savedMcqs     SavedMCQ[]
+  todos         TodoItem[]
+  plannerItems  PlannerItem[]
+  trackedJobs   UserJobTracking[]
+  preferredSubjectIds Int[] @default([])
+  dailyGoalTarget     Int      @default(20)
+}
+
+enum Role {
+  USER
+  PREMIUM
+  ADMIN
+  TUTOR
+}
+
+model Category {
+  id            Int           @id @default(autoincrement())
+  name          String        @unique
+  description   String?
+  subCategories SubCategory[]
+  mcqs          MCQ[]
+}
+
+model SubCategory {
+  id         Int      @id @default(autoincrement())
+  name       String
+  categoryId Int
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  mcqs       MCQ[]
+  topics     Topic[]
+}
+
+model Topic {
+  id            Int              @id @default(autoincrement())
+  name          String
+  description   String?
+  level         String           @default("beginner") // beginner, moderate, expert
+  subCategoryId Int
+  subCategory   SubCategory      @relation(fields: [subCategoryId], references: [id], onDelete: Cascade)
+  mcqs          MCQ[]
+  content       SubtopicContent?
+}
+
+model SubtopicContent {
+  id         Int      @id @default(autoincrement())
+  topicId    Int      @unique
+  topic      Topic    @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  bodyText   String?  @db.Text
+  tables     Json?
+  keyPoints  Json?
+  references Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model MCQ {
+  id            Int          @id @default(autoincrement())
+  question      String
+  optionA       String
+  optionB       String
+  optionC       String
+  optionD       String
+  correctOption String // A, B, C, or D
+  explanation   String?
+  difficulty    String       @default("medium") // easy, medium, hard
+  categoryId    Int
+  category      Category     @relation(fields: [categoryId], references: [id])
+  subCategoryId Int?
+  subCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
+  topicId       Int?
+  topic         Topic?       @relation(fields: [topicId], references: [id])
+  createdAt     DateTime     @default(now())
+  savedBy       SavedMCQ[]
+}
+
+model Exam {
+  id           Int          @id @default(autoincrement())
+  title        String
+  description  String?
+  duration     Int          @default(5400) // seconds
+  totalMarks   Int          @default(100)
+  type         String       @default("Free") // Free, Premium
+  status       String       @default("Draft") // Active, Draft
+  instructions String       @default("")
+  categoryId   Int?
+  mcqIds       Int[]        @default([])
+  createdAt    DateTime     @default(now())
+  results      ExamResult[]
+}
+
+model ExamResult {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examId      Int
+  exam        Exam     @relation(fields: [examId], references: [id])
+  score       Int
+  total       Int
+  completedAt DateTime @default(now())
+}
+
+model Subscription {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan      String // "basic", "premium"
+  startDate DateTime @default(now())
+  endDate   DateTime
+  isActive  Boolean  @default(true)
+}
+
+model Badge {
+  id          Int         @id @default(autoincrement())
+  name        String
+  description String
+  imageUrl    String?
+  users       UserBadge[]
+}
+
+model UserBadge {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badgeId   Int
+  badge     Badge    @relation(fields: [badgeId], references: [id])
+  awardedAt DateTime @default(now())
+
+  @@unique([userId, badgeId])
+}
+
+// ============================================
+// ADMIN EXTENSION MODELS
+// ============================================
+
+model Job {
+  id           Int      @id @default(autoincrement())
+  title        String
+  organization String
+  location     String?
+  salary       String?
+  description  String
+  totalMcqs    Int      @default(0)
+  durationMins Int      @default(90)
+  vacancies    Int      @default(1)
+  difficulty   Int      @default(5)
+  deadline     DateTime
+  applyLink    String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  trackedBy    UserJobTracking[]
+}
+
+model Announcement {
+  id        Int      @id @default(autoincrement())
+  title     String
+  body      String
+  type      String   @default("Info") // Urgent, Info, Success
+  link      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PastPaper {
+  id        Int      @id @default(autoincrement())
+  title     String
+  subject   String
+  year      String
+  type      String
+  downloads Int      @default(0)
+  mcqIds    Int[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DailyTest {
+  id        Int      @id @default(autoincrement())
+  date      DateTime @unique
+  mcqIds    Int[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ContactMessage {
+  id         Int      @id @default(autoincrement())
+  senderName String
+  email      String
+  subject    String
+  message    String
+  status     String   @default("Unread") // Unread, Read, Replied
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model PromoCode {
+  id            Int      @id @default(autoincrement())
+  code          String   @unique
+  discountType  String // Percentage, Flat
+  discountValue Int
+  usageLimit    Int      @default(0) // 0 means unlimited
+  usedCount     Int      @default(0)
+  expiryDate    DateTime
+  status        String   @default("Active") // Active, Expired, Disabled
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Testimonial {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  quote     String
+  rating    Int      @default(5)
+  avatar    String   @default("👤")
+  createdAt DateTime @default(now())
+}
+
+model FAQ {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model ActivityLog {
+  id        Int      @id @default(autoincrement())
+  adminId   Int?     // Optional - system actions have no admin
+  admin     User?    @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  action    String   // Created, Updated, Deleted
+  entity    String
+  details   String   @default("")
+  createdAt DateTime @default(now())
+}
+
+model SavedMCQ {
+  id      Int      @id @default(autoincrement())
+  userId  Int
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mcqId   Int
+  mcq     MCQ      @relation(fields: [mcqId], references: [id], onDelete: Cascade)
+  savedAt DateTime @default(now())
+  @@unique([userId, mcqId])
+}
+
+model TodoItem {
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  description String?
+  dueDate     DateTime?
+  completed   Boolean   @default(false)
+  priority    String    @default("Medium") // Low, Medium, High
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model PlannerItem {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  day       String   // e.g. "Monday", "Tuesday"
+  title     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UserJobTracking {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jobId     Int
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  notes     String   @default("")
+  trackedAt DateTime @default(now())
+  @@unique([userId, jobId])
+}
+
+model SystemSetting {
+  id    Int    @id @default(autoincrement())
+  key   String @unique
+  value String @db.Text
+}
+
+model Media {
+  id        Int      @id @default(autoincrement())
+  name      String
+  type      String
+  size      String
+  url       String
+  createdAt DateTime @default(now())
+}
