@@ -227,6 +227,13 @@ a.mm-btn-primary:active {
   font-weight: 900;
   font-size: 1rem;
 }
+.mm-brand-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  object-fit: cover;
+  display: block;
+}
 .mm-brand em {
   font-style: normal;
   color: var(--mm-accent-deep);

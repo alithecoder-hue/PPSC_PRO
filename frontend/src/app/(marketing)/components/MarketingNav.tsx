@@ -23,7 +23,7 @@ export default function MarketingNav() {
       <header className="mm-nav">
         <div className="mm-container mm-nav-inner">
           <Link href="/" className="mm-brand" aria-label="Merit Master home">
-            <span className="mm-brand-mark">M</span>
+            <img src="/images/logo-mark.png" alt="" width={34} height={34} className="mm-brand-img" />
             <span>
               MERIT<em>MASTER</em>
             </span>
