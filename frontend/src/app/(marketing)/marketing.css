@@ -127,6 +127,16 @@ body:has(.mm-scope) .orb-container {
   color: #fff;
   box-shadow: var(--mm-shadow);
 }
+/* Hardened: primary CTA label must always paint white (seen rendered dark-on-dark in some Chromium builds) */
+a.mm-btn-primary,
+button.mm-btn-primary,
+a.mm-btn-primary:hover,
+button.mm-btn-primary:hover,
+a.mm-btn-primary:visited,
+a.mm-btn-primary:active {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
 .mm-btn-primary:hover {
   background: var(--mm-navy-2);
   transform: translateY(-1px);
