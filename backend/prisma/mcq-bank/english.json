@@ -1,0 +1,1352 @@
+[
+ {
+  "correct": 2,
+  "difficulty": "easy",
+  "explanation": "Beautifully modifies the verb sings, telling how she sings. Words that modify verbs are adverbs.",
+  "options": [
+   "Noun",
+   "Adjective",
+   "Adverb",
+   "Verb"
+  ],
+  "question": "In the sentence 'She sings beautifully,' the word 'beautifully' is a:",
+  "subject": "English",
+  "subtopic": "Parts of Speech (Noun, Verb, Adjective, Adverb, Pronoun)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 0,
+  "difficulty": "easy",
+  "explanation": "Honesty names a quality (an abstract idea), and naming words are nouns.",
+  "options": [
+   "Noun",
+   "Adjective",
+   "Verb",
+   "Adverb"
+  ],
+  "question": "In the sentence 'Honesty is the best policy,' the word 'honesty' is a:",
+  "subject": "English",
+  "subtopic": "Parts of Speech (Noun, Verb, Adjective, Adverb, Pronoun)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Tired describes the noun workers, so it functions as an adjective (a past participle used attributively).",
+  "options": [
+   "Verb",
+   "Adjective",
+   "Adverb",
+   "Noun"
+  ],
+  "question": "In the sentence 'The tired workers went home,' the word 'tired' is used as a:",
+  "subject": "English",
+  "subtopic": "Parts of Speech (Noun, Verb, Adjective, Adverb, Pronoun)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Fast modifies the verb runs here, so it is an adverb. Some words, like fast, serve as both adjective and adverb.",
+  "options": [
+   "Adjective",
+   "Adverb",
+   "Noun",
+   "Verb"
+  ],
+  "question": "The word 'fast' in the sentence 'He runs fast' is a:",
+  "subject": "English",
+  "subtopic": "Parts of Speech (Noun, Verb, Adjective, Adverb, Pronoun)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "With a third-person singular subject (she), the present simple takes -s: goes.",
+  "options": [
+   "go",
+   "goes",
+   "going",
+   "gone"
+  ],
+  "question": "She ___ to school every day:",
+  "subject": "English",
+  "subtopic": "All 12 Tenses with Examples",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Yesterday marks completed past time, so the past simple did is required.",
+  "options": [
+   "do",
+   "did",
+   "done",
+   "doing"
+  ],
+  "question": "I ___ my homework yesterday:",
+  "subject": "English",
+  "subtopic": "All 12 Tenses with Examples",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Since is used with a point of time (2015); for is used with a duration (ten years).",
+  "options": [
+   "for",
+   "since",
+   "from",
+   "by"
+  ],
+  "question": "He has lived in Lahore ___ 2015:",
+  "subject": "English",
+  "subtopic": "All 12 Tenses with Examples",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "For an action completed before another past action, use the past perfect: had started.",
+  "options": [
+   "started",
+   "had started",
+   "has started",
+   "starts"
+  ],
+  "question": "By the time we arrived, the movie ___:",
+  "subject": "English",
+  "subtopic": "All 12 Tenses with Examples",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "The waiting continued up to a past moment (his arrival), so the past perfect continuous had been waiting is correct.",
+  "options": [
+   "have been waiting",
+   "had been waiting",
+   "waited",
+   "am waiting"
+  ],
+  "question": "I ___ here for three hours when he finally came:",
+  "subject": "English",
+  "subtopic": "All 12 Tenses with Examples",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Past simple active becomes was/were + past participle in the passive voice.",
+  "options": [
+   "A letter is written by her.",
+   "A letter was written by her.",
+   "A letter has been written by her.",
+   "A letter had been written by her."
+  ],
+  "question": "The passive voice of 'She wrote a letter' is:",
+  "subject": "English",
+  "subtopic": "Active and Passive Voice",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Present continuous active becomes is/are + being + past participle in the passive.",
+  "options": [
+   "A bridge is built by them.",
+   "A bridge is being built by them.",
+   "A bridge was built by them.",
+   "A bridge has been built by them."
+  ],
+  "question": "The passive voice of 'They are building a bridge' is:",
+  "subject": "English",
+  "subtopic": "Active and Passive Voice",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Imperative sentences become passive with Let + object + be + past participle.",
+  "options": [
+   "The door is opened.",
+   "Let the door be opened.",
+   "Open the door by you.",
+   "The door be opened."
+  ],
+  "question": "The passive voice of 'Open the door' is:",
+  "subject": "English",
+  "subtopic": "Active and Passive Voice",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "In passive interrogatives, who changes to by whom and moves to the beginning of the sentence.",
+  "options": [
+   "Who was the window broken by?",
+   "By whom was the window broken?",
+   "The window was broken by who?",
+   "By who the window was broken?"
+  ],
+  "question": "The passive voice of 'Who broke the window?' is:",
+  "subject": "English",
+  "subtopic": "Active and Passive Voice",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "In reported speech, present simple shifts to past simple and the pronoun I changes to he.",
+  "options": [
+   "He said that he is tired.",
+   "He said that he was tired.",
+   "He said that I was tired.",
+   "He says that he was tired."
+  ],
+  "question": "He said, 'I am tired.' The indirect speech is:",
+  "subject": "English",
+  "subtopic": "Direct and Indirect Speech",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Reported questions use statement word order (no inversion) and the verb shifts back: do you live becomes I lived.",
+  "options": [
+   "She asked me where did I live.",
+   "She asked me where I lived.",
+   "She said to me where do you live.",
+   "She asked me where I live."
+  ],
+  "question": "She said to me, 'Where do you live?' The indirect speech is:",
+  "subject": "English",
+  "subtopic": "Direct and Indirect Speech",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 2,
+  "difficulty": "medium",
+  "explanation": "Imperatives are reported with tell, order or ask + object + to-infinitive.",
+  "options": [
+   "The teacher said the boys to sit down.",
+   "The teacher told that the boys sit down.",
+   "The teacher ordered the boys to sit down.",
+   "The teacher says the boys to sit down."
+  ],
+  "question": "The teacher said, 'Sit down, boys.' The indirect speech is:",
+  "subject": "English",
+  "subtopic": "Direct and Indirect Speech",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "Will shifts to would, and the time expression tomorrow becomes the next day in reported speech.",
+  "options": [
+   "He said that he will come tomorrow.",
+   "He said that he would come the next day.",
+   "He said that I would come tomorrow.",
+   "He says that he would come the next day."
+  ],
+  "question": "He said, 'I will come tomorrow.' The indirect speech is:",
+  "subject": "English",
+  "subtopic": "Direct and Indirect Speech",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 2,
+  "difficulty": "easy",
+  "explanation": "Unique natural objects like the sun take the definite article the.",
+  "options": [
+   "A",
+   "An",
+   "The",
+   "No article"
+  ],
+  "question": "___ sun rises in the east:",
+  "subject": "English",
+  "subtopic": "Articles (a, an, the)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Honest begins with a vowel sound (the h is silent), so an is used.",
+  "options": [
+   "a",
+   "an",
+   "the",
+   "No article"
+  ],
+  "question": "He is ___ honest man:",
+  "subject": "English",
+  "subtopic": "Articles (a, an, the)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 0,
+  "difficulty": "medium",
+  "explanation": "University begins with the consonant sound yu, so a is used despite the vowel letter.",
+  "options": [
+   "a",
+   "an",
+   "the",
+   "No article"
+  ],
+  "question": "She goes to ___ university in Lahore:",
+  "subject": "English",
+  "subtopic": "Articles (a, an, the)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 2,
+  "difficulty": "medium",
+  "explanation": "The before an adjective (the rich) turns it into a plural noun referring to a whole class of people.",
+  "options": [
+   "A",
+   "An",
+   "The",
+   "No article"
+  ],
+  "question": "___ rich should help the poor:",
+  "subject": "English",
+  "subtopic": "Articles (a, an, the)",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "The fixed collocation is good at (a skill or subject), not good in.",
+  "options": [
+   "in",
+   "at",
+   "for",
+   "with"
+  ],
+  "question": "She is good ___ mathematics:",
+  "subject": "English",
+  "subtopic": "Prepositions",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Afraid of is the standard collocation in English.",
+  "options": [
+   "from",
+   "of",
+   "by",
+   "with"
+  ],
+  "question": "He is afraid ___ dogs:",
+  "subject": "English",
+  "subtopic": "Prepositions",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Prefer is followed by to, not than, when comparing two nouns.",
+  "options": [
+   "than",
+   "to",
+   "over",
+   "from"
+  ],
+  "question": "I prefer tea ___ coffee:",
+  "subject": "English",
+  "subtopic": "Prepositions",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "The verb accuse takes the preposition of (accused of theft).",
+  "options": [
+   "for",
+   "of",
+   "with",
+   "about"
+  ],
+  "question": "She was accused ___ stealing the money:",
+  "subject": "English",
+  "subtopic": "Prepositions",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "Adjectives ending in -ior (senior, junior, inferior, superior) take to, never than.",
+  "options": [
+   "than",
+   "to",
+   "from",
+   "over"
+  ],
+  "question": "He is senior ___ me in service:",
+  "subject": "English",
+  "subtopic": "Prepositions",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 0,
+  "difficulty": "easy",
+  "explanation": "The first conditional (a real possibility) uses if + present simple, will + verb.",
+  "options": [
+   "will",
+   "would",
+   "would have",
+   "had"
+  ],
+  "question": "If it rains, we ___ stay at home:",
+  "subject": "English",
+  "subtopic": "Conjunctions and Conditionals",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "In second conditional unreal statements, were is used for all persons, including I.",
+  "options": [
+   "was",
+   "were",
+   "am",
+   "be"
+  ],
+  "question": "If I ___ rich, I would travel the world:",
+  "subject": "English",
+  "subtopic": "Conjunctions and Conditionals",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "In the inverted third conditional (Had he...), the result clause uses would have + past participle.",
+  "options": [
+   "will have",
+   "would have",
+   "will",
+   "would"
+  ],
+  "question": "Had he worked hard, he ___ passed:",
+  "subject": "English",
+  "subtopic": "Conjunctions and Conditionals",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Neither is singular, so it takes the singular verb was.",
+  "options": [
+   "were",
+   "was",
+   "are",
+   "have been"
+  ],
+  "question": "Neither of the students ___ present yesterday:",
+  "subject": "English",
+  "subtopic": "Subject-Verb Agreement",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "A collective noun acting as one single body takes a singular verb.",
+  "options": [
+   "were",
+   "was",
+   "are",
+   "have"
+  ],
+  "question": "The committee ___ unanimous in its decision:",
+  "subject": "English",
+  "subtopic": "Subject-Verb Agreement",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "A number of means several and takes a plural verb; the number of would take a singular verb.",
+  "options": [
+   "was",
+   "were",
+   "is",
+   "has been"
+  ],
+  "question": "A number of students ___ absent today:",
+  "subject": "English",
+  "subtopic": "Subject-Verb Agreement",
+  "topic": "English Grammar"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Abandon means to leave behind or give up completely.",
+  "options": [
+   "Keep",
+   "Leave",
+   "Hold",
+   "Cherish"
+  ],
+  "question": "Choose the synonym of ABANDON:",
+  "subject": "English",
+  "subtopic": "Synonyms and Antonyms",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Brave means courageous; its opposite is cowardly.",
+  "options": [
+   "Bold",
+   "Cowardly",
+   "Heroic",
+   "Fearless"
+  ],
+  "question": "Choose the antonym of BRAVE:",
+  "subject": "English",
+  "subtopic": "Synonyms and Antonyms",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Meticulous means showing great attention to detail, i.e. careful.",
+  "options": [
+   "Careless",
+   "Careful",
+   "Hasty",
+   "Lazy"
+  ],
+  "question": "Choose the synonym of METICULOUS:",
+  "subject": "English",
+  "subtopic": "Synonyms and Antonyms",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Transparent means clear or see-through; opaque means not transparent.",
+  "options": [
+   "Clear",
+   "Opaque",
+   "Obvious",
+   "Fragile"
+  ],
+  "question": "Choose the antonym of TRANSPARENT:",
+  "subject": "English",
+  "subtopic": "Synonyms and Antonyms",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "Alleviate means to make pain or a problem less severe, i.e. to relieve.",
+  "options": [
+   "Aggravate",
+   "Relieve",
+   "Intensify",
+   "Worsen"
+  ],
+  "question": "Choose the synonym of ALLEVIATE:",
+  "subject": "English",
+  "subtopic": "Synonyms and Antonyms",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 2,
+  "difficulty": "hard",
+  "explanation": "Frugal means economical with money; its opposite is extravagant (spending wastefully).",
+  "options": [
+   "Thrifty",
+   "Economical",
+   "Extravagant",
+   "Careful"
+  ],
+  "question": "Choose the antonym of FRUGAL:",
+  "subject": "English",
+  "subtopic": "Synonyms and Antonyms",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 0,
+  "difficulty": "easy",
+  "explanation": "Ambidextrous (ambi = both, dexter = right-handed/skilful) means equally skilful with both hands.",
+  "options": [
+   "Ambidextrous",
+   "Versatile",
+   "Dexterous",
+   "Skilful"
+  ],
+  "question": "One who can use both hands equally well is called:",
+  "subject": "English",
+  "subtopic": "One Word Substitution",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "An aviary houses birds; an apiary (the classic distractor) houses bees.",
+  "options": [
+   "Apiary",
+   "Aviary",
+   "Stable",
+   "Aquarium"
+  ],
+  "question": "A place where birds are kept is called:",
+  "subject": "English",
+  "subtopic": "One Word Substitution",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Misanthrope (miso = hate, anthropos = man) hates mankind; a philanthropist loves it.",
+  "options": [
+   "Philanthropist",
+   "Misanthrope",
+   "Misogynist",
+   "Humanitarian"
+  ],
+  "question": "A person who hates mankind is called a:",
+  "subject": "English",
+  "subtopic": "One Word Substitution",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "An epitaph is written on a tomb; an epigraph is an inscription on a building or statue.",
+  "options": [
+   "Epigraph",
+   "Epitaph",
+   "Elegy",
+   "Epilogue"
+  ],
+  "question": "Words inscribed on a tombstone are called:",
+  "subject": "English",
+  "subtopic": "One Word Substitution",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "The idiom refers to studying or working very late into the night.",
+  "options": [
+   "To waste fuel",
+   "To work late at night",
+   "To set fire at night",
+   "To stay awake idly"
+  ],
+  "question": "'To burn the midnight oil' means:",
+  "subject": "English",
+  "subtopic": "Idioms and Phrases",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "It describes something that seems bad at first but turns out to be good.",
+  "options": [
+   "A religious ceremony",
+   "A hidden benefit",
+   "A curse",
+   "A costume party"
+  ],
+  "question": "'A blessing in disguise' means:",
+  "subject": "English",
+  "subtopic": "Idioms and Phrases",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "The idiom means to suffer defeat or failure.",
+  "options": [
+   "To eat quickly",
+   "To fail or be defeated",
+   "To work in the fields",
+   "To taste soil"
+  ],
+  "question": "'To bite the dust' means:",
+  "subject": "English",
+  "subtopic": "Idioms and Phrases",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "It means at the latest possible moment before a deadline.",
+  "options": [
+   "At 11 o'clock",
+   "At the last moment",
+   "In the morning",
+   "Very early"
+  ],
+  "question": "'At the eleventh hour' means:",
+  "subject": "English",
+  "subtopic": "Idioms and Phrases",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "The idiom means to bribe someone, usually with money.",
+  "options": [
+   "To massage hands",
+   "To bribe someone",
+   "To help willingly",
+   "To apply oil"
+  ],
+  "question": "'To grease someone's palm' means:",
+  "subject": "English",
+  "subtopic": "Idioms and Phrases",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "They're = they are, their = possessive, there = place. Only the second sentence uses all three correctly.",
+  "options": [
+   "Their going to there house over they're.",
+   "They're going to their house over there.",
+   "There going to they're house over their.",
+   "They're going to there house over their."
+  ],
+  "question": "Choose the sentence that uses they're, their and there correctly:",
+  "subject": "English",
+  "subtopic": "Homophones and Confusing Words",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Principle is a rule or belief; principal means main, or the head of an institution.",
+  "options": [
+   "principal",
+   "principle",
+   "principality",
+   "principalship"
+  ],
+  "question": "The committee's decision was based on sound ___:",
+  "subject": "English",
+  "subtopic": "Homophones and Confusing Words",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 0,
+  "difficulty": "medium",
+  "explanation": "Affect is the verb meaning to influence; effect is the noun meaning a result.",
+  "options": [
+   "affect",
+   "effect",
+   "infect",
+   "reflect"
+  ],
+  "question": "The new tax policy will ___ the poor the most:",
+  "subject": "English",
+  "subtopic": "Homophones and Confusing Words",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "The prefix un- reverses the meaning of the base word.",
+  "options": [
+   "Very happy",
+   "Not happy",
+   "Happier",
+   "Happily"
+  ],
+  "question": "Adding the prefix 'un-' to 'happy' gives a word meaning:",
+  "subject": "English",
+  "subtopic": "Word Formation (Prefix, Suffix)",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 2,
+  "difficulty": "easy",
+  "explanation": "The suffix -ness forms nouns denoting a state or quality (kind + ness = kindness).",
+  "options": [
+   "Verb",
+   "Adverb",
+   "Noun",
+   "Adjective"
+  ],
+  "question": "In the word 'kindness', the suffix '-ness' changes the adjective into a:",
+  "subject": "English",
+  "subtopic": "Word Formation (Prefix, Suffix)",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 0,
+  "difficulty": "easy",
+  "explanation": "Occasion has a double c but a single s.",
+  "options": [
+   "Occasion",
+   "Occassion",
+   "Ocasion",
+   "Ocassion"
+  ],
+  "question": "Choose the correctly spelled word:",
+  "subject": "English",
+  "subtopic": "Commonly Misspelled Words",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 0,
+  "difficulty": "easy",
+  "explanation": "Necessary has one c and two s's.",
+  "options": [
+   "Necessary",
+   "Neccessary",
+   "Necesary",
+   "Neccesary"
+  ],
+  "question": "Which of the following is spelled correctly?",
+  "subject": "English",
+  "subtopic": "Commonly Misspelled Words",
+  "topic": "Vocabulary"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "The topic sentence carries the main idea; the other sentences support or develop it.",
+  "options": [
+   "Supporting sentence",
+   "Topic sentence",
+   "Concluding sentence",
+   "Transitional sentence"
+  ],
+  "question": "The sentence that states the central thought of a paragraph is called the:",
+  "subject": "English",
+  "subtopic": "Reading Comprehension Passages",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Scanning is reading quickly to locate specific information; skimming is for getting the general idea.",
+  "options": [
+   "Skimming",
+   "Scanning",
+   "Guessing",
+   "Memorizing"
+  ],
+  "question": "To find a specific date in a passage quickly, the best reading strategy is:",
+  "subject": "English",
+  "subtopic": "Reading Comprehension Passages",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 0,
+  "difficulty": "medium",
+  "explanation": "Presenting two sides of an issue for comparison is compare-and-contrast organization.",
+  "options": [
+   "Compare and contrast",
+   "Chronological order",
+   "Cause and effect",
+   "Problem and solution"
+  ],
+  "question": "If a passage gives reasons both for and against online classes, its organization is:",
+  "subject": "English",
+  "subtopic": "Reading Comprehension Passages",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "In other words introduces a restatement that clarifies what was just said.",
+  "options": [
+   "Change the topic",
+   "Restate or clarify an idea",
+   "Give an example",
+   "Draw a conclusion"
+  ],
+  "question": "The phrase 'in other words' in a passage usually signals that the author is about to:",
+  "subject": "English",
+  "subtopic": "Reading Comprehension Passages",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "An inference is a conclusion the reader draws from evidence in the text, not something stated directly.",
+  "options": [
+   "A direct quotation",
+   "A logical conclusion drawn from the text",
+   "The name of the author",
+   "A summary of one sentence"
+  ],
+  "question": "An inference is:",
+  "subject": "English",
+  "subtopic": "Inference and Main Idea",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 0,
+  "difficulty": "medium",
+  "explanation": "Carrying an umbrella on a clear morning implies he expects rain later in the day.",
+  "options": [
+   "Ahmed expected rain later",
+   "Ahmed dislikes umbrellas",
+   "It was already raining",
+   "Ahmed never goes out in the morning"
+  ],
+  "question": "A passage says: 'Ahmed left home at 7 a.m. carrying an umbrella, though the sky was clear.' The reader can infer that:",
+  "subject": "English",
+  "subtopic": "Inference and Main Idea",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "Since all successful students studied daily, it is necessary; since some daily studiers failed, it is not sufficient.",
+  "options": [
+   "A guarantee of success",
+   "Necessary but not sufficient for success",
+   "Unrelated to success",
+   "Harmful to success"
+  ],
+  "question": "A survey found: 'All successful students studied daily, but not all daily studiers were successful.' It follows that daily study is:",
+  "subject": "English",
+  "subtopic": "Inference and Main Idea",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "A how-to passage aims to instruct the reader in performing a task.",
+  "options": [
+   "Entertain",
+   "Instruct",
+   "Persuade",
+   "Narrate"
+  ],
+  "question": "The author's purpose in a passage explaining how to operate a machine is to:",
+  "subject": "English",
+  "subtopic": "Tone and Purpose of Passage",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Consistent praise indicates an admiring tone toward the subject.",
+  "options": [
+   "Critical",
+   "Admiring",
+   "Neutral",
+   "Sarcastic"
+  ],
+  "question": "A passage full of praise for a leader's achievements most likely has a ___ tone:",
+  "subject": "English",
+  "subtopic": "Tone and Purpose of Passage",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "An objective tone presents facts impartially; a subjective tone shows personal feelings.",
+  "options": [
+   "Subjective",
+   "Objective",
+   "Emotional",
+   "Satirical"
+  ],
+  "question": "An author who presents facts without taking sides writes in a ___ tone:",
+  "subject": "English",
+  "subtopic": "Tone and Purpose of Passage",
+  "topic": "Reading Comprehension"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Prefer takes the preposition to, not than, when comparing two nouns.",
+  "options": [
+   "She prefers coffee than tea.",
+   "She prefers coffee to tea.",
+   "She prefers coffee over tea.",
+   "She prefers coffee from tea."
+  ],
+  "question": "Choose the correct sentence:",
+  "subject": "English",
+  "subtopic": "Sentence Correction",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "After it is high time, the past subjunctive (left) is used to express a present or future meaning.",
+  "options": [
+   "It is high time we leave.",
+   "It is high time we left.",
+   "It is high time we are leaving.",
+   "It is high time we have left."
+  ],
+  "question": "Which of the following sentences is correct?",
+  "subject": "English",
+  "subtopic": "Sentence Correction",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "The verb deny is followed by a gerund (stealing), not an infinitive.",
+  "options": [
+   "He denied to steal the money.",
+   "He denied stealing the money.",
+   "He denied to have stolen the money.",
+   "He denied steal the money."
+  ],
+  "question": "Identify the correct sentence:",
+  "subject": "English",
+  "subtopic": "Sentence Correction",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "No sooner pairs with than (not when) and requires inversion with the auxiliary verb.",
+  "options": [
+   "No sooner had he arrived when it started raining.",
+   "No sooner had he arrived than it started raining.",
+   "No sooner he had arrived than it started raining.",
+   "No sooner did he arrived than it started raining."
+  ],
+  "question": "Select the grammatically correct sentence:",
+  "subject": "English",
+  "subtopic": "Sentence Correction",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Since is used with a point of time (2019); for is used with a duration.",
+  "options": [
+   "for",
+   "since",
+   "from",
+   "by"
+  ],
+  "question": "She has been working here ___ 2019:",
+  "subject": "English",
+  "subtopic": "Fill in the Blanks",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Arrive at is used for small places like stations; arrive in is used for cities and countries.",
+  "options": [
+   "in",
+   "at",
+   "on",
+   "to"
+  ],
+  "question": "The train arrived ___ the platform on time:",
+  "subject": "English",
+  "subtopic": "Fill in the Blanks",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Among is used for more than two; between is used for two.",
+  "options": [
+   "between",
+   "among",
+   "within",
+   "amidst"
+  ],
+  "question": "Distribute these books ___ the students:",
+  "subject": "English",
+  "subtopic": "Fill in the Blanks",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "The fixed collocation is congratulate someone on something.",
+  "options": [
+   "for",
+   "on",
+   "about",
+   "at"
+  ],
+  "question": "He congratulated me ___ my success:",
+  "subject": "English",
+  "subtopic": "Fill in the Blanks",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 0,
+  "difficulty": "hard",
+  "explanation": "Unless means if not; note it is already negative, so no not follows it.",
+  "options": [
+   "Unless",
+   "Until",
+   "If",
+   "Although"
+  ],
+  "question": "___ you work hard, you will not succeed:",
+  "subject": "English",
+  "subtopic": "Fill in the Blanks",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 2,
+  "difficulty": "easy",
+  "explanation": "Senior takes to, not than. Adjectives ending in -ior always take to.",
+  "options": [
+   "He is",
+   "senior",
+   "than me",
+   "No error"
+  ],
+  "question": "Find the error: He is senior than me:",
+  "subject": "English",
+  "subtopic": "Error Detection",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 2,
+  "difficulty": "medium",
+  "explanation": "Each is singular and requires the singular verb has, not have.",
+  "options": [
+   "Each of",
+   "the boys",
+   "have a book",
+   "No error"
+  ],
+  "question": "Identify the incorrect part: Each of the boys have a book:",
+  "subject": "English",
+  "subtopic": "Error Detection",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 0,
+  "difficulty": "medium",
+  "explanation": "Scenery is uncountable and has no plural form; the verb should be is.",
+  "options": [
+   "The sceneries",
+   "of Murree",
+   "are charming",
+   "No error"
+  ],
+  "question": "Identify the incorrect part: The sceneries of Murree are charming:",
+  "subject": "English",
+  "subtopic": "Error Detection",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "Unless already carries a negative sense (if not), so do not is redundant. It should be: Unless you hurry.",
+  "options": [
+   "Unless you",
+   "do not hurry",
+   "you will miss the bus",
+   "No error"
+  ],
+  "question": "Identify the incorrect part: Unless you do not hurry, you will miss the bus:",
+  "subject": "English",
+  "subtopic": "Error Detection",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 0,
+  "difficulty": "easy",
+  "explanation": "Not only and but also form a correlative pair and must be used together.",
+  "options": [
+   "but also",
+   "and also",
+   "as well",
+   "too"
+  ],
+  "question": "She is not only intelligent ___ hardworking:",
+  "subject": "English",
+  "subtopic": "Sentence Completion",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 0,
+  "difficulty": "hard",
+  "explanation": "Hardly (like scarcely) pairs with when in inverted past-perfect constructions.",
+  "options": [
+   "Hardly",
+   "Hard",
+   "Hardlier",
+   "Hardness"
+  ],
+  "question": "___ had he finished his speech when the lights went out:",
+  "subject": "English",
+  "subtopic": "Sentence Completion",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 2,
+  "difficulty": "hard",
+  "explanation": "As if expressing unreality takes the past subjunctive were for all persons.",
+  "options": [
+   "is",
+   "was",
+   "were",
+   "has been"
+  ],
+  "question": "He talks as if he ___ the owner of the company:",
+  "subject": "English",
+  "subtopic": "Sentence Completion",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 0,
+  "difficulty": "medium",
+  "explanation": "The natural sequence is: knock first, then open the door, get no answer, and finally walk away.",
+  "options": [
+   "2-1-3-4",
+   "1-2-3-4",
+   "3-2-1-4",
+   "2-3-1-4"
+  ],
+  "question": "Choose the correct logical order: 1. He opened the door. 2. He knocked twice. 3. Nobody answered. 4. He walked away:",
+  "subject": "English",
+  "subtopic": "Ordering of Sentences (Para Jumbles)",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "Cause comes first (no rain), then its effects: crops failed, farmers suffered, and prices rose.",
+  "options": [
+   "1-2-3-4",
+   "2-1-3-4",
+   "2-3-1-4",
+   "4-1-3-2"
+  ],
+  "question": "Choose the correct logical order: 1. The crops failed. 2. There was no rain. 3. The farmers suffered. 4. Prices rose sharply:",
+  "subject": "English",
+  "subtopic": "Ordering of Sentences (Para Jumbles)",
+  "topic": "Sentence Structure"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Every standard essay has three parts: an introduction, a body of paragraphs, and a conclusion.",
+  "options": [
+   "Introduction only",
+   "Introduction, body, and conclusion",
+   "Body and conclusion",
+   "Title and references"
+  ],
+  "question": "A standard essay consists of:",
+  "subject": "English",
+  "subtopic": "Essay Writing (Common PPSC Topics)",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 2,
+  "difficulty": "medium",
+  "explanation": "The thesis statement appears at the end of the introduction and states the essay's central argument.",
+  "options": [
+   "Conclusion",
+   "Body",
+   "Introduction",
+   "Title"
+  ],
+  "question": "The thesis statement of an essay is normally placed in the:",
+  "subject": "English",
+  "subtopic": "Essay Writing (Common PPSC Topics)",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "A formal application opens with the recipient's designation and address, followed by the salutation.",
+  "options": [
+   "At the end",
+   "At the top, before the salutation",
+   "In the middle",
+   "After the signature"
+  ],
+  "question": "In a formal application, the address of the recipient is written:",
+  "subject": "English",
+  "subtopic": "Letter and Application Writing",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "Yours obediently is the formal close for applications addressed to officers and authorities.",
+  "options": [
+   "Personal letters",
+   "Applications to authorities",
+   "Business orders",
+   "Invitations"
+  ],
+  "question": "The complimentary close 'Yours obediently' is used in:",
+  "subject": "English",
+  "subtopic": "Letter and Application Writing",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 1,
+  "difficulty": "medium",
+  "explanation": "The standard rule is that a precis should be roughly one-third of the original length.",
+  "options": [
+   "One-half",
+   "One-third",
+   "One-fourth",
+   "The same"
+  ],
+  "question": "A good precis should be about ___ the length of the original passage:",
+  "subject": "English",
+  "subtopic": "Precis Writing",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 1,
+  "difficulty": "hard",
+  "explanation": "A precis must be written in the writer's own words, without examples, illustrations, or personal opinions.",
+  "options": [
+   "Copy original sentences",
+   "Write in your own words",
+   "Add your own opinions",
+   "Keep all the examples"
+  ],
+  "question": "Which rule is essential in precis writing?",
+  "subject": "English",
+  "subtopic": "Precis Writing",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 1,
+  "difficulty": "easy",
+  "explanation": "Unity requires a paragraph to develop a single main idea, stated in its topic sentence.",
+  "options": [
+   "Many ideas",
+   "One main idea",
+   "No idea",
+   "Two contrasting ideas"
+  ],
+  "question": "A paragraph should normally deal with:",
+  "subject": "English",
+  "subtopic": "Paragraph Writing",
+  "topic": "Writing Skills"
+ },
+ {
+  "correct": 2,
+  "difficulty": "easy",
+  "explanation": "The topic sentence typically opens the paragraph and states its main idea.",
+  "options": [
+   "At the end",
+   "In the middle",
+   "At the beginning",
+   "It has no fixed place"
+  ],
+  "question": "The topic sentence of a paragraph is usually placed:",
+  "subject": "English",
+  "subtopic": "Paragraph Writing",
+  "topic": "Writing Skills"
+ }
+]

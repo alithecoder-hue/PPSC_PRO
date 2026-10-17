@@ -1,0 +1,702 @@
+[
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Government Policies and Major Decisions",
+    "question": "The Ehsaas Programme, Pakistan's flagship poverty alleviation initiative, was launched in:",
+    "options": ["2017", "2018", "2019", "2021"],
+    "correct": 2,
+    "explanation": "The Ehsaas Programme was launched in March 2019 to provide social protection to Pakistan's underprivileged segments.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Government Policies and Major Decisions",
+    "question": "Under the Sehat Sahulat Program, an enrolled family is entitled to health coverage of up to:",
+    "options": ["Rs 250,000 per year", "Rs 1,000,000 per year", "Rs 100,000 per year", "Rs 500,000 per year"],
+    "correct": 1,
+    "explanation": "The Sehat Sahulat Program provides up to Rs 1,000,000 (10 lakh) of annual health insurance coverage per enrolled family.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Economic Updates (Budget, Inflation, IMF)",
+    "question": "The total outlay of Pakistan's federal budget for fiscal year 2024-25 was:",
+    "options": ["Rs 14.5 trillion", "Rs 16.2 trillion", "Rs 18.9 trillion", "Rs 21.3 trillion"],
+    "correct": 2,
+    "explanation": "The FY 2024-25 federal budget, presented in June 2024, had a total outlay of Rs 18.9 trillion.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Economic Updates (Budget, Inflation, IMF)",
+    "question": "Who presented Pakistan's federal budget for 2024-25 as Finance Minister?",
+    "options": ["Ishaq Dar", "Muhammad Aurangzeb", "Shamshad Akhtar", "Miftah Ismail"],
+    "correct": 1,
+    "explanation": "Muhammad Aurangzeb, serving as Finance Minister, presented the FY 2024-25 budget in the National Assembly in June 2024.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Economic Updates (Budget, Inflation, IMF)",
+    "question": "In September 2024, the IMF approved a bailout package for Pakistan worth:",
+    "options": ["$3 billion", "$6 billion", "$7 billion", "$9 billion"],
+    "correct": 2,
+    "explanation": "The IMF approved a 37-month $7 billion Extended Fund Facility for Pakistan in September 2024.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "CPEC Latest Developments",
+    "question": "The China-Pakistan Economic Corridor (CPEC) was officially launched in:",
+    "options": ["2013", "2015", "2017", "2019"],
+    "correct": 1,
+    "explanation": "CPEC was officially launched in 2015 during Chinese President Xi Jinping's state visit to Pakistan.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "CPEC Latest Developments",
+    "question": "The Gwadar deep-sea port, central to CPEC, is located in which province?",
+    "options": ["Sindh", "Punjab", "Khyber Pakhtunkhwa", "Balochistan"],
+    "correct": 3,
+    "explanation": "Gwadar port is located on the Arabian Sea coast in Balochistan province.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Elections and Political Changes",
+    "question": "Pakistan's general elections for the National Assembly were most recently held on:",
+    "options": ["8 February 2024", "25 July 2018", "11 May 2013", "18 February 2008"],
+    "correct": 0,
+    "explanation": "The 2024 general elections for the National Assembly and provincial assemblies were held on 8 February 2024.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Elections and Political Changes",
+    "question": "Who became the Prime Minister of Pakistan after the February 2024 general elections?",
+    "options": ["Imran Khan", "Shehbaz Sharif", "Bilawal Bhutto Zardari", "Nawaz Sharif"],
+    "correct": 1,
+    "explanation": "Shehbaz Sharif became Prime Minister in March 2024 after the February general elections.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Military and Defense Updates",
+    "question": "General Asim Munir took charge as the Chief of Army Staff of Pakistan in:",
+    "options": ["June 2022", "November 2022", "March 2023", "November 2023"],
+    "correct": 1,
+    "explanation": "General Syed Asim Munir assumed command as Chief of Army Staff in November 2022.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Military and Defense Updates",
+    "question": "The JF-17 Thunder fighter jet is jointly developed by Pakistan and:",
+    "options": ["Turkey", "Russia", "China", "France"],
+    "correct": 2,
+    "explanation": "The JF-17 Thunder is co-produced by the Pakistan Aeronautical Complex and China's Chengdu Aircraft Corporation.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Supreme Court Major Judgments",
+    "question": "The 26th Constitutional Amendment, passed in October 2024, primarily deals with:",
+    "options": ["Electoral reforms", "Judicial reforms", "Provincial autonomy", "Taxation powers"],
+    "correct": 1,
+    "explanation": "The 26th Amendment (October 2024) introduced major judicial reforms, including a new process for appointing the Chief Justice.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Pakistan Current Affairs",
+    "subtopic": "Supreme Court Major Judgments",
+    "question": "Who took oath as the Chief Justice of Pakistan in October 2024?",
+    "options": ["Qazi Faez Isa", "Umar Ata Bandial", "Yahya Afridi", "Gulzar Ahmed"],
+    "correct": 2,
+    "explanation": "Justice Yahya Afridi took oath as Chief Justice on 26 October 2024, succeeding Qazi Faez Isa.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "USA, China, Russia Relations",
+    "question": "The United States completed its military withdrawal from Afghanistan in:",
+    "options": ["December 2019", "February 2020", "August 2021", "March 2022"],
+    "correct": 2,
+    "explanation": "The US completed its troop withdrawal from Afghanistan on 30 August 2021, ending a 20-year military presence.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "USA, China, Russia Relations",
+    "question": "Who won the United States presidential election held in November 2024?",
+    "options": ["Joe Biden", "Kamala Harris", "Donald Trump", "Ron DeSantis"],
+    "correct": 2,
+    "explanation": "Donald Trump won the November 2024 election and returned to the US presidency.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "USA, China, Russia Relations",
+    "question": "China and Russia declared a 'no limits' partnership in February 2022 during:",
+    "options": ["The Beijing Winter Olympics", "A BRICS summit", "A G20 meeting", "The Shanghai Expo"],
+    "correct": 0,
+    "explanation": "Presidents Xi Jinping and Vladimir Putin announced the 'no limits' partnership on the sidelines of the Beijing Winter Olympics in February 2022.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Middle East Conflicts",
+    "question": "The latest major Israel-Palestine escalation began after the Hamas attack on:",
+    "options": ["7 October 2023", "11 September 2021", "6 October 1973", "14 May 2018"],
+    "correct": 0,
+    "explanation": "The Hamas-led attack of 7 October 2023 on Israel triggered the Gaza war that followed.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Middle East Conflicts",
+    "question": "The Abraham Accords of 2020 normalized relations between Israel and which Arab states initially?",
+    "options": ["Saudi Arabia and Egypt", "UAE and Bahrain", "Qatar and Kuwait", "Jordan and Lebanon"],
+    "correct": 1,
+    "explanation": "The 2020 Abraham Accords normalized Israel's diplomatic relations with the United Arab Emirates and Bahrain.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Kashmir Issue — Latest Updates",
+    "question": "India revoked the special constitutional status of Jammu and Kashmir (Article 370) on:",
+    "options": ["5 August 2019", "14 August 2019", "26 January 2020", "5 August 2020"],
+    "correct": 0,
+    "explanation": "India revoked Article 370 on 5 August 2019, ending the special constitutional status of Jammu and Kashmir.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Kashmir Issue — Latest Updates",
+    "question": "Which UN Security Council resolution of 1948 called for a plebiscite in Jammu and Kashmir?",
+    "options": ["Resolution 39", "Resolution 47", "Resolution 51", "Resolution 82"],
+    "correct": 1,
+    "explanation": "UNSC Resolution 47, adopted in April 1948, called for a free and impartial plebiscite in Jammu and Kashmir.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Afghanistan Situation",
+    "question": "The Taliban regained control of Kabul, Afghanistan in:",
+    "options": ["December 2019", "February 2020", "August 2021", "January 2022"],
+    "correct": 2,
+    "explanation": "The Taliban entered Kabul on 15 August 2021 as the Afghan government collapsed.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Afghanistan Situation",
+    "question": "The Doha Agreement, signed between the United States and the Taliban, was concluded in:",
+    "options": ["2018", "2019", "2020", "2021"],
+    "correct": 2,
+    "explanation": "The US-Taliban Doha Agreement was signed in February 2020, setting the terms for the American withdrawal from Afghanistan.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Ukraine-Russia War",
+    "question": "Russia launched its full-scale invasion of Ukraine on:",
+    "options": ["24 February 2022", "24 March 2022", "1 January 2022", "24 February 2023"],
+    "correct": 0,
+    "explanation": "Russia began its full-scale invasion of Ukraine on 24 February 2022.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Ukraine-Russia War",
+    "question": "Which country became NATO's 31st member in April 2023 following Russia's invasion of Ukraine?",
+    "options": ["Sweden", "Finland", "Ukraine", "Georgia"],
+    "correct": 1,
+    "explanation": "Finland joined NATO in April 2023, doubling the alliance's land border with Russia; Sweden followed in 2024.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Israel-Palestine Conflict",
+    "question": "The Balfour Declaration of 1917 is significant to the Israel-Palestine conflict because it:",
+    "options": ["Ended the Six-Day War", "Supported a Jewish homeland in Palestine", "Created the state of Israel", "Divided Jerusalem"],
+    "correct": 1,
+    "explanation": "Britain's 1917 Balfour Declaration expressed support for 'a national home for the Jewish people' in Palestine.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Affairs",
+    "subtopic": "Israel-Palestine Conflict",
+    "question": "The internationally proposed framework for resolving the Israel-Palestine conflict is known as the:",
+    "options": ["One-state solution", "Two-state solution", "Three-state solution", "Confederation plan"],
+    "correct": 1,
+    "explanation": "The two-state solution — an independent Palestine alongside Israel — remains the internationally endorsed framework for peace.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "UN Security Council Decisions",
+    "question": "How many permanent members of the UN Security Council hold veto power?",
+    "options": ["3", "5", "7", "10"],
+    "correct": 1,
+    "explanation": "Five permanent members — the US, UK, France, Russia and China — hold veto power in the Security Council.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "UN Security Council Decisions",
+    "question": "Pakistan was elected as a non-permanent member of the UN Security Council for the term:",
+    "options": ["2023-24", "2024-25", "2025-26", "2026-27"],
+    "correct": 2,
+    "explanation": "Pakistan was elected in June 2024 to serve as a non-permanent member of the UN Security Council for the 2025-26 term.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "SCO Summits and Outcomes",
+    "question": "The headquarters of the Shanghai Cooperation Organisation (SCO) is located in:",
+    "options": ["Shanghai", "Moscow", "Beijing", "Astana"],
+    "correct": 2,
+    "explanation": "The SCO Secretariat is headquartered in Beijing, China.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "SCO Summits and Outcomes",
+    "question": "Pakistan became a full member of the Shanghai Cooperation Organisation (SCO) in:",
+    "options": ["2015", "2016", "2017", "2019"],
+    "correct": 2,
+    "explanation": "Pakistan, along with India, joined the SCO as a full member at the 2017 Astana summit.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "SCO Summits and Outcomes",
+    "question": "Pakistan hosted the SCO Council of Heads of Government meeting in October 2024 in:",
+    "options": ["Lahore", "Karachi", "Islamabad", "Gwadar"],
+    "correct": 2,
+    "explanation": "Islamabad hosted the SCO Council of Heads of Government summit on 15-16 October 2024.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "OIC Meetings and Resolutions",
+    "question": "The Organisation of Islamic Cooperation (OIC) was founded in 1969 in:",
+    "options": ["Jeddah", "Rabat", "Cairo", "Istanbul"],
+    "correct": 1,
+    "explanation": "The OIC was founded in 1969 at Rabat, Morocco, following the arson attack on the Al-Aqsa Mosque.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "OIC Meetings and Resolutions",
+    "question": "The Organisation of Islamic Cooperation (OIC) currently has how many member states?",
+    "options": ["47", "52", "57", "62"],
+    "correct": 2,
+    "explanation": "The OIC has 57 member states, making it the second-largest intergovernmental organization after the United Nations.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "SAARC Updates",
+    "question": "SAARC was founded in 1985 with its first summit held in:",
+    "options": ["Kathmandu", "Dhaka", "New Delhi", "Colombo"],
+    "correct": 1,
+    "explanation": "SAARC was established in December 1985 at its first summit in Dhaka, Bangladesh.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "SAARC Updates",
+    "question": "The SAARC Secretariat is headquartered in:",
+    "options": ["Dhaka", "New Delhi", "Kathmandu", "Islamabad"],
+    "correct": 2,
+    "explanation": "The SAARC Secretariat is based in Kathmandu, Nepal.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "Commonwealth Updates",
+    "question": "The headquarters of the Commonwealth of Nations is located in:",
+    "options": ["London", "Canberra", "Ottawa", "New Delhi"],
+    "correct": 0,
+    "explanation": "The Commonwealth Secretariat is headquartered at Marlborough House in London.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "International Organizations (Current)",
+    "subtopic": "Commonwealth Updates",
+    "question": "How many member countries does the Commonwealth of Nations currently have?",
+    "options": ["48", "52", "54", "56"],
+    "correct": 3,
+    "explanation": "The Commonwealth has 56 member countries, most of them former territories of the British Empire.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "World Economic Forum Reports",
+    "question": "The World Economic Forum holds its famous annual meeting in:",
+    "options": ["Geneva", "Davos", "Zurich", "New York"],
+    "correct": 1,
+    "explanation": "The WEF's annual meeting takes place in Davos, Switzerland, bringing together world leaders and business executives.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "World Economic Forum Reports",
+    "question": "The World Economic Forum was founded in 1971 by:",
+    "options": ["John Maynard Keynes", "Klaus Schwab", "Milton Friedman", "Amartya Sen"],
+    "correct": 1,
+    "explanation": "German economist Klaus Schwab founded the World Economic Forum in 1971.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Oil Prices and Global Impact",
+    "question": "The headquarters of OPEC is located in:",
+    "options": ["Riyadh", "Vienna", "Doha", "Baghdad"],
+    "correct": 1,
+    "explanation": "OPEC has been headquartered in Vienna, Austria, since 1965.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Oil Prices and Global Impact",
+    "question": "OPEC was founded in 1960 in:",
+    "options": ["Vienna", "Riyadh", "Baghdad", "Tehran"],
+    "correct": 2,
+    "explanation": "OPEC was founded in September 1960 at the Baghdad Conference by five oil-producing nations.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Oil Prices and Global Impact",
+    "question": "The 'OPEC+' alliance includes OPEC members plus which major non-OPEC oil producer?",
+    "options": ["USA", "Russia", "Norway", "Canada"],
+    "correct": 1,
+    "explanation": "OPEC+, formed in 2016, coordinates oil production between OPEC members and allied producers led by Russia.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Global Inflation Trends",
+    "question": "Inflation is best described as:",
+    "options": ["A fall in the general price level", "A sustained rise in the general price level", "A rise in unemployment", "A fall in exports"],
+    "correct": 1,
+    "explanation": "Inflation is a sustained increase in the general price level of goods and services over time.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Global Inflation Trends",
+    "question": "The economic condition of high inflation combined with stagnant growth and high unemployment is called:",
+    "options": ["Deflation", "Stagflation", "Disinflation", "Hyperinflation"],
+    "correct": 1,
+    "explanation": "Stagflation — stagnation plus inflation — famously affected Western economies in the 1970s.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Trade Wars and Sanctions",
+    "question": "The US-China trade war began to escalate in 2018 with:",
+    "options": ["US tariffs on Chinese goods", "China joining the WTO", "A US-China free trade deal", "Sanctions on Chinese banks"],
+    "correct": 0,
+    "explanation": "In 2018 the United States imposed tariffs on Chinese imports, triggering retaliatory Chinese tariffs and a prolonged trade war.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Trade Wars and Sanctions",
+    "question": "Since 2022, which country has faced the most extensive Western economic sanctions over the Ukraine conflict?",
+    "options": ["Iran", "North Korea", "Russia", "Belarus"],
+    "correct": 2,
+    "explanation": "Russia has faced unprecedented Western sanctions — on banks, energy, technology and individuals — since its 2022 invasion of Ukraine.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Digital Economy and Crypto",
+    "question": "Bitcoin, the first decentralized cryptocurrency, was introduced in:",
+    "options": ["2005", "2007", "2009", "2012"],
+    "correct": 2,
+    "explanation": "Bitcoin was launched in 2009 by the pseudonymous Satoshi Nakamoto.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Economy & Trade (Current)",
+    "subtopic": "Digital Economy and Crypto",
+    "question": "Which country became the first in the world to adopt Bitcoin as legal tender in 2021?",
+    "options": ["Panama", "El Salvador", "Paraguay", "Venezuela"],
+    "correct": 1,
+    "explanation": "El Salvador adopted Bitcoin as legal tender in September 2021.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "AI and Machine Learning Developments",
+    "question": "ChatGPT was launched by OpenAI in:",
+    "options": ["January 2021", "June 2022", "November 2022", "March 2023"],
+    "correct": 2,
+    "explanation": "OpenAI released ChatGPT on 30 November 2022, triggering the global generative-AI wave.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "AI and Machine Learning Developments",
+    "question": "The Turing Test, a benchmark for machine intelligence, was proposed by Alan Turing in:",
+    "options": ["1936", "1950", "1956", "1965"],
+    "correct": 1,
+    "explanation": "Alan Turing proposed the imitation game, now called the Turing Test, in his 1950 paper 'Computing Machinery and Intelligence'.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "AI and Machine Learning Developments",
+    "question": "The term 'Artificial Intelligence' was coined in 1956 at:",
+    "options": ["MIT", "Stanford University", "The Dartmouth Conference", "Bell Labs"],
+    "correct": 2,
+    "explanation": "John McCarthy coined the term 'artificial intelligence' for the 1956 Dartmouth Summer Research Project.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Space Missions (NASA, ISRO, SpaceX)",
+    "question": "India's Chandrayaan-3 mission (2023) is historic because it:",
+    "options": ["Was the first mission to Mars", "Made the first landing near the Moon's south pole", "Carried humans to the Moon", "Landed on an asteroid"],
+    "correct": 1,
+    "explanation": "Chandrayaan-3 landed in August 2023, making India the first country to achieve a soft landing near the lunar south pole.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Space Missions (NASA, ISRO, SpaceX)",
+    "question": "The James Webb Space Telescope was launched in:",
+    "options": ["December 2021", "July 2020", "April 2019", "October 2022"],
+    "correct": 0,
+    "explanation": "The James Webb Space Telescope was launched on 25 December 2021 as the successor to the Hubble telescope.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Space Missions (NASA, ISRO, SpaceX)",
+    "question": "In May 2020, SpaceX became the first private company to:",
+    "options": ["Land a rocket on the Moon", "Send astronauts to the International Space Station", "Launch a satellite", "Build a space station"],
+    "correct": 1,
+    "explanation": "SpaceX's Demo-2 mission in May 2020 was the first crewed orbital flight by a private company, docking with the ISS.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Cyber Attacks and Security Issues",
+    "question": "'Phishing' in cybersecurity refers to:",
+    "options": ["Catching computer viruses", "Fraudulent attempts to obtain sensitive information", "Encrypting hard drives", "Speeding up networks"],
+    "correct": 1,
+    "explanation": "Phishing uses fake emails or websites to trick people into revealing passwords and financial details.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Cyber Attacks and Security Issues",
+    "question": "The WannaCry ransomware attack of 2017 primarily spread by exploiting:",
+    "options": ["Weak passwords", "Windows vulnerabilities", "Fake software updates", "USB drives"],
+    "correct": 1,
+    "explanation": "WannaCry (May 2017) exploited the EternalBlue Windows vulnerability, infecting more than 200,000 computers worldwide.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Climate Change Agreements (COP)",
+    "question": "COP28, the 2023 UN climate conference, was hosted by:",
+    "options": ["Egypt", "UAE", "Scotland", "Azerbaijan"],
+    "correct": 1,
+    "explanation": "COP28 was held in Dubai, United Arab Emirates, in November-December 2023.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Climate Change Agreements (COP)",
+    "question": "The Paris Agreement (2015) aims to limit global warming to:",
+    "options": ["Below 1°C", "Well below 2°C, pursuing 1.5°C", "Below 3°C", "Below 4°C"],
+    "correct": 1,
+    "explanation": "The Paris Agreement targets holding warming well below 2°C above pre-industrial levels, while pursuing efforts for 1.5°C.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Science & Technology (Current)",
+    "subtopic": "Climate Change Agreements (COP)",
+    "question": "The Kyoto Protocol, the first binding emissions treaty, was adopted in:",
+    "options": ["1992", "1997", "2001", "2005"],
+    "correct": 1,
+    "explanation": "The Kyoto Protocol was adopted in 1997 in Japan, committing developed nations to binding emission cuts.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "Cricket — Pakistan Team Performance",
+    "question": "Pakistan won the Cricket World Cup in 1992 under the captaincy of:",
+    "options": ["Javed Miandad", "Imran Khan", "Wasim Akram", "Inzamam-ul-Haq"],
+    "correct": 1,
+    "explanation": "Imran Khan led Pakistan to its first and only ODI World Cup title in 1992, beating England in the final.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "Cricket — Pakistan Team Performance",
+    "question": "Pakistan won the ICC Champions Trophy 2017 by defeating which team in the final?",
+    "options": ["Australia", "England", "India", "Sri Lanka"],
+    "correct": 2,
+    "explanation": "Pakistan beat India by 180 runs in the 2017 Champions Trophy final at The Oval, London.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "Cricket — Pakistan Team Performance",
+    "question": "Which team won the ICC T20 World Cup 2024?",
+    "options": ["Pakistan", "England", "India", "South Africa"],
+    "correct": 2,
+    "explanation": "India won the 2024 T20 World Cup, defeating South Africa in the final in Barbados.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "Olympics — Latest Events",
+    "question": "Arshad Nadeem won Pakistan's first individual Olympic gold medal at Paris 2024 in:",
+    "options": ["Wrestling", "Weightlifting", "Javelin throw", "Shooting"],
+    "correct": 2,
+    "explanation": "Arshad Nadeem won gold in the javelin throw at Paris 2024 with an Olympic record of 92.97 metres.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "Olympics — Latest Events",
+    "question": "The Tokyo 2020 Olympic Games were actually held in:",
+    "options": ["2020", "2021", "2022", "2019"],
+    "correct": 1,
+    "explanation": "The Tokyo Olympics were postponed due to COVID-19 and held in 2021, while keeping the 'Tokyo 2020' name.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "FIFA World Cup Updates",
+    "question": "The FIFA World Cup 2022 was hosted by:",
+    "options": ["Russia", "Qatar", "Brazil", "USA"],
+    "correct": 1,
+    "explanation": "Qatar hosted the 2022 FIFA World Cup, the first edition held in the Middle East.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "FIFA World Cup Updates",
+    "question": "The FIFA World Cup 2026 will be jointly hosted by:",
+    "options": ["USA, Canada and Mexico", "Spain, Portugal and Morocco", "England and Ireland", "Japan and South Korea"],
+    "correct": 0,
+    "explanation": "The 2026 World Cup will be hosted by the United States, Canada and Mexico — the first edition with 48 teams.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "PSL Updates",
+    "question": "The Pakistan Super League (PSL) was launched in:",
+    "options": ["2014", "2015", "2016", "2017"],
+    "correct": 2,
+    "explanation": "The first PSL edition was played in the United Arab Emirates in February 2016.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "PSL Updates",
+    "question": "Which team won the PSL 9 (2024) title?",
+    "options": ["Lahore Qalandars", "Karachi Kings", "Islamabad United", "Peshawar Zalmi"],
+    "correct": 2,
+    "explanation": "Islamabad United won PSL 9 in 2024 — their third title after 2016 and 2018.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "International Awards to Pakistanis",
+    "question": "Malala Yousafzai won the Nobel Peace Prize in 2014 at the age of 17, making her the:",
+    "options": ["First Pakistani Nobel laureate", "Youngest Nobel laureate ever", "First female Peace laureate", "First Asian laureate"],
+    "correct": 1,
+    "explanation": "Malala, sharing the 2014 Peace Prize with Kailash Satyarthi, is the youngest Nobel laureate in history.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Current Affairs",
+    "topic": "Sports (Current)",
+    "subtopic": "International Awards to Pakistanis",
+    "question": "Dr. Abdus Salam won the Nobel Prize in Physics in 1979 for his work on:",
+    "options": ["Black holes", "The electroweak theory", "Quantum computing", "Nuclear fission"],
+    "correct": 1,
+    "explanation": "Abdus Salam shared the 1979 Nobel Prize in Physics for unifying the electromagnetic and weak nuclear forces.",
+    "difficulty": "hard"
+  }
+]

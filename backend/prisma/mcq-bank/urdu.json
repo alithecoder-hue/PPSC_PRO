@@ -1,0 +1,1202 @@
+[
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Ism, Fail, Sifat, Zameer — Parts of Speech",
+    "question": "احمد کتاب پڑھتا ہے۔ اس جملے میں لفظ کتاب کیا ہے?",
+    "options": [
+      "اسم",
+      "فعل",
+      "صفت",
+      "ضمیر"
+    ],
+    "correct": 0,
+    "explanation": "کتاب کسی چیز کا نام ہے، اور نام کو اسم کہتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Ism, Fail, Sifat, Zameer — Parts of Speech",
+    "question": "وہ سکول جاتا ہے۔ اس جملے میں جاتا ہے کیا ہے?",
+    "options": [
+      "ضمیر",
+      "فعل",
+      "اسم",
+      "صفت"
+    ],
+    "correct": 1,
+    "explanation": "جاتا ہے کام کے کرنے کو ظاہر کرتا ہے، اس لیے یہ فعل ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Ism, Fail, Sifat, Zameer — Parts of Speech",
+    "question": "وہ لڑکا بہت ذہین ہے۔ اس جملے میں ذہین کیا ہے?",
+    "options": [
+      "فعل",
+      "اسم",
+      "صفت",
+      "حرف"
+    ],
+    "correct": 2,
+    "explanation": "ذہین لڑکے کی خوبی بیان کرتا ہے، اور خوبی بیان کرنے والے لفظ کو صفت کہتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Ism, Fail, Sifat, Zameer — Parts of Speech",
+    "question": "یہ میری کتاب ہے۔ اس جملے میں میری کیا ہے?",
+    "options": [
+      "اسم",
+      "صفت",
+      "فعل",
+      "ضمیر"
+    ],
+    "correct": 3,
+    "explanation": "میری اسم کی جگہ استعمال ہوا ہے، اس لیے یہ ضمیر ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Wahid Jama — Singular and Plural",
+    "question": "کتاب کی جمع کیا ہے?",
+    "options": [
+      "کتابیں",
+      "کتابوں",
+      "کتب",
+      "کتابات"
+    ],
+    "correct": 0,
+    "explanation": "کتاب کی جمع کتابیں ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Wahid Jama — Singular and Plural",
+    "question": "لڑکا کی جمع کیا ہے?",
+    "options": [
+      "لڑکوں",
+      "لڑکے",
+      "لڑکیاں",
+      "لڑکایاں"
+    ],
+    "correct": 1,
+    "explanation": "لڑکا کی جمع لڑکے ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Wahid Jama — Singular and Plural",
+    "question": "مسجد کی جمع کیا ہے?",
+    "options": [
+      "مسجدیں",
+      "مسجدوں",
+      "مساجد",
+      "مسجدات"
+    ],
+    "correct": 2,
+    "explanation": "مسجد عربی الاصل لفظ ہے، اس کی جمع مساجد آتی ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Wahid Jama — Singular and Plural",
+    "question": "استاد کی جمع کیا ہے?",
+    "options": [
+      "استادوں",
+      "استادیں",
+      "استادات",
+      "اساتذہ"
+    ],
+    "correct": 3,
+    "explanation": "استاد کی جمع اساتذہ ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muzakkar Muannas — Gender in Urdu",
+    "question": "لڑکا کا مؤنث کیا ہے?",
+    "options": [
+      "لڑکی",
+      "لڑکیاں",
+      "لڑکوں",
+      "لڑکپن"
+    ],
+    "correct": 0,
+    "explanation": "لڑکا مذکر ہے اور اس کا مؤنث لڑکی ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muzakkar Muannas — Gender in Urdu",
+    "question": "استاد کا مؤنث کیا ہے?",
+    "options": [
+      "استادی",
+      "استانی",
+      "استادن",
+      "استادہ"
+    ],
+    "correct": 1,
+    "explanation": "استاد کا مؤنث استانی ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muzakkar Muannas — Gender in Urdu",
+    "question": "درج ذیل میں سے مؤنث لفظ کون سا ہے?",
+    "options": [
+      "قلم",
+      "دروازہ",
+      "کتاب",
+      "پہاڑ"
+    ],
+    "correct": 2,
+    "explanation": "کتاب مؤنث ہے، اسی لیے کہتے ہیں کتاب پڑھی گئی۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muhawray aur Zarb ul Amsal — Idioms and Proverbs",
+    "question": "آنکھوں کا تارا کا کیا مطلب ہے?",
+    "options": [
+      "بہت پیارا",
+      "سخت دشمن",
+      "معمولی چیز",
+      "پرانی یاد"
+    ],
+    "correct": 0,
+    "explanation": "آنکھوں کا تارا اس شخص کو کہتے ہیں جو بہت پیارا ہو۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muhawray aur Zarb ul Amsal — Idioms and Proverbs",
+    "question": "آستین کا سانپ سے کیا مراد ہے?",
+    "options": [
+      "زہریلا سانپ",
+      "دوست نما دشمن",
+      "وفادار ساتھی",
+      "عقلمند شخص"
+    ],
+    "correct": 1,
+    "explanation": "آستین کا سانپ اس دوست کو کہتے ہیں جو اندر سے دشمن ہو۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muhawray aur Zarb ul Amsal — Idioms and Proverbs",
+    "question": "اونٹ کے منہ میں زیرہ ضرب المثل کا کیا مفہوم ہے?",
+    "options": [
+      "ضرورت سے زائد",
+      "بہت کم مقدار",
+      "برابر مقدار",
+      "نامکمل کام"
+    ],
+    "correct": 1,
+    "explanation": "ضرورت کے مقابلے میں نہایت قلیل مقدار کو اونٹ کے منہ میں زیرہ کہتے ہیں۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Muhawray aur Zarb ul Amsal — Idioms and Proverbs",
+    "question": "تھالی کا بینگن کس شخص کے لیے بولا جاتا ہے?",
+    "options": [
+      "دیانت دار شخص",
+      "بہادر سپاہی",
+      "موقع پرست شخص",
+      "سخی انسان"
+    ],
+    "correct": 2,
+    "explanation": "جو شخص مفاد کے لیے ہر طرف جھک جائے اسے تھالی کا بینگن کہتے ہیں۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Aarab aur Rumooz Auqaf — Punctuation",
+    "question": "سوالیہ جملے کے آخر میں کون سی علامت لگائی جاتی ہے?",
+    "options": [
+      "۔",
+      "؟",
+      "!",
+      "،"
+    ],
+    "correct": 1,
+    "explanation": "سوال پوچھنے والے جملے کے آخر میں سوالیہ علامت ؟ لگائی جاتی ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Aarab aur Rumooz Auqaf — Punctuation",
+    "question": "علامت ، کو اردو میں کیا کہتے ہیں?",
+    "options": [
+      "ختمہ",
+      "وقفہ",
+      "سکتہ",
+      "سوالیہ"
+    ],
+    "correct": 2,
+    "explanation": "، سکتہ یعنی کاما کی علامت ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Grammar",
+    "subtopic": "Aarab aur Rumooz Auqaf — Punctuation",
+    "question": "ختمہ کی علامت کون سی ہے?",
+    "options": [
+      "؟",
+      "!",
+      ":",
+      "۔"
+    ],
+    "correct": 3,
+    "explanation": "جملہ مکمل ہونے پر آخر میں ۔ یعنی ختمہ لگایا جاتا ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Classical Urdu Poetry (Mir, Ghalib, Iqbal, Faiz)",
+    "question": "خدائے سخن کس شاعر کا لقب ہے?",
+    "options": [
+      "میر تقی میر",
+      "مرزا غالب",
+      "علامہ اقبال",
+      "فیض احمد فیض"
+    ],
+    "correct": 0,
+    "explanation": "میر تقی میر کو ان کی شاعرانہ عظمت کی وجہ سے خدائے سخن کہا جاتا ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Classical Urdu Poetry (Mir, Ghalib, Iqbal, Faiz)",
+    "question": "مرزا غالب کا اصل نام کیا تھا?",
+    "options": [
+      "ابراہیم ذوق",
+      "اسد اللہ خان",
+      "الطاف حسین حالی",
+      "داغ دہلوی"
+    ],
+    "correct": 1,
+    "explanation": "غالب کا اصل نام اسد اللہ خان تھا، غالب ان کا تخلص تھا۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Classical Urdu Poetry (Mir, Ghalib, Iqbal, Faiz)",
+    "question": "علامہ اقبال کا پہلا اردو مجموعہ کلام کون سا ہے?",
+    "options": [
+      "بالِ جبریل",
+      "ضربِ کلیم",
+      "بانگِ درا",
+      "ارمغانِ حجاز"
+    ],
+    "correct": 2,
+    "explanation": "بانگِ درا 1924ء میں شائع ہوا اور یہ اقبال کا پہلا اردو دیوان ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Classical Urdu Poetry (Mir, Ghalib, Iqbal, Faiz)",
+    "question": "فیض احمد فیض کو کون سا بین الاقوامی اعزاز ملا تھا?",
+    "options": [
+      "نوبل انعام",
+      "بکر انعام",
+      "پلٹزر انعام",
+      "لینن امن انعام"
+    ],
+    "correct": 3,
+    "explanation": "فیض احمد فیض کو 1962ء میں لینن امن انعام سے نوازا گیا۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Famous Urdu Novels and Novelists",
+    "question": "اردو کے پہلے ناول مراۃ العروس کے مصنف کون ہیں?",
+    "options": [
+      "ڈپٹی نذیر احمد",
+      "منشی پریم چند",
+      "کرشن چندر",
+      "عبداللہ حسین"
+    ],
+    "correct": 0,
+    "explanation": "مراۃ العروس 1869ء میں لکھا گیا اور یہ اردو کا پہلا ناول مانا جاتا ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Famous Urdu Novels and Novelists",
+    "question": "آگ کا دریا ناول کی مصنفہ کون ہیں?",
+    "options": [
+      "بانو قدسیہ",
+      "قرۃ العین حیدر",
+      "خدیجہ مستور",
+      "عصمت چغتائی"
+    ],
+    "correct": 1,
+    "explanation": "آگ کا دریا قرۃ العین حیدر کا مشہور ناول ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Famous Urdu Novels and Novelists",
+    "question": "راجہ گدھ کس کا ناول ہے?",
+    "options": [
+      "اشفاق احمد",
+      "مستنصر حسین تارڑ",
+      "بانو قدسیہ",
+      "شوکت صدیقی"
+    ],
+    "correct": 2,
+    "explanation": "راجہ گدھ بانو قدسیہ کا مشہور فلسفیانہ ناول ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Famous Urdu Novels and Novelists",
+    "question": "اداس نسلیں کے مصنف کون ہیں?",
+    "options": [
+      "قرۃ العین حیدر",
+      "احمد ندیم قاسمی",
+      "انتظار حسین",
+      "عبداللہ حسین"
+    ],
+    "correct": 3,
+    "explanation": "اداس نسلیں عبداللہ حسین کا مشہور ناول ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Famous Urdu Dramas",
+    "question": "مشہور ٹی وی ڈراما وارث کس نے لکھا تھا?",
+    "options": [
+      "امجد اسلام امجد",
+      "حسینہ معین",
+      "اشفاق احمد",
+      "شعیب منصور"
+    ],
+    "correct": 0,
+    "explanation": "وارث امجد اسلام امجد کا لکھا ہوا مشہور ڈراما ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Famous Urdu Dramas",
+    "question": "تنہائیاں اور دھوپ کنارے ڈراموں کی مصنفہ کون ہیں?",
+    "options": [
+      "فاطمہ ثریا بجیا",
+      "حسینہ معین",
+      "عمیرہ احمد",
+      "نور الہدیٰ شاہ"
+    ],
+    "correct": 1,
+    "explanation": "حسینہ معین نے تنہائیاں، دھوپ کنارے اور ان کہی جیسے مشہور ڈرامے لکھے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Short Story Writers (Manto, Bedi, Ismat)",
+    "question": "ٹوبہ ٹیک سنگھ افسانے کے مصنف کون ہیں?",
+    "options": [
+      "کرشن چندر",
+      "سعادت حسن منٹو",
+      "غلام عباس",
+      "احمد علی"
+    ],
+    "correct": 1,
+    "explanation": "ٹوبہ ٹیک سنگھ سعادت حسن منٹو کا مشہور ترین افسانہ ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Short Story Writers (Manto, Bedi, Ismat)",
+    "question": "لحاف افسانے کی مصنفہ کون ہیں?",
+    "options": [
+      "بانو قدسیہ",
+      "خدیجہ مستور",
+      "ہاجرہ مسرور",
+      "عصمت چغتائی"
+    ],
+    "correct": 3,
+    "explanation": "لحاف عصمت چغتائی کا متنازع اور مشہور افسانہ ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Short Story Writers (Manto, Bedi, Ismat)",
+    "question": "ٹھنڈا گوشت افسانہ کس کا لکھا ہوا ہے?",
+    "options": [
+      "غلام عباس",
+      "کرشن چندر",
+      "سعادت حسن منٹو",
+      "احمد ندیم قاسمی"
+    ],
+    "correct": 2,
+    "explanation": "ٹھنڈا گوشت منٹو کا افسانہ ہے جس پر فحاشی کا مقدمہ بھی چلا تھا۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Urdu Prose Writers",
+    "question": "پطرس کے مضامین کے مصنف کون ہیں?",
+    "options": [
+      "ابنِ انشا",
+      "مشتاق احمد یوسفی",
+      "پطرس بخاری",
+      "شوکت تھانوی"
+    ],
+    "correct": 2,
+    "explanation": "پطرس کے مضامین سید احمد شاہ بخاری یعنی پطرس بخاری کی مشہور کتاب ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Urdu Prose Writers",
+    "question": "چراغ تلے اور خاکم بدہن کے مصنف کون ہیں?",
+    "options": [
+      "ابنِ انشا",
+      "چراغ حسن حسرت",
+      "پطرس بخاری",
+      "مشتاق احمد یوسفی"
+    ],
+    "correct": 3,
+    "explanation": "مشتاق احمد یوسفی اردو مزاح کے بے تاج بادشاہ کہلاتے ہیں۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Literature",
+    "subtopic": "Urdu Prose Writers",
+    "question": "آثار الصنادید کس کی تصنیف ہے?",
+    "options": [
+      "ڈپٹی نذیر احمد",
+      "سر سید احمد خان",
+      "الطاف حسین حالی",
+      "شبلی نعمانی"
+    ],
+    "correct": 1,
+    "explanation": "آثار الصنادید 1847ء میں دہلی کی تاریخی عمارتوں پر سر سید احمد خان نے لکھی۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Urdu Passage Reading and Understanding",
+    "question": "خودی کو کر بلند اتنا کہ ہر تقدیر سے پہلے خدا بندے سے خود پوچھے بتا تیری رضا کیا ہے۔ اس شعر کا مرکزی خیال کیا ہے?",
+    "options": [
+      "خودی اور خود اعتمادی",
+      "تقدیر پرستی",
+      "دنیا سے کنارہ کشی",
+      "دولت کی ہوس"
+    ],
+    "correct": 0,
+    "explanation": "اقبال اس شعر میں خودی یعنی خود اعتمادی اور بلند ہمتی پر زور دیتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Urdu Passage Reading and Understanding",
+    "question": "ہزاروں خواہشیں ایسی کہ ہر خواہش پہ دم نکلے بہت نکلے مرے ارمان لیکن پھر بھی کم نکلے۔ غالب اس شعر میں کیا کہہ رہے ہیں?",
+    "options": [
+      "دولت کی فراوانی",
+      "انسانی خواہشات کی لامحدودیت",
+      "عشق کی ناکامی",
+      "دنیا کی بے ثباتی"
+    ],
+    "correct": 1,
+    "explanation": "غالب کہتے ہیں کہ انسانی خواہشات کبھی ختم نہیں ہوتیں، یہ لامحدود ہیں۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Urdu Passage Reading and Understanding",
+    "question": "لب پہ آتی ہے دعا بن کے تمنا میری زندگی شمع کی صورت ہو خدایا میری۔ یہ دعا کس جذبے کا اظہار کرتی ہے?",
+    "options": [
+      "دولت کی طلب",
+      "شہرت کی خواہش",
+      "دوسروں کی خدمت کا جذبہ",
+      "تنہائی کی آرزو"
+    ],
+    "correct": 2,
+    "explanation": "شمع کی طرح جل کر دوسروں کو روشنی دینا خدمتِ خلق کے جذبے کی علامت ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Urdu Passage Reading and Understanding",
+    "question": "ہم کو معلوم ہے جنت کی حقیقت لیکن دل کے خوش رکھنے کو غالب خیال اچھا ہے۔ اس شعر میں خیال اچھا ہے سے کیا مراد ہے?",
+    "options": [
+      "نیک نیتی",
+      "سچائی",
+      "عبادت",
+      "خوش فہمی"
+    ],
+    "correct": 3,
+    "explanation": "غالب کہتے ہیں کہ جنت کا تصور محض دل بہلانے والی ایک خوش فہمی ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Summary Writing in Urdu",
+    "question": "کسی لمبی عبارت کے مرکزی خیالات کو مختصر الفاظ میں لکھنا کیا کہلاتا ہے?",
+    "options": [
+      "تلخیص",
+      "تشریح",
+      "تنقید",
+      "ترجمہ"
+    ],
+    "correct": 0,
+    "explanation": "تلخیص میں عبارت کے بنیادی نکات کو مختصر کر کے بیان کیا جاتا ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Summary Writing in Urdu",
+    "question": "تلخیص لکھتے وقت سب سے اہم بات کیا ہے?",
+    "options": [
+      "الفاظ مشکل ہوں",
+      "اصل مفہوم برقرار رہے",
+      "عبارت لمبی ہو",
+      "اپنی رائے شامل ہو"
+    ],
+    "correct": 1,
+    "explanation": "تلخیص میں اصل عبارت کا مفہوم برقرار رکھنا سب سے ضروری ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Summary Writing in Urdu",
+    "question": "معیاری تلخیص عام طور پر اصل عبارت کا کتنا حصہ ہوتی ہے?",
+    "options": [
+      "نصف",
+      "دو تہائی",
+      "ایک تہائی",
+      "مکمل"
+    ],
+    "correct": 2,
+    "explanation": "معیاری تلخیص اصل عبارت کی تقریباً ایک تہائی لمبائی میں لکھی جاتی ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "لفظ آفتاب کا مترادف کیا ہے?",
+    "options": [
+      "چاند",
+      "سورج",
+      "ستارہ",
+      "بادل"
+    ],
+    "correct": 1,
+    "explanation": "آفتاب سورج کو کہتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "لفظ ماہتاب کا مترادف کیا ہے?",
+    "options": [
+      "سورج",
+      "آسمان",
+      "چاند",
+      "ستارہ"
+    ],
+    "correct": 2,
+    "explanation": "ماہتاب چاند کو کہتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "لفظ گل کا مترادف کیا ہے?",
+    "options": [
+      "پھول",
+      "کانٹا",
+      "پتا",
+      "شاخ"
+    ],
+    "correct": 0,
+    "explanation": "گل پھول کو کہتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "لفظ سرد کا متضاد کیا ہے?",
+    "options": [
+      "ٹھنڈا",
+      "گرم",
+      "یخ",
+      "معتدل"
+    ],
+    "correct": 1,
+    "explanation": "سرد کا متضاد گرم ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "لفظ روشن کا متضاد کیا ہے?",
+    "options": [
+      "روشن",
+      "چمکدار",
+      "تاریک",
+      "اجلا"
+    ],
+    "correct": 2,
+    "explanation": "روشن کا متضاد تاریک ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "لفظ شمع کے کیا معنی ہیں?",
+    "options": [
+      "آئینہ",
+      "چراغ کا تیل",
+      "پھول",
+      "موم بتی"
+    ],
+    "correct": 3,
+    "explanation": "شمع موم بتی کو کہتے ہیں اور یہ روشنی کے استعارے کے طور پر استعمال ہوتی ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Comprehension",
+    "subtopic": "Meaning of Difficult Urdu Words",
+    "question": "ابنِ آدم سے کیا مراد ہے?",
+    "options": [
+      "فرشتہ",
+      "انسان",
+      "جن",
+      "حیوان"
+    ],
+    "correct": 1,
+    "explanation": "ابنِ آدم حضرت آدم کی اولاد یعنی انسان کو کہتے ہیں۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Essay Writing — Mazmoon Nawisi",
+    "question": "مضمون کے بنیادی طور پر کتنے حصے ہوتے ہیں?",
+    "options": [
+      "تین",
+      "دو",
+      "چار",
+      "پانچ"
+    ],
+    "correct": 0,
+    "explanation": "مضمون کے تین حصے ہوتے ہیں: تمہید، نفسِ مضمون اور خاتمہ۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Essay Writing — Mazmoon Nawisi",
+    "question": "تمہید سے کیا مراد ہے?",
+    "options": [
+      "مضمون کا اختتام",
+      "مضمون کا تعارفی حصہ",
+      "مضمون کا عنوان",
+      "مضمون کی طوالت"
+    ],
+    "correct": 1,
+    "explanation": "تمہید مضمون کا ابتدائی تعارفی حصہ ہوتا ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Essay Writing — Mazmoon Nawisi",
+    "question": "مضمون کے درمیانی اور تفصیلی حصے کو کیا کہتے ہیں?",
+    "options": [
+      "تمہید",
+      "خاتمہ",
+      "نفسِ مضمون",
+      "عنوان"
+    ],
+    "correct": 2,
+    "explanation": "نفسِ مضمون میں موضوع کی تفصیلی بحث کی جاتی ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Essay Writing — Mazmoon Nawisi",
+    "question": "اچھے مضمون کی نمایاں خوبی کیا ہے?",
+    "options": [
+      "مشکل الفاظ",
+      "طویل اقتباسات",
+      "متضاد آراء",
+      "ربط اور تسلسل"
+    ],
+    "correct": 3,
+    "explanation": "اچھے مضمون میں خیالات کے درمیان ربط اور تسلسل ہونا ضروری ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Essay Writing — Mazmoon Nawisi",
+    "question": "خاتمہ میں کیا بیان کیا جاتا ہے?",
+    "options": [
+      "نئے دلائل کا اضافہ",
+      "مصنف کا تعارف",
+      "مضمون کا نتیجہ اور خلاصہ",
+      "حوالہ جات کی فہرست"
+    ],
+    "correct": 2,
+    "explanation": "خاتمہ میں مضمون کا نتیجہ اور خلاصہ پیش کیا جاتا ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Letter Writing — Khat Nawisi",
+    "question": "خط میں تاریخ عام طور پر کہاں لکھی جاتی ہے?",
+    "options": [
+      "اوپر بائیں جانب",
+      "اوپر دائیں جانب",
+      "نیچے دائیں جانب",
+      "خط کے درمیان"
+    ],
+    "correct": 1,
+    "explanation": "خط میں تاریخ اوپر دائیں جانب لکھی جاتی ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Letter Writing — Khat Nawisi",
+    "question": "رسمی خط کس کو لکھا جاتا ہے?",
+    "options": [
+      "دوستوں کو",
+      "رشتہ داروں کو",
+      "افسران اور اداروں کو",
+      "بچوں کو"
+    ],
+    "correct": 2,
+    "explanation": "رسمی خط افسران، اداروں اور حکام کو لکھا جاتا ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Letter Writing — Khat Nawisi",
+    "question": "خط کے آخر میں لکھنے والا کیا تحریر کرتا ہے?",
+    "options": [
+      "پتہ",
+      "تاریخ",
+      "عنوان",
+      "دستخط اور نام"
+    ],
+    "correct": 3,
+    "explanation": "خط کے آخر میں لکھنے والا اپنا نام اور دستخط کرتا ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Letter Writing — Khat Nawisi",
+    "question": "غیر رسمی خط کی زبان کیسی ہوتی ہے?",
+    "options": [
+      "بے تکلف اور دوستانہ",
+      "انتہائی رسمی",
+      "قانونی",
+      "تجارتی"
+    ],
+    "correct": 0,
+    "explanation": "غیر رسمی خط دوستوں اور رشتہ داروں کو بے تکلف زبان میں لکھا جاتا ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Letter Writing — Khat Nawisi",
+    "question": "خط کے آغاز میں مخاطب کے لیے لکھے جانے والے کلمات کیا کہلاتے ہیں?",
+    "options": [
+      "عنوان",
+      "القاب",
+      "حوالہ نمبر",
+      "دستخط"
+    ],
+    "correct": 1,
+    "explanation": "محترم اور عزیز جیسے کلمات القاب کہلاتے ہیں۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Application Writing — Darkhwast",
+    "question": "درخواست کا آغاز عام طور پر کس سے ہوتا ہے?",
+    "options": [
+      "بخدمت جناب",
+      "السلام علیکم",
+      "محترمی",
+      "جنابِ عالی"
+    ],
+    "correct": 0,
+    "explanation": "درخواست بخدمت جناب سے شروع کی جاتی ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Application Writing — Darkhwast",
+    "question": "مودبانہ گزارش ہے کے بعد درخواست میں کیا لکھا جاتا ہے?",
+    "options": [
+      "دستخط",
+      "اصل مدعا",
+      "تاریخ",
+      "پتہ"
+    ],
+    "correct": 1,
+    "explanation": "مودبانہ گزارش ہے کے بعد درخواست کا اصل مدعا بیان کیا جاتا ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Application Writing — Darkhwast",
+    "question": "درخواست کے آخر میں کیا لکھا جاتا ہے?",
+    "options": [
+      "نظم",
+      "کہانی",
+      "اشتہار",
+      "نام، دستخط اور تاریخ"
+    ],
+    "correct": 3,
+    "explanation": "درخواست کے آخر میں درخواست گزار اپنا نام، دستخط اور تاریخ لکھتا ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Urdu Composition",
+    "subtopic": "Urdu Application Writing — Darkhwast",
+    "question": "درخواست کی زبان کیسی ہونی چاہیے?",
+    "options": [
+      "طویل اور پیچیدہ",
+      "شاعرانہ",
+      "مہذب اور مختصر",
+      "غیر سنجیدہ"
+    ],
+    "correct": 2,
+    "explanation": "درخواست کی زبان مہذب، مختصر اور مدلل ہونی چاہیے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Allama Iqbal — Life and Poetry",
+    "question": "علامہ اقبال کہاں پیدا ہوئے تھے?",
+    "options": [
+      "سیالکوٹ",
+      "لاہور",
+      "دہلی",
+      "کراچی"
+    ],
+    "correct": 0,
+    "explanation": "علامہ اقبال 9 نومبر 1877ء کو سیالکوٹ میں پیدا ہوئے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Allama Iqbal — Life and Poetry",
+    "question": "علامہ اقبال کو سر کا خطاب کب ملا تھا?",
+    "options": [
+      "1930ء",
+      "1915ء",
+      "1922ء",
+      "1938ء"
+    ],
+    "correct": 2,
+    "explanation": "علامہ اقبال کو 1922ء میں سر کا خطاب دیا گیا۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Allama Iqbal — Life and Poetry",
+    "question": "شکوہ اور جوابِ شکوہ کس مجموعہ کلام میں شامل ہیں?",
+    "options": [
+      "بالِ جبریل",
+      "بانگِ درا",
+      "ضربِ کلیم",
+      "ارمغانِ حجاز"
+    ],
+    "correct": 1,
+    "explanation": "شکوہ اور جوابِ شکوہ بانگِ درا میں شامل ہیں۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Allama Iqbal — Life and Poetry",
+    "question": "علامہ اقبال نے پی ایچ ڈی کس یونیورسٹی سے کی تھی?",
+    "options": [
+      "کیمبرج",
+      "آکسفورڈ",
+      "لندن",
+      "میونخ"
+    ],
+    "correct": 3,
+    "explanation": "اقبال نے 1908ء میں میونخ یونیورسٹی جرمنی سے فلسفے میں پی ایچ ڈی کی۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Faiz Ahmed Faiz — Life and Poetry",
+    "question": "مجھ سے پہلی سی محبت میرے محبوب نہ مانگ کس مجموعے کی نظم ہے?",
+    "options": [
+      "نقشِ فریادی",
+      "دستِ صبا",
+      "زنداں نامہ",
+      "دستِ تہِ سنگ"
+    ],
+    "correct": 0,
+    "explanation": "یہ مشہور نظم فیض کے پہلے مجموعے نقشِ فریادی میں شامل ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Faiz Ahmed Faiz — Life and Poetry",
+    "question": "فیض احمد فیض کو لینن امن انعام کب ملا تھا?",
+    "options": [
+      "1955ء",
+      "1962ء",
+      "1970ء",
+      "1984ء"
+    ],
+    "correct": 1,
+    "explanation": "فیض احمد فیض کو 1962ء میں لینن امن انعام دیا گیا۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Faiz Ahmed Faiz — Life and Poetry",
+    "question": "نسخہ ہائے وفا کیا ہے?",
+    "options": [
+      "فیض کی سوانح",
+      "فیض کے خطوط",
+      "فیض کے کلام کا مجموعہ",
+      "فیض کا ناول"
+    ],
+    "correct": 2,
+    "explanation": "نسخہ ہائے وفا فیض احمد فیض کے مکمل کلام کا مجموعہ ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Faiz Ahmed Faiz — Life and Poetry",
+    "question": "فیض نے دستِ صبا کہاں لکھی تھی?",
+    "options": [
+      "لندن میں",
+      "جیل میں",
+      "دہلی میں",
+      "کراچی میں"
+    ],
+    "correct": 1,
+    "explanation": "دستِ صبا فیض نے راولپنڈی سازش کیس میں قید کے دوران جیل میں لکھی۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Ahmad Faraz — Life and Poetry",
+    "question": "احمد فراز کا اصل نام کیا تھا?",
+    "options": [
+      "احمد ندیم قاسمی",
+      "سید احمد شاہ",
+      "جون ایلیا",
+      "ناصر کاظمی"
+    ],
+    "correct": 1,
+    "explanation": "احمد فراز کا اصل نام سید احمد شاہ تھا۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Ahmad Faraz — Life and Poetry",
+    "question": "رنجش ہی سہی دل ہی دکھانے کے لیے آ کس شاعر کا شعر ہے?",
+    "options": [
+      "فیض احمد فیض",
+      "ناصر کاظمی",
+      "احمد فراز",
+      "پروین شاکر"
+    ],
+    "correct": 2,
+    "explanation": "رنجش ہی سہی احمد فراز کی مشہور غزل کا مطلع ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Ahmad Faraz — Life and Poetry",
+    "question": "احمد فراز کہاں پیدا ہوئے تھے?",
+    "options": [
+      "پشاور",
+      "لاہور",
+      "کراچی",
+      "کوہاٹ"
+    ],
+    "correct": 3,
+    "explanation": "احمد فراز 12 جنوری 1931ء کو کوہاٹ میں پیدا ہوئے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Parveen Shakir — Life and Poetry",
+    "question": "پروین شاکر کا پہلا مجموعہ کلام کون سا ہے?",
+    "options": [
+      "خوشبو",
+      "صد برگ",
+      "خود کلامی",
+      "ماہِ تمام"
+    ],
+    "correct": 0,
+    "explanation": "خوشبو 1976ء میں شائع ہوا اور یہ پروین شاکر کا پہلا مجموعہ ہے۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Parveen Shakir — Life and Poetry",
+    "question": "پروین شاکر کا انتقال کب ہوا تھا?",
+    "options": [
+      "1994ء",
+      "1984ء",
+      "2000ء",
+      "1990ء"
+    ],
+    "correct": 0,
+    "explanation": "پروین شاکر 26 دسمبر 1994ء کو ٹریفک حادثے میں انتقال کر گئیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Parveen Shakir — Life and Poetry",
+    "question": "پروین شاکر پیشے کے اعتبار سے کیا تھیں?",
+    "options": [
+      "استانی",
+      "ڈاکٹر",
+      "سی ایس پی افسر",
+      "صحافی"
+    ],
+    "correct": 2,
+    "explanation": "پروین شاکر کسٹمز ڈیپارٹمنٹ میں سی ایس پی افسر تھیں۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Parveen Shakir — Life and Poetry",
+    "question": "صد برگ کس کی تصنیف ہے?",
+    "options": [
+      "فہمیدہ ریاض",
+      "پروین شاکر",
+      "کشور ناہید",
+      "ادا جعفری"
+    ],
+    "correct": 1,
+    "explanation": "صد برگ پروین شاکر کا مجموعہ کلام ہے۔",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Josh Malihabadi — Life and Poetry",
+    "question": "جوش ملیح آبادی کو کس لقب سے یاد کیا جاتا ہے?",
+    "options": [
+      "شاعرِ انقلاب",
+      "شاعرِ مشرق",
+      "شاعرِ اعظم",
+      "شاعرِ فطرت"
+    ],
+    "correct": 0,
+    "explanation": "جوش ملیح آبادی انقلابی شاعری کی وجہ سے شاعرِ انقلاب کہلاتے ہیں۔",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Josh Malihabadi — Life and Poetry",
+    "question": "یادوں کی برات کس کی خود نوشت سوانح عمری ہے?",
+    "options": [
+      "قدرت اللہ شہاب کی",
+      "احمد ندیم قاسمی کی",
+      "جوش ملیح آبادی کی",
+      "اشفاق احمد کی"
+    ],
+    "correct": 2,
+    "explanation": "یادوں کی برات جوش ملیح آبادی کی خود نوشت سوانح عمری ہے۔",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Urdu",
+    "topic": "Famous Urdu Poets of Pakistan",
+    "subtopic": "Josh Malihabadi — Life and Poetry",
+    "question": "جوش ملیح آبادی کا انتقال کہاں ہوا تھا?",
+    "options": [
+      "کراچی",
+      "لاہور",
+      "دہلی",
+      "اسلام آباد"
+    ],
+    "correct": 3,
+    "explanation": "جوش ملیح آبادی 22 فروری 1982ء کو اسلام آباد میں انتقال کر گئے۔",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,1352 @@
+[
+  {
+    "subject": "Computer Studies",
+    "topic": "Introduction to Computers",
+    "subtopic": "Definition and History of Computers",
+    "question": "Who is known as the father of the computer?",
+    "options": [
+      "Charles Babbage",
+      "Alan Turing",
+      "Bill Gates",
+      "John von Neumann"
+    ],
+    "correct": 0,
+    "explanation": "Charles Babbage designed the Analytical Engine in the 1830s, the first general-purpose computer concept.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Introduction to Computers",
+    "subtopic": "Generations of Computers (1st to 5th)",
+    "question": "Which technology was used in the first generation of computers?",
+    "options": [
+      "Transistors",
+      "Vacuum tubes",
+      "Integrated circuits",
+      "Microprocessors"
+    ],
+    "correct": 1,
+    "explanation": "First-generation computers (1940-1956), such as ENIAC, used vacuum tubes as their main electronic component.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Introduction to Computers",
+    "subtopic": "Types of Computers (Analog, Digital, Hybrid)",
+    "question": "A speedometer in a car is an example of which type of computer?",
+    "options": [
+      "Digital computer",
+      "Hybrid computer",
+      "Supercomputer",
+      "Analog computer"
+    ],
+    "correct": 3,
+    "explanation": "Analog computers measure continuously varying physical quantities, such as speed, temperature, or pressure.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Introduction to Computers",
+    "subtopic": "Characteristics and Limitations of Computers",
+    "question": "Which of the following is a limitation of computers?",
+    "options": [
+      "High speed",
+      "Lack of intelligence (no IQ)",
+      "Diligence",
+      "Accuracy"
+    ],
+    "correct": 1,
+    "explanation": "Computers have no intelligence of their own; they only follow given instructions, so wrong input gives wrong output (GIGO).",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Hardware",
+    "subtopic": "Input Devices (Keyboard, Mouse, Scanner)",
+    "question": "Which input device is commonly used to check objective-type answer sheets in exams?",
+    "options": [
+      "OMR",
+      "OCR",
+      "MICR",
+      "Joystick"
+    ],
+    "correct": 0,
+    "explanation": "OMR (Optical Mark Recognition) reads pencil marks on sheets, such as exam answer sheets and surveys.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Hardware",
+    "subtopic": "Output Devices (Monitor, Printer, Speaker)",
+    "question": "Which of the following is a non-impact printer?",
+    "options": [
+      "Dot matrix printer",
+      "Laser printer",
+      "Daisy wheel printer",
+      "Line printer"
+    ],
+    "correct": 1,
+    "explanation": "Laser printers form images without striking the paper (non-impact); dot matrix, daisy wheel, and line printers are impact printers.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Hardware",
+    "subtopic": "Storage Devices (HDD, SSD, USB, CD/DVD)",
+    "question": "How many megabytes are there in one gigabyte?",
+    "options": [
+      "1000",
+      "100",
+      "2048",
+      "1024"
+    ],
+    "correct": 3,
+    "explanation": "In computing, 1 GB = 1024 MB, 1 MB = 1024 KB, and 1 KB = 1024 bytes.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Hardware",
+    "subtopic": "CPU Components (ALU, CU, Registers)",
+    "question": "Which component of the CPU performs arithmetic and logical operations?",
+    "options": [
+      "ALU",
+      "Control Unit",
+      "Register",
+      "Cache"
+    ],
+    "correct": 0,
+    "explanation": "The ALU (Arithmetic Logic Unit) executes arithmetic operations like addition and logical operations like AND and OR.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Software",
+    "subtopic": "System Software vs Application Software",
+    "question": "Which of the following is system software?",
+    "options": [
+      "MS Word",
+      "Google Chrome",
+      "Adobe Photoshop",
+      "Windows 10"
+    ],
+    "correct": 3,
+    "explanation": "System software, such as operating systems, manages hardware; Word, Chrome, and Photoshop are application software.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Software",
+    "subtopic": "Types of Operating Systems",
+    "question": "An operating system used in air traffic control and missile guidance, where response time is critical, is called:",
+    "options": [
+      "Batch OS",
+      "Real-time OS",
+      "Time-sharing OS",
+      "Distributed OS"
+    ],
+    "correct": 1,
+    "explanation": "A real-time OS guarantees a response within strict deadlines and is used in control systems like air traffic control.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Software",
+    "subtopic": "Utility Programs and Their Uses",
+    "question": "What is the purpose of a disk defragmenter utility?",
+    "options": [
+      "Remove viruses",
+      "Compress files",
+      "Rearrange fragmented files for faster access",
+      "Back up data"
+    ],
+    "correct": 2,
+    "explanation": "Defragmentation reorganizes scattered file fragments into contiguous blocks so the disk can read them faster.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Software",
+    "subtopic": "Open Source vs Proprietary Software",
+    "question": "Which of the following is open-source software?",
+    "options": [
+      "MS Windows",
+      "Linux",
+      "Adobe Photoshop",
+      "MS Office"
+    ],
+    "correct": 1,
+    "explanation": "Linux source code is freely available and modifiable; Windows, Photoshop, and MS Office are proprietary.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "MS Office Basics",
+    "subtopic": "MS Word (Formatting, Tables, Mail Merge)",
+    "question": "In MS Word, which function key is used to check spelling and grammar?",
+    "options": [
+      "F1",
+      "F7",
+      "F5",
+      "F12"
+    ],
+    "correct": 1,
+    "explanation": "Pressing F7 opens the spelling and grammar check dialog in MS Word.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "MS Office Basics",
+    "subtopic": "MS Excel (Basic Formulas, Charts, Sorting)",
+    "question": "Every formula in MS Excel must begin with:",
+    "options": [
+      "+",
+      "@",
+      "#",
+      "="
+    ],
+    "correct": 3,
+    "explanation": "Excel formulas always start with the equals sign, for example =SUM(A1:A5).",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "MS Office Basics",
+    "subtopic": "MS Excel (Basic Formulas, Charts, Sorting)",
+    "question": "Which Excel function looks up a value in the first column of a table and returns a value from another column?",
+    "options": [
+      "HLOOKUP",
+      "LOOKUPX",
+      "MATCH",
+      "VLOOKUP"
+    ],
+    "correct": 3,
+    "explanation": "VLOOKUP searches vertically down the first column of a range and returns a value from a specified column.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "MS Office Basics",
+    "subtopic": "MS PowerPoint (Slides, Transitions, Templates)",
+    "question": "Which key starts a PowerPoint slide show from the beginning?",
+    "options": [
+      "F1",
+      "F5",
+      "F7",
+      "F12"
+    ],
+    "correct": 1,
+    "explanation": "F5 starts the slide show from the first slide; Shift+F5 starts it from the current slide.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "MS Office Basics",
+    "subtopic": "MS Access (Basic Database Concepts)",
+    "question": "What is the default file extension of an MS Access database since Access 2007?",
+    "options": [
+      ".accdb",
+      ".mdb",
+      ".dbf",
+      ".sql"
+    ],
+    "correct": 0,
+    "explanation": "Since Access 2007, the default format is .accdb, replacing the older .mdb format.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "What is the Internet and WWW",
+    "question": "Who invented the World Wide Web?",
+    "options": [
+      "Tim Berners-Lee",
+      "Bill Gates",
+      "Steve Jobs",
+      "Vint Cerf"
+    ],
+    "correct": 0,
+    "explanation": "Tim Berners-Lee invented the World Wide Web in 1990-1991 at CERN (Vint Cerf co-invented the Internet's TCP/IP).",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "What is the Internet and WWW",
+    "question": "Which statement best describes the difference between the Internet and the World Wide Web?",
+    "options": [
+      "They are the same thing",
+      "The Web is older than the Internet",
+      "The Internet is the network infrastructure while the Web is a service running on it",
+      "The Internet works only on mobile phones"
+    ],
+    "correct": 2,
+    "explanation": "The Internet is the global network of networks; the Web is a hypertext information service that runs on top of it.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "Web Browsers and Search Engines",
+    "question": "Which of the following is a search engine, not a web browser?",
+    "options": [
+      "Google Chrome",
+      "Google",
+      "Mozilla Firefox",
+      "Microsoft Edge"
+    ],
+    "correct": 1,
+    "explanation": "Google is a search engine; Chrome, Firefox, and Edge are web browsers used to access it.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "Email Etiquette and Usage",
+    "question": "In email communication, which protocol is used to SEND messages?",
+    "options": [
+      "SMTP",
+      "POP3",
+      "IMAP",
+      "HTTP"
+    ],
+    "correct": 0,
+    "explanation": "SMTP (Simple Mail Transfer Protocol) sends outgoing mail; POP3 and IMAP are used to receive it.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "Social Media and Online Safety",
+    "question": "Which of the following is the strongest password practice?",
+    "options": [
+      "Using your name and birth year",
+      "Using a long mix of letters, numbers, and symbols",
+      "Using the word password123",
+      "Reusing one password for every account"
+    ],
+    "correct": 1,
+    "explanation": "Long, unique passwords mixing character types resist brute-force and dictionary attacks.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Number Systems",
+    "subtopic": "Binary, Decimal, Octal, Hexadecimal",
+    "question": "What is the binary equivalent of decimal 13?",
+    "options": [
+      "1011",
+      "1110",
+      "1001",
+      "1101"
+    ],
+    "correct": 3,
+    "explanation": "13 = 8 + 4 + 1, so its binary equivalent is 1101.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Number Systems",
+    "subtopic": "Conversion Between Number Systems",
+    "question": "What is the decimal value of hexadecimal 2F?",
+    "options": [
+      "37",
+      "47",
+      "57",
+      "42"
+    ],
+    "correct": 1,
+    "explanation": "2F in hex = (2 x 16) + 15 = 32 + 15 = 47 in decimal.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Number Systems",
+    "subtopic": "Conversion Between Number Systems",
+    "question": "What is the binary equivalent of decimal 25?",
+    "options": [
+      "11001",
+      "10101",
+      "11010",
+      "10011"
+    ],
+    "correct": 0,
+    "explanation": "25 = 16 + 8 + 1, so its binary equivalent is 11001.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Number Systems",
+    "subtopic": "BCD (Binary Coded Decimal)",
+    "question": "In BCD code, the decimal number 25 is represented as:",
+    "options": [
+      "11001",
+      "0010 0101",
+      "10101",
+      "0011 1001"
+    ],
+    "correct": 1,
+    "explanation": "BCD encodes each decimal digit in 4 bits: 2 becomes 0010 and 5 becomes 0101.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Number Systems",
+    "subtopic": "Basic Binary Arithmetic",
+    "question": "What is the result of the binary addition 1010 + 0110?",
+    "options": [
+      "1110",
+      "10000",
+      "10010",
+      "1111"
+    ],
+    "correct": 1,
+    "explanation": "1010 (10) + 0110 (6) = 16 in decimal, which is 10000 in binary.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Basic Networking",
+    "subtopic": "Definition of Network",
+    "question": "A group of interconnected computers that share resources is called a:",
+    "options": [
+      "Topology",
+      "Protocol",
+      "Server",
+      "Network"
+    ],
+    "correct": 3,
+    "explanation": "A computer network connects devices so they can share data and resources such as files and printers.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Basic Networking",
+    "subtopic": "Types of Networks (LAN, MAN, WAN)",
+    "question": "Which network covers the smallest geographical area?",
+    "options": [
+      "WAN",
+      "LAN",
+      "MAN",
+      "Internet"
+    ],
+    "correct": 1,
+    "explanation": "A LAN covers a building or campus; a MAN covers a city, and a WAN spans countries or continents.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Basic Networking",
+    "subtopic": "Network Devices (Router, Switch, Modem, Hub)",
+    "question": "Which device connects different networks together and routes data between them?",
+    "options": [
+      "Router",
+      "Hub",
+      "Switch",
+      "Repeater"
+    ],
+    "correct": 0,
+    "explanation": "A router forwards packets between networks using IP addresses; a switch connects devices within a single network.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Basic Networking",
+    "subtopic": "Internet vs Intranet vs Extranet",
+    "question": "An intranet is best described as:",
+    "options": [
+      "The public Internet",
+      "A network shared between two companies",
+      "A wireless hotspot",
+      "A private network inside an organization"
+    ],
+    "correct": 3,
+    "explanation": "An intranet is a private internal network; an extranet extends it to trusted outside partners.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Operating Systems",
+    "subtopic": "Functions and Types of OS",
+    "question": "Which of the following is NOT a function of an operating system?",
+    "options": [
+      "Memory management",
+      "Process management",
+      "File management",
+      "Word processing"
+    ],
+    "correct": 3,
+    "explanation": "Word processing is done by application software; the OS manages memory, processes, files, and devices.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Operating Systems",
+    "subtopic": "Memory Management (Paging, Segmentation)",
+    "question": "In virtual memory, a fixed-size block of a program that is loaded into RAM is called a:",
+    "options": [
+      "Segment",
+      "Frame",
+      "Page",
+      "Partition"
+    ],
+    "correct": 2,
+    "explanation": "Paging divides a program into fixed-size pages, which are mapped to same-sized frames in physical RAM.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Operating Systems",
+    "subtopic": "File Systems (FAT, NTFS, ext4)",
+    "question": "What is the maximum size of a single file supported by the FAT32 file system?",
+    "options": [
+      "4 GB",
+      "2 GB",
+      "8 GB",
+      "16 GB"
+    ],
+    "correct": 0,
+    "explanation": "FAT32 cannot store a single file larger than 4 GB; NTFS and ext4 remove this limitation.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Operating Systems",
+    "subtopic": "Deadlocks and Their Handling",
+    "question": "Which of the following is NOT one of the four necessary conditions for a deadlock?",
+    "options": [
+      "Preemption",
+      "Mutual exclusion",
+      "Hold and wait",
+      "Circular wait"
+    ],
+    "correct": 0,
+    "explanation": "Coffman's conditions are mutual exclusion, hold and wait, no preemption, and circular wait - preemption actually prevents deadlocks.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Programming Fundamentals",
+    "subtopic": "Variables, Data Types, Operators",
+    "question": "Which data type is used to store whole numbers in most programming languages?",
+    "options": [
+      "float",
+      "char",
+      "int",
+      "bool"
+    ],
+    "correct": 2,
+    "explanation": "The int type stores integers; float stores decimals, char a single character, and bool true/false values.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Programming Fundamentals",
+    "subtopic": "Control Structures (if/else, loops, switch)",
+    "question": "Which loop is guaranteed to execute its body at least once?",
+    "options": [
+      "for loop",
+      "while loop",
+      "foreach loop",
+      "do-while loop"
+    ],
+    "correct": 3,
+    "explanation": "A do-while loop checks its condition after the body, so the body always runs at least once.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Programming Fundamentals",
+    "subtopic": "Functions and Recursion",
+    "question": "For a recursive function to terminate, it must have a:",
+    "options": [
+      "Loop counter",
+      "Global variable",
+      "Void return type",
+      "Base case"
+    ],
+    "correct": 3,
+    "explanation": "The base case stops the recursion; without it, the function calls itself forever and causes a stack overflow.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Programming Fundamentals",
+    "subtopic": "Introduction to C, C++, Python",
+    "question": "The Python programming language was developed by:",
+    "options": [
+      "Dennis Ritchie",
+      "Bjarne Stroustrup",
+      "Guido van Rossum",
+      "James Gosling"
+    ],
+    "correct": 2,
+    "explanation": "Guido van Rossum created Python in 1991; Ritchie made C, Stroustrup C++, and Gosling Java.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Data Structures",
+    "subtopic": "Stacks and Queues",
+    "question": "A stack data structure works on which principle?",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "LILO",
+      "Random access"
+    ],
+    "correct": 1,
+    "explanation": "A stack is Last-In-First-Out, like a stack of plates; a queue is First-In-First-Out.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Data Structures",
+    "subtopic": "Sorting Algorithms (Bubble, Selection, Merge)",
+    "question": "What is the average-case time complexity of quicksort?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correct": 0,
+    "explanation": "Quicksort averages O(n log n); its worst case is O(n squared) on already-sorted data with a poor pivot choice.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Data Structures",
+    "subtopic": "Searching Algorithms (Linear, Binary)",
+    "question": "What must be true before binary search can be applied to an array?",
+    "options": [
+      "The array must contain duplicates",
+      "The array must be small",
+      "The array must be sorted",
+      "The array must be empty"
+    ],
+    "correct": 2,
+    "explanation": "Binary search repeatedly halves the search space, which only works on sorted data, running in O(log n) time.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Data Structures",
+    "subtopic": "Trees (Binary Tree, BST)",
+    "question": "In a binary search tree, an inorder traversal visits nodes in which order?",
+    "options": [
+      "Random order",
+      "Ascending order",
+      "Descending order",
+      "Level order"
+    ],
+    "correct": 1,
+    "explanation": "Inorder traversal (left, root, right) of a BST visits keys in ascending sorted order.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Database Management (DBMS)",
+    "subtopic": "SQL Basics (SELECT, INSERT, UPDATE, DELETE)",
+    "question": "Which SQL statement is used to retrieve data from a database?",
+    "options": [
+      "GET",
+      "FETCH",
+      "OPEN",
+      "SELECT"
+    ],
+    "correct": 3,
+    "explanation": "SELECT retrieves rows from a table, for example: SELECT * FROM Students.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Database Management (DBMS)",
+    "subtopic": "Keys (Primary, Foreign, Candidate)",
+    "question": "A primary key must always be:",
+    "options": [
+      "Unique and not null",
+      "Allowed to be null",
+      "Shared between tables",
+      "A text field"
+    ],
+    "correct": 0,
+    "explanation": "A primary key uniquely identifies each row in a table and cannot contain NULL values.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Database Management (DBMS)",
+    "subtopic": "Normalization (1NF, 2NF, 3NF)",
+    "question": "A table is in first normal form (1NF) if:",
+    "options": [
+      "It has no duplicate rows",
+      "It has a primary key",
+      "All attributes contain only atomic (indivisible) values",
+      "It has no transitive dependencies"
+    ],
+    "correct": 2,
+    "explanation": "1NF requires atomic values in every cell - no repeating groups or multi-valued attributes.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Database Management (DBMS)",
+    "subtopic": "Relational Model and ER Diagrams",
+    "question": "In an ER diagram, a diamond shape represents a:",
+    "options": [
+      "Entity",
+      "Relationship",
+      "Attribute",
+      "Key"
+    ],
+    "correct": 1,
+    "explanation": "In ER diagrams, rectangles are entities, ovals are attributes, and diamonds are relationships between entities.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Networks",
+    "subtopic": "OSI Model (7 Layers) and TCP/IP Model",
+    "question": "How many layers are there in the OSI reference model?",
+    "options": [
+      "7",
+      "4",
+      "5",
+      "9"
+    ],
+    "correct": 0,
+    "explanation": "The OSI model has 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Networks",
+    "subtopic": "IP Addressing (IPv4, IPv6, Subnetting)",
+    "question": "How many bits are in an IPv4 address?",
+    "options": [
+      "16",
+      "64",
+      "128",
+      "32"
+    ],
+    "correct": 3,
+    "explanation": "IPv4 uses 32-bit addresses like 192.168.1.1; IPv6 uses 128-bit addresses.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Networks",
+    "subtopic": "Protocols (HTTP, FTP, SMTP, DNS, DHCP)",
+    "question": "Which protocol is used to browse the World Wide Web?",
+    "options": [
+      "FTP",
+      "SMTP",
+      "HTTP",
+      "DHCP"
+    ],
+    "correct": 2,
+    "explanation": "HTTP (port 80) transfers web pages; its secure version HTTPS uses port 443.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Networks",
+    "subtopic": "Network Topologies (Bus, Star, Ring, Mesh)",
+    "question": "In which topology does every device connect to a central hub or switch?",
+    "options": [
+      "Bus",
+      "Ring",
+      "Star",
+      "Mesh"
+    ],
+    "correct": 2,
+    "explanation": "In a star topology, all nodes connect to a central device; if the center fails, the whole network fails.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Digital Logic & Boolean Algebra",
+    "subtopic": "Logic Gates (AND, OR, NOT, NAND, NOR, XOR)",
+    "question": "Which gates are called universal gates?",
+    "options": [
+      "AND and OR",
+      "XOR and XNOR",
+      "NOT and AND",
+      "NAND and NOR"
+    ],
+    "correct": 3,
+    "explanation": "NAND and NOR are universal gates - any logic function can be built using only NAND gates or only NOR gates.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Digital Logic & Boolean Algebra",
+    "subtopic": "Boolean Expressions and Simplification",
+    "question": "According to De Morgan's law, the complement of (A AND B) equals:",
+    "options": [
+      "(NOT A) OR (NOT B)",
+      "(NOT A) AND (NOT B)",
+      "A OR B",
+      "A AND B"
+    ],
+    "correct": 0,
+    "explanation": "De Morgan's law states that (A AND B)' = (NOT A) OR (NOT B): the complement of AND is the OR of complements.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Digital Logic & Boolean Algebra",
+    "subtopic": "Combinational Circuits (Adders, Multiplexers)",
+    "question": "A half-adder circuit produces which two outputs?",
+    "options": [
+      "Sum and Carry",
+      "Difference and Borrow",
+      "Product and Quotient",
+      "AND and OR"
+    ],
+    "correct": 0,
+    "explanation": "A half-adder adds two bits, producing Sum (XOR) and Carry (AND); a full adder additionally accepts a carry input.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Digital Logic & Boolean Algebra",
+    "subtopic": "Sequential Circuits (Flip-Flops, Registers)",
+    "question": "In a JK flip-flop, what happens when J = 1 and K = 1?",
+    "options": [
+      "Output resets to 0",
+      "Output sets to 1",
+      "Output toggles",
+      "No change in output"
+    ],
+    "correct": 2,
+    "explanation": "J = K = 1 is the toggle mode: the output flips on each clock pulse, with no invalid state unlike the SR flip-flop.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Software Engineering",
+    "subtopic": "SDLC Phases",
+    "question": "Which is the correct order of the first three SDLC phases?",
+    "options": [
+      "Design, Planning, Analysis",
+      "Coding, Testing, Design",
+      "Testing, Planning, Analysis",
+      "Planning, Analysis, Design"
+    ],
+    "correct": 3,
+    "explanation": "SDLC begins with Planning, then Requirements Analysis, then Design, followed by Implementation, Testing, Deployment, and Maintenance.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Software Engineering",
+    "subtopic": "Development Models (Waterfall, Agile, Spiral)",
+    "question": "The spiral model of software development is best known for emphasizing:",
+    "options": [
+      "Speed of coding",
+      "Risk analysis",
+      "Fixed requirements",
+      "Skipping testing"
+    ],
+    "correct": 1,
+    "explanation": "Barry Boehm's spiral model performs risk analysis in each iteration, making it suitable for large, high-risk projects.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Software Engineering",
+    "subtopic": "Testing Types (Unit, Integration, System, UAT)",
+    "question": "Testing performed by the end user to verify the system meets business requirements is called:",
+    "options": [
+      "Unit testing",
+      "Integration testing",
+      "User Acceptance Testing (UAT)",
+      "Regression testing"
+    ],
+    "correct": 2,
+    "explanation": "UAT is the final testing phase where real users validate that the software meets their requirements.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Software Engineering",
+    "subtopic": "Requirements Analysis and SRS",
+    "question": "SRS in software engineering stands for:",
+    "options": [
+      "Software Requirements Specification",
+      "System Review Specification",
+      "Software Review System",
+      "System Requirements Software"
+    ],
+    "correct": 0,
+    "explanation": "The Software Requirements Specification formally documents what the software must do, agreed upon before design begins.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Object-Oriented Programming",
+    "subtopic": "Classes, Objects, Constructors, Destructors",
+    "question": "An object is best described as:",
+    "options": [
+      "A blueprint of a class",
+      "An instance of a class",
+      "A type of function",
+      "A header file"
+    ],
+    "correct": 1,
+    "explanation": "A class is the blueprint; an object is a concrete instance created from that class.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Object-Oriented Programming",
+    "subtopic": "Inheritance (Single, Multiple, Multilevel)",
+    "question": "When a class inherits from more than one base class, it is called:",
+    "options": [
+      "Single inheritance",
+      "Multilevel inheritance",
+      "Hierarchical inheritance",
+      "Multiple inheritance"
+    ],
+    "correct": 3,
+    "explanation": "Multiple inheritance derives one class from several base classes; it is supported in C++ but not in Java.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Object-Oriented Programming",
+    "subtopic": "Polymorphism (Overloading, Overriding)",
+    "question": "Function overloading is an example of:",
+    "options": [
+      "Runtime polymorphism",
+      "Inheritance",
+      "Compile-time polymorphism",
+      "Encapsulation"
+    ],
+    "correct": 2,
+    "explanation": "Overloading (same name, different parameters) is resolved at compile time; overriding is runtime polymorphism.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Object-Oriented Programming",
+    "subtopic": "Encapsulation and Abstraction",
+    "question": "Which OOP principle bundles data and methods together while hiding internal details?",
+    "options": [
+      "Encapsulation",
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction"
+    ],
+    "correct": 0,
+    "explanation": "Encapsulation wraps data and code into a class and restricts direct access, for example through private members.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Advanced Database Systems",
+    "subtopic": "Transaction Management (ACID Properties)",
+    "question": "In the ACID properties of transactions, the letter 'A' stands for:",
+    "options": [
+      "Accuracy",
+      "Atomicity",
+      "Availability",
+      "Aggregation"
+    ],
+    "correct": 1,
+    "explanation": "Atomicity means a transaction is all-or-nothing: it either fully commits or fully rolls back.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Advanced Database Systems",
+    "subtopic": "Concurrency Control (Locking, Timestamping)",
+    "question": "In two-phase locking, a transaction:",
+    "options": [
+      "Never releases its locks",
+      "Uses no locks at all",
+      "Locks only one table",
+      "Acquires all locks before releasing any"
+    ],
+    "correct": 3,
+    "explanation": "Two-phase locking has a growing phase (acquiring locks) followed by a shrinking phase (releasing them), which guarantees serializability.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Advanced Database Systems",
+    "subtopic": "Stored Procedures, Triggers, Views",
+    "question": "A database view is best described as:",
+    "options": [
+      "A physical copy of a table",
+      "A backup of the database",
+      "A virtual table based on a query",
+      "An index on a table"
+    ],
+    "correct": 2,
+    "explanation": "A view is a stored query that behaves like a table but does not store any data itself.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Advanced Database Systems",
+    "subtopic": "NoSQL Databases (MongoDB, Redis Concepts)",
+    "question": "MongoDB stores data primarily in which format?",
+    "options": [
+      "JSON-like documents",
+      "Tables with rows",
+      "Key-value pairs only",
+      "Graph nodes"
+    ],
+    "correct": 0,
+    "explanation": "MongoDB is a document database that stores BSON (binary JSON) documents inside collections.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Algorithms & Complexity",
+    "subtopic": "Big-O Notation and Complexity Analysis",
+    "question": "The time complexity of binary search on a sorted array of n elements is:",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)"
+    ],
+    "correct": 0,
+    "explanation": "Binary search halves the search range with each step, giving logarithmic O(log n) time complexity.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Algorithms & Complexity",
+    "subtopic": "Graph Algorithms (BFS, DFS, Dijkstra, Kruskal)",
+    "question": "Dijkstra's algorithm is used to find the:",
+    "options": [
+      "Minimum spanning tree",
+      "Maximum flow in a network",
+      "Strongly connected components",
+      "Shortest path from a source vertex"
+    ],
+    "correct": 3,
+    "explanation": "Dijkstra's algorithm computes shortest paths from a single source in graphs with non-negative edge weights.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Algorithms & Complexity",
+    "subtopic": "Hashing and Hash Tables",
+    "question": "When two keys map to the same slot in a hash table, it is called a:",
+    "options": [
+      "Overflow",
+      "Clustering",
+      "Collision",
+      "Probing"
+    ],
+    "correct": 2,
+    "explanation": "A collision is resolved by chaining (linked lists) or open addressing (probing for another slot).",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Algorithms & Complexity",
+    "subtopic": "NP-Hard and NP-Complete Problems",
+    "question": "Which of the following is a classic NP-complete problem?",
+    "options": [
+      "Sorting an array",
+      "Travelling Salesman Problem",
+      "Binary search",
+      "Finding the minimum in a list"
+    ],
+    "correct": 1,
+    "explanation": "The Travelling Salesman Problem has no known polynomial-time solution; verifying a candidate tour is easy, finding the best is NP-complete.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Architecture",
+    "subtopic": "Von Neumann Architecture",
+    "question": "The Von Neumann architecture is based on which key concept?",
+    "options": [
+      "Stored program concept",
+      "Separate memory for data and instructions",
+      "Parallel processing",
+      "Quantum computing"
+    ],
+    "correct": 0,
+    "explanation": "Von Neumann proposed storing programs and data together in the same memory, fetched and executed sequentially.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Architecture",
+    "subtopic": "Cache Memory Levels (L1, L2, L3)",
+    "question": "Which cache memory level is the fastest and smallest?",
+    "options": [
+      "L2",
+      "L3",
+      "L1",
+      "Main memory"
+    ],
+    "correct": 2,
+    "explanation": "L1 cache sits closest to the CPU core: smallest but fastest; L2 and L3 are larger but slower.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Architecture",
+    "subtopic": "RISC vs CISC Processors",
+    "question": "Which processor design uses a small set of simple, fixed-length instructions?",
+    "options": [
+      "CISC",
+      "VLIW",
+      "EPIC",
+      "RISC"
+    ],
+    "correct": 3,
+    "explanation": "RISC (e.g., ARM) uses simple fixed-length instructions; CISC (e.g., x86) uses complex variable-length ones.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Computer Architecture",
+    "subtopic": "Pipelining and Parallel Processing",
+    "question": "In a classic 5-stage pipeline, which stage comes immediately after Instruction Decode?",
+    "options": [
+      "Fetch",
+      "Execute",
+      "Memory access",
+      "Write back"
+    ],
+    "correct": 1,
+    "explanation": "The five stages are Fetch, Decode, Execute, Memory access, and Write-back; pipelining overlaps them across instructions.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Cybersecurity",
+    "subtopic": "Types of Cyber Threats (Malware, Phishing, DDoS)",
+    "question": "Phishing attacks primarily aim to:",
+    "options": [
+      "Steal sensitive information by deception",
+      "Damage computer hardware",
+      "Speed up the network",
+      "Update software automatically"
+    ],
+    "correct": 0,
+    "explanation": "Phishing uses fake emails or websites to trick users into revealing passwords, bank details, or other sensitive data.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Cybersecurity",
+    "subtopic": "Cryptography (Symmetric, Asymmetric, Hashing)",
+    "question": "RSA encryption is an example of:",
+    "options": [
+      "Symmetric encryption",
+      "Hashing",
+      "Asymmetric encryption",
+      "Steganography"
+    ],
+    "correct": 2,
+    "explanation": "RSA uses a public/private key pair (asymmetric); AES is symmetric encryption and SHA-256 is hashing.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Cybersecurity",
+    "subtopic": "Firewalls, IDS/IPS, VPN",
+    "question": "What is the main difference between an IDS and an IPS?",
+    "options": [
+      "IDS is hardware and IPS is software",
+      "There is no difference",
+      "IPS is older than IDS",
+      "IDS only detects intrusions while IPS also prevents them"
+    ],
+    "correct": 3,
+    "explanation": "An Intrusion Detection System only alerts on threats, while an Intrusion Prevention System actively blocks them.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Cybersecurity",
+    "subtopic": "Cybersecurity Laws and Ethics in Pakistan",
+    "question": "Cybercrime in Pakistan is primarily governed by which law?",
+    "options": [
+      "Pakistan Penal Code 1860",
+      "PECA 2016",
+      "IT Act 2000",
+      "Cyber Ordinance 2002"
+    ],
+    "correct": 1,
+    "explanation": "The Prevention of Electronic Crimes Act 2016 (PECA) covers hacking, cyberstalking, and online fraud, investigated by the FIA.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "AI, Machine Learning, Deep Learning Basics",
+    "question": "Who coined the term 'Artificial Intelligence'?",
+    "options": [
+      "Alan Turing",
+      "Marvin Minsky",
+      "John McCarthy",
+      "Geoffrey Hinton"
+    ],
+    "correct": 2,
+    "explanation": "John McCarthy coined the term 'artificial intelligence' at the 1956 Dartmouth conference.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Natural Language Processing (NLP) Concepts",
+    "question": "In NLP, breaking text into individual words or tokens is called:",
+    "options": [
+      "Tokenization",
+      "Parsing",
+      "Lemmatization",
+      "Vectorization"
+    ],
+    "correct": 0,
+    "explanation": "Tokenization is the first NLP step, splitting text into tokens before further processing like parsing.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Cloud Computing (IaaS, PaaS, SaaS)",
+    "question": "Gmail and Google Docs are examples of which cloud service model?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "DaaS"
+    ],
+    "correct": 1,
+    "explanation": "SaaS delivers ready-to-use software over the internet; IaaS provides virtual machines and PaaS provides development platforms.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Blockchain, IoT, Big Data Fundamentals",
+    "question": "The first blockchain-based cryptocurrency, Bitcoin, was introduced by:",
+    "options": [
+      "Vitalik Buterin",
+      "Hal Finney",
+      "Nick Szabo",
+      "Satoshi Nakamoto"
+    ],
+    "correct": 3,
+    "explanation": "Satoshi Nakamoto published the Bitcoin whitepaper in 2008, launching blockchain technology.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "HTML5, CSS3, JavaScript Basics",
+    "question": "Who invented the World Wide Web and HTML?",
+    "options": [
+      "Brendan Eich",
+      "Marc Andreessen",
+      "Tim Berners-Lee",
+      "Hakon Wium Lie"
+    ],
+    "correct": 2,
+    "explanation": "Tim Berners-Lee created the Web, HTTP, URLs, and HTML at CERN around 1990 (Brendan Eich created JavaScript).",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "Client-Server Architecture",
+    "question": "In client-server architecture, the client is the party that:",
+    "options": [
+      "Requests services or resources",
+      "Stores the database",
+      "Always runs on Linux",
+      "Assigns IP addresses"
+    ],
+    "correct": 0,
+    "explanation": "The client, such as a web browser, requests resources; the server responds to those requests.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "RESTful APIs and Web Services",
+    "question": "A key constraint of RESTful APIs is that they are:",
+    "options": [
+      "Stateful",
+      "Encrypted by default",
+      "Limited to XML",
+      "Stateless"
+    ],
+    "correct": 3,
+    "explanation": "REST, defined by Roy Fielding in 2000, requires stateless communication: each request carries everything the server needs.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "Web Security (SQL Injection, XSS, CSRF)",
+    "question": "An attacker inserting malicious SQL code into a website's input field is performing:",
+    "options": [
+      "Cross-site scripting",
+      "Phishing",
+      "SQL injection",
+      "DDoS attack"
+    ],
+    "correct": 2,
+    "explanation": "SQL injection exploits unsanitized user inputs to manipulate the backend database queries of a web application.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Phases of a Compiler (Lexical, Syntax, Semantic)",
+    "question": "Which is the FIRST phase of a compiler?",
+    "options": [
+      "Syntax analysis",
+      "Lexical analysis",
+      "Code generation",
+      "Semantic analysis"
+    ],
+    "correct": 1,
+    "explanation": "Lexical analysis (scanning) comes first, converting source code into tokens for the syntax analyzer.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Parsing Techniques (Top-Down, Bottom-Up)",
+    "question": "Recursive descent parsing is an example of which technique?",
+    "options": [
+      "Top-down parsing",
+      "Bottom-up parsing",
+      "No parsing",
+      "Semantic parsing"
+    ],
+    "correct": 0,
+    "explanation": "Recursive descent is a top-down technique starting from the start symbol; LR and shift-reduce parsers are bottom-up.",
+    "difficulty": "hard"
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Symbol Tables and Error Handling",
+    "question": "What information does a compiler's symbol table store?",
+    "options": [
+      "Machine code instructions",
+      "Error messages only",
+      "Identifiers like variable names, types, and scopes",
+      "Optimization rules"
+    ],
+    "correct": 2,
+    "explanation": "The symbol table tracks every identifier's name, type, scope, and memory location during compilation.",
+    "difficulty": "medium"
+  }
+]

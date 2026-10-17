@@ -1,0 +1,817 @@
+{
+ "General": {
+  "Mixed Pakistan Knowledge": [
+   "Important Dates of Pakistan",
+   "National Symbols of Pakistan",
+   "Records and Firsts of Pakistan",
+   "Famous Quotes of Quaid-e-Azam",
+   "Pakistan at a Glance (Quick Facts)"
+  ],
+  "Mixed General Knowledge": [
+   "Capitals and Currencies of the World",
+   "Famous Inventions and Inventors",
+   "World Records (Largest, Smallest, Highest)",
+   "Famous Books and Authors",
+   "Important Days and Dates (World)"
+  ],
+  "Mixed Science Facts": [
+   "Important Scientific Terms",
+   "Famous Scientists and Discoveries",
+   "Everyday Science Quick Facts",
+   "Medical Terms and Common Diseases",
+   "Technology Milestones"
+  ],
+  "Mixed Mathematics": [
+   "Quick Calculation Tricks",
+   "Number Tricks and Patterns",
+   "Shortcut Methods for MCQs",
+   "Common Formulas Sheet"
+  ],
+  "Mixed Current Affairs": [
+   "Important Events of Last 2 Years",
+   "Key International Agreements",
+   "World Leaders and Their Countries"
+  ]
+ },
+ "Pakistan Studies": {
+  "Geography of Pakistan": [
+   "Location and Boundaries of Pakistan",
+   "Physical Features (Mountains, Plains, Plateaus, Deserts)",
+   "Major Rivers and Water System (Indus Basin)",
+   "Climate Zones of Pakistan",
+   "Natural Resources of Pakistan",
+   "Provinces and Administrative Divisions"
+  ],
+  "History of Pakistan Movement": [
+   "Sir Syed Ahmad Khan and Aligarh Movement",
+   "All India Muslim League (1906)",
+   "Lucknow Pact 1916",
+   "Khilafat Movement",
+   "Simon Commission and Nehru Report",
+   "Allahabad Address 1930 (Allama Iqbal)",
+   "Round Table Conferences",
+   "Pakistan Resolution 1940 (Lahore Resolution)",
+   "Cabinet Mission Plan 1946",
+   "Independence and Partition 1947"
+  ],
+  "Founding Fathers": [
+   "Quaid-e-Azam Muhammad Ali Jinnah — Life and Role",
+   "Allama Muhammad Iqbal — Vision and Philosophy",
+   "Liaquat Ali Khan — First Prime Minister",
+   "Fatima Jinnah — Mother of the Nation",
+   "Sir Agha Khan III — Role in Muslim League"
+  ],
+  "Constitutional History of Pakistan": [
+   "Objectives Resolution 1949",
+   "Constitution of 1956",
+   "Constitution of 1962",
+   "Constitution of 1973 and Key Features",
+   "Martial Laws in Pakistan (1958, 1969, 1977, 1999)",
+   "Major Constitutional Amendments"
+  ],
+  "Economy of Pakistan": [
+   "Agriculture Sector of Pakistan",
+   "Industrial Sector of Pakistan",
+   "CPEC and Foreign Investment",
+   "Major Exports and Imports of Pakistan",
+   "Economic Challenges and Reforms"
+  ],
+  "Culture and Society of Pakistan": [
+   "Languages of Pakistan",
+   "Festivals and Traditions of Pakistan",
+   "Famous Personalities of Pakistan",
+   "Education System of Pakistan",
+   "Media in Pakistan"
+  ],
+  "Foreign Policy of Pakistan": [
+   "Pakistan-India Relations",
+   "Pakistan-China Relations (CPEC)",
+   "Pakistan-USA Relations",
+   "Pakistan and OIC",
+   "Pakistan and United Nations"
+  ]
+ },
+ "Islamic Studies": {
+  "Quran & Tafseer": [
+   "Introduction to the Quran",
+   "Makki and Madni Surahs",
+   "Surah Names and Numbers",
+   "Tafseer Basics",
+   "Tajweed Rules",
+   "Famous Mufassireen"
+  ],
+  "Hadith & Sunnah": [
+   "Introduction to Hadith",
+   "Types of Hadith (Sahih, Hasan, Daif)",
+   "Kutub al-Sittah (Six Major Books)",
+   "Famous Muhaddiseen",
+   "Hadith vs Sunnah Difference",
+   "Isnad and Matn"
+  ],
+  "Islamic History": [
+   "Life of Prophet Muhammad (PBUH)",
+   "Khulafa e Rashideen",
+   "Umayyad Caliphate",
+   "Abbasid Caliphate",
+   "Muslim Scholars and Scientists",
+   "Islam in the Subcontinent",
+   "Ottoman Empire"
+  ],
+  "Fiqh & Islamic Law": [
+   "Five Pillars of Islam",
+   "Salah (Prayer) Rules",
+   "Sawm (Fasting) Rules",
+   "Zakat Rules",
+   "Hajj Rules",
+   "Halal and Haram",
+   "Four Schools of Fiqh (Hanafi, Maliki, Shafi, Hanbali)"
+  ],
+  "Aqeedah (Islamic Beliefs)": [
+   "Tawheed (Oneness of Allah)",
+   "Belief in Angels",
+   "Belief in Prophets",
+   "Belief in Divine Books",
+   "Belief in Day of Judgment",
+   "Belief in Qadar (Destiny)"
+  ],
+  "Prophets & Messengers": [
+   "Prophet Adam (AS)",
+   "Prophet Ibrahim (AS)",
+   "Prophet Musa (AS)",
+   "Prophet Isa (AS)",
+   "Prophet Muhammad (PBUH) — Detailed",
+   "Seal of Prophethood"
+  ],
+  "Islamic Ethics & Morality": [
+   "Honesty and Truthfulness in Islam",
+   "Respect for Parents",
+   "Rights of Neighbors",
+   "Brotherhood in Islam",
+   "Islamic Business Ethics",
+   "Gender Relations in Islam"
+  ],
+  "Islamiat for Non-Muslims (Ethics)": [
+   "Comparative Religion Basics",
+   "Universal Moral Values",
+   "Human Rights in Islam",
+   "Justice and Equality in Islam"
+  ]
+ },
+ "Current Affairs": {
+  "Pakistan Current Affairs": [
+   "Government Policies and Major Decisions",
+   "Economic Updates (Budget, Inflation, IMF)",
+   "CPEC Latest Developments",
+   "Elections and Political Changes",
+   "Military and Defense Updates",
+   "Supreme Court Major Judgments"
+  ],
+  "International Affairs": [
+   "USA, China, Russia Relations",
+   "Middle East Conflicts",
+   "Kashmir Issue — Latest Updates",
+   "Afghanistan Situation",
+   "Ukraine-Russia War",
+   "Israel-Palestine Conflict"
+  ],
+  "International Organizations (Current)": [
+   "UN Security Council Decisions",
+   "SCO Summits and Outcomes",
+   "OIC Meetings and Resolutions",
+   "SAARC Updates",
+   "Commonwealth Updates"
+  ],
+  "Economy & Trade (Current)": [
+   "World Economic Forum Reports",
+   "Oil Prices and Global Impact",
+   "Global Inflation Trends",
+   "Trade Wars and Sanctions",
+   "Digital Economy and Crypto"
+  ],
+  "Science & Technology (Current)": [
+   "AI and Machine Learning Developments",
+   "Space Missions (NASA, ISRO, SpaceX)",
+   "Cyber Attacks and Security Issues",
+   "Climate Change Agreements (COP)"
+  ],
+  "Sports (Current)": [
+   "Cricket — Pakistan Team Performance",
+   "Olympics — Latest Events",
+   "FIFA World Cup Updates",
+   "PSL Updates",
+   "International Awards to Pakistanis"
+  ]
+ },
+ "English": {
+  "English Grammar": [
+   "Parts of Speech (Noun, Verb, Adjective, Adverb, Pronoun)",
+   "All 12 Tenses with Examples",
+   "Active and Passive Voice",
+   "Direct and Indirect Speech",
+   "Articles (a, an, the)",
+   "Prepositions",
+   "Conjunctions and Conditionals",
+   "Subject-Verb Agreement"
+  ],
+  "Vocabulary": [
+   "Synonyms and Antonyms",
+   "One Word Substitution",
+   "Idioms and Phrases",
+   "Homophones and Confusing Words",
+   "Word Formation (Prefix, Suffix)",
+   "Commonly Misspelled Words"
+  ],
+  "Reading Comprehension": [
+   "Reading Comprehension Passages",
+   "Inference and Main Idea",
+   "Tone and Purpose of Passage"
+  ],
+  "Sentence Structure": [
+   "Sentence Correction",
+   "Fill in the Blanks",
+   "Error Detection",
+   "Sentence Completion",
+   "Ordering of Sentences (Para Jumbles)"
+  ],
+  "Writing Skills": [
+   "Essay Writing (Common PPSC Topics)",
+   "Letter and Application Writing",
+   "Precis Writing",
+   "Paragraph Writing"
+  ]
+ },
+ "Urdu": {
+  "Urdu Grammar": [
+   "Ism, Fail, Sifat, Zameer — Parts of Speech",
+   "Wahid Jama — Singular and Plural",
+   "Muzakkar Muannas — Gender in Urdu",
+   "Muhawray aur Zarb ul Amsal — Idioms and Proverbs",
+   "Aarab aur Rumooz Auqaf — Punctuation"
+  ],
+  "Urdu Literature": [
+   "Classical Urdu Poetry (Mir, Ghalib, Iqbal, Faiz)",
+   "Famous Urdu Novels and Novelists",
+   "Famous Urdu Dramas",
+   "Short Story Writers (Manto, Bedi, Ismat)",
+   "Urdu Prose Writers"
+  ],
+  "Urdu Comprehension": [
+   "Urdu Passage Reading and Understanding",
+   "Summary Writing in Urdu",
+   "Meaning of Difficult Urdu Words"
+  ],
+  "Urdu Composition": [
+   "Urdu Essay Writing — Mazmoon Nawisi",
+   "Urdu Letter Writing — Khat Nawisi",
+   "Urdu Application Writing — Darkhwast"
+  ],
+  "Famous Urdu Poets of Pakistan": [
+   "Allama Iqbal — Life and Poetry",
+   "Faiz Ahmed Faiz — Life and Poetry",
+   "Ahmad Faraz — Life and Poetry",
+   "Parveen Shakir — Life and Poetry",
+   "Josh Malihabadi — Life and Poetry"
+  ]
+ },
+ "Everyday Science": {
+  "Physics in Daily Life": [
+   "Gravity and Weight",
+   "Light and Optics (Mirrors, Lenses)",
+   "Sound and Waves",
+   "Electricity and Magnetism",
+   "Heat and Temperature",
+   "Simple Machines"
+  ],
+  "Chemistry in Daily Life": [
+   "Atoms, Elements and Compounds",
+   "Acids, Bases and Salts",
+   "Oxidation and Reduction",
+   "Chemical Reactions in Daily Life",
+   "Plastics, Soaps and Detergents",
+   "Air and Water Pollution"
+  ],
+  "Biology in Daily Life": [
+   "Human Body Systems (Digestive, Respiratory, Circulatory)",
+   "Diseases and their Causes",
+   "Vitamins and their Deficiencies",
+   "Nutrition and Food",
+   "Plants and Photosynthesis",
+   "Genetics Basics"
+  ],
+  "Environmental Science": [
+   "Ecosystem and Food Chain",
+   "Global Warming and Climate Change",
+   "Ozone Layer Depletion",
+   "Renewable and Non-Renewable Energy",
+   "Water Conservation"
+  ],
+  "Health & Medicine": [
+   "Common Diseases (Malaria, Dengue, Typhoid, COVID)",
+   "Vaccines and Immunization",
+   "First Aid Basics",
+   "Blood Groups",
+   "Human Nutrition"
+  ],
+  "Space & Universe": [
+   "Solar System (Planets, Moon, Sun)",
+   "Stars and Galaxies",
+   "Day and Night and Seasons",
+   "Eclipses (Solar and Lunar)",
+   "Space Exploration Milestones"
+  ]
+ },
+ "Basic Mathematics": {
+  "Arithmetic": [
+   "Number System (Natural, Integer, Rational, Real)",
+   "HCF and LCM",
+   "Fractions and Decimals",
+   "Percentages",
+   "Ratio and Proportion",
+   "Average (Mean)",
+   "Profit, Loss and Discount",
+   "Simple and Compound Interest"
+  ],
+  "Algebra": [
+   "Basic Algebraic Expressions",
+   "Linear Equations (One Variable, Two Variables)",
+   "Quadratic Equations",
+   "Factorization",
+   "Simultaneous Equations",
+   "Indices and Surds"
+  ],
+  "Geometry": [
+   "Lines, Angles and Triangles",
+   "Properties of Circle",
+   "Area and Perimeter (Rectangle, Square, Triangle, Circle)",
+   "Volume and Surface Area (Cube, Cylinder, Cone)",
+   "Pythagoras Theorem"
+  ],
+  "Data Handling": [
+   "Mean, Median, Mode",
+   "Bar Graph, Pie Chart, Line Graph",
+   "Probability Basics",
+   "Simple Statistics"
+  ],
+  "Applied Mathematics (Word Problems)": [
+   "Time and Work",
+   "Speed, Distance and Time",
+   "Pipes and Cisterns",
+   "Age Problems",
+   "Number Sequences and Patterns"
+  ]
+ },
+ "Geography": {
+  "Physical Geography": [
+   "Landforms (Mountains, Valleys, Plains, Plateaus)",
+   "Volcanoes and Earthquakes",
+   "Types of Rocks",
+   "Atmosphere Layers",
+   "Weather vs Climate"
+  ],
+  "Human Geography": [
+   "World Population Distribution",
+   "Urbanization and Migration",
+   "Agriculture Types Worldwide",
+   "Industries and Trade",
+   "Transport and Communication"
+  ],
+  "Geography of Pakistan": [
+   "Location and Boundaries of Pakistan",
+   "Mountain Ranges (Himalayas, Karakoram, Hindu Kush)",
+   "Rivers and Dams of Pakistan",
+   "Deserts of Pakistan (Thar, Cholistan, Thal)",
+   "Coastal Areas (Arabian Sea)",
+   "Climate of Pakistan"
+  ],
+  "World Geography": [
+   "Continents and their Features",
+   "Important Oceans and Seas",
+   "Important Straits and Canals",
+   "Time Zones and International Date Line",
+   "Major Mountain Ranges of the World",
+   "Important Rivers of the World"
+  ],
+  "Maps and Directions": [
+   "Types of Maps",
+   "Latitude and Longitude",
+   "Scale and Compass",
+   "Map Reading Basics"
+  ],
+  "Environmental Geography": [
+   "Natural Disasters (Floods, Earthquakes, Droughts)",
+   "Deforestation and its Effects",
+   "Soil Erosion",
+   "Water Resources",
+   "Climate Zones of the World"
+  ]
+ },
+ "Computer Studies": {
+  "Introduction to Computers": [
+   "Definition and History of Computers",
+   "Generations of Computers (1st to 5th)",
+   "Types of Computers (Analog, Digital, Hybrid)",
+   "Characteristics and Limitations of Computers"
+  ],
+  "Computer Hardware": [
+   "Input Devices (Keyboard, Mouse, Scanner)",
+   "Output Devices (Monitor, Printer, Speaker)",
+   "Storage Devices (HDD, SSD, USB, CD/DVD)",
+   "CPU Components (ALU, CU, Registers)"
+  ],
+  "Computer Software": [
+   "System Software vs Application Software",
+   "Types of Operating Systems",
+   "Utility Programs and Their Uses",
+   "Open Source vs Proprietary Software"
+  ],
+  "MS Office Basics": [
+   "MS Word (Formatting, Tables, Mail Merge)",
+   "MS Excel (Basic Formulas, Charts, Sorting)",
+   "MS PowerPoint (Slides, Transitions, Templates)",
+   "MS Access (Basic Database Concepts)"
+  ],
+  "Internet & Email Basics": [
+   "What is the Internet and WWW",
+   "Web Browsers and Search Engines",
+   "Email Etiquette and Usage",
+   "Social Media and Online Safety"
+  ],
+  "Number Systems": [
+   "Binary, Decimal, Octal, Hexadecimal",
+   "Conversion Between Number Systems",
+   "BCD (Binary Coded Decimal)",
+   "Basic Binary Arithmetic"
+  ],
+  "Basic Networking": [
+   "Definition of Network",
+   "Types of Networks (LAN, MAN, WAN)",
+   "Network Devices (Router, Switch, Modem, Hub)",
+   "Internet vs Intranet vs Extranet"
+  ],
+  "Operating Systems": [
+   "Functions and Types of OS",
+   "Process Management and Scheduling",
+   "Memory Management (Paging, Segmentation)",
+   "File Systems (FAT, NTFS, ext4)",
+   "Deadlocks and Their Handling"
+  ],
+  "Programming Fundamentals": [
+   "Variables, Data Types, Operators",
+   "Control Structures (if/else, loops, switch)",
+   "Functions and Recursion",
+   "Arrays and Strings",
+   "Introduction to C, C++, Python"
+  ],
+  "Data Structures": [
+   "Arrays and Linked Lists",
+   "Stacks and Queues",
+   "Trees (Binary Tree, BST)",
+   "Sorting Algorithms (Bubble, Selection, Merge)",
+   "Searching Algorithms (Linear, Binary)"
+  ],
+  "Database Management (DBMS)": [
+   "DBMS Concepts and Architecture",
+   "Relational Model and ER Diagrams",
+   "SQL Basics (SELECT, INSERT, UPDATE, DELETE)",
+   "Keys (Primary, Foreign, Candidate)",
+   "Normalization (1NF, 2NF, 3NF)"
+  ],
+  "Computer Networks": [
+   "OSI Model (7 Layers) and TCP/IP Model",
+   "IP Addressing (IPv4, IPv6, Subnetting)",
+   "Protocols (HTTP, FTP, SMTP, DNS, DHCP)",
+   "Network Topologies (Bus, Star, Ring, Mesh)",
+   "Switching Techniques (Circuit, Packet, Message)"
+  ],
+  "Digital Logic & Boolean Algebra": [
+   "Logic Gates (AND, OR, NOT, NAND, NOR, XOR)",
+   "Boolean Expressions and Simplification",
+   "Karnaugh Maps (K-Maps)",
+   "Combinational Circuits (Adders, Multiplexers)",
+   "Sequential Circuits (Flip-Flops, Registers)"
+  ],
+  "Software Engineering": [
+   "SDLC Phases",
+   "Development Models (Waterfall, Agile, Spiral)",
+   "Testing Types (Unit, Integration, System, UAT)",
+   "Software Documentation and Maintenance",
+   "Requirements Analysis and SRS"
+  ],
+  "Object-Oriented Programming": [
+   "Classes, Objects, Constructors, Destructors",
+   "Inheritance (Single, Multiple, Multilevel)",
+   "Polymorphism (Overloading, Overriding)",
+   "Encapsulation and Abstraction",
+   "Design Patterns (Singleton, Factory, Observer)"
+  ],
+  "Advanced Database Systems": [
+   "Transaction Management (ACID Properties)",
+   "Concurrency Control (Locking, Timestamping)",
+   "Query Optimization and Indexing",
+   "Stored Procedures, Triggers, Views",
+   "NoSQL Databases (MongoDB, Redis Concepts)"
+  ],
+  "Algorithms & Complexity": [
+   "Algorithm Design (Greedy, Divide & Conquer, DP)",
+   "Big-O Notation and Complexity Analysis",
+   "Graph Algorithms (BFS, DFS, Dijkstra, Kruskal)",
+   "Hashing and Hash Tables",
+   "NP-Hard and NP-Complete Problems"
+  ],
+  "Computer Architecture": [
+   "Von Neumann Architecture",
+   "Instruction Set Architecture (ISA)",
+   "Pipelining and Parallel Processing",
+   "Cache Memory Levels (L1, L2, L3)",
+   "RISC vs CISC Processors"
+  ],
+  "Cybersecurity": [
+   "Types of Cyber Threats (Malware, Phishing, DDoS)",
+   "Cryptography (Symmetric, Asymmetric, Hashing)",
+   "Firewalls, IDS/IPS, VPN",
+   "Authentication and Access Control",
+   "Cybersecurity Laws and Ethics in Pakistan"
+  ],
+  "Artificial Intelligence & Emerging Tech": [
+   "AI, Machine Learning, Deep Learning Basics",
+   "Expert Systems and Knowledge Representation",
+   "Natural Language Processing (NLP) Concepts",
+   "Cloud Computing (IaaS, PaaS, SaaS)",
+   "Blockchain, IoT, Big Data Fundamentals"
+  ],
+  "Web Technologies": [
+   "HTML5, CSS3, JavaScript Basics",
+   "Client-Server Architecture",
+   "RESTful APIs and Web Services",
+   "Frameworks Overview (React, Node.js, Django)",
+   "Web Security (SQL Injection, XSS, CSRF)"
+  ],
+  "Compiler Design": [
+   "Phases of a Compiler (Lexical, Syntax, Semantic)",
+   "Parsing Techniques (Top-Down, Bottom-Up)",
+   "Symbol Tables and Error Handling",
+   "Intermediate Code Generation",
+   "Code Optimization Techniques"
+  ]
+ },
+ "Logical Reasoning": {
+  "Verbal Reasoning": [
+   "Analogies (Word Relationships)",
+   "Classification (Odd One Out)",
+   "Series Completion (Letters/Words)",
+   "Coding and Decoding",
+   "Blood Relations",
+   "Direction and Distance"
+  ],
+  "Non-Verbal Reasoning": [
+   "Number Series",
+   "Figure Patterns and Sequences",
+   "Mirror and Water Images",
+   "Paper Folding and Cutting",
+   "Embedded Figures"
+  ],
+  "Analytical Reasoning": [
+   "Seating Arrangements",
+   "Ranking and Ordering",
+   "Syllogisms (All/Some/No)",
+   "Statement and Conclusions",
+   "Statement and Assumptions",
+   "Cause and Effect"
+  ],
+  "Mathematical Reasoning": [
+   "Number Puzzles",
+   "Age Problems (Logical)",
+   "Clock and Calendar Problems",
+   "Missing Numbers in Matrices",
+   "Dice and Cubes"
+  ],
+  "Critical Thinking": [
+   "Logical Deduction",
+   "Strengthening and Weakening Arguments",
+   "Course of Action Questions",
+   "Inference Questions"
+  ]
+ },
+ "Pakistan Affairs": {
+  "Constitution of Pakistan 1973": [
+   "Fundamental Rights (Articles 8-28)",
+   "Directive Principles of State Policy",
+   "Federal and Provincial Structure",
+   "Parliament (Senate and National Assembly)",
+   "Judiciary (Supreme Court, High Courts)",
+   "Important Constitutional Amendments (8th, 17th, 18th, 26th)"
+  ],
+  "Government and Politics of Pakistan": [
+   "Political Parties of Pakistan",
+   "Electoral System of Pakistan",
+   "Role of Army in Pakistan Politics",
+   "President vs Prime Minister Powers",
+   "NFC Award (National Finance Commission)"
+  ],
+  "Economy and Development of Pakistan": [
+   "CPEC Projects and Corridors",
+   "Taxation System in Pakistan (FBR)",
+   "Agriculture Policy of Pakistan",
+   "Industrial Policy of Pakistan",
+   "Poverty and Unemployment Issues"
+  ],
+  "Foreign Policy of Pakistan": [
+   "Pak-India Relations and Kashmir Issue",
+   "Pak-China Strategic Partnership",
+   "Pak-USA Relations (Post 9/11)",
+   "Pakistan and Afghanistan"
+  ],
+  "Law and Order in Pakistan": [
+   "Judicial System of Pakistan",
+   "NAB (National Accountability Bureau)",
+   "Anti-Terrorism Laws of Pakistan",
+   "Police System in Punjab",
+   "Human Rights in Pakistan"
+  ],
+  "Social Issues of Pakistan": [
+   "Education Crisis in Pakistan",
+   "Health System Issues",
+   "Women Rights in Pakistan",
+   "Child Labor and Poverty",
+   "Population Growth Problem"
+  ]
+ },
+ "Economics": {
+  "Basic Economics Concepts": [
+   "Definition and Scope of Economics",
+   "Micro vs Macro Economics",
+   "Demand and Supply Laws",
+   "Market Equilibrium",
+   "Elasticity of Demand and Supply",
+   "Consumer and Producer Surplus"
+  ],
+  "National Income": [
+   "GDP, GNP, NNP Concepts",
+   "Methods of Measuring National Income",
+   "Per Capita Income",
+   "Economic Growth vs Economic Development",
+   "Human Development Index (HDI)"
+  ],
+  "Money and Banking": [
+   "Functions of Money",
+   "Types of Banks",
+   "State Bank of Pakistan (SBP) Role",
+   "Monetary Policy",
+   "Inflation and Deflation",
+   "Credit and Interest Rates"
+  ],
+  "International Economics": [
+   "World Trade Organization (WTO)",
+   "IMF and World Bank Role",
+   "Balance of Payments",
+   "Foreign Direct Investment (FDI)",
+   "Economic Integration (SAARC, ECO)"
+  ],
+  "Development Economics": [
+   "Poverty and Inequality",
+   "Types of Unemployment",
+   "Five Year Plans of Pakistan",
+   "Privatization in Pakistan",
+   "CPEC Economic Impact"
+  ]
+ },
+ "History": {
+  "Ancient Civilizations": [
+   "Indus Valley Civilization (Mohenjo-daro, Harappa)",
+   "Mesopotamia and Egypt",
+   "Greek and Roman Civilizations",
+   "Persian Empire"
+  ],
+  "Medieval History": [
+   "Rise of Islam (7th Century)",
+   "Arab Conquests",
+   "Mongol Empire",
+   "Ottoman Empire",
+   "Mughal Empire in Subcontinent"
+  ],
+  "History of the Subcontinent": [
+   "Hindu Shahi and Ghaznavid Period",
+   "Delhi Sultanate",
+   "Mughal Empire (Babur to Aurangzeb)",
+   "British East India Company",
+   "Mutiny of 1857",
+   "Indian National Movement (1857-1947)"
+  ],
+  "Modern World History": [
+   "Renaissance and Industrial Revolution",
+   "American Revolution (1776)",
+   "French Revolution (1789)",
+   "Russian Revolution (1917)",
+   "World War I — Causes, Events, Results",
+   "World War II — Causes, Events, Results",
+   "Cold War and its End",
+   "Decolonization of Asia and Africa"
+  ],
+  "History of Pakistan (Post 1947)": [
+   "Two Nation Theory",
+   "Pakistan Movement (1906-1947)",
+   "Post-Independence History of Pakistan",
+   "Wars with India (1948, 1965, 1971)",
+   "Separation of East Pakistan (1971)",
+   "Nuclear Tests 1998",
+   "Modern Pakistan (2000-present)"
+  ]
+ },
+ "Civics & Constitution": {
+  "Introduction to Civics": [
+   "Definition and Importance of Civics",
+   "Rights and Responsibilities of Citizens",
+   "Concept of State and Government",
+   "Democracy and its Types",
+   "Citizenship"
+  ],
+  "Constitution of Pakistan 1973": [
+   "Features of 1973 Constitution",
+   "Islamic Provisions of the Constitution",
+   "Fundamental Rights (Articles 8-28)",
+   "Fundamental Duties",
+   "Emergency Provisions"
+  ],
+  "Government Structure of Pakistan": [
+   "Federal Government (Executive, Legislature, Judiciary)",
+   "Provincial Government Structure",
+   "Local Government System",
+   "Relationship between Federal and Provincial Governments"
+  ],
+  "Parliament of Pakistan": [
+   "National Assembly — Composition and Powers",
+   "Senate — Composition and Powers",
+   "Law Making Process in Pakistan",
+   "Budget Process in Parliament"
+  ],
+  "Judiciary of Pakistan": [
+   "Supreme Court of Pakistan",
+   "High Courts (Punjab, Sindh, KPK, Balochistan)",
+   "Federal Shariat Court",
+   "Judicial Review",
+   "Independence of Judiciary"
+  ],
+  "Constitutional Amendments": [
+   "8th Amendment (1985)",
+   "17th Amendment (2003)",
+   "18th Amendment (2010) — Devolution of Power",
+   "21st Amendment — Military Courts",
+   "26th Amendment — Recent Changes"
+  ],
+  "Human Rights": [
+   "Universal Declaration of Human Rights",
+   "Women Rights in Pakistan",
+   "Minority Rights in Pakistan",
+   "Child Rights in Pakistan",
+   "Press Freedom in Pakistan"
+  ]
+ },
+ "General Knowledge": {
+  "World Geography (GK)": [
+   "Continents and Oceans",
+   "Important Countries and Capitals",
+   "Longest/Highest/Largest in the World",
+   "Important Seas, Straits and Canals",
+   "Mountain Ranges of the World"
+  ],
+  "World Organizations": [
+   "United Nations (UN) and its Agencies",
+   "NATO, SAARC, SCO, OIC",
+   "World Bank, IMF, WTO",
+   "G7, G20, BRICS",
+   "Commonwealth of Nations"
+  ],
+  "Science & Technology (GK)": [
+   "Famous Scientists and Inventions",
+   "Important Discoveries in History",
+   "Space Exploration Milestones",
+   "Nobel Prize Winners (Major)",
+   "Technology Milestones"
+  ],
+  "World History (GK)": [
+   "World War I and II Summary",
+   "Cold War Summary",
+   "French Revolution",
+   "American Revolution",
+   "United Nations Formation"
+  ],
+  "Sports & Games": [
+   "Olympic Games History",
+   "Cricket World Cup",
+   "FIFA World Cup",
+   "Famous Sports Personalities",
+   "Pakistan in International Sports"
+  ],
+  "Books & Authors": [
+   "Famous Books and their Authors",
+   "Nobel Prize in Literature",
+   "Pakistani Writers and Poets",
+   "Famous Urdu Literature"
+  ],
+  "Awards & Honors": [
+   "Nobel Prize Categories and History",
+   "Oscar Award History",
+   "Commonwealth Awards"
+  ]
+ }
+}

@@ -1,0 +1,1352 @@
+[
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "The standard value of acceleration due to gravity (g) on Earth's surface is about 9.8 m/s².",
+    "options": [
+      "10.8 m/s²",
+      "9.8 m/s²",
+      "6.7 m/s²",
+      "8.9 m/s²"
+    ],
+    "question": "The acceleration due to gravity on the surface of the Earth is approximately:",
+    "subject": "Everyday Science",
+    "subtopic": "Gravity and Weight",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "The Moon's surface gravity is about 1.62 m/s², roughly one-sixth of Earth's 9.8 m/s², so objects weigh less there.",
+    "options": [
+      "One-tenth",
+      "One-sixth",
+      "One-half",
+      "One-fourth"
+    ],
+    "question": "The gravitational pull of the Moon is about ____ that of the Earth:",
+    "subject": "Everyday Science",
+    "subtopic": "Gravity and Weight",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "A freely falling body accelerates uniformly at about 9.8 m/s², independent of its mass.",
+    "options": [
+      "Uniform acceleration",
+      "Zero acceleration",
+      "Increasing acceleration",
+      "Uniform velocity"
+    ],
+    "question": "A body falling freely under gravity (ignoring air resistance) falls with:",
+    "subject": "Everyday Science",
+    "subtopic": "Gravity and Weight",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Convex mirrors form diminished, erect images over a wide field of view, making them ideal for rear-view mirrors.",
+    "options": [
+      "Convex mirror",
+      "Plane mirror",
+      "Concave mirror",
+      "Cylindrical mirror"
+    ],
+    "question": "Which type of mirror is used as the rear-view mirror in vehicles?",
+    "subject": "Everyday Science",
+    "subtopic": "Light and Optics (Mirrors, Lenses)",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Dispersion separates white light into its spectrum (VIBGYOR) because each color refracts by a different amount.",
+    "options": [
+      "Refraction",
+      "Dispersion",
+      "Diffraction",
+      "Reflection"
+    ],
+    "question": "The splitting of white light into its seven constituent colors is called:",
+    "subject": "Everyday Science",
+    "subtopic": "Light and Optics (Mirrors, Lenses)",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Concave (diverging) lenses correct myopia by spreading light rays so the image focuses on the retina.",
+    "options": [
+      "Nearsightedness (myopia)",
+      "Cataract",
+      "Color blindness",
+      "Farsightedness (hypermetropia)"
+    ],
+    "question": "A concave lens is used to correct:",
+    "subject": "Everyday Science",
+    "subtopic": "Light and Optics (Mirrors, Lenses)",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Sound travels fastest in solids (about 5,000 m/s in steel), slower in liquids and gases, and not at all in a vacuum.",
+    "options": [
+      "Water",
+      "Air",
+      "Vacuum",
+      "Steel"
+    ],
+    "question": "Sound travels fastest through:",
+    "subject": "Everyday Science",
+    "subtopic": "Sound and Waves",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Frequency is measured in hertz (Hz); one hertz equals one cycle or vibration per second.",
+    "options": [
+      "Hertz",
+      "Pascal",
+      "Decibel",
+      "Watt"
+    ],
+    "question": "The SI unit of frequency is:",
+    "subject": "Everyday Science",
+    "subtopic": "Sound and Waves",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Electric current is measured in amperes (A); one ampere is one coulomb of charge flowing per second.",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "question": "The SI unit of electric current is:",
+    "subject": "Everyday Science",
+    "subtopic": "Electricity and Magnetism",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "A fuse melts and breaks the circuit when current exceeds a safe limit, protecting appliances from damage.",
+    "options": [
+      "Protect appliances from excess current",
+      "Convert AC to DC",
+      "Increase the voltage",
+      "Store electric charge"
+    ],
+    "question": "A fuse in an electric circuit is used to:",
+    "subject": "Everyday Science",
+    "subtopic": "Electricity and Magnetism",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Silver has the highest electrical conductivity of all metals, though copper is more commonly used because it is cheaper.",
+    "options": [
+      "Silver",
+      "Aluminium",
+      "Iron",
+      "Copper"
+    ],
+    "question": "Which metal is the best conductor of electricity?",
+    "subject": "Everyday Science",
+    "subtopic": "Electricity and Magnetism",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Kelvin (K) is the SI unit of temperature; 0°C equals 273.15 K.",
+    "options": [
+      "Degree Rankine",
+      "Kelvin",
+      "Degree Fahrenheit",
+      "Degree Celsius"
+    ],
+    "question": "The SI unit of temperature is:",
+    "subject": "Everyday Science",
+    "subtopic": "Heat and Temperature",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Convection transfers heat through the bulk movement of fluid particles in liquids and gases.",
+    "options": [
+      "Evaporation",
+      "Convection",
+      "Conduction",
+      "Radiation"
+    ],
+    "question": "In liquids and gases, heat is mainly transferred by:",
+    "subject": "Everyday Science",
+    "subtopic": "Heat and Temperature",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "In a seesaw the fulcrum lies between the effort and the load, which defines a first-class lever.",
+    "options": [
+      "Third-class lever",
+      "It is not a lever",
+      "Second-class lever",
+      "First-class lever"
+    ],
+    "question": "A seesaw is an example of which class of lever?",
+    "subject": "Everyday Science",
+    "subtopic": "Simple Machines",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "A fixed pulley changes the direction of force (for example, pulling down to lift a load up) without multiplying it.",
+    "options": [
+      "Multiply the applied force",
+      "Change the direction of the applied force",
+      "Measure the weight of a load",
+      "Increase the speed of work"
+    ],
+    "question": "A fixed pulley is mainly used to:",
+    "subject": "Everyday Science",
+    "subtopic": "Simple Machines",
+    "topic": "Physics in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "An atom is the smallest unit of an element that keeps its chemical identity and properties.",
+    "options": [
+      "Neutron",
+      "Molecule",
+      "Electron",
+      "Atom"
+    ],
+    "question": "The smallest particle of an element that retains the chemical properties of that element is:",
+    "subject": "Everyday Science",
+    "subtopic": "Atoms, Elements and Compounds",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The atomic number counts the protons in the nucleus, and it is this number that defines the element.",
+    "options": [
+      "Protons in the nucleus",
+      "Protons plus neutrons",
+      "Electrons plus neutrons",
+      "Neutrons in the nucleus"
+    ],
+    "question": "The atomic number of an element is equal to the number of:",
+    "subject": "Everyday Science",
+    "subtopic": "Atoms, Elements and Compounds",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "hard",
+    "explanation": "Water (H2O) is a compound of hydrogen and oxygen, while oxygen, iron and gold are pure elements.",
+    "options": [
+      "Iron",
+      "Gold",
+      "Oxygen",
+      "Water"
+    ],
+    "question": "Which of the following is a compound?",
+    "subject": "Everyday Science",
+    "subtopic": "Atoms, Elements and Compounds",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Lemons are rich in citric acid, which gives them their characteristic sour taste.",
+    "options": [
+      "Tartaric acid",
+      "Lactic acid",
+      "Citric acid",
+      "Acetic acid"
+    ],
+    "question": "Lemon juice tastes sour because it contains:",
+    "subject": "Everyday Science",
+    "subtopic": "Acids, Bases and Salts",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "A neutral solution such as pure water has pH 7; values below 7 are acidic and above 7 are basic.",
+    "options": [
+      "0",
+      "1",
+      "7",
+      "14"
+    ],
+    "question": "The pH value of a neutral solution at 25°C is:",
+    "subject": "Everyday Science",
+    "subtopic": "Acids, Bases and Salts",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "The stomach secretes hydrochloric acid (HCl), which activates digestive enzymes and kills harmful germs.",
+    "options": [
+      "Sulphuric acid",
+      "Hydrochloric acid",
+      "Acetic acid",
+      "Nitric acid"
+    ],
+    "question": "Which acid is present in the human stomach to aid digestion?",
+    "subject": "Everyday Science",
+    "subtopic": "Acids, Bases and Salts",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Rusting is the oxidation of iron in the presence of oxygen and moisture, forming iron oxide.",
+    "options": [
+      "Reduction",
+      "Sublimation",
+      "Neutralization",
+      "Oxidation"
+    ],
+    "question": "The rusting of iron is an example of:",
+    "subject": "Everyday Science",
+    "subtopic": "Oxidation and Reduction",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Zinc loses electrons (is oxidized) and reduces copper ions to copper metal, so it acts as the reducing agent.",
+    "options": [
+      "A reducing agent",
+      "An indicator",
+      "A catalyst",
+      "An oxidizing agent"
+    ],
+    "question": "In the reaction Zn + CuSO4 → ZnSO4 + Cu, zinc acts as:",
+    "subject": "Everyday Science",
+    "subtopic": "Oxidation and Reduction",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Baking soda is sodium bicarbonate (NaHCO3), widely used in cooking, baking and cleaning.",
+    "options": [
+      "Calcium carbonate",
+      "Potassium bicarbonate",
+      "Sodium carbonate",
+      "Sodium bicarbonate"
+    ],
+    "question": "The chemical name of baking soda is:",
+    "subject": "Everyday Science",
+    "subtopic": "Chemical Reactions in Daily Life",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Acetic acid in vinegar reacts with sodium bicarbonate to release carbon dioxide gas, causing fizzing.",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Hydrogen",
+      "Nitrogen"
+    ],
+    "question": "When vinegar is mixed with baking soda, the gas released is:",
+    "subject": "Everyday Science",
+    "subtopic": "Chemical Reactions in Daily Life",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Photosynthesis absorbs light energy to build glucose from carbon dioxide and water, so it is an endothermic process.",
+    "options": [
+      "An endothermic reaction",
+      "A combustion reaction",
+      "An exothermic reaction",
+      "A neutralization reaction"
+    ],
+    "question": "Photosynthesis is an example of:",
+    "subject": "Everyday Science",
+    "subtopic": "Chemical Reactions in Daily Life",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Saponification — heating fats or oils with sodium hydroxide (caustic soda) — produces soap and glycerol.",
+    "options": [
+      "Ethanol",
+      "Ammonia",
+      "Sodium hydroxide",
+      "Hydrochloric acid"
+    ],
+    "question": "Soap is manufactured by boiling fats or oils with:",
+    "subject": "Everyday Science",
+    "subtopic": "Plastics, Soaps and Detergents",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "PET (polyethylene terephthalate) is light, transparent and safe for food contact, making it ideal for bottles.",
+    "options": [
+      "PET",
+      "Bakelite",
+      "PVC",
+      "Nylon"
+    ],
+    "question": "Which plastic is most commonly used to make disposable water bottles?",
+    "subject": "Everyday Science",
+    "subtopic": "Plastics, Soaps and Detergents",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Sulphur dioxide from burning fossil fuels forms sulphuric acid in rainwater, which is the main cause of acid rain.",
+    "options": [
+      "Oxygen",
+      "Sulphur dioxide",
+      "Carbon dioxide",
+      "Methane"
+    ],
+    "question": "Which gas is mainly responsible for acid rain?",
+    "subject": "Everyday Science",
+    "subtopic": "Air and Water Pollution",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Desalination removes dissolved salts from seawater, most commonly by reverse osmosis or distillation.",
+    "options": [
+      "Filtration",
+      "Chlorination",
+      "Desalination",
+      "Sedimentation"
+    ],
+    "question": "The process of removing dissolved salts from seawater to make it drinkable is called:",
+    "subject": "Everyday Science",
+    "subtopic": "Air and Water Pollution",
+    "topic": "Chemistry in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "The skin is the body's largest organ, protecting against germs, heat and water loss.",
+    "options": [
+      "Heart",
+      "Liver",
+      "Lungs",
+      "Skin"
+    ],
+    "question": "The largest organ of the human body is:",
+    "subject": "Everyday Science",
+    "subtopic": "Human Body Systems (Digestive, Respiratory, Circulatory)",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "An adult human skeleton has 206 bones; babies are born with about 300, some of which fuse later.",
+    "options": [
+      "106",
+      "406",
+      "306",
+      "206"
+    ],
+    "question": "The number of bones in an adult human body is:",
+    "subject": "Everyday Science",
+    "subtopic": "Human Body Systems (Digestive, Respiratory, Circulatory)",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "Each kidney contains about a million nephrons, which filter blood and form urine.",
+    "options": [
+      "Neuron",
+      "Nephron",
+      "Alveolus",
+      "Glomerulus"
+    ],
+    "question": "The structural and functional unit of the kidney is the:",
+    "subject": "Everyday Science",
+    "subtopic": "Human Body Systems (Digestive, Respiratory, Circulatory)",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Malaria is caused by Plasmodium parasites, transmitted through the bite of infected female Anopheles mosquitoes.",
+    "options": [
+      "A bacterium",
+      "A fungus",
+      "A virus",
+      "The Plasmodium parasite"
+    ],
+    "question": "Malaria is caused by:",
+    "subject": "Everyday Science",
+    "subtopic": "Diseases and their Causes",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "Insulin, produced by the pancreas, controls blood sugar; its deficiency or resistance causes diabetes mellitus.",
+    "options": [
+      "Insulin",
+      "Adrenaline",
+      "Thyroxine",
+      "Growth hormone"
+    ],
+    "question": "Diabetes mellitus is caused by the deficiency of:",
+    "subject": "Everyday Science",
+    "subtopic": "Diseases and their Causes",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Dengue virus spreads mainly through the bite of infected Aedes aegypti mosquitoes, which bite during the day.",
+    "options": [
+      "Aedes mosquito",
+      "Culex mosquito",
+      "Sandfly",
+      "Anopheles mosquito"
+    ],
+    "question": "Dengue fever is transmitted to humans by the bite of:",
+    "subject": "Everyday Science",
+    "subtopic": "Diseases and their Causes",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Vitamin D is needed for calcium absorption; its deficiency softens growing bones, causing rickets in children.",
+    "options": [
+      "Rickets",
+      "Scurvy",
+      "Beriberi",
+      "Goiter"
+    ],
+    "question": "Deficiency of vitamin D in children causes:",
+    "subject": "Everyday Science",
+    "subtopic": "Vitamins and their Deficiencies",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Vitamin C is chemically ascorbic acid; its deficiency causes scurvy.",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin B12",
+      "Vitamin K"
+    ],
+    "question": "Which vitamin is also known as ascorbic acid?",
+    "subject": "Everyday Science",
+    "subtopic": "Vitamins and their Deficiencies",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "Vitamin A maintains the retina's light-sensitive pigments; its deficiency first shows up as night blindness.",
+    "options": [
+      "Vitamin D",
+      "Vitamin A",
+      "Vitamin B1",
+      "Vitamin E"
+    ],
+    "question": "Night blindness is caused by the deficiency of:",
+    "subject": "Everyday Science",
+    "subtopic": "Vitamins and their Deficiencies",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Carbohydrates are the body's preferred and most readily available source of energy.",
+    "options": [
+      "Minerals",
+      "Vitamins",
+      "Carbohydrates",
+      "Proteins"
+    ],
+    "question": "Which nutrient is the body's main source of energy?",
+    "subject": "Everyday Science",
+    "subtopic": "Nutrition and Food",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Iodine is needed to make thyroid hormones; its deficiency enlarges the thyroid gland, causing goiter.",
+    "options": [
+      "Scurvy",
+      "Goiter",
+      "Anemia",
+      "Rickets"
+    ],
+    "question": "Deficiency of iodine in the diet causes:",
+    "subject": "Everyday Science",
+    "subtopic": "Nutrition and Food",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Leaves contain chlorophyll in chloroplasts, which capture sunlight to drive photosynthesis.",
+    "options": [
+      "Leaves",
+      "Stem",
+      "Roots",
+      "Flowers"
+    ],
+    "question": "In green plants, photosynthesis mainly takes place in the:",
+    "subject": "Everyday Science",
+    "subtopic": "Plants and Photosynthesis",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Plants absorb carbon dioxide and release oxygen while manufacturing glucose in photosynthesis.",
+    "options": [
+      "Hydrogen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Oxygen"
+    ],
+    "question": "Which gas do green plants absorb from the air during photosynthesis?",
+    "subject": "Everyday Science",
+    "subtopic": "Plants and Photosynthesis",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Genes are DNA segments that carry hereditary traits from parents to children.",
+    "options": [
+      "Protein",
+      "Cell",
+      "Chromosome",
+      "Gene"
+    ],
+    "question": "The basic unit of heredity, passed from parents to offspring, is the:",
+    "subject": "Everyday Science",
+    "subtopic": "Genetics Basics",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Most DNA is packed into chromosomes inside the cell nucleus (a small amount is found in mitochondria).",
+    "options": [
+      "Cytoplasm",
+      "Ribosome",
+      "Cell membrane",
+      "Nucleus"
+    ],
+    "question": "In human cells, DNA is mainly located in the:",
+    "subject": "Everyday Science",
+    "subtopic": "Genetics Basics",
+    "topic": "Biology in Daily Life"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Green plants produce food by photosynthesis, so they are the producers at the base of every food chain.",
+    "options": [
+      "Producers",
+      "Consumers",
+      "Scavengers",
+      "Decomposers"
+    ],
+    "question": "In a food chain, green plants are called:",
+    "subject": "Everyday Science",
+    "subtopic": "Ecosystem and Food Chain",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Bacteria and fungi break down dead organic matter, recycling nutrients back into the ecosystem.",
+    "options": [
+      "Carnivores",
+      "Herbivores",
+      "Bacteria and fungi",
+      "Green plants"
+    ],
+    "question": "Which of the following act as decomposers in an ecosystem?",
+    "subject": "Everyday Science",
+    "subtopic": "Ecosystem and Food Chain",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Lindeman's 10% law states that only about 10% of energy passes to the next trophic level; the rest is lost as heat.",
+    "options": [
+      "10%",
+      "50%",
+      "1%",
+      "90%"
+    ],
+    "question": "Approximately how much energy is transferred from one trophic level to the next in a food chain?",
+    "subject": "Everyday Science",
+    "subtopic": "Ecosystem and Food Chain",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Burning fossil fuels releases large amounts of carbon dioxide, the chief human-driven greenhouse gas.",
+    "options": [
+      "Hydrogen",
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide"
+    ],
+    "question": "Which gas is the main greenhouse gas emitted by human activities?",
+    "subject": "Everyday Science",
+    "subtopic": "Global Warming and Climate Change",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The 1997 Kyoto Protocol committed industrialized nations to cut their greenhouse gas emissions.",
+    "options": [
+      "Reducing greenhouse gas emissions",
+      "Banning nuclear weapons",
+      "Conserving wildlife",
+      "Protecting the ozone layer"
+    ],
+    "question": "The Kyoto Protocol is an international agreement aimed at:",
+    "subject": "Everyday Science",
+    "subtopic": "Global Warming and Climate Change",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "China emits the most carbon dioxide annually, followed by the United States.",
+    "options": [
+      "Russia",
+      "India",
+      "China",
+      "United States"
+    ],
+    "question": "Which country is currently the world's largest emitter of carbon dioxide?",
+    "subject": "Everyday Science",
+    "subtopic": "Global Warming and Climate Change",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The 2015 Paris Agreement targets keeping global warming well below 2°C, pursuing efforts to limit it to 1.5°C.",
+    "options": [
+      "Well below 2°C",
+      "Below 4°C",
+      "Below 3°C",
+      "Below 1°C"
+    ],
+    "question": "The Paris Agreement aims to limit global warming to:",
+    "subject": "Everyday Science",
+    "subtopic": "Global Warming and Climate Change",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "The ozone layer sits in the stratosphere, about 15 to 35 km above the Earth, shielding life from ultraviolet rays.",
+    "options": [
+      "Troposphere",
+      "Thermosphere",
+      "Mesosphere",
+      "Stratosphere"
+    ],
+    "question": "The ozone layer, which absorbs harmful ultraviolet rays, is located in the:",
+    "subject": "Everyday Science",
+    "subtopic": "Ozone Layer Depletion",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Chlorofluorocarbons, once used in refrigerants and aerosols, release chlorine that destroys ozone molecules.",
+    "options": [
+      "Carbon fluoride compounds",
+      "Calcium ferric chlorides",
+      "Carbon fiber composites",
+      "Chlorofluorocarbons"
+    ],
+    "question": "CFCs, which damage the ozone layer, stands for:",
+    "subject": "Everyday Science",
+    "subtopic": "Ozone Layer Depletion",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 3,
+    "difficulty": "hard",
+    "explanation": "The Montreal Protocol phased out ozone-depleting substances like CFCs and is regarded as a highly successful treaty.",
+    "options": [
+      "Limit deforestation",
+      "Control acid rain",
+      "Reduce plastic waste",
+      "Protect the ozone layer"
+    ],
+    "question": "The Montreal Protocol of 1987 was signed to:",
+    "subject": "Everyday Science",
+    "subtopic": "Ozone Layer Depletion",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Solar energy is inexhaustible, while coal, natural gas and petroleum are finite fossil fuels.",
+    "options": [
+      "Coal",
+      "Petroleum",
+      "Natural gas",
+      "Solar energy"
+    ],
+    "question": "Which of the following is a renewable source of energy?",
+    "subject": "Everyday Science",
+    "subtopic": "Renewable and Non-Renewable Energy",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Biogas is about 60 to 70 percent methane, which burns to release energy for cooking and electricity.",
+    "options": [
+      "Carbon dioxide",
+      "Methane",
+      "Hydrogen",
+      "Ethane"
+    ],
+    "question": "Biogas, produced from organic waste, mainly consists of:",
+    "subject": "Everyday Science",
+    "subtopic": "Renewable and Non-Renewable Energy",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Hydropower dams generate more renewable electricity worldwide than solar, wind and geothermal combined.",
+    "options": [
+      "Wind power",
+      "Hydropower",
+      "Geothermal power",
+      "Solar power"
+    ],
+    "question": "The largest source of renewable electricity generation in the world is:",
+    "subject": "Everyday Science",
+    "subtopic": "Renewable and Non-Renewable Energy",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Agriculture uses roughly 70 percent of global freshwater withdrawals, mainly for irrigation.",
+    "options": [
+      "Agriculture",
+      "Power generation",
+      "Domestic use",
+      "Industry"
+    ],
+    "question": "Which sector consumes the largest share of the world's freshwater?",
+    "subject": "Everyday Science",
+    "subtopic": "Water Conservation",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Drip irrigation applies water drop by drop at the roots, minimizing wastage from runoff and evaporation.",
+    "options": [
+      "Reduces evaporation from dams",
+      "Uses rainwater only",
+      "Recycles wastewater",
+      "Delivers water directly to plant roots"
+    ],
+    "question": "Drip irrigation saves water mainly because it:",
+    "subject": "Everyday Science",
+    "subtopic": "Water Conservation",
+    "topic": "Environmental Science"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Typhoid is a bacterial infection caused by Salmonella typhi, spread through contaminated food and water.",
+    "options": [
+      "Salmonella typhi bacteria",
+      "A parasite",
+      "A fungus",
+      "A virus"
+    ],
+    "question": "Typhoid fever is caused by:",
+    "subject": "Everyday Science",
+    "subtopic": "Common Diseases (Malaria, Dengue, Typhoid, COVID)",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "COVID-19 is caused by the SARS-CoV-2 coronavirus, first identified in late 2019.",
+    "options": [
+      "A parasite",
+      "Influenza virus",
+      "A bacterium",
+      "SARS-CoV-2 coronavirus"
+    ],
+    "question": "COVID-19 is caused by:",
+    "subject": "Everyday Science",
+    "subtopic": "Common Diseases (Malaria, Dengue, Typhoid, COVID)",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Tetanus causes painful muscle stiffness, especially of the jaw muscles — hence the name lockjaw.",
+    "options": [
+      "Tetanus",
+      "Polio",
+      "Diphtheria",
+      "Whooping cough"
+    ],
+    "question": "Which disease is also known as 'lockjaw'?",
+    "subject": "Everyday Science",
+    "subtopic": "Common Diseases (Malaria, Dengue, Typhoid, COVID)",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Pulmonary tuberculosis attacks the lungs, though the bacteria can also spread to other organs.",
+    "options": [
+      "Liver",
+      "Kidneys",
+      "Brain",
+      "Lungs"
+    ],
+    "question": "Tuberculosis (TB) most commonly affects the:",
+    "subject": "Everyday Science",
+    "subtopic": "Common Diseases (Malaria, Dengue, Typhoid, COVID)",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "BCG (Bacillus Calmette-Guerin) is given at birth to protect against severe forms of tuberculosis.",
+    "options": [
+      "Hepatitis",
+      "Polio",
+      "Tuberculosis",
+      "Measles"
+    ],
+    "question": "The BCG vaccine protects children against:",
+    "subject": "Everyday Science",
+    "subtopic": "Vaccines and Immunization",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Jonas Salk developed the inactivated polio vaccine in 1955; Albert Sabin later made the oral version.",
+    "options": [
+      "Alexander Fleming",
+      "Jonas Salk",
+      "Louis Pasteur",
+      "Robert Koch"
+    ],
+    "question": "The first effective polio vaccine was developed by:",
+    "subject": "Everyday Science",
+    "subtopic": "Vaccines and Immunization",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Pakistan's Expanded Programme on Immunization (EPI) gives BCG along with oral polio drops at birth.",
+    "options": [
+      "BCG",
+      "Pentavalent vaccine",
+      "Measles vaccine",
+      "Rotavirus vaccine"
+    ],
+    "question": "Under Pakistan's EPI program, which vaccine is given to a newborn at birth?",
+    "subject": "Everyday Science",
+    "subtopic": "Vaccines and Immunization",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "Cooling a minor burn under clean running water for several minutes reduces pain and tissue damage.",
+    "options": [
+      "Rub ice directly on it",
+      "Cool it under clean running water",
+      "Cover it with cotton wool",
+      "Apply toothpaste"
+    ],
+    "question": "The immediate first-aid step for a minor burn is to:",
+    "subject": "Everyday Science",
+    "subtopic": "First Aid Basics",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Cardiopulmonary resuscitation combines chest compressions and rescue breaths to keep blood circulating.",
+    "options": [
+      "Cardiac Pulse Recovery",
+      "Critical Patient Response",
+      "Cardiopulmonary Resuscitation",
+      "Chest Pressure Relief"
+    ],
+    "question": "CPR stands for:",
+    "subject": "Everyday Science",
+    "subtopic": "First Aid Basics",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 2,
+    "difficulty": "hard",
+    "explanation": "Leaning forward prevents blood from flowing down the throat, while pinching the soft part of the nose helps clotting.",
+    "options": [
+      "Lie flat on the back",
+      "Tilt the head back",
+      "Lean forward and pinch the nose",
+      "Blow the nose hard"
+    ],
+    "question": "For a person with a nosebleed, the correct first-aid position is to:",
+    "subject": "Everyday Science",
+    "subtopic": "First Aid Basics",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 1,
+    "difficulty": "easy",
+    "explanation": "O negative red cells lack A, B and Rh antigens, so they can be transfused to patients of any blood group.",
+    "options": [
+      "A positive",
+      "O negative",
+      "B negative",
+      "AB positive"
+    ],
+    "question": "Which blood group is known as the universal donor?",
+    "subject": "Everyday Science",
+    "subtopic": "Blood Groups",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Karl Landsteiner identified the A, B and O blood groups in 1901, winning the Nobel Prize in 1930.",
+    "options": [
+      "Gregor Mendel",
+      "William Harvey",
+      "Karl Landsteiner",
+      "Louis Pasteur"
+    ],
+    "question": "The ABO blood group system was discovered by:",
+    "subject": "Everyday Science",
+    "subtopic": "Blood Groups",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "AB blood carries both A and B antigens, so AB recipients can safely receive red cells from all blood groups.",
+    "options": [
+      "Their blood has no antigens",
+      "They can donate to everyone",
+      "They have no antibodies",
+      "They have both A and B antigens"
+    ],
+    "question": "A person with AB blood group is called a universal recipient because:",
+    "subject": "Everyday Science",
+    "subtopic": "Blood Groups",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Ultraviolet sunlight converts a compound in the skin into vitamin D, which is essential for strong bones.",
+    "options": [
+      "Vitamin D",
+      "Vitamin A",
+      "Vitamin K",
+      "Vitamin C"
+    ],
+    "question": "Which vitamin is synthesized in human skin on exposure to sunlight?",
+    "subject": "Everyday Science",
+    "subtopic": "Human Nutrition",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Kwashiorkor results from severe protein deficiency, causing swelling, stunted growth and a distended belly.",
+    "options": [
+      "Calcium",
+      "Iron",
+      "Protein",
+      "Vitamin C"
+    ],
+    "question": "Kwashiorkor, common in malnourished children, is caused by deficiency of:",
+    "subject": "Everyday Science",
+    "subtopic": "Human Nutrition",
+    "topic": "Health & Medicine"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Jupiter's diameter is about 11 times that of Earth, making it the largest planet in the solar system.",
+    "options": [
+      "Neptune",
+      "Earth",
+      "Jupiter",
+      "Saturn"
+    ],
+    "question": "The largest planet in our solar system is:",
+    "subject": "Everyday Science",
+    "subtopic": "Solar System (Planets, Moon, Sun)",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Mars appears red because of iron oxide (rust) dust covering its surface.",
+    "options": [
+      "Mercury",
+      "Jupiter",
+      "Mars",
+      "Venus"
+    ],
+    "question": "Which planet is known as the 'Red Planet'?",
+    "subject": "Everyday Science",
+    "subtopic": "Solar System (Planets, Moon, Sun)",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 0,
+    "difficulty": "hard",
+    "explanation": "Venus's thick carbon dioxide atmosphere traps heat in a runaway greenhouse effect, reaching about 465°C — hotter than Mercury.",
+    "options": [
+      "Venus",
+      "Mars",
+      "Jupiter",
+      "Mercury"
+    ],
+    "question": "The hottest planet in the solar system is:",
+    "subject": "Everyday Science",
+    "subtopic": "Solar System (Planets, Moon, Sun)",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 2,
+    "difficulty": "medium",
+    "explanation": "Mercury orbits closest to the Sun at an average distance of about 58 million km.",
+    "options": [
+      "Venus",
+      "Earth",
+      "Mercury",
+      "Mars"
+    ],
+    "question": "The planet nearest to the Sun is:",
+    "subject": "Everyday Science",
+    "subtopic": "Solar System (Planets, Moon, Sun)",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 3,
+    "difficulty": "easy",
+    "explanation": "Our Sun is one of billions of stars in the barred spiral Milky Way galaxy.",
+    "options": [
+      "Triangulum Galaxy",
+      "Andromeda Galaxy",
+      "Large Magellanic Cloud",
+      "Milky Way"
+    ],
+    "question": "The galaxy that contains our solar system is called the:",
+    "subject": "Everyday Science",
+    "subtopic": "Stars and Galaxies",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "The Sun is a G-type main-sequence (yellow dwarf) star, fusing hydrogen into helium in its core.",
+    "options": [
+      "Yellow dwarf",
+      "Red giant",
+      "Neutron star",
+      "White dwarf"
+    ],
+    "question": "The Sun is classified as which type of star?",
+    "subject": "Everyday Science",
+    "subtopic": "Stars and Galaxies",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 1,
+    "difficulty": "hard",
+    "explanation": "A light-year is the distance light travels in one year — about 9.46 trillion km.",
+    "options": [
+      "Time",
+      "Distance",
+      "Speed",
+      "Brightness"
+    ],
+    "question": "A light-year is a unit of:",
+    "subject": "Everyday Science",
+    "subtopic": "Stars and Galaxies",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 2,
+    "difficulty": "easy",
+    "explanation": "Earth spins once on its axis roughly every 24 hours, alternately exposing each side to sunlight.",
+    "options": [
+      "Revolution around the Sun",
+      "Magnetic field",
+      "Rotation on its axis",
+      "Tilted orbit"
+    ],
+    "question": "Day and night on Earth are caused by the Earth's:",
+    "subject": "Everyday Science",
+    "subtopic": "Day and Night and Seasons",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "Earth's 23.5° axial tilt makes each hemisphere lean toward or away from the Sun during different parts of the year.",
+    "options": [
+      "Solar flares",
+      "The Moon's gravity",
+      "Varying distance from the Sun",
+      "The tilt of Earth's axis"
+    ],
+    "question": "The change of seasons on Earth is mainly caused by:",
+    "subject": "Everyday Science",
+    "subtopic": "Day and Night and Seasons",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 3,
+    "difficulty": "hard",
+    "explanation": "Around 21 June the North Pole tilts most toward the Sun, giving the Northern Hemisphere its longest day of the year.",
+    "options": [
+      "22 December",
+      "23 September",
+      "21 March",
+      "21 June"
+    ],
+    "question": "The summer solstice in the Northern Hemisphere occurs around:",
+    "subject": "Everyday Science",
+    "subtopic": "Day and Night and Seasons",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "In a solar eclipse the Moon passes between the Sun and the Earth, blocking sunlight from reaching parts of Earth.",
+    "options": [
+      "The Moon comes between the Sun and the Earth",
+      "Mars aligns with the Earth",
+      "The Earth comes between the Sun and the Moon",
+      "The Sun comes between the Earth and the Moon"
+    ],
+    "question": "A solar eclipse occurs when:",
+    "subject": "Everyday Science",
+    "subtopic": "Eclipses (Solar and Lunar)",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 0,
+    "difficulty": "medium",
+    "explanation": "A lunar eclipse needs the Earth positioned between the Sun and the Moon, which happens at full moon.",
+    "options": [
+      "Full moon",
+      "New moon",
+      "Half moon",
+      "Crescent moon"
+    ],
+    "question": "A total lunar eclipse can only occur on the night of a:",
+    "subject": "Everyday Science",
+    "subtopic": "Eclipses (Solar and Lunar)",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 0,
+    "difficulty": "easy",
+    "explanation": "Soviet cosmonaut Yuri Gagarin orbited the Earth aboard Vostok 1 on 12 April 1961.",
+    "options": [
+      "Yuri Gagarin",
+      "Buzz Aldrin",
+      "Valentina Tereshkova",
+      "Neil Armstrong"
+    ],
+    "question": "The first human to travel into outer space was:",
+    "subject": "Everyday Science",
+    "subtopic": "Space Exploration Milestones",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 1,
+    "difficulty": "medium",
+    "explanation": "Apollo 11 landed Neil Armstrong and Buzz Aldrin on the Moon on 20 July 1969.",
+    "options": [
+      "1975",
+      "1969",
+      "1959",
+      "1965"
+    ],
+    "question": "Humans first landed on the Moon in the year:",
+    "subject": "Everyday Science",
+    "subtopic": "Space Exploration Milestones",
+    "topic": "Space & Universe"
+  },
+  {
+    "correct": 3,
+    "difficulty": "medium",
+    "explanation": "SUPARCO's Badr-1, Pakistan's first indigenously developed satellite, was launched in July 1990.",
+    "options": [
+      "1998",
+      "1985",
+      "2001",
+      "1990"
+    ],
+    "question": "Pakistan's first satellite, Badr-1, was launched in:",
+    "subject": "Everyday Science",
+    "subtopic": "Space Exploration Milestones",
+    "topic": "Space & Universe"
+  }
+]
