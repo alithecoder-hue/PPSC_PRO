@@ -290,7 +290,7 @@ a.mm-btn-primary:active {
 }
 .mm-mobile-menu a {
   display: block;
-  padding: 12px 4px;
+  padding: 14px 4px;
   font-weight: 600;
   color: var(--mm-ink-2);
   border-bottom: 1px solid var(--mm-line-soft);
@@ -676,18 +676,26 @@ a.mm-btn-primary:active {
   color: var(--mm-muted);
 }
 
-/* ---------- proof strip ---------- */
+/* ---------- proof strip (floating card overlapping hero) ---------- */
 .mm-proof {
-  padding: 34px 0;
-  border-bottom: 1px solid var(--mm-line-soft);
-  background: #fff;
+  padding: 0;
+  background: transparent;
+  border-bottom: none;
+  margin-top: -58px;
+  position: relative;
+  z-index: 2;
 }
 .mm-proof-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 44px;
+  gap: 40px;
   flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid var(--mm-line);
+  border-radius: 20px;
+  box-shadow: var(--mm-shadow-lg);
+  padding: 26px 40px;
 }
 .mm-proof-label {
   font-size: 0.78rem;
@@ -728,7 +736,7 @@ a.mm-btn-primary:active {
 .mm-card {
   background: #fff;
   border: 1px solid var(--mm-line);
-  border-radius: var(--mm-radius-lg);
+  border-radius: 18px;
   padding: 30px 28px;
   box-shadow: var(--mm-shadow-sm);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -774,8 +782,14 @@ a.mm-btn-primary:active {
   position: relative;
   padding: 28px;
   border: 1px solid var(--mm-line);
-  border-radius: var(--mm-radius-lg);
+  border-radius: 18px;
   background: #fff;
+  box-shadow: var(--mm-shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.mm-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mm-shadow);
 }
 .mm-step::before {
   counter-increment: step;
@@ -821,7 +835,7 @@ a.mm-btn-primary:active {
   gap: 14px;
   background: #fff;
   border: 1px solid var(--mm-line);
-  border-radius: var(--mm-radius);
+  border-radius: 18px;
   padding: 18px;
   box-shadow: var(--mm-shadow-sm);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
@@ -877,6 +891,19 @@ a.mm-btn-primary:active {
 .mm-showcase {
   background: var(--mm-navy);
   color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+.mm-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(760px 400px at 82% 12%, rgba(245, 158, 11, 0.08), transparent 65%);
+  pointer-events: none;
+}
+.mm-showcase > .mm-container {
+  position: relative;
+  z-index: 1;
 }
 .mm-showcase .mm-h2 {
   color: #fff;
@@ -1023,12 +1050,17 @@ a.mm-btn-primary:active {
 }
 .mm-t-card {
   border: 1px solid var(--mm-line);
-  border-radius: var(--mm-radius-lg);
+  border-radius: 18px;
   padding: 28px;
   background: #fff;
   box-shadow: var(--mm-shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.mm-t-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mm-shadow);
 }
 .mm-t-stars {
   color: var(--mm-accent);
@@ -1137,7 +1169,7 @@ a.mm-btn-primary:active {
 .mm-price-card {
   background: #fff;
   border: 1px solid var(--mm-line);
-  border-radius: var(--mm-radius-lg);
+  border-radius: 18px;
   padding: 36px 34px;
   box-shadow: var(--mm-shadow-sm);
   display: flex;
@@ -1277,6 +1309,9 @@ a.mm-btn-primary:active {
 }
 
 /* ---------- final cta ---------- */
+.mm-section.mm-cta-wrap {
+  padding-top: 0;
+}
 .mm-cta {
   background: var(--mm-navy);
   border-radius: 24px;
@@ -1668,6 +1703,14 @@ a.mm-btn-primary:active {
   }
   .mm-cta h2 {
     font-size: 1.7rem;
+  }
+  .mm-proof {
+    margin-top: -44px;
+  }
+  .mm-proof-inner {
+    gap: 20px;
+    padding: 20px 24px;
+    border-radius: 16px;
   }
   .mm-footer-grid {
     grid-template-columns: 1fr 1fr;

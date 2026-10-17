@@ -282,7 +282,7 @@ export default function LandingPage() {
       </section>
 
       {/* ============ FINAL CTA ============ */}
-      <section className="mm-section" style={{ paddingTop: 0 }}>
+      <section className="mm-section mm-cta-wrap">
         <div className="mm-container">
           <div className="mm-cta">
             <h2>Your competition started preparing yesterday.</h2>
