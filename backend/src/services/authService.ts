@@ -5,21 +5,23 @@ import jwt from 'jsonwebtoken';
 const prisma = new PrismaClient();
 
 export const registerUser = async (data: any) => {
-  const { email, password, name, role } = data;
-  
+  const { email, password, name } = data;
+
   const existingUser = await prisma.user.findUnique({ where: { email } });
   if (existingUser) {
     throw new Error('Email already exists');
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  
+
+  // SECURITY: never trust a client-supplied role — every signup is a plain USER.
+  // Admins are created via the seed script or direct DB access only.
   const createdUser = await prisma.user.create({
     data: {
       email,
       password: hashedPassword,
       name,
-      role: role || 'USER',
+      role: 'USER',
     },
   });
 

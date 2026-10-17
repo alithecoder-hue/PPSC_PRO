@@ -26,7 +26,14 @@ function BillingContent() {
   const handleTransactionSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!transactionId.trim()) return;
-    
+
+    const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+    if (!token) {
+      alert('Please log in first to complete your purchase.');
+      router.push('/login');
+      return;
+    }
+
     setIsScanning(true);
     setScanStep(1);
 
@@ -35,35 +42,39 @@ function BillingContent() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       setScanStep(2);
 
-      // Verify transaction against our new backend endpoint
-      // We'll hardcode a dummy user ID for now since we haven't wired up a full auth context
-      const userId = localStorage.getItem('userId') || '1';
-      
+      // Submit the payment claim — the backend records it as PENDING.
+      // Premium activates only after an admin verifies the transaction ID.
       const response = await fetch(API_BASE + '/api/subscriptions/verify', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
         body: JSON.stringify({
-          userId,
           planId: planParam,
-          transactionId
+          transactionId: transactionId.trim(),
+          paymentMethod: selectedMethod
         })
       });
 
-      if (!response.ok) throw new Error('Verification failed');
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Submission failed');
+      }
 
       setScanStep(3);
       await new Promise(resolve => setTimeout(resolve, 1500));
 
       setIsScanning(false);
       setScanStep(0);
-      alert('Transaction verified successfully! Welcome to Meritmaster Premium.');
+      alert('Payment submitted for verification! Premium will activate once our team confirms your transaction.');
       setTransactionId('');
       router.push('/dashboard');
     } catch (error) {
       console.error(error);
       setIsScanning(false);
       setScanStep(0);
-      alert('Transaction verification failed. Please try again.');
+      alert('Submission failed. Please try again.');
     }
   };
 
@@ -107,7 +118,7 @@ function BillingContent() {
         <div className={styles.content}>
           <div className={styles.header}>
             <h1 className={styles.title}>Secure <span className={styles.highlight}>Checkout</span></h1>
-            <p className={styles.subtitle}>Complete your payment to instantly unlock Meritmaster Premium.</p>
+            <p className={styles.subtitle}>Complete your payment below — Premium activates after we verify your transaction.</p>
           </div>
 
           <div className={styles.checkoutContainer}>
@@ -251,8 +262,8 @@ function BillingContent() {
             </div>
             <div className={styles.scanningText}>
               {scanStep === 1 && "CONNECTING TO LEDGER..."}
-              {scanStep === 2 && "VERIFYING TRANSACTION..."}
-              {scanStep === 3 && "PAYMENT CONFIRMED!"}
+              {scanStep === 2 && "SUBMITTING PAYMENT..."}
+              {scanStep === 3 && "SUBMITTED FOR REVIEW!"}
             </div>
             <div className={styles.scanningSubtext}>Tracing ID: {transactionId}</div>
             

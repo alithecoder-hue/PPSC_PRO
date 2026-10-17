@@ -124,7 +124,7 @@ export const bulkCreateMCQs = async (req: Request, res: Response) => {
     // Build a subject name → ID map (case-insensitive)
     const categories = await prisma.category.findMany({ select: { id: true, name: true } });
     const categoryMap = new Map<string, number>();
-    categories.forEach(c => categoryMap.set(c.name.toLowerCase().trim(), c.id));
+    categories.forEach((c: { id: number; name: string }) => categoryMap.set(c.name.toLowerCase().trim(), c.id));
 
     const toInsert: any[] = [];
     const skipped: { row: number; reason: string }[] = [];
@@ -275,7 +275,7 @@ export const createExam = async (req: Request, res: Response) => {
               select: { id: true }
             });
             const shuffled = matchingMcqs.sort(() => 0.5 - Math.random());
-            finalMcqIds.push(...shuffled.slice(0, alloc.count).map(m => m.id));
+            finalMcqIds.push(...shuffled.slice(0, alloc.count).map((m: { id: number }) => m.id));
           }
         } else {
           const limit = 100;
@@ -288,7 +288,7 @@ export const createExam = async (req: Request, res: Response) => {
             select: { id: true }
           });
           const shuffled = matchingMcqs.sort(() => 0.5 - Math.random());
-          finalMcqIds = shuffled.slice(0, limit).map(m => m.id);
+          finalMcqIds = shuffled.slice(0, limit).map((m: { id: number }) => m.id);
         }
       }
     }
@@ -407,6 +407,27 @@ export const deleteSubscription = async (req: Request, res: Response) => {
     res.json({ success: true });
   } catch (error) {
     res.status(500).json({ error: 'Failed to revoke subscription' });
+  }
+};
+
+// Approve a user-submitted manual payment (Easypaisa/JazzCash/bank).
+// The admin is expected to verify the transaction ID against the receiving
+// account before calling this.
+export const approveSubscription = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const subscription = await prisma.subscription.update({
+      where: { id: parseInt(id) },
+      data: { isActive: true }
+    });
+    // Grant premium access for the subscription period
+    await prisma.user.update({
+      where: { id: subscription.userId },
+      data: { role: 'PREMIUM' }
+    });
+    res.json({ success: true, subscription });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to approve subscription' });
   }
 };
 
@@ -863,7 +884,7 @@ export const bulkUploadTopicsAndSubtopics = async (req: Request, res: Response) 
     const { categoryId, data } = req.body;
     if (!categoryId || !data) return res.status(400).json({ error: 'categoryId and data are required' });
 
-    await prisma.$transaction(async (tx) => {
+    await prisma.$transaction(async (tx: any) => {
       for (const item of data) {
         // Create Topic (SubCategory in DB)
         const subCat = await tx.subCategory.create({
@@ -928,7 +949,7 @@ export const getSubtopicsByTopic = async (req: Request, res: Response) => {
       include: { content: { select: { id: true } } },
       orderBy: { id: 'asc' }
     });
-    const result = subtopics.map(s => ({ ...s, hasContent: !!s.content }));
+    const result = subtopics.map((s: any) => ({ ...s, hasContent: !!s.content }));
     res.json(result);
   } catch (error) {
     console.error('getSubtopicsByTopic Error:', error);

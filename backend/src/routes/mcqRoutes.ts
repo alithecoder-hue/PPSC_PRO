@@ -9,7 +9,7 @@ router.get('/', getMCQs);
 router.get('/exam', generateExam);
 router.post('/custom-exam', generateCustomExam);
 router.get('/categories', getCategories);
-router.post('/exam/submit', submitExamResult);
+router.post('/exam/submit', authenticateJWT, submitExamResult);
 
 // Admin routes
 router.post('/', authenticateJWT, isAdmin, createMCQ);

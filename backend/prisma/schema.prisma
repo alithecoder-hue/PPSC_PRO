@@ -119,8 +119,8 @@ model ExamResult {
   id          Int      @id @default(autoincrement())
   userId      Int
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  examId      Int
-  exam        Exam     @relation(fields: [examId], references: [id])
+  examId      Int?     // null for ad-hoc practice sessions (no formal Exam row)
+  exam        Exam?    @relation(fields: [examId], references: [id])
   score       Int
   total       Int
   completedAt DateTime @default(now())
@@ -134,6 +134,10 @@ model Subscription {
   startDate DateTime @default(now())
   endDate   DateTime
   isActive  Boolean  @default(true)
+  // Manual mobile-money verification (Easypaisa/JazzCash/bank):
+  // user-submitted payments start inactive until an admin approves them.
+  transactionId String?
+  paymentMethod String?
 }
 
 model Badge {

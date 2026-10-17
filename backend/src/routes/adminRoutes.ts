@@ -56,7 +56,8 @@ import {
   deleteSubtopic,
   getSubtopicContent,
   upsertSubtopicContent,
-  bulkUploadTopicsAndSubtopics
+  bulkUploadTopicsAndSubtopics,
+  approveSubscription
 } from '../controllers/adminController';
 import { authenticateJWT, isAdmin } from '../middleware/authMiddleware';
 
@@ -85,6 +86,7 @@ router.get('/users', getUsers);
 router.get('/academics', getAcademics);
 router.get('/business', getBusiness);
 router.post('/business/subscription', createSubscription);
+router.post('/business/subscription/:id/approve', approveSubscription);
 router.delete('/business/subscription/:id', deleteSubscription);
 router.post('/business/promo', createPromoCode);
 router.delete('/business/promo/:id', deletePromoCode);

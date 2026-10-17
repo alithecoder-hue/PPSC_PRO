@@ -106,6 +106,29 @@ export default function SubscriptionsTab() {
     }
   };
 
+  const handleApprove = async (id: number) => {
+    if (!confirm('Have you verified this payment in your Easypaisa/JazzCash/bank account? This will activate Premium for the user.')) return;
+    try {
+      const res = await authFetch(`${API_BASE}/api/admin/business/subscription/${id}/approve`, {
+        method: 'POST'
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Failed to approve');
+      }
+      alert('Subscription approved — Premium activated.');
+      window.location.reload();
+    } catch (err: any) {
+      alert(err.message);
+    }
+  };
+
+  const getSubStatus = (s: any): 'active' | 'pending' | 'expired' => {
+    if (s.isActive && new Date(s.endDate) > now) return 'active';
+    if (!s.isActive && new Date(s.endDate) > now) return 'pending';
+    return 'expired';
+  };
+
   return (
     <div>
       <div className={styles.sectionHeader}>
@@ -199,6 +222,7 @@ export default function SubscriptionsTab() {
             <tr>
               <th>User</th>
               <th>Plan</th>
+              <th>Payment</th>
               <th>Amount</th>
               <th>Start Date</th>
               <th>Expiry Date</th>
@@ -214,21 +238,45 @@ export default function SubscriptionsTab() {
                   <div style={{ fontSize: '0.8rem', color: 'gray' }}>{s.user?.email || ''}</div>
                 </td>
                 <td>{s.plan}</td>
+                <td>
+                  {s.transactionId ? (
+                    <div>
+                      <div style={{ fontWeight: 600, textTransform: 'capitalize' }}>{s.paymentMethod || 'Manual'}</div>
+                      <div style={{ fontSize: '0.8rem', color: 'gray', fontFamily: 'monospace' }}>TID: {s.transactionId}</div>
+                    </div>
+                  ) : (
+                    <span style={{ color: 'gray' }}>—</span>
+                  )}
+                </td>
                 <td>{s.amount || '0'}</td>
                 <td>{new Date(s.startDate).toLocaleDateString()}</td>
                 <td>{new Date(s.endDate).toLocaleDateString()}</td>
                 <td>
-                  <span className={`${styles.badge} ${(s.isActive && new Date(s.endDate) > now) ? styles.badgePremium : styles.badgeUrgent}`}>
-                    {(s.isActive && new Date(s.endDate) > now) ? 'Active' : 'Expired'}
-                  </span>
+                  {(() => {
+                    const status = getSubStatus(s);
+                    return (
+                      <span className={`${styles.badge} ${status === 'active' ? styles.badgePremium : styles.badgeUrgent}`}>
+                        {status === 'active' ? 'Active' : status === 'pending' ? 'Pending verification' : 'Expired'}
+                      </span>
+                    );
+                  })()}
                 </td>
                 <td>
                   <button className={`${styles.actionBtn} ${styles.success}`}>Extend</button>
+                  {getSubStatus(s) === 'pending' && (
+                    <button
+                      className={`${styles.actionBtn} ${styles.success}`}
+                      onClick={() => handleApprove(s.id)}
+                      style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', borderColor: 'rgba(16, 185, 129, 0.4)', marginLeft: '6px' }}
+                    >
+                      Approve
+                    </button>
+                  )}
                   <button 
                     className={`${styles.actionBtn} ${styles.danger}`} 
                     onClick={() => handleRevoke(s.id)}
                     disabled={!s.isActive || new Date(s.endDate) <= now}
-                    style={{ opacity: (!s.isActive || new Date(s.endDate) <= now) ? 0.5 : 1 }}
+                    style={{ opacity: (!s.isActive || new Date(s.endDate) <= now) ? 0.5 : 1, marginLeft: '6px' }}
                   >
                     Revoke
                   </button>

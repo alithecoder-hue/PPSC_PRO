@@ -35,7 +35,7 @@ export const getPremiumDashboard = async (req: Request, res: Response) => {
     res.json({
       user,
       stats: { savedMcqs: savedMcqCount, totalTodos: todoCount, pendingTodos: pendingTodoCount },
-      trackedJobs: trackedJobs.map(t => t.job),
+      trackedJobs: trackedJobs.map((t: any) => t.job),
       dailyGoal: { target: user.dailyGoalTarget || 20, completed: 0 } // Can be expanded with session tracking
     });
   } catch (error) {
@@ -111,7 +111,7 @@ export const getSavedMCQs = async (req: Request, res: Response) => {
       },
       orderBy: { savedAt: 'desc' }
     });
-    res.json(saved.map(s => ({ ...s.mcq, savedAt: s.savedAt, savedId: s.id })));
+    res.json(saved.map((s: any) => ({ ...s.mcq, savedAt: s.savedAt, savedId: s.id })));
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch saved MCQs' });
   }
@@ -152,7 +152,7 @@ export const getTrackedJobs = async (req: Request, res: Response) => {
       include: { job: true },
       orderBy: { trackedAt: 'desc' }
     });
-    res.json(tracked.map(t => ({ ...t.job, trackedAt: t.trackedAt, trackingId: t.id, notes: t.notes })));
+    res.json(tracked.map((t: any) => ({ ...t.job, trackedAt: t.trackedAt, trackingId: t.id, notes: t.notes })));
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch tracked jobs' });
   }

@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as mcqService from '../services/mcqService';
 import { PrismaClient } from '@prisma/client';
+import { AuthRequest } from '../middleware/authMiddleware';
 
 const prisma = new PrismaClient();
 
@@ -66,14 +67,14 @@ export const getCategories = async (req: Request, res: Response) => {
       }
     });
 
-    const formattedCategories = categories.map(cat => ({
+    const formattedCategories = categories.map((cat: any) => ({
       ...cat,
-      subtopics: cat.subCategories.length > 0 ? cat.subCategories.map(sub => ({
+      subtopics: cat.subCategories.length > 0 ? cat.subCategories.map((sub: any) => ({
         id: sub.id.toString(),
         title: sub.name,
         level: sub.topics.length > 0 ? sub.topics[0].level : 'beginner',
         content: sub.topics.length > 0 
-          ? `Covers topics like: ${sub.topics.slice(0, 4).map(t => t.name).join(', ')}${sub.topics.length > 4 ? '...' : ''}`
+          ? `Covers topics like: ${sub.topics.slice(0, 4).map((t: any) => t.name).join(', ')}${sub.topics.length > 4 ? '...' : ''}`
           : 'Detailed notes and MCQs for this topic area.',
         mcqs: sub._count.mcqs,
         nestedTopics: sub.topics
@@ -86,40 +87,46 @@ export const getCategories = async (req: Request, res: Response) => {
   }
 };
 
-export const submitExamResult = async (req: Request, res: Response) => {
+export const submitExamResult = async (req: AuthRequest, res: Response) => {
   try {
-    const { answers } = req.body; // { mcqId: optionIndex }
-    
-    // Fetch all correct answers for the submitted MCQs
-    const mcqIds = Object.keys(answers).map(Number);
-    const mcqs = await prisma.mCQ.findMany({
-      where: { id: { in: mcqIds } },
-      select: { id: true, correctOption: true, explanation: true }
+    const userId = req.user?.userId;
+    if (!userId) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    // Contract used by the frontend clients: { score, total, examId? }
+    // (examId is null for ad-hoc practice sessions)
+    const { score, total, examId } = req.body;
+    if (
+      typeof score !== 'number' || typeof total !== 'number' ||
+      !Number.isFinite(score) || !Number.isFinite(total) ||
+      score < 0 || total <= 0 || score > total
+    ) {
+      return res.status(400).json({ error: 'Invalid score payload' });
+    }
+
+    const result = await prisma.examResult.create({
+      data: {
+        userId: Number(userId),
+        examId: examId != null ? Number(examId) : null,
+        score: Math.floor(score),
+        total: Math.floor(total),
+      },
     });
 
-    let score = 0;
-    const results = mcqs.map(mcq => {
-      // Map option index (0,1,2,3) to option letter (A,B,C,D)
-      const letters = ['A', 'B', 'C', 'D'];
-      const userLetter = letters[answers[mcq.id]];
-      const isCorrect = userLetter === mcq.correctOption;
-      
-      if (isCorrect) score++;
-
-      return {
-        id: mcq.id,
-        isCorrect,
-        correctOption: mcq.correctOption,
-        userOption: userLetter,
-        explanation: mcq.explanation
-      };
+    // Keep the user's progress stats in sync
+    await prisma.user.update({
+      where: { id: Number(userId) },
+      data: {
+        testsTaken: { increment: 1 },
+        xp: { increment: Math.floor(score) * 10 },
+        lastActive: new Date(),
+      },
     });
 
-    res.json({ 
+    res.status(201).json({
       message: 'Exam submitted successfully',
-      score,
-      total: mcqIds.length,
-      results
+      result,
     });
   } catch (error) {
     console.error('Submit Exam Error:', error);
@@ -157,7 +164,7 @@ export const getPublicSubtopicsByTopic = async (req: Request, res: Response) => 
       include: { content: { select: { id: true } } },
       orderBy: [{ level: 'asc' }, { id: 'asc' }]
     });
-    const result = subtopics.map(s => ({ ...s, hasContent: !!s.content }));
+    const result = subtopics.map((s: any) => ({ ...s, hasContent: !!s.content }));
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch subtopics' });
