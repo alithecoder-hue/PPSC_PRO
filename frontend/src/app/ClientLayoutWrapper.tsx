@@ -55,11 +55,21 @@ export default function ClientLayoutWrapper({ children }: { children: React.Reac
   }
 
   // 3. Free User Zone — standard web layout
-  // Free users get the Navbar, FloatingHomeBtn, and Footer.
-  const isLandingPage = pathname === '/';
+  // Marketing routes ((marketing) group) render their own nav/footer via
+  // the marketing layout, so the legacy chrome is skipped there.
+  const isMarketingRoute =
+    pathname === '/' ||
+    pathname === '/login' ||
+    pathname === '/signup' ||
+    pathname === '/subscription' ||
+    pathname?.startsWith('/billing');
+
+  if (isMarketingRoute) {
+    return <main>{children}</main>;
+  }
 
   return (
-    <div className={isLandingPage ? 'light-landing' : ''}>
+    <div>
       <Navbar />
       <main>{children}</main>
       <FloatingHomeBtn />
