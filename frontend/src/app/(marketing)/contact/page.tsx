@@ -49,7 +49,7 @@ export default function ContactPage() {
                 <div className={styles.iconWrapper}><MapPin size={24} /></div>
                 <div className={styles.infoText}>
                   <h3>Office</h3>
-                  <p>Lahore, Pakistan</p>
+                  <p>Taunsa Sharif, Pakistan</p>
                 </div>
               </div>
               <div className={styles.infoItem}>
