@@ -4,13 +4,7 @@ import { API_BASE } from '@/lib/api';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Check, Eye, EyeOff, Zap } from 'lucide-react';
-
-const POINTS = [
-  { t: '50,000+ MCQs, free to start', d: 'Topic-wise practice across every PPSC subject, organized the way exams test it.' },
-  { t: 'Timed mock tests', d: 'Full-length papers under real exam pressure, with instant scoring.' },
-  { t: 'Analytics that guide you', d: 'See your weak topics and watch your scores climb week after week.' },
-];
+import { Eye, EyeOff, Zap, Flame } from 'lucide-react';
 
 export default function SignupPage() {
   const [name, setName] = useState('');
@@ -53,46 +47,29 @@ export default function SignupPage() {
             MERIT<em>MASTER</em>
           </span>
         </div>
-        <h2>Start preparing for free. No card, no catch.</h2>
+        <h2>
+          What if <span className="mm-hl">this attempt</span> is the one?
+        </h2>
         <p>
-          Join 2,300+ aspirants practicing on Merit Master every day. Your
-          first mock test is two minutes away.
+          Join 2,300+ aspirants preparing on Merit Master. Your first mock
+          test is two minutes away.
         </p>
-        <ul className="mm-auth-points">
-          {POINTS.map((p) => (
-            <li key={p.t}>
-              <span className="mm-check">
-                <Check size={14} />
-              </span>
-              <div>
-                <strong>{p.t}</strong>
-                <p>{p.d}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div className="mm-auth-quote">
-          <p>
-            &ldquo;I practiced past papers on Merit Master every evening for
-            two months. Walked into the exam and half the paper felt
-            familiar.&rdquo;
-          </p>
-          <span>Sana Fatima — Lecturer, Education Department</span>
-        </div>
-        <div className="mm-auth-stats">
-          <div>
-            <strong>50,000+</strong>
-            <span>Practice MCQs</span>
+        <div className="mm-auth-deco" aria-hidden="true">
+          <div className="mm-deco-score">
+            <span>Latest mock score</span>
+            <strong>
+              82<small>/100</small>
+            </strong>
+            <div className="mm-deco-bar">
+              <i />
+            </div>
           </div>
-          <div>
-            <strong>5 years</strong>
-            <span>Past papers</span>
-          </div>
-          <div>
-            <strong>4.9/5</strong>
-            <span>Student rating</span>
+          <div className="mm-deco-streak">
+            <Flame size={15} />
+            <span>12-day streak</span>
           </div>
         </div>
+        <p className="mm-auth-foot">50,000+ MCQs · 5 years of past papers · 4.9/5 student rating</p>
       </div>
 
       <div className="mm-auth-form-wrap">

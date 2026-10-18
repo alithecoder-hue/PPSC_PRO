@@ -4,13 +4,7 @@ import { API_BASE } from '@/lib/api';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Check, Eye, EyeOff, Zap } from 'lucide-react';
-
-const POINTS = [
-  { t: 'Continue where you left off', d: 'Your progress, streaks and analytics pick up right where they stopped.' },
-  { t: 'Daily practice waiting', d: 'New MCQs and the daily test refresh every morning.' },
-  { t: 'Exam alerts', d: 'PPSC advertisements and paper announcements in one place.' },
-];
+import { Eye, EyeOff, Zap, Flame } from 'lucide-react';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -57,45 +51,29 @@ export default function LoginPage() {
             MERIT<em>MASTER</em>
           </span>
         </div>
-        <h2>Welcome back. Your preparation missed you.</h2>
+        <h2>
+          You&apos;re going to make it <span className="mm-hl">one day.</span>
+        </h2>
         <p>
-          Log in to continue your streak, pick up your study plan and keep
-          climbing toward exam day.
+          Every topper started exactly where you are now. Log in, take
+          today&apos;s step, and keep the streak alive.
         </p>
-        <ul className="mm-auth-points">
-          {POINTS.map((p) => (
-            <li key={p.t}>
-              <span className="mm-check">
-                <Check size={14} />
-              </span>
-              <div>
-                <strong>{p.t}</strong>
-                <p>{p.d}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div className="mm-auth-quote">
-          <p>
-            &ldquo;The analytics showed me I was losing marks in Everyday
-            Science. Fixed that one topic and my mock scores jumped 15%.&rdquo;
-          </p>
-          <span>Ahmed Raza — ASI, Punjab Police</span>
-        </div>
-        <div className="mm-auth-stats">
-          <div>
-            <strong>50,000+</strong>
-            <span>Practice MCQs</span>
+        <div className="mm-auth-deco" aria-hidden="true">
+          <div className="mm-deco-score">
+            <span>Latest mock score</span>
+            <strong>
+              82<small>/100</small>
+            </strong>
+            <div className="mm-deco-bar">
+              <i />
+            </div>
           </div>
-          <div>
-            <strong>5 years</strong>
-            <span>Past papers</span>
-          </div>
-          <div>
-            <strong>4.9/5</strong>
-            <span>Student rating</span>
+          <div className="mm-deco-streak">
+            <Flame size={15} />
+            <span>12-day streak</span>
           </div>
         </div>
+        <p className="mm-auth-foot">50,000+ MCQs · 5 years of past papers · 4.9/5 student rating</p>
       </div>
 
       <div className="mm-auth-form-wrap">
