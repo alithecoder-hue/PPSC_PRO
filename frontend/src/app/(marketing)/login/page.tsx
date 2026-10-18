@@ -45,12 +45,12 @@ export default function LoginPage() {
   return (
     <div className="mm-auth">
       <div className="mm-auth-side mm-auth-side-login">
-        <div className="mm-auth-brand">
+        <Link href="/" className="mm-auth-brand" aria-label="Back to home">
           <img src="/images/logo-mark.png" alt="" width={30} height={30} />
           <span>
             MERIT<em>MASTER</em>
           </span>
-        </div>
+        </Link>
         <div className="mm-auth-msg">
           <span className="mm-auth-kicker">Space to do your best work</span>
           <h2>

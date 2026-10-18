@@ -1806,6 +1806,9 @@ a.mm-btn-primary:active {
   gap: 9px;
   position: relative;
   z-index: 1;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
 }
 .mm-auth-brand img {
   width: 30px;
