@@ -38,7 +38,7 @@ export default function MarketingFooter() {
         <div className="mm-footer-grid">
           <div className="mm-footer-brand">
             <Link href="/" className="mm-brand">
-              <img src="/images/logo-mark.png" alt="" width={34} height={34} className="mm-brand-img" />
+              <img src="/images/logo-mark-light.png" alt="" width={34} height={34} className="mm-brand-img" />
               <span>
                 MERIT<em>MASTER</em>
               </span>

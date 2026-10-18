@@ -46,7 +46,7 @@ export default function LoginPage() {
     <div className="mm-auth">
       <div className="mm-auth-side mm-auth-side-login">
         <Link href="/" className="mm-auth-brand" aria-label="Back to home">
-          <img src="/images/logo-mark.png" alt="" width={30} height={30} />
+          <img src="/images/logo-mark-light.png" alt="" width={30} height={30} />
           <span>
             MERIT<em>MASTER</em>
           </span>
