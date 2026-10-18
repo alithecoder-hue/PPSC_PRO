@@ -17,38 +17,44 @@ import type { LucideIcon } from 'lucide-react';
  * Theme-aware: all colors come from --mm-* tokens.
  * Copy (titles + text) is identical to the previous FEATURES array.
  */
-const FEATURES: { icon: LucideIcon; title: string; text: string; tags?: string[] }[] = [
+const FEATURES: { icon: LucideIcon; title: string; text: string; tags?: string[]; img: string }[] = [
   {
     icon: BookOpen,
     title: '50,000+ topic-wise MCQs',
     text: 'Every subject broken into topics, exactly the way PPSC tests them. Practice what matters, skip what doesn\u2019t.',
     tags: ['Islamiyat', 'Pak Studies', 'Everyday Science', 'English', '+12 more'],
+    img: 'feature-mcqs.jpg',
   },
   {
     icon: FileText,
     title: '5 years of solved past papers',
     text: 'Real PPSC papers from recent years, fully solved with explanations. Download them as PDFs with Premium.',
     tags: ['2024', '2023', '2022', '2021', '2020'],
+    img: 'feature-past-papers.jpg',
   },
   {
     icon: Timer,
     title: 'Timed mock exams',
     text: 'Full-length tests under real exam pressure — 100 questions, real timing, instant scoring.',
+    img: 'feature-mock-exams.jpg',
   },
   {
     icon: BarChart3,
     title: 'Performance analytics',
     text: 'See your score trend, accuracy by topic and exactly which weak areas are costing you marks.',
+    img: 'feature-analytics.jpg',
   },
   {
     icon: CalendarCheck,
     title: 'Study planner',
     text: 'A day-by-day plan that adapts to your exam date and keeps your preparation on track.',
+    img: 'feature-planner.jpg',
   },
   {
     icon: Bell,
     title: 'Jobs & exam alerts',
     text: 'Never miss an opening — new PPSC advertisements and paper announcements, all in one board.',
+    img: 'feature-alerts.jpg',
   },
 ];
 
@@ -82,8 +88,7 @@ export default function FeaturesShowcase() {
       <div className="mm-featshow-panel" role="tabpanel" aria-live="polite">
         <div key={active} className="mm-featshow-panel-inner">
           <div className="mm-featshow-visual" aria-hidden="true">
-            <span className="mm-featshow-orb" />
-            <f.icon size={72} strokeWidth={1.3} />
+            <img src={`/images/features/${f.img}`} alt="" loading="lazy" />
           </div>
           <div className="mm-featshow-body">
             <span className="mm-featshow-kicker">

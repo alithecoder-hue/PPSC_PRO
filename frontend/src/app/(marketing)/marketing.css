@@ -668,32 +668,16 @@ a.mm-btn-primary:active {
 }
 .mm-featshow-visual {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(420px 300px at 50% 60%, var(--mm-accent-soft), transparent 70%),
-    var(--mm-surface-2);
-  color: var(--mm-accent-deep);
   overflow: hidden;
   min-height: 320px;
 }
-.mm-featshow-orb {
+.mm-featshow-visual img {
   position: absolute;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.22), transparent 65%);
-  animation: mm-featshow-float 7s ease-in-out infinite;
-}
-@keyframes mm-featshow-float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(14px, -18px) scale(1.08); }
-}
-.mm-featshow-visual svg {
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 14px 24px rgba(245, 158, 11, 0.25));
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .mm-featshow-body {
   padding: 44px 42px;
