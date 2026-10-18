@@ -935,25 +935,22 @@ a.mm-btn-primary:active {
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 .mm-subj-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--mm-shadow);
-  border-color: var(--mm-accent);
+  transform: translateY(-3px);
+  border-color: var(--subj-accent);
+  box-shadow: 0 16px 30px -14px color-mix(in srgb, var(--subj-accent) 45%, transparent);
 }
 .mm-subj-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
-  background: var(--mm-navy);
-  color: var(--mm-accent);
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.18s ease, color 0.18s ease;
+  transition: transform 0.2s ease;
 }
 .mm-subj-card:hover .mm-subj-icon {
-  background: var(--mm-accent);
-  color: #1a1207;
+  transform: scale(1.08) rotate(-4deg);
 }
 .mm-subj-body {
   flex: 1;
@@ -977,8 +974,8 @@ a.mm-btn-primary:active {
   transition: color 0.18s ease, transform 0.18s ease;
 }
 .mm-subj-card:hover .mm-subj-arrow {
-  color: var(--mm-accent-deep);
-  transform: translateX(3px);
+  color: var(--subj-accent);
+  transform: translateX(4px);
 }
 
 /* ---------- showcase ---------- */
