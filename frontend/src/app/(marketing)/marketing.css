@@ -669,14 +669,16 @@ a.mm-btn-primary:active {
 .mm-featshow-visual {
   position: relative;
   overflow: hidden;
-  min-height: 320px;
+  aspect-ratio: 16 / 10;
+  min-height: 280px;
+  background: #0a1628;
 }
 .mm-featshow-visual img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .mm-featshow-body {
