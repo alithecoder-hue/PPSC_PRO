@@ -120,7 +120,7 @@ export default function AboutPage() {
               <p className="mm-founder-sign">
                 Regards,
                 <strong>Ali Tahir</strong>
-                <span>Founder, Merit Master · BS IT student, Taunsa Sharif</span>
+                <span>Founder, Merit Master</span>
               </p>
             </div>
           </div>
