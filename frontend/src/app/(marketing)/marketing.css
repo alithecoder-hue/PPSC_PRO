@@ -763,10 +763,10 @@ a.mm-btn-primary:active {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   width: 100%;
-  animation: mm-featshow-in 0.35s ease;
+  animation: mm-featshow-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
-@keyframes mm-featshow-in {
-  from { opacity: 0; transform: translateY(10px); }
+@keyframes mm-featshow-pop {
+  from { opacity: 0; transform: scale(0.965) translateY(14px); }
   to { opacity: 1; transform: none; }
 }
 .mm-featshow-visual {

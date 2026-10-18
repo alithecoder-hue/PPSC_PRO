@@ -64,6 +64,14 @@ export default function FeaturesShowcase() {
 
   return (
     <div className="mm-featshow">
+      {FEATURES.map((feat) => (
+        <link
+          key={feat.img}
+          rel="preload"
+          as="image"
+          href={`/images/features/${feat.img}`}
+        />
+      ))}
       <div className="mm-featshow-tabs" role="tablist" aria-label="Platform features">
         {FEATURES.map((feat, i) => (
           <button
@@ -88,7 +96,7 @@ export default function FeaturesShowcase() {
       <div className="mm-featshow-panel" role="tabpanel" aria-live="polite">
         <div key={active} className="mm-featshow-panel-inner">
           <div className="mm-featshow-visual" aria-hidden="true">
-            <img src={`/images/features/${f.img}`} alt="" loading="lazy" />
+            <img src={`/images/features/${f.img}`} alt="" />
           </div>
           <div className="mm-featshow-body">
             <span className="mm-featshow-kicker">
