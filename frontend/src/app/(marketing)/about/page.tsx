@@ -89,6 +89,46 @@ export default function AboutPage() {
 
       <section className="mm-section" style={{ paddingTop: 0 }}>
         <div className="mm-container">
+          <div className="mm-founder-card">
+            <div className="mm-founder-photo">
+              <span>AT</span>
+            </div>
+            <div className="mm-founder-note">
+              <span className="mm-eyebrow">A note from the founder</span>
+              <p>Assalam-o-Alaikum,</p>
+              <p>
+                My name is <strong>Ali Tahir</strong>, and I built Merit
+                Master for one reason: the students preparing for competitive
+                exams like PPSC, FPSC and NTS.
+              </p>
+              <p>
+                I know what this journey feels like — the scattered PDFs, the
+                outdated guidebooks, the feeling of studying hard but not
+                knowing whether you&apos;re studying right. I wanted to create
+                one place where you can find everything: practice questions,
+                past papers, mock tests, and the guidance to actually improve.
+              </p>
+              <p>
+                This platform will always stay updated. I will keep adding the
+                latest and most effective material, and I will keep working to
+                make your preparation easier with every update.
+              </p>
+              <p>
+                I pray for your success — study hard, stay consistent, and
+                trust the process.
+              </p>
+              <p className="mm-founder-sign">
+                Regards,
+                <strong>Ali Tahir</strong>
+                <span>Founder, Merit Master</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mm-section" style={{ paddingTop: 0 }}>
+        <div className="mm-container">
           <div className="mm-stats-light">
             {STATS.map((s) => (
               <div key={s.l}>

@@ -476,6 +476,82 @@ a.mm-btn-primary:active {
   color: var(--mm-muted);
   font-size: 0.92rem;
 }
+/* Founder note card (about page) */
+.mm-founder-card {
+  display: flex;
+  gap: 44px;
+  align-items: flex-start;
+  max-width: 880px;
+  margin: 0 auto;
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-line);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 12px 40px rgba(15, 30, 51, 0.08);
+}
+.mm-founder-photo {
+  flex-shrink: 0;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0c1b2e, #1e3a5f);
+  border: 4px solid #f59e0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(15, 30, 51, 0.2);
+  overflow: hidden;
+}
+.mm-founder-photo span {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.mm-founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mm-founder-note .mm-eyebrow {
+  margin-bottom: 14px;
+}
+.mm-founder-note p {
+  color: var(--mm-ink-2);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin: 0 0 16px;
+}
+.mm-founder-note p strong {
+  color: var(--mm-ink);
+}
+.mm-founder-sign {
+  margin-top: 28px !important;
+  margin-bottom: 0 !important;
+  color: var(--mm-muted) !important;
+  font-size: 0.95rem !important;
+}
+.mm-founder-sign strong {
+  display: block;
+  color: var(--mm-ink);
+  font-size: 1.15rem;
+  margin-top: 4px;
+}
+.mm-founder-sign span {
+  display: block;
+  color: var(--mm-accent-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+@media (max-width: 720px) {
+  .mm-founder-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 36px 28px;
+  }
+}
 @media (max-width: 1020px) {
   .mm-hero-stats {
     gap: 28px;
