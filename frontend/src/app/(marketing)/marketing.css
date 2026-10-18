@@ -1829,7 +1829,7 @@ a.mm-btn-primary:active {
 .mm-auth-msg {
   position: relative;
   z-index: 1;
-  margin-top: 9vh;
+  margin-top: 60px;
   max-width: 400px;
 }
 .mm-auth-kicker {
