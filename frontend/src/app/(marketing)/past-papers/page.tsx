@@ -348,6 +348,7 @@ export default function PastPapersPage() {
               </select>
             </div>
           </div>
+          </div>
         </div>
 
         {/* 3. Content */}
