@@ -7,7 +7,6 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 const LINKS = [
   { href: '/classroom', label: 'Classroom' },
   { href: '/#features', label: 'Features' },
-  { href: '/#how-it-works', label: 'How it works' },
   { href: '/past-papers', label: 'Past papers' },
   { href: '/subscription', label: 'Pricing' },
 ];
