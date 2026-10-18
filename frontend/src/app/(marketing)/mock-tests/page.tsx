@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import MockTestsSection from '../MockTestsSection';
+import MockTestsSection from '../../MockTestsSection';
 
 export default function AllMockTestsPage() {
   return (

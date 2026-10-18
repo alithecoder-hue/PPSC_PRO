@@ -64,7 +64,9 @@ export default function ClientLayoutWrapper({ children }: { children: React.Reac
     pathname === '/subscription' ||
     pathname?.startsWith('/billing') ||
     pathname?.startsWith('/past-papers') ||
-    pathname?.startsWith('/jobs');
+    pathname?.startsWith('/jobs') ||
+    pathname?.startsWith('/mock-tests') ||
+    pathname?.startsWith('/contact');
 
   if (isMarketingRoute) {
     return <main>{children}</main>;
