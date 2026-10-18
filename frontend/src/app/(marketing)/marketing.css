@@ -450,6 +450,32 @@ a.mm-btn-primary:active {
   color: #94a3b8;
   font-size: 0.92rem;
 }
+/* Light-theme stats row (about page) */
+.mm-stats-light {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 0;
+}
+.mm-stats-light > div {
+  padding: 4px 44px;
+  text-align: center;
+}
+.mm-stats-light > div + div {
+  border-left: 1px solid var(--mm-line);
+}
+.mm-stats-light strong {
+  display: block;
+  color: var(--mm-ink);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.mm-stats-light span {
+  color: var(--mm-muted);
+  font-size: 0.92rem;
+}
 @media (max-width: 1020px) {
   .mm-hero-stats {
     gap: 28px;

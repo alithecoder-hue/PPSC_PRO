@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, MessageCircle, MapPin, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, CheckCircle, Clock } from 'lucide-react';
 import styles from './contact.module.css';
 import { API_BASE } from '@/lib/api';
 
@@ -31,7 +31,8 @@ export default function ContactPage() {
       <div className={styles.contactContainer}>
         <div className="container">
           <div className={styles.header}>
-            <h1 className={styles.title}>Contact <span>Us</span></h1>
+            <span className="mm-eyebrow">Contact</span>
+            <h1 className={styles.title}>Talk to <span>us</span></h1>
             <p className={styles.subtitle}>Have a question, feedback, or need support? Our team is here to help you succeed.</p>
           </div>
 
@@ -45,17 +46,17 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className={styles.infoItem}>
-                <div className={styles.iconWrapper}><MessageCircle size={24} /></div>
-                <div className={styles.infoText}>
-                  <h3>WhatsApp</h3>
-                  <p>+92 300 0000000</p>
-                </div>
-              </div>
-              <div className={styles.infoItem}>
                 <div className={styles.iconWrapper}><MapPin size={24} /></div>
                 <div className={styles.infoText}>
                   <h3>Office</h3>
                   <p>Lahore, Pakistan</p>
+                </div>
+              </div>
+              <div className={styles.infoItem}>
+                <div className={styles.iconWrapper}><Clock size={24} /></div>
+                <div className={styles.infoText}>
+                  <h3>Response time</h3>
+                  <p>Within 24 hours, 7 days a week</p>
                 </div>
               </div>
             </div>

@@ -23,7 +23,7 @@ const COLS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: 'Company',
     links: [
-      { label: 'About', href: '/#features' },
+      { label: 'About', href: '/about' },
       { label: 'Contact', href: '/contact' },
       { label: 'Log in', href: '/login' },
       { label: 'Sign up', href: '/signup' },
