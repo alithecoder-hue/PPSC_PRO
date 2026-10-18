@@ -91,7 +91,7 @@ export default function AboutPage() {
         <div className="mm-container">
           <div className="mm-founder-card">
             <div className="mm-founder-photo">
-              <span>AT</span>
+              <img src="/images/founder-ali-tahir.png" alt="Ali Tahir, Founder of Merit Master" />
             </div>
             <div className="mm-founder-note">
               <span className="mm-eyebrow">A note from the founder</span>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               <p className="mm-founder-sign">
                 Regards,
                 <strong>Ali Tahir</strong>
-                <span>Founder, Merit Master</span>
+                <span>Founder, Merit Master · BS IT student, Taunsa Sharif</span>
               </p>
             </div>
           </div>
