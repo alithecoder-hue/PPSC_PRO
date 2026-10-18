@@ -669,8 +669,8 @@ a.mm-btn-primary:active {
 .mm-featshow-visual {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
-  min-height: 280px;
+  min-height: 300px;
+  min-width: 0;
   background: #0a1628;
 }
 .mm-featshow-visual img {
@@ -682,6 +682,7 @@ a.mm-btn-primary:active {
   display: block;
 }
 .mm-featshow-body {
+  min-width: 0;
   padding: 44px 42px;
   display: flex;
   flex-direction: column;
