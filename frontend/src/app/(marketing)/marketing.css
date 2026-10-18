@@ -1756,39 +1756,29 @@ a.mm-btn-primary:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 56px 32px;
-  background: var(--mm-bg-soft);
+  padding: 56px 40px;
+  background: #ffffff;
 }
 .mm-auth-card {
   width: 100%;
-  max-width: 420px;
-  background: var(--mm-surface);
-  border: 1px solid var(--mm-line);
-  border-radius: var(--mm-radius-lg);
-  padding: 40px 38px;
-  box-shadow: var(--mm-shadow);
-  position: relative;
-  overflow: hidden;
-}
-.mm-auth-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  max-width: 400px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 8px 0;
+  box-shadow: none;
 }
 .mm-auth-card h1 {
-  font-size: 1.65rem;
+  font-size: 1.9rem;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin: 0 0 8px;
+  color: #0c1b2e;
 }
 .mm-auth-card > p {
-  font-size: 0.93rem;
-  color: var(--mm-muted);
-  margin: 0 0 28px;
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 32px;
 }
 .mm-field {
   margin-bottom: 18px;
@@ -1804,13 +1794,13 @@ a.mm-btn-primary:active {
   width: 100%;
   font-family: var(--mm-font);
   font-size: 0.95rem;
-  padding: 13px 15px;
-  border: 1.5px solid var(--mm-input-border);
-  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
   outline: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  background: var(--mm-input-bg);
-  color: var(--mm-ink);
+  background: #f8fafc;
+  color: #0c1b2e;
 }
 .mm-field input:focus {
   border-color: var(--mm-input-focus-border);
