@@ -912,70 +912,219 @@ a.mm-btn-primary:active {
 }
 
 /* ---------- subjects browser ---------- */
-.mm-subjects {
-  background: var(--mm-bg-soft);
+/* ---------- subjects: glassmorphic carousel ---------- */
+.mm-subjects-carousel {
+  position: relative;
+  overflow: hidden;
+  background: #f8fafc;
   border-top: 1px solid var(--mm-line-soft);
   border-bottom: 1px solid var(--mm-line-soft);
 }
-.mm-subj-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 48px;
+.mm-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(620px 320px at 8% 18%, rgba(245, 158, 11, 0.1), transparent 60%),
+    radial-gradient(720px 360px at 88% 12%, rgba(59, 130, 246, 0.12), transparent 60%),
+    radial-gradient(640px 340px at 52% 92%, rgba(219, 39, 119, 0.08), transparent 60%);
 }
-.mm-subj-card {
+.mm-subjects-carousel .mm-container {
+  position: relative;
+  z-index: 1;
+}
+.mm-subj-head {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #fff;
-  border: 1px solid var(--mm-line);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: var(--mm-shadow-sm);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
 }
-.mm-subj-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--subj-accent);
-  box-shadow: 0 16px 30px -14px color-mix(in srgb, var(--subj-accent) 45%, transparent);
+.mm-subj-head .mm-eyebrow {
+  margin-bottom: 16px;
 }
-.mm-subj-icon {
+.mm-subj-head .mm-h2 {
+  margin: 0 0 12px;
+}
+.mm-subj-head .mm-lead {
+  margin: 0;
+  max-width: 560px;
+}
+.mm-carousel-nav {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-bottom: 4px;
+}
+.mm-carousel-nav button {
   width: 46px;
   height: 46px;
-  border-radius: 13px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 22px -10px rgba(12, 27, 46, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
+  color: var(--mm-ink);
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
 }
-.mm-subj-card:hover .mm-subj-icon {
-  transform: scale(1.08) rotate(-4deg);
+.mm-carousel-nav button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #fff;
 }
-.mm-subj-body {
-  flex: 1;
-  min-width: 0;
+.mm-carousel-nav button:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
-.mm-subj-body h3 {
-  font-size: 0.98rem;
-  font-weight: 750;
+.mm-carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 4px 26px;
+  margin-top: 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.mm-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.mm-glass-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 22px 45px -22px rgba(12, 27, 46, 0.28);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.mm-glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 55px -22px color-mix(in srgb, var(--subj-accent) 45%, transparent);
+}
+.mm-glass-img {
+  position: relative;
+  height: 172px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+.mm-glass-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+.mm-glass-card:hover .mm-glass-img img {
+  transform: scale(1.06);
+}
+.mm-glass-img-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+.mm-glass-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  background: rgba(12, 27, 46, 0.55);
+  color: #fff;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.mm-glass-body {
+  padding: 20px 22px 22px;
+}
+.mm-glass-body h3 {
+  font-size: 1.12rem;
+  font-weight: 800;
   letter-spacing: -0.01em;
-  margin: 0 0 3px;
+  margin: 0 0 10px;
   color: var(--mm-ink);
 }
-.mm-subj-body span {
-  font-size: 0.82rem;
-  color: var(--mm-muted);
+.mm-glass-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.mm-glass-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
   font-weight: 600;
+  color: var(--mm-muted);
 }
-.mm-subj-arrow {
-  color: var(--mm-faint);
-  flex-shrink: 0;
-  transition: color 0.18s ease, transform 0.18s ease;
-}
-.mm-subj-card:hover .mm-subj-arrow {
+.mm-glass-stats svg {
   color: var(--subj-accent);
+}
+.mm-glass-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--subj-accent);
+}
+.mm-glass-cta svg {
+  transition: transform 0.18s ease;
+}
+.mm-glass-card:hover .mm-glass-cta svg {
   transform: translateX(4px);
+}
+.mm-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+.mm-carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: #cbd5e1;
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+.mm-carousel-dots button.active {
+  width: 28px;
+  background: var(--mm-navy);
+}
+@media (max-width: 1020px) {
+  .mm-glass-card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 680px) {
+  .mm-subj-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mm-glass-card {
+    flex-basis: 82%;
+  }
+  .mm-glass-img {
+    height: 150px;
+  }
 }
 
 /* ---------- showcase ---------- */
