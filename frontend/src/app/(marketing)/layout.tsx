@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './marketing.css';
 import MarketingNav from './components/MarketingNav';
-import MarketingFooter from './components/MarketingFooter';
+import MarketingFooterGate from './components/MarketingFooterGate';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,7 +21,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
     <div className={`mm-scope ${inter.variable}`}>
       <MarketingNav />
       <main>{children}</main>
-      <MarketingFooter />
+      <MarketingFooterGate />
     </div>
   );
 }
