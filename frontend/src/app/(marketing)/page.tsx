@@ -9,6 +9,11 @@ import {
   Bell,
   ArrowRight,
   Check,
+  Landmark,
+  Building2,
+  FileCheck2,
+  ClipboardCheck,
+  ShieldCheck,
 } from 'lucide-react';
 import { AnalyticsMock } from './components/ProductMock';
 import PricingSection from './components/PricingSection';
@@ -122,14 +127,16 @@ export default function LandingPage() {
 
       {/* ============ PROOF STRIP ============ */}
       <div className="mm-proof">
-        <div className="mm-container mm-proof-inner">
-          <span className="mm-proof-label">Built for Pakistan&apos;s exams</span>
-          <div className="mm-proof-badges">
-            <span>PPSC</span>
-            <span>FPSC</span>
-            <span>NTS</span>
-            <span>OTS</span>
-            <span>FIA</span>
+        <div className="mm-container">
+          <div className="mm-proof-inner">
+            <span className="mm-proof-label">Built for Pakistan&apos;s exams</span>
+            <div className="mm-proof-badges">
+              <span><Landmark size={15} strokeWidth={2.4} />PPSC</span>
+              <span><Building2 size={15} strokeWidth={2.4} />FPSC</span>
+              <span><FileCheck2 size={15} strokeWidth={2.4} />NTS</span>
+              <span><ClipboardCheck size={15} strokeWidth={2.4} />OTS</span>
+              <span><ShieldCheck size={15} strokeWidth={2.4} />FIA</span>
+            </div>
           </div>
         </div>
       </div>
