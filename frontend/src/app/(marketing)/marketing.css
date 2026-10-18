@@ -1803,7 +1803,7 @@ a.mm-btn-primary:active {
 .mm-auth-brand {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 12px;
   position: relative;
   z-index: 1;
   text-decoration: none;
@@ -1811,16 +1811,16 @@ a.mm-btn-primary:active {
   width: fit-content;
 }
 .mm-auth-brand img {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 .mm-auth-brand span {
   color: #fff;
   font-weight: 800;
   letter-spacing: 0.1em;
-  font-size: 0.76rem;
+  font-size: 0.95rem;
 }
 .mm-auth-brand span em {
   color: #f59e0b;
