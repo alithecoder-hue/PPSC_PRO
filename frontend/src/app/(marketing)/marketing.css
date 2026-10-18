@@ -678,7 +678,7 @@ a.mm-btn-primary:active {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 .mm-featshow-body {
