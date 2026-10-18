@@ -51,6 +51,12 @@ export default function LoginPage() {
   return (
     <div className="mm-auth">
       <div className="mm-auth-side">
+        <div className="mm-auth-brand">
+          <img src="/images/logo-mark.png" alt="" width={34} height={34} />
+          <span>
+            MERIT<em>MASTER</em>
+          </span>
+        </div>
         <h2>Welcome back. Your preparation missed you.</h2>
         <p>
           Log in to continue your streak, pick up your study plan and keep
@@ -75,6 +81,20 @@ export default function LoginPage() {
             Science. Fixed that one topic and my mock scores jumped 15%.&rdquo;
           </p>
           <span>Ahmed Raza — ASI, Punjab Police</span>
+        </div>
+        <div className="mm-auth-stats">
+          <div>
+            <strong>50,000+</strong>
+            <span>Practice MCQs</span>
+          </div>
+          <div>
+            <strong>5 years</strong>
+            <span>Past papers</span>
+          </div>
+          <div>
+            <strong>4.9/5</strong>
+            <span>Student rating</span>
+          </div>
         </div>
       </div>
 

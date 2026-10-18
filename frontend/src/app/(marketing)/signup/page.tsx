@@ -47,6 +47,12 @@ export default function SignupPage() {
   return (
     <div className="mm-auth">
       <div className="mm-auth-side">
+        <div className="mm-auth-brand">
+          <img src="/images/logo-mark.png" alt="" width={34} height={34} />
+          <span>
+            MERIT<em>MASTER</em>
+          </span>
+        </div>
         <h2>Start preparing for free. No card, no catch.</h2>
         <p>
           Join 2,300+ aspirants practicing on Merit Master every day. Your
@@ -72,6 +78,20 @@ export default function SignupPage() {
             familiar.&rdquo;
           </p>
           <span>Sana Fatima — Lecturer, Education Department</span>
+        </div>
+        <div className="mm-auth-stats">
+          <div>
+            <strong>50,000+</strong>
+            <span>Practice MCQs</span>
+          </div>
+          <div>
+            <strong>5 years</strong>
+            <span>Past papers</span>
+          </div>
+          <div>
+            <strong>4.9/5</strong>
+            <span>Student rating</span>
+          </div>
         </div>
       </div>
 
