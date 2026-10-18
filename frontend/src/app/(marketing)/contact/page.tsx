@@ -63,9 +63,9 @@ export default function ContactPage() {
             <div className={styles.formCard}>
               {status === 'success' ? (
                 <div style={{ textAlign: 'center', padding: '40px' }}>
-                  <CheckCircle size={48} style={{ color: '#16A34A', marginBottom: '15px' }} />
-                  <h3 style={{ color: '#0C1B2E', marginBottom: '10px' }}>Message Sent!</h3>
-                  <p style={{ color: '#64748B' }}>We'll get back to you within 24 hours.</p>
+                  <CheckCircle size={48} style={{ color: 'var(--mm-success)', marginBottom: '15px' }} />
+                  <h3 style={{ color: 'var(--mm-ink)', marginBottom: '10px' }}>Message Sent!</h3>
+                  <p style={{ color: 'var(--mm-muted)' }}>We'll get back to you within 24 hours.</p>
                   <button onClick={() => setStatus('idle')} className={styles.submitBtn} style={{ marginTop: '20px', width: 'auto', padding: '10px 30px' }}>Send Another</button>
                 </div>
               ) : (
@@ -86,7 +86,7 @@ export default function ContactPage() {
                     <label>Message</label>
                     <textarea className={styles.textarea} placeholder="Tell us more..." required value={form.message} onChange={e => setForm({...form, message: e.target.value})} />
                   </div>
-                  {status === 'error' && <p style={{ color: '#DC2626', marginBottom: '10px', fontSize: '0.9rem' }}>Something went wrong. Please try again.</p>}
+                  {status === 'error' && <p style={{ color: 'var(--mm-danger)', marginBottom: '10px', fontSize: '0.9rem' }}>Something went wrong. Please try again.</p>}
                   <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
                     {status === 'loading' ? 'Sending...' : 'Send Message'}
                   </button>

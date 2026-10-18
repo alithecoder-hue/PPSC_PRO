@@ -1,12 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  BookOpen,
-  FileText,
-  Timer,
-  BarChart3,
-  CalendarCheck,
-  Bell,
   ArrowRight,
   Check,
   Landmark,
@@ -19,6 +13,7 @@ import { AnalyticsMock } from './components/ProductMock';
 import PricingSection from './components/PricingSection';
 import FaqSection from './components/FaqSection';
 import SubjectsSection from './components/SubjectsSection';
+import FeaturesShowcase from './components/FeaturesShowcase';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -26,43 +21,6 @@ export const metadata: Metadata = {
   description:
     'Crack the PPSC exam on your first attempt. 50,000+ topic-wise MCQs, 5 years of solved past papers, timed mock tests and performance analytics.',
 };
-
-import type { LucideIcon } from 'lucide-react';
-
-const FEATURES: { icon: LucideIcon; title: string; text: string; tags?: string[] }[] = [
-  {
-    icon: BookOpen,
-    title: '50,000+ topic-wise MCQs',
-    text: 'Every subject broken into topics, exactly the way PPSC tests them. Practice what matters, skip what doesn\u2019t.',
-    tags: ['Islamiyat', 'Pak Studies', 'Everyday Science', 'English', '+12 more'],
-  },
-  {
-    icon: FileText,
-    title: '5 years of solved past papers',
-    text: 'Real PPSC papers from recent years, fully solved with explanations. Download them as PDFs with Premium.',
-    tags: ['2024', '2023', '2022', '2021', '2020'],
-  },
-  {
-    icon: Timer,
-    title: 'Timed mock exams',
-    text: 'Full-length tests under real exam pressure — 100 questions, real timing, instant scoring.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Performance analytics',
-    text: 'See your score trend, accuracy by topic and exactly which weak areas are costing you marks.',
-  },
-  {
-    icon: CalendarCheck,
-    title: 'Study planner',
-    text: 'A day-by-day plan that adapts to your exam date and keeps your preparation on track.',
-  },
-  {
-    icon: Bell,
-    title: 'Jobs & exam alerts',
-    text: 'Never miss an opening — new PPSC advertisements and paper announcements, all in one board.',
-  },
-];
 
 const TESTIMONIALS = [
   {
@@ -156,37 +114,7 @@ export default function LandingPage() {
               is a complete system — practice, test, analyze, improve.
             </p>
           </div>
-          <div className="mm-feat-lg">
-            {FEATURES.slice(0, 2).map((f) => (
-              <div key={f.title} className="mm-card mm-card-lg">
-                <div className="mm-card-icon">
-                  <f.icon size={22} />
-                </div>
-                <h3>{f.title}</h3>
-                <p>{f.text}</p>
-                {f.tags && (
-                  <div className="mm-card-tags" aria-hidden="true">
-                    {f.tags.map((t) => (
-                      <span key={t} className={t.startsWith('+') ? 'more' : ''}>
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="mm-feat-sm">
-            {FEATURES.slice(2).map((f) => (
-              <div key={f.title} className="mm-card">
-                <div className="mm-card-icon">
-                  <f.icon size={22} />
-                </div>
-                <h3>{f.title}</h3>
-                <p>{f.text}</p>
-              </div>
-            ))}
-          </div>
+          <FeaturesShowcase />
         </div>
       </section>
 

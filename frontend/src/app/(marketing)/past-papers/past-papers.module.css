@@ -130,9 +130,9 @@
 }
 
 .filterCard {
-  background: #ffffff;
+  background: var(--mm-surface);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--mm-glass-border);
   padding: 24px 30px;
   box-shadow: 
     0 4px 6px rgba(0, 0, 0, 0.02),
@@ -156,14 +156,14 @@
 .searchIcon {
   position: absolute;
   left: 18px;
-  color: #94a3b8;
+  color: var(--mm-faint);
 }
 
 .searchInput {
   width: 100%;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  color: #0f172a;
+  background: var(--mm-surface-2);
+  border: 1.5px solid var(--mm-line);
+  color: var(--mm-ink);
   padding: 13px 20px 13px 48px;
   border-radius: 12px;
   font-size: 0.96rem;
@@ -173,17 +173,17 @@
 }
 
 .searchInput:focus {
-  border-color: #f59e0b;
-  background: #ffffff;
+  border-color: var(--mm-accent);
+  background: var(--mm-surface);
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
 }
 
 .searchInput::placeholder {
-  color: #94a3b8;
+  color: var(--mm-faint);
 }
 
 .searchBtn {
-  background: #f59e0b;
+  background: var(--mm-accent);
   color: #000000;
   border: none;
   padding: 0 28px;
@@ -201,9 +201,9 @@
 }
 
 .resetBtn {
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  color: #334155;
+  background: var(--mm-surface);
+  border: 1.5px solid var(--mm-line);
+  color: var(--mm-ink-2);
   padding: 0 20px;
   height: 48px;
   border-radius: 12px;
@@ -217,8 +217,8 @@
 }
 
 .resetBtn:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: var(--mm-surface-2);
+  border-color: var(--mm-line-strong);
 }
 
 .selectsRow {
@@ -236,7 +236,7 @@
 .selectLabel {
   font-size: 0.72rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: var(--mm-faint);
   letter-spacing: 0.05em;
   padding-left: 2px;
 }
@@ -244,9 +244,9 @@
 .filterSelect {
   width: 100%;
   appearance: none;
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  color: #334155;
+  background: var(--mm-surface);
+  border: 1.5px solid var(--mm-line);
+  color: var(--mm-ink-2);
   padding: 11px 16px;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -262,7 +262,7 @@
 }
 
 .filterSelect:focus, .filterSelect:hover {
-  border-color: #cbd5e1;
+  border-color: var(--mm-line-strong);
 }
 
 /* 3. Light Theme Content */
@@ -286,7 +286,7 @@
 .sectionTitle {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--mm-ink);
 }
 
 .sectionLink, .sectionLinkAmber {
@@ -300,11 +300,11 @@
 }
 
 .sectionLink {
-  color: #334155;
+  color: var(--mm-ink-2);
 }
 .sectionLink:hover {
   transform: translateX(3px);
-  color: #0f172a;
+  color: var(--mm-ink);
 }
 
 .sectionLinkAmber {
@@ -337,9 +337,9 @@
 
 /* Agency Card */
 .agencyCard {
-  background: #ffffff;
+  background: var(--mm-surface);
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--mm-line);
   padding: 24px;
   min-width: 250px;
   flex: 1;
@@ -351,18 +351,18 @@
 
 .agencyCard:hover {
   transform: translateY(-4px);
-  border-color: #cbd5e1;
+  border-color: var(--mm-line-strong);
   box-shadow: 
     0 10px 25px rgba(0, 0, 0, 0.04),
     0 2px 4px rgba(0, 0, 0, 0.01);
 }
 
 /* Agency accent variants (top border tint per exam body) */
-.ppscCard { border-top: 3px solid #f59e0b; }
+.ppscCard { border-top: 3px solid var(--mm-accent); }
 .fpscCard { border-top: 3px solid #0c1b2e; }
 .ntsCard { border-top: 3px solid #2563eb; }
 .spscCard { border-top: 3px solid #16a34a; }
-.kppscCard { border-top: 3px solid #64748b; }
+.kppscCard { border-top: 3px solid var(--mm-muted); }
 
 .agencyIconWrapper {
   margin-bottom: 16px;
@@ -378,13 +378,13 @@
 }
 
 .emblemIcon {
-  color: #ffffff;
+  color: var(--mm-surface);
 }
 
 /* Custom Emblem Background colors */
 .ppscBg { background: #10B981; }
 .fpscBg { background: #3B82F6; }
-.ntsBg { background: #F59E0B; }
+.ntsBg { background: var(--mm-accent); }
 .spscBg { background: #047857; }
 .kppscBg { background: #059669; }
 
@@ -395,13 +395,13 @@
 .agencyName {
   font-size: 1.15rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--mm-ink);
   margin: 0 0 2px 0;
 }
 
 .papersCount {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--mm-muted);
   margin: 0;
   font-weight: 600;
 }
@@ -449,9 +449,9 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  color: #334155;
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-line);
+  color: var(--mm-ink-2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,8 +462,8 @@
 }
 
 .sliderArrow:hover {
-  background: #f8fafc;
-  color: #0f172a;
+  background: var(--mm-surface-2);
+  color: var(--mm-ink);
   transform: scale(1.05);
 }
 
@@ -475,8 +475,8 @@
 }
 
 .subjectBox {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-line);
   border-radius: 14px;
   padding: 16px;
   display: flex;
@@ -489,7 +489,7 @@
 
 .subjectBox:hover {
   transform: translateY(-2px);
-  border-color: #cbd5e1;
+  border-color: var(--mm-line-strong);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
 }
 
@@ -505,7 +505,7 @@
 
 /* Icon and Background styling for Subjects */
 .gkIconBg { background: rgba(245, 158, 11, 0.08); }
-.gkIcon { color: #f59e0b; }
+.gkIcon { color: var(--mm-accent); }
 
 .pakIconBg { background: rgba(16, 185, 129, 0.08); }
 .pakIcon { color: #10b981; }
@@ -530,12 +530,12 @@
 .subjectName {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--mm-ink);
 }
 
 .subjectCount {
   font-size: 0.78rem;
-  color: #64748b;
+  color: var(--mm-muted);
   font-weight: 600;
 }
 
@@ -561,8 +561,8 @@
 }
 
 .listItemRow {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--mm-surface);
+  border: 1px solid var(--mm-line);
   border-radius: 14px;
   padding: 16px 20px;
   display: flex;
@@ -572,7 +572,7 @@
 }
 
 .listItemRow:hover {
-  border-color: #cbd5e1;
+  border-color: var(--mm-line-strong);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
@@ -597,9 +597,9 @@
 }
 
 .listItemYearBadge {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: #64748b;
+  background: var(--mm-surface-2);
+  border: 1px solid var(--mm-line);
+  color: var(--mm-muted);
   font-size: 0.72rem;
   font-weight: 700;
   text-align: center;
@@ -625,12 +625,12 @@
 .listItemTitle {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--mm-ink);
   margin: 0;
 }
 
 .listItemTag {
-  background: #fef3c7;
+  background: var(--mm-accent-soft);
   color: #d97706;
   border: 1px solid #fde68a;
   font-size: 0.68rem;
@@ -647,7 +647,7 @@
 
 .listItemSub {
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--mm-muted);
   margin: 0;
 }
 
@@ -662,7 +662,7 @@
   align-items: center;
   gap: 4px;
   font-size: 0.74rem;
-  color: #94a3b8;
+  color: var(--mm-faint);
   font-weight: 500;
 }
 
@@ -674,8 +674,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
+  background: var(--mm-surface-2);
+  border: 1.5px solid var(--mm-line);
   color: #475569;
   padding: 8px 16px;
   border-radius: 10px;
@@ -688,7 +688,7 @@
 .listItemBtn:hover {
   background: #ea580c;
   border-color: #ea580c;
-  color: #ffffff;
+  color: var(--mm-surface);
   box-shadow: 0 4px 10px rgba(234, 88, 12, 0.25);
 }
 
@@ -699,19 +699,19 @@
 }
 
 .listItemPremiumBtn:hover {
-  background: #f59e0b;
-  border-color: #f59e0b;
+  background: var(--mm-accent);
+  border-color: var(--mm-accent);
   color: #000000;
   box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
 }
 
 .noResultsBox {
-  background: #ffffff;
-  border: 1.5px dashed #e2e8f0;
+  background: var(--mm-surface);
+  border: 1.5px dashed var(--mm-line);
   border-radius: 12px;
   padding: 40px;
   text-align: center;
-  color: #64748b;
+  color: var(--mm-muted);
   font-weight: 500;
 }
 
