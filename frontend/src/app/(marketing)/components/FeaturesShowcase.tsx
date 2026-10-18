@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
 import {
   BookOpen,
   FileText,
@@ -94,27 +95,38 @@ export default function FeaturesShowcase() {
         ))}
       </div>
       <div className="mm-featshow-panel" role="tabpanel" aria-live="polite">
-        <div key={active} className="mm-featshow-panel-inner">
-          <div className="mm-featshow-visual" aria-hidden="true">
-            <img src={`/images/features/${f.img}`} alt="" />
-          </div>
-          <div className="mm-featshow-body">
-            <span className="mm-featshow-kicker">
-              Feature {String(active + 1).padStart(2, '0')} / {String(FEATURES.length).padStart(2, '0')}
-            </span>
-            <h3>{f.title}</h3>
-            <p>{f.text}</p>
-            {f.tags && (
-              <div className="mm-featshow-tags">
-                {f.tags.map((t) => (
-                  <span key={t} className={t.startsWith('+') ? 'more' : ''}>
-                    {t}
-                  </span>
-                ))}
+        <MotionConfig reducedMotion="user">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              className="mm-featshow-panel-inner"
+              initial={{ opacity: 0, y: 26, scale: 0.985 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -18, scale: 0.99 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="mm-featshow-visual" aria-hidden="true">
+                <img src={`/images/features/${f.img}`} alt="" />
               </div>
-            )}
-          </div>
-        </div>
+              <div className="mm-featshow-body">
+                <span className="mm-featshow-kicker">
+                  Feature {String(active + 1).padStart(2, '0')} / {String(FEATURES.length).padStart(2, '0')}
+                </span>
+                <h3>{f.title}</h3>
+                <p>{f.text}</p>
+                {f.tags && (
+                  <div className="mm-featshow-tags">
+                    {f.tags.map((t) => (
+                      <span key={t} className={t.startsWith('+') ? 'more' : ''}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </MotionConfig>
       </div>
     </div>
   );
