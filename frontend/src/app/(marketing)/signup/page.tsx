@@ -40,24 +40,20 @@ export default function SignupPage() {
 
   return (
     <div className="mm-auth">
-      <div className="mm-auth-side">
+      <div className="mm-auth-side mm-auth-side-signup">
         <div className="mm-auth-brand">
-          <img src="/images/logo-mark.png" alt="" width={34} height={34} />
+          <img src="/images/logo-mark.png" alt="" width={30} height={30} />
           <span>
             MERIT<em>MASTER</em>
           </span>
         </div>
-        <h2>
-          What if <span className="mm-hl">this attempt</span> is the one?
-        </h2>
-        <p>
-          Join 2,300+ aspirants preparing on Merit Master. Your first mock
-          test is two minutes away.
-        </p>
-        <div className="mm-auth-deco" aria-hidden="true">
-          <img src="/images/auth-signup.jpg" alt="" />
+        <div className="mm-auth-msg">
+          <span className="mm-auth-kicker">Space to do your best work</span>
+          <h2>
+            What if <span className="mm-hl">this attempt</span> is the one?
+          </h2>
+          <p>Bring your preparation together. Make the next move yours.</p>
         </div>
-        <p className="mm-auth-foot">50,000+ MCQs · 5 years of past papers · 4.9/5 student rating</p>
       </div>
 
       <div className="mm-auth-form-wrap">

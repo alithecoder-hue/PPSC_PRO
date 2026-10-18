@@ -44,24 +44,20 @@ export default function LoginPage() {
 
   return (
     <div className="mm-auth">
-      <div className="mm-auth-side">
+      <div className="mm-auth-side mm-auth-side-login">
         <div className="mm-auth-brand">
-          <img src="/images/logo-mark.png" alt="" width={34} height={34} />
+          <img src="/images/logo-mark.png" alt="" width={30} height={30} />
           <span>
             MERIT<em>MASTER</em>
           </span>
         </div>
-        <h2>
-          You&apos;re going to make it <span className="mm-hl">one day.</span>
-        </h2>
-        <p>
-          Every topper started exactly where you are now. Log in, take
-          today&apos;s step, and keep the streak alive.
-        </p>
-        <div className="mm-auth-deco" aria-hidden="true">
-          <img src="/images/auth-login.jpg" alt="" />
+        <div className="mm-auth-msg">
+          <span className="mm-auth-kicker">Space to do your best work</span>
+          <h2>
+            You&apos;re going to make it <span className="mm-hl">one day.</span>
+          </h2>
+          <p>Bring your preparation together. Make the next move yours.</p>
         </div>
-        <p className="mm-auth-foot">50,000+ MCQs · 5 years of past papers · 4.9/5 student rating</p>
       </div>
 
       <div className="mm-auth-form-wrap">
