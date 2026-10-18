@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const LINKS = [
   { href: '/classroom', label: 'Classroom' },
@@ -11,27 +11,7 @@ const LINKS = [
   { href: '/subscription', label: 'Pricing' },
 ];
 
-function useTheme() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  useEffect(() => {
-    const current = document.documentElement.dataset.theme;
-    setTheme(current === 'light' ? 'light' : 'dark');
-  }, []);
-  const toggle = () => {
-    const next = theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem('mm-theme', next);
-    } catch {
-      /* storage unavailable — theme still applies for this session */
-    }
-    setTheme(next);
-  };
-  return { theme, toggle };
-}
-
 export default function MarketingNav() {
-  const { theme, toggle } = useTheme();
   const [open, setOpen] = useState(false);
 
   return (
@@ -58,15 +38,6 @@ export default function MarketingNav() {
           </nav>
 
           <div className="mm-nav-actions">
-            <button
-              type="button"
-              className="mm-theme-toggle"
-              onClick={toggle}
-              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-              title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-            >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
             <Link href="/login" className="mm-login">
               Log in
             </Link>

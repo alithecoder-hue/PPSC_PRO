@@ -18,19 +18,10 @@ export const metadata: Metadata = {
 
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      {/* Set the theme before first paint to avoid a flash of the wrong theme.
-          Default is dark when nothing is saved. */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(){try{var t=localStorage.getItem('mm-theme')||'dark';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`,
-        }}
-      />
-      <div className={`mm-scope ${inter.variable}`}>
-        <MarketingNav />
-        <main>{children}</main>
-        <MarketingFooter />
-      </div>
-    </>
+    <div className={`mm-scope ${inter.variable}`}>
+      <MarketingNav />
+      <main>{children}</main>
+      <MarketingFooter />
+    </div>
   );
 }
