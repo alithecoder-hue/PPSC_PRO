@@ -1779,7 +1779,7 @@ a.mm-btn-primary:active {
 
 /* ---------- auth pages ---------- */
 .mm-auth {
-  min-height: calc(100vh - 69px);
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--mm-bg);

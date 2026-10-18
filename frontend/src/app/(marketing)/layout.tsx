@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './marketing.css';
-import MarketingNav from './components/MarketingNav';
+import MarketingNavGate from './components/MarketingNavGate';
 import MarketingFooterGate from './components/MarketingFooterGate';
 
 const inter = Inter({
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`mm-scope ${inter.variable}`}>
-      <MarketingNav />
+      <MarketingNavGate />
       <main>{children}</main>
       <MarketingFooterGate />
     </div>
