@@ -35,19 +35,25 @@ export default function PricingSection() {
             Start free. Upgrade when you&apos;re ready to go all in — less than
             the cost of a single guidebook.
           </p>
-          <div className="mm-toggle">
-            <span className={!yearly ? 'on' : ''}>Monthly</span>
+          <div className="mm-billing-toggle" role="tablist" aria-label="Billing period">
             <button
-              className="mm-switch"
-              data-on={yearly}
-              onClick={() => setYearly(!yearly)}
-              aria-label="Toggle yearly billing"
+              type="button"
+              role="tab"
+              aria-selected={!yearly}
+              className={!yearly ? 'on' : ''}
+              onClick={() => setYearly(false)}
             >
-              <i />
+              Monthly
             </button>
-            <span className={yearly ? 'on' : ''}>
-              Yearly<span className="mm-save">Save 37%</span>
-            </span>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={yearly}
+              className={yearly ? 'on' : ''}
+              onClick={() => setYearly(true)}
+            >
+              Yearly <span className="mm-save">Save 37%</span>
+            </button>
           </div>
         </div>
 
@@ -77,7 +83,7 @@ export default function PricingSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/signup" className="mm-btn mm-btn-ghost">
+            <Link href="/signup" className="mm-btn mm-btn-ghost-dark">
               Get started free
             </Link>
           </div>
@@ -110,6 +116,9 @@ export default function PricingSection() {
             </Link>
           </div>
         </div>
+        <p className="mm-price-note">
+          Pay with Easypaisa, JazzCash or bank transfer · Cancel anytime
+        </p>
       </div>
     </section>
   );
