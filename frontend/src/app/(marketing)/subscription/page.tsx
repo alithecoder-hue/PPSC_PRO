@@ -19,20 +19,9 @@ const TRUST = [
 export default function SubscriptionPage() {
   return (
     <>
-      <section className="mm-section" style={{ paddingBottom: 0 }}>
-        <div className="mm-container mm-center">
-          <span className="mm-eyebrow">Pricing</span>
-          <h1 className="mm-h2">Invest in the result, not just the attempt</h1>
-          <p className="mm-lead">
-            One guidebook costs more than a month of Premium — and a guidebook
-            can&apos;t test you, track you, or tell you what to fix.
-          </p>
-        </div>
-      </section>
+      <PricingSection h1 />
 
-      <PricingSection />
-
-      <section className="mm-section" style={{ paddingTop: 0 }}>
+      <section className="mm-section">
         <div className="mm-container">
           <div className="mm-grid-3" style={{ marginTop: 0 }}>
             {TRUST.map((x) => (

@@ -22,7 +22,7 @@ const PRO_FEATS = [
   { ok: true, text: 'Priority support & exam alerts' },
 ];
 
-export default function PricingSection() {
+export default function PricingSection({ h1 = false }: { h1?: boolean }) {
   const [yearly, setYearly] = useState(false);
 
   return (
@@ -30,7 +30,11 @@ export default function PricingSection() {
       <div className="mm-container">
         <div className="mm-center">
           <span className="mm-eyebrow">Pricing</span>
-          <h2 className="mm-h2">Simple pricing, serious preparation</h2>
+          {h1 ? (
+            <h1 className="mm-h2">Simple pricing, serious preparation</h1>
+          ) : (
+            <h2 className="mm-h2">Simple pricing, serious preparation</h2>
+          )}
           <p className="mm-lead">
             Start free. Upgrade when you&apos;re ready to go all in — less than
             the cost of a single guidebook.
