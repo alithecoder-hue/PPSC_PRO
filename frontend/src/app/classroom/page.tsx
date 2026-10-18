@@ -57,8 +57,7 @@ function ClassroomContent() {
   const mode = searchParams.get('mode') || 'study';
 
   const [isLightMode, setIsLightMode] = useState(false);
-  const [activeTab, setActiveTab] = useState('study');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeTab, setActiveTab] = useState('study');  const [searchQuery, setSearchQuery] = useState('');
   const [userRole, setUserRole] = useState<string | null>(null);
   const [readerFontSize, setReaderFontSize] = useState(18);
 
@@ -66,7 +65,22 @@ function ClassroomContent() {
     setUserRole(localStorage.getItem('role'));
     const savedSize = localStorage.getItem('classroom_reader_font_size');
     if (savedSize) setReaderFontSize(Number(savedSize));
+    // Theme: dark by default; restore the student's saved choice (read after
+    // mount so server and client render the same default — no hydration mismatch)
+    try {
+      if (localStorage.getItem('mm-classroom-theme') === 'light') setIsLightMode(true);
+    } catch { /* storage unavailable */ }
   }, []);
+
+  const toggleTheme = () => {
+    setIsLightMode((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('mm-classroom-theme', next ? 'light' : 'dark');
+      } catch { /* storage unavailable */ }
+      return next;
+    });
+  };
 
   const handleFontSizeChange = (size: number) => {
     const newSize = Math.min(28, Math.max(14, size));
@@ -472,14 +486,14 @@ function ClassroomContent() {
       
       <motion.div className={styles.filterBarWrapper} style={{ marginBottom: '20px', top: '0px', maxWidth: '100%', width: '100%', margin: '0 0 20px 0' }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
         <div className={styles.filterGroupLeft}>
-          <button onClick={() => router.back()} className={styles.backBtn} style={{ background: isLightMode ? 'rgba(0,0,0,0.05)' : 'rgba(0,0,0,0.05)', color: 'inherit', padding: '0 12px', height: '44px' }}>
+          <button onClick={() => router.back()} className={styles.backBtn} style={{ background: 'var(--cr-hover)', color: 'inherit', padding: '0 12px', height: '44px' }}>
             <ArrowLeft size={18} />
           </button>
           
-          <div className={`${styles.boardTabs} ${styles.desktopTabsOnly}`} style={{ display: 'flex', background: '#E9EDF3', borderRadius: '14px', padding: '4px' }}>
-            <button className={`${styles.boardTab} ${activeTab === 'study' ? styles.active : ''}`} onClick={() => setActiveTab('study')} style={{ color: activeTab === 'study' ? '#FFF' : '#475569', border: 'none', background: activeTab === 'study' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Study</button>
-            <button className={`${styles.boardTab} ${activeTab === 'practice' ? styles.active : ''}`} onClick={() => setActiveTab('practice')} style={{ color: activeTab === 'practice' ? '#FFF' : '#475569', border: 'none', background: activeTab === 'practice' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Practice</button>
-            <button className={`${styles.boardTab} ${activeTab === 'test' ? styles.active : ''}`} onClick={() => setActiveTab('test')} style={{ color: activeTab === 'test' ? '#FFF' : '#475569', border: 'none', background: activeTab === 'test' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Test</button>
+          <div className={`${styles.boardTabs} ${styles.desktopTabsOnly}`}>
+            <button className={`${styles.boardTab} ${activeTab === 'study' ? styles.active : ''}`} onClick={() => setActiveTab('study')} style={{ color: activeTab === 'study' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'study' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Study</button>
+            <button className={`${styles.boardTab} ${activeTab === 'practice' ? styles.active : ''}`} onClick={() => setActiveTab('practice')} style={{ color: activeTab === 'practice' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'practice' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Practice</button>
+            <button className={`${styles.boardTab} ${activeTab === 'test' ? styles.active : ''}`} onClick={() => setActiveTab('test')} style={{ color: activeTab === 'test' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'test' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Test</button>
           </div>
 
           <div className={styles.mobileTabsOnly}>
@@ -509,13 +523,13 @@ function ClassroomContent() {
             onSelect={(val: string) => setSelectedComplexity(val)} icon={Filter}
           />
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', flex: 1, minWidth: 0 }}>
-            <Search size={16} style={{ position: 'absolute', left: '12px', color: '#9CA3AF' }} />
+            <Search size={16} style={{ position: 'absolute', left: '12px', color: 'var(--cr-text-faint)' }} />
             <input 
               type="text" 
               placeholder="Search topics..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              style={{ background: '#FFFFFF', border: '1px solid #E6EAF0', borderRadius: '12px', padding: '10px 10px 10px 36px', color: '#0F1E33', height: '44px', outline: 'none', width: '100%', minWidth: 0 }}
+              style={{ background: 'var(--cr-surface)', border: 'var(--cr-border)', borderRadius: '12px', padding: '10px 10px 10px 36px', color: 'var(--cr-text)', height: '44px', width: '100%', minWidth: 0 }}
             />
           </div>
         </div>
@@ -528,7 +542,12 @@ function ClassroomContent() {
               </motion.button>
             ) : null}
           </AnimatePresence>
-          <button className={styles.themeToggleBtn} onClick={() => setIsLightMode(!isLightMode)}>
+          <button
+            className={styles.themeToggleBtn}
+            onClick={toggleTheme}
+            title={isLightMode ? 'Switch to dark mode' : 'Switch to light mode'}
+            aria-label={isLightMode ? 'Switch to dark mode' : 'Switch to light mode'}
+          >
             {isLightMode ? <Moon size={18} /> : <Sun size={18} />}
           </button>
           <button className={styles.hamburgerBtn} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -558,7 +577,7 @@ function ClassroomContent() {
                   </div>
                 ))
               ) : (
-                <div style={{ textAlign: 'center', padding: '40px 20px', color: '#6B7280' }}>
+                <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--cr-text-muted)' }}>
                   <Filter size={32} style={{ opacity: 0.3, margin: '0 auto 16px auto' }} />
                   <p>Loading subjects...</p>
                 </div>
@@ -590,7 +609,7 @@ function ClassroomContent() {
                 );
               })
             ) : (
-              <div style={{ textAlign: 'center', padding: '40px 20px', color: '#6B7280' }}><p>No topics found.</p></div>
+              <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--cr-text-muted)' }}><p>No topics found.</p></div>
             )}
           </div>
         ) : (
@@ -627,7 +646,7 @@ function ClassroomContent() {
                 </motion.div>
               )}
               <div style={{ marginTop: 'auto', paddingTop: '24px' }}>
-                <button onClick={() => { setActiveSubtopic(null); setSelectedAnswers({}); }} style={{ width: '100%', padding: '12px', background: '#F3F4F6', color: '#374151', border: '1px solid #E6EAF0', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer' }}>
+                <button onClick={() => { setActiveSubtopic(null); setSelectedAnswers({}); }} style={{ width: '100%', padding: '12px', background: 'var(--cr-surface-2)', color: 'var(--cr-text-2)', border: 'var(--cr-border)', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer' }}>
                   Quit Session
                 </button>
               </div>
@@ -654,20 +673,20 @@ function ClassroomContent() {
                   {/* Interactive Reader Controls (Font Size Adjuster) */}
                   <div style={{
                     display: 'flex', alignItems: 'center', gap: '6px',
-                    background: isLightMode ? 'rgba(0,0,0,0.04)' : 'rgba(0,0,0,0.04)',
+                    background: 'var(--cr-hover)',
                     padding: '4px 12px', borderRadius: '24px',
-                    border: `1px solid ${isLightMode ? 'rgba(217,119,6,0.3)' : 'rgba(217,119,6,0.3)'}`,
+                    border: '1px solid var(--cr-amber-border)',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                   }}>
-                    <span style={{ fontSize: '0.75rem', color: isLightMode ? '#6B7280' : '#6B7280', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 700, marginRight: '2px' }}>Font</span>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--cr-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 700, marginRight: '2px' }}>Font</span>
                     <button
                       onClick={() => handleFontSizeChange(readerFontSize - 2)}
                       disabled={readerFontSize <= 14}
                       title="Decrease font size (-)"
                       style={{
                         width: '24px', height: '24px', borderRadius: '50%',
-                        background: isLightMode ? 'rgba(0,0,0,0.08)' : 'rgba(0,0,0,0.08)',
-                        border: 'none', color: isLightMode ? '#1F2937' : '#1F2937',
+                        background: 'var(--cr-surface-3)',
+                        border: 'none', color: 'var(--cr-text)',
                         cursor: readerFontSize <= 14 ? 'not-allowed' : 'pointer',
                         fontWeight: 800, fontSize: '1rem',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -676,7 +695,7 @@ function ClassroomContent() {
                     >
                       -
                     </button>
-                    <span style={{ fontSize: '0.85rem', color: isLightMode ? '#D97706' : '#D97706', fontWeight: 800, minWidth: '36px', textAlign: 'center' }}>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--cr-amber-text)', fontWeight: 800, minWidth: '36px', textAlign: 'center' }}>
                       {readerFontSize}px
                     </span>
                     <button
@@ -685,8 +704,8 @@ function ClassroomContent() {
                       title="Increase font size (+)"
                       style={{
                         width: '24px', height: '24px', borderRadius: '50%',
-                        background: isLightMode ? 'rgba(0,0,0,0.08)' : 'rgba(0,0,0,0.08)',
-                        border: 'none', color: isLightMode ? '#1F2937' : '#1F2937',
+                        background: 'var(--cr-surface-3)',
+                        border: 'none', color: 'var(--cr-text)',
                         cursor: readerFontSize >= 28 ? 'not-allowed' : 'pointer',
                         fontWeight: 800, fontSize: '1rem',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -699,7 +718,7 @@ function ClassroomContent() {
                 </div>
                 <div className={styles.contentBody} style={{ padding: '20px', overflowY: 'auto' }}>
                   {contentLoading ? (
-                    <div style={{ padding: '40px', textAlign: 'center', color: '#6B7280' }}>Loading study material...</div>
+                    <div style={{ padding: '40px', textAlign: 'center', color: 'var(--cr-text-muted)' }}>Loading study material...</div>
                   ) : subtopicContent ? (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', lineHeight: 1.6 }}>
                       {subtopicContent.bodyText && (() => {
@@ -710,7 +729,7 @@ function ClassroomContent() {
                             style={{
                               fontSize: `${readerFontSize}px`,
                               lineHeight: hasUrdu ? 2.4 : 1.9,
-                              color: isLightMode ? '#1F2937' : '#1F2937'
+                              color: 'var(--cr-text-2)'
                             }}
                             className={`${styles.richTextContent}${hasUrdu ? ' urdu-text' : ''}`}
                             dangerouslySetInnerHTML={{ __html: subtopicContent.bodyText }}
@@ -721,7 +740,7 @@ function ClassroomContent() {
                         const hasUrdu = subtopicContent.isUrdu || (subtopicContent.keyPoints[0] && /[\u0600-\u06FF]/.test(subtopicContent.keyPoints[0]));
                         return (
                           <div style={{ background: 'rgba(16, 185, 129, 0.05)', borderLeft: hasUrdu ? undefined : '4px solid #10b981', borderRight: hasUrdu ? '4px solid #10b981' : undefined, padding: '20px', borderRadius: '4px', direction: hasUrdu ? 'rtl' : 'ltr' }}>
-                            <h3 style={{ margin: '0 0 15px 0', color: '#15803D', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: hasUrdu ? 'flex-end' : 'flex-start' }}><Info size={20} /> {hasUrdu ? 'اہم نکات' : 'Key Takeaways'}</h3>
+                            <h3 style={{ margin: '0 0 15px 0', color: 'var(--cr-success-text)', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: hasUrdu ? 'flex-end' : 'flex-start' }}><Info size={20} /> {hasUrdu ? 'اہم نکات' : 'Key Takeaways'}</h3>
                             <ul style={{ margin: 0, paddingLeft: hasUrdu ? 0 : '20px', paddingRight: hasUrdu ? '20px' : 0, fontFamily: hasUrdu ? "'Noto Naskh Arabic', serif" : 'inherit', lineHeight: hasUrdu ? 2.2 : 1.6, textAlign: hasUrdu ? 'right' : 'left' }}>
                               {subtopicContent.keyPoints.map((pt: string, i: number) => <li key={i}>{pt}</li>)}
                             </ul>
@@ -731,27 +750,27 @@ function ClassroomContent() {
                       {subtopicContent.tables && subtopicContent.tables.length > 0 && (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                           {subtopicContent.tables.map((tbl: any, idx: number) => (
-                            <div key={idx} style={{ overflowX: 'auto', background: '#F8FAFC', borderRadius: '8px', border: '1px solid #E6EAF0' }}>
-                              <h4 style={{ margin: 0, padding: '15px', borderBottom: '1px solid #E6EAF0' }}>{tbl.title}</h4>
+                            <div key={idx} style={{ overflowX: 'auto', background: 'var(--cr-surface-2)', borderRadius: '8px', border: 'var(--cr-border)' }}>
+                              <h4 style={{ margin: 0, padding: '15px', borderBottom: '1px solid var(--cr-border)' }}>{tbl.title}</h4>
                               <table className={styles.dataTable} style={{ width: '100%', borderCollapse: 'collapse' }}>
-                                <thead><tr>{tbl.headers.map((h: string, i: number) => <th key={i} style={{ padding: '12px 15px', textAlign: 'left', color: '#B45309' }}>{h}</th>)}</tr></thead>
-                                <tbody>{tbl.rows.map((row: any[], i: number) => <tr key={i}>{row.map((cell: string, j: number) => <td key={j} style={{ padding: '12px 15px', borderBottom: '1px solid #EEF2F7' }}>{cell}</td>)}</tr>)}</tbody>
+                                <thead><tr>{tbl.headers.map((h: string, i: number) => <th key={i} style={{ padding: '12px 15px', textAlign: 'left', color: 'var(--cr-amber-text)' }}>{h}</th>)}</tr></thead>
+                                <tbody>{tbl.rows.map((row: any[], i: number) => <tr key={i}>{row.map((cell: string, j: number) => <td key={j} style={{ padding: '12px 15px', borderBottom: '1px solid var(--cr-border-soft)' }}>{cell}</td>)}</tr>)}</tbody>
                               </table>
                             </div>
                           ))}
                         </div>
                       )}
                       {subtopicContent.references && subtopicContent.references.length > 0 && (
-                        <div style={{ marginTop: '20px', paddingTop: '20px', borderTop: '1px solid #E6EAF0' }}>
-                          <h4 style={{ margin: '0 0 10px 0', color: '#64748B', display: 'flex', alignItems: 'center', gap: '8px' }}><List size={16} /> References</h4>
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>{subtopicContent.references.map((ref: any, i: number) => <div key={i} style={{ background: '#F3F4F6', padding: '5px 10px', borderRadius: '4px', fontSize: '0.85rem' }}><strong style={{ color: '#B45309' }}>{ref.label}:</strong> {ref.value}</div>)}</div>
+                        <div style={{ marginTop: '20px', paddingTop: '20px', borderTop: '1px solid var(--cr-border)' }}>
+                          <h4 style={{ margin: '0 0 10px 0', color: 'var(--cr-text-muted)', display: 'flex', alignItems: 'center', gap: '8px' }}><List size={16} /> References</h4>
+                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>{subtopicContent.references.map((ref: any, i: number) => <div key={i} style={{ background: 'var(--cr-surface-2)', padding: '5px 10px', borderRadius: '4px', fontSize: '0.85rem' }}><strong style={{ color: 'var(--cr-amber-text)' }}>{ref.label}:</strong> {ref.value}</div>)}</div>
                         </div>
                       )}
                     </div>
                   ) : (
-                    <div style={{ textAlign: 'center', padding: '60px 20px', color: '#94A3B8' }}>
+                    <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--cr-text-faint)' }}>
                       <FileText size={48} style={{ opacity: 0.2, margin: '0 auto 20px auto' }} />
-                      <p style={{ fontSize: '1.2rem', color: '#0C1B2E' }}>No content written yet.</p>
+                      <p style={{ fontSize: '1.2rem', color: 'var(--cr-text)' }}>No content written yet.</p>
                       <p>The admin has not added study notes for this subtopic.</p>
                     </div>
                   )}
@@ -764,18 +783,18 @@ function ClassroomContent() {
               /* RESTORED EXAM ENGINE VIEWER */
               isSubmitted ? (
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} style={{ padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                  <div style={{ background: '#FFFFFF', border: '1px solid #E6EAF0', padding: '40px', borderRadius: '24px', textAlign: 'center', maxWidth: '500px', width: '100%', boxShadow: '0 18px 48px rgba(15, 30, 51, 0.12)' }}>
-                    <h2 style={{ color: '#0C1B2E', fontSize: '2rem', marginBottom: '10px' }}>Exam Submitted!</h2>
-                    <p style={{ color: '#64748B', marginBottom: '30px' }}>Here is your performance summary for {testModeTitle || activeSubtopic?.name}</p>
+                  <div style={{ background: 'var(--cr-surface)', border: 'var(--cr-border)', padding: '40px', borderRadius: '24px', textAlign: 'center', maxWidth: '500px', width: '100%', boxShadow: '0 18px 48px rgba(15, 30, 51, 0.12)' }}>
+                    <h2 style={{ color: 'var(--cr-text)', fontSize: '2rem', marginBottom: '10px' }}>Exam Submitted!</h2>
+                    <p style={{ color: 'var(--cr-text-muted)', marginBottom: '30px' }}>Here is your performance summary for {testModeTitle || activeSubtopic?.name}</p>
                     
                     <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '30px' }}>
                       <div style={{ textAlign: 'center' }}>
                         <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#16A34A' }}>{score}</div>
-                        <div style={{ fontSize: '0.9rem', color: '#64748B' }}>Correct</div>
+                        <div style={{ fontSize: '0.9rem', color: 'var(--cr-text-muted)' }}>Correct</div>
                       </div>
                       <div style={{ textAlign: 'center' }}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#B45309' }}>{Math.round((score / totalMcqs) * 100)}%</div>
-                        <div style={{ fontSize: '0.9rem', color: '#64748B' }}>Accuracy</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--cr-amber-text)' }}>{Math.round((score / totalMcqs) * 100)}%</div>
+                        <div style={{ fontSize: '0.9rem', color: 'var(--cr-text-muted)' }}>Accuracy</div>
                       </div>
                     </div>
                     
@@ -802,7 +821,7 @@ function ClassroomContent() {
                       {activeTab === 'test' && (
                         <button 
                           onClick={handleExamSubmit}
-                          style={{ background: 'rgba(239, 68, 68, 0.08)', border: '1px solid #FECACA', color: '#DC2626', padding: '10px 16px', borderRadius: '12px', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '8px' }}
+                          style={{ background: 'var(--cr-danger-bg)', border: '1px solid var(--cr-danger-border)', color: 'var(--cr-danger-text)', padding: '10px 16px', borderRadius: '12px', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '8px' }}
                         >
                           <Send size={18} /> <span className={styles.hideOnMobile}>Submit Early</span>
                         </button>
@@ -810,7 +829,7 @@ function ClassroomContent() {
                       <button 
                         onClick={() => handleSaveMcq(currentMcq.id)}
                         title={savedMcqs.has(currentMcq.id) ? "Remove from Vault" : "Save to Vault"}
-                        style={{ background: savedMcqs.has(currentMcq.id) ? '#8B5CF6' : '#F8FAFC', border: '1px solid #E6EAF0', color: savedMcqs.has(currentMcq.id) ? '#fff' : '#64748B', padding: '10px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0, transition: 'all 0.2s' }}
+                        style={{ background: savedMcqs.has(currentMcq.id) ? '#8B5CF6' : 'var(--cr-surface-2)', border: 'var(--cr-border)', color: savedMcqs.has(currentMcq.id) ? '#fff' : 'var(--cr-text-muted)', padding: '10px', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0, transition: 'all 0.2s' }}
                       >
                         <Bookmark size={18} fill={savedMcqs.has(currentMcq.id) ? '#fff' : 'none'} />
                       </button>
@@ -859,7 +878,7 @@ function ClassroomContent() {
             <div className={styles.emptyState} style={{ display: 'flex', flexDirection: 'column', height: '100%', position: 'relative' }}>
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                 <Layers size={64} style={{ opacity: 0.2, margin: '0 auto 24px auto' }} />
-                <h3 style={{ fontSize: '1.8rem', color: '#0C1B2E', marginBottom: '8px' }}>Select a Topic</h3>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--cr-text)', marginBottom: '8px' }}>Select a Topic</h3>
                 <p style={{ fontSize: '1.1rem' }}>Please select a subtopic from the Study tab to load content.</p>
               </div>
             </div>
@@ -874,9 +893,9 @@ function ClassroomContent() {
               gap: '16px', 
               justifyContent: 'center',
               padding: '16px 24px',
-              background: 'rgba(255, 255, 255, 0.92)',
+              background: 'var(--cr-surface-glass)',
               backdropFilter: 'blur(20px)',
-              borderTop: '1px solid #E6EAF0',
+              borderTop: '1px solid var(--cr-border)',
               zIndex: 10,
               flexWrap: 'nowrap',
               borderBottomLeftRadius: '24px',
@@ -901,7 +920,7 @@ function ClassroomContent() {
                 onClick={() => handleQuickMode(30, 'any', false, 1200)} 
                 className={styles.footerBtn}
                 style={{ 
-                  background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.3)', color: '#B45309', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
+                  background: 'var(--cr-amber-bg)', border: '1px solid var(--cr-amber-border)', color: 'var(--cr-amber-text)', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
                 }}
                 onMouseOver={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(245, 158, 11, 0.2)'; }}
                 onMouseOut={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.1)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
@@ -913,7 +932,7 @@ function ClassroomContent() {
                 onClick={() => handleQuickMode(50, 'any', true)} 
                 className={styles.footerBtn}
                 style={{ 
-                  background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.3)', color: '#15803D', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
+                  background: 'var(--cr-success-bg)', border: '1px solid var(--cr-success-border)', color: 'var(--cr-success-text)', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
                 }}
                 onMouseOver={e => { e.currentTarget.style.background = 'rgba(16, 185, 129, 0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(16, 185, 129, 0.2)'; }}
                 onMouseOut={e => { e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
@@ -925,7 +944,7 @@ function ClassroomContent() {
                 onClick={() => handleQuickMode(50, 'hard', false, 1200)} 
                 className={styles.footerBtn}
                 style={{ 
-                  background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#DC2626', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
+                  background: 'var(--cr-danger-bg)', border: '1px solid var(--cr-danger-border)', color: 'var(--cr-danger-text)', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
                 }}
                 onMouseOver={e => { e.currentTarget.style.background = 'rgba(239, 68, 68, 0.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(239, 68, 68, 0.2)'; }}
                 onMouseOut={e => { e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
@@ -937,7 +956,7 @@ function ClassroomContent() {
                 onClick={() => setIsCustomTestModalOpen(true)}
                 className={styles.footerBtn}
                 style={{ 
-                  background: '#F8FAFC', border: '1px solid #E6EAF0', color: '#374151', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
+                  background: 'var(--cr-surface-2)', border: 'var(--cr-border)', color: 'var(--cr-text-2)', padding: '12px 24px', borderRadius: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', fontSize: '0.95rem', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', flexShrink: 0
                 }}
                 onMouseOver={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(255, 255, 255, 0.1)'; }}
                 onMouseOut={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
@@ -954,16 +973,16 @@ function ClassroomContent() {
         {isCustomTestModalOpen && (
           <div style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsCustomTestModalOpen(false)} style={{ position: 'absolute', inset: 0, background: 'rgba(12, 27, 46, 0.5)', backdropFilter: 'blur(5px)' }} />
-            <motion.div initial={{ scale: 0.9, y: 20, opacity: 0 }} animate={{ scale: 1, y: 0, opacity: 1 }} exit={{ scale: 0.9, y: 20, opacity: 0 }} style={{ position: 'relative', background: '#FFFFFF', borderRadius: '16px', padding: '30px', width: '100%', maxWidth: '500px', border: '1px solid #E6EAF0', boxShadow: '0 18px 48px rgba(15, 30, 51, 0.12)' }}>
+            <motion.div initial={{ scale: 0.9, y: 20, opacity: 0 }} animate={{ scale: 1, y: 0, opacity: 1 }} exit={{ scale: 0.9, y: 20, opacity: 0 }} style={{ position: 'relative', background: 'var(--cr-surface)', borderRadius: '16px', padding: '30px', width: '100%', maxWidth: '500px', border: 'var(--cr-border)', boxShadow: '0 18px 48px rgba(15, 30, 51, 0.12)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-                <h2 style={{ fontSize: '1.5rem', color: '#0C1B2E', margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}><Settings size={24} color="#F59E0B" /> Custom Exam Generator</h2>
-                <button onClick={() => setIsCustomTestModalOpen(false)} style={{ background: 'transparent', border: 'none', color: '#64748B', cursor: 'pointer', padding: '4px' }}><X size={20} /></button>
+                <h2 style={{ fontSize: '1.5rem', color: 'var(--cr-text)', margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}><Settings size={24} color="#F59E0B" /> Custom Exam Generator</h2>
+                <button onClick={() => setIsCustomTestModalOpen(false)} style={{ background: 'transparent', border: 'none', color: 'var(--cr-text-muted)', cursor: 'pointer', padding: '4px' }}><X size={20} /></button>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <div>
-                  <label style={{ display: 'block', color: '#64748B', marginBottom: '8px', fontSize: '0.9rem' }}>Mode</label>
-                  <select value={customTestMode} onChange={e => setCustomTestMode(e.target.value)} style={{ width: '100%', background: '#FFFFFF', border: '1px solid #E6EAF0', color: '#0F1E33', padding: '12px', borderRadius: '8px', outline: 'none' }}>
+                  <label style={{ display: 'block', color: 'var(--cr-text-muted)', marginBottom: '8px', fontSize: '0.9rem' }}>Mode</label>
+                  <select value={customTestMode} onChange={e => setCustomTestMode(e.target.value)} style={{ width: '100%', background: 'var(--cr-surface)', border: 'var(--cr-border)', color: 'var(--cr-text)', padding: '12px', borderRadius: '8px' }}>
                     <option value="random">Random (All Subjects)</option>
                     <option value="single">Single Subject</option>
                     <option value="multi">Multi Subject</option>
@@ -972,7 +991,7 @@ function ClassroomContent() {
 
                 {customTestMode !== 'random' && (
                   <div>
-                    <label style={{ display: 'block', color: '#64748B', marginBottom: '8px', fontSize: '0.9rem' }}>Select Subject(s)</label>
+                    <label style={{ display: 'block', color: 'var(--cr-text-muted)', marginBottom: '8px', fontSize: '0.9rem' }}>Select Subject(s)</label>
                     <select 
                       multiple={customTestMode === 'multi'} 
                       value={customTestMode === 'multi' ? customTestSubjects.map(String) : (customTestSubjects[0] ? String(customTestSubjects[0]) : '')} 
@@ -984,23 +1003,23 @@ function ClassroomContent() {
                           setCustomTestSubjects([parseInt(e.target.value)]);
                         }
                       }} 
-                      style={{ width: '100%', background: '#FFFFFF', border: '1px solid #E6EAF0', color: '#0F1E33', padding: '12px', borderRadius: '8px', outline: 'none', height: customTestMode === 'multi' ? '120px' : 'auto' }}
+                      style={{ width: '100%', background: 'var(--cr-surface)', border: 'var(--cr-border)', color: 'var(--cr-text)', padding: '12px', borderRadius: '8px', height: customTestMode === 'multi' ? '120px' : 'auto' }}
                     >
                       {customTestMode === 'single' && <option value="" disabled>Select a subject</option>}
                       {categories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                     </select>
-                    {customTestMode === 'multi' && <div style={{ fontSize: '0.8rem', color: '#94A3B8', marginTop: '4px' }}>Hold Ctrl/Cmd to select multiple.</div>}
+                    {customTestMode === 'multi' && <div style={{ fontSize: '0.8rem', color: 'var(--cr-text-faint)', marginTop: '4px' }}>Hold Ctrl/Cmd to select multiple.</div>}
                   </div>
                 )}
 
                 <div style={{ display: 'flex', gap: '16px' }}>
                   <div style={{ flex: 1 }}>
-                    <label style={{ display: 'block', color: '#64748B', marginBottom: '8px', fontSize: '0.9rem' }}>Total MCQs</label>
-                    <input type="number" min="5" max="200" value={customTestLimit} onChange={e => setCustomTestLimit(parseInt(e.target.value) || 20)} style={{ width: '100%', background: '#FFFFFF', border: '1px solid #E6EAF0', color: '#0F1E33', padding: '12px', borderRadius: '8px', outline: 'none' }} />
+                    <label style={{ display: 'block', color: 'var(--cr-text-muted)', marginBottom: '8px', fontSize: '0.9rem' }}>Total MCQs</label>
+                    <input type="number" min="5" max="200" value={customTestLimit} onChange={e => setCustomTestLimit(parseInt(e.target.value) || 20)} style={{ width: '100%', background: 'var(--cr-surface)', border: 'var(--cr-border)', color: 'var(--cr-text)', padding: '12px', borderRadius: '8px' }} />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <label style={{ display: 'block', color: '#64748B', marginBottom: '8px', fontSize: '0.9rem' }}>Difficulty</label>
-                    <select value={customTestDifficulty} onChange={e => setCustomTestDifficulty(e.target.value)} style={{ width: '100%', background: '#FFFFFF', border: '1px solid #E6EAF0', color: '#0F1E33', padding: '12px', borderRadius: '8px', outline: 'none' }}>
+                    <label style={{ display: 'block', color: 'var(--cr-text-muted)', marginBottom: '8px', fontSize: '0.9rem' }}>Difficulty</label>
+                    <select value={customTestDifficulty} onChange={e => setCustomTestDifficulty(e.target.value)} style={{ width: '100%', background: 'var(--cr-surface)', border: 'var(--cr-border)', color: 'var(--cr-text)', padding: '12px', borderRadius: '8px' }}>
                       <option value="any">Mixed (Any)</option>
                       <option value="easy">Easy</option>
                       <option value="medium">Medium</option>
@@ -1026,7 +1045,7 @@ function ClassroomContent() {
 
 export default function LearningBoardPage() {
   return (
-    <Suspense fallback={<div style={{ color: '#64748B', padding: '40px', textAlign: 'center' }}>Loading Classroom...</div>}>
+    <Suspense fallback={<div style={{ color: 'var(--cr-text-muted)', padding: '40px', textAlign: 'center' }}>Loading Classroom...</div>}>
       <ClassroomContent />
     </Suspense>
   );
