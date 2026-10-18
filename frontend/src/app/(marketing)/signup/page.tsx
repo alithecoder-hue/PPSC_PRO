@@ -4,7 +4,7 @@ import { API_BASE } from '@/lib/api';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Eye, EyeOff, Zap, Flame } from 'lucide-react';
+import { Eye, EyeOff, Zap } from 'lucide-react';
 
 export default function SignupPage() {
   const [name, setName] = useState('');
@@ -55,19 +55,7 @@ export default function SignupPage() {
           test is two minutes away.
         </p>
         <div className="mm-auth-deco" aria-hidden="true">
-          <div className="mm-deco-score">
-            <span>Latest mock score</span>
-            <strong>
-              82<small>/100</small>
-            </strong>
-            <div className="mm-deco-bar">
-              <i />
-            </div>
-          </div>
-          <div className="mm-deco-streak">
-            <Flame size={15} />
-            <span>12-day streak</span>
-          </div>
+          <img src="/images/auth-signup.jpg" alt="" />
         </div>
         <p className="mm-auth-foot">50,000+ MCQs · 5 years of past papers · 4.9/5 student rating</p>
       </div>
