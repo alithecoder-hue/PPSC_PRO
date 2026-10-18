@@ -81,13 +81,15 @@ export default function SubjectsSection() {
   const go = (dir: number) => {
     const el = trackRef.current;
     if (!el) return;
-    el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' });
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollBy({ left: dir * el.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
   };
 
   const goTo = (i: number) => {
     const el = trackRef.current;
     if (!el) return;
-    el.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' });
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollTo({ left: i * el.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
   };
 
   return (
@@ -117,7 +119,14 @@ export default function SubjectsSection() {
         </div>
       </div>
       <div className="mm-container">
-        <div className="mm-carousel-track" ref={trackRef} onScroll={update}>
+        <div
+          className="mm-carousel-track"
+          ref={trackRef}
+          onScroll={update}
+          tabIndex={0}
+          role="region"
+          aria-label="Subjects carousel — use left and right arrow keys to scroll"
+        >
           {SUBJECTS.map((s) => (
             <Link
               key={s.slug}
@@ -155,7 +164,7 @@ export default function SubjectsSection() {
             </Link>
           ))}
         </div>
-        {pages > 1 && (
+        {pages > 1 && pages <= 10 && (
           <div className="mm-carousel-dots" role="tablist" aria-label="Subject pages">
             {Array.from({ length: pages }).map((_, i) => (
               <button

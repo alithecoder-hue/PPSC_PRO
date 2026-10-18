@@ -117,9 +117,6 @@ export default function LoginPage() {
                 </button>
               </div>
             </div>
-            <div className="mm-form-row">
-              <Link href="#">Forgot password?</Link>
-            </div>
             <button type="submit" className="mm-btn mm-btn-primary mm-submit" disabled={isLoading}>
               {isLoading ? 'Logging in…' : 'Log in'}
             </button>
