@@ -27,16 +27,20 @@ export const metadata: Metadata = {
     'Crack the PPSC exam on your first attempt. 50,000+ topic-wise MCQs, 5 years of solved past papers, timed mock tests and performance analytics.',
 };
 
-const FEATURES = [
+import type { LucideIcon } from 'lucide-react';
+
+const FEATURES: { icon: LucideIcon; title: string; text: string; tags?: string[] }[] = [
   {
     icon: BookOpen,
     title: '50,000+ topic-wise MCQs',
     text: 'Every subject broken into topics, exactly the way PPSC tests them. Practice what matters, skip what doesn\u2019t.',
+    tags: ['Islamiyat', 'Pak Studies', 'Everyday Science', 'English', '+12 more'],
   },
   {
     icon: FileText,
     title: '5 years of solved past papers',
     text: 'Real PPSC papers from recent years, fully solved with explanations. Download them as PDFs with Premium.',
+    tags: ['2024', '2023', '2022', '2021', '2020'],
   },
   {
     icon: Timer,
@@ -152,8 +156,28 @@ export default function LandingPage() {
               is a complete system — practice, test, analyze, improve.
             </p>
           </div>
-          <div className="mm-grid-3">
-            {FEATURES.map((f) => (
+          <div className="mm-feat-lg">
+            {FEATURES.slice(0, 2).map((f) => (
+              <div key={f.title} className="mm-card mm-card-lg">
+                <div className="mm-card-icon">
+                  <f.icon size={22} />
+                </div>
+                <h3>{f.title}</h3>
+                <p>{f.text}</p>
+                {f.tags && (
+                  <div className="mm-card-tags" aria-hidden="true">
+                    {f.tags.map((t) => (
+                      <span key={t} className={t.startsWith('+') ? 'more' : ''}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="mm-feat-sm">
+            {FEATURES.slice(2).map((f) => (
               <div key={f.title} className="mm-card">
                 <div className="mm-card-icon">
                   <f.icon size={22} />

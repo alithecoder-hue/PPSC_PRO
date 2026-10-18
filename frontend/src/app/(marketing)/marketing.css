@@ -768,6 +768,19 @@ a.mm-btn-primary:active {
   gap: 20px;
   margin-top: 48px;
 }
+/* bento layout: 2 large cards + 4 compact cards */
+.mm-feat-lg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 48px;
+}
+.mm-feat-sm {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
 .mm-card {
   background: #fff;
   border: 1px solid var(--mm-line);
@@ -775,6 +788,24 @@ a.mm-btn-primary:active {
   padding: 30px 28px;
   box-shadow: var(--mm-shadow-sm);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+.mm-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 28px;
+  right: 28px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.mm-card:hover::before {
+  transform: scaleX(1);
 }
 .mm-card:hover {
   transform: translateY(-4px);
@@ -783,13 +814,41 @@ a.mm-btn-primary:active {
 .mm-card-icon {
   width: 46px;
   height: 46px;
-  border-radius: 12px;
-  background: var(--mm-navy);
+  border-radius: 13px;
+  background: linear-gradient(135deg, #0c1b2e 0%, #1e3a5f 100%);
   color: var(--mm-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  box-shadow: 0 10px 18px -8px rgba(12, 27, 46, 0.5);
+  transition: transform 0.2s ease;
+}
+.mm-card:hover .mm-card-icon {
+  transform: translateY(-2px) rotate(-5deg);
+}
+.mm-card-lg {
+  padding: 34px 32px;
+}
+.mm-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.mm-card-tags span {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--mm-ink-2);
+  background: var(--mm-bg-soft);
+  border: 1px solid var(--mm-line);
+  padding: 6px 13px;
+  border-radius: 999px;
+}
+.mm-card-tags span.more {
+  color: #b45309;
+  background: #fffbeb;
+  border-color: #fde68a;
 }
 .mm-card h3 {
   font-size: 1.08rem;
@@ -1679,6 +1738,9 @@ a.mm-btn-primary:active {
   .mm-subj-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .mm-feat-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .mm-steps {
     grid-template-columns: 1fr;
     max-width: 560px;
@@ -1699,6 +1761,10 @@ a.mm-btn-primary:active {
   }
   .mm-h2 {
     font-size: 1.85rem;
+  }
+  .mm-feat-lg,
+  .mm-feat-sm {
+    grid-template-columns: 1fr;
   }
   .mm-hero {
     padding: 52px 0 64px;
