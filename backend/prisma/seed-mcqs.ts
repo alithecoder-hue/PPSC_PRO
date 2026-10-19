@@ -52,7 +52,7 @@ async function main(): Promise<void> {
   const dir = __dirname + '/mcq-bank';
   const files = fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.json'))
+    .filter((f) => f.endsWith('.json') && !f.startsWith('_') && f !== 'README.md')
     .sort();
 
   if (files.length === 0) fail('no question files found in prisma/mcq-bank/');
