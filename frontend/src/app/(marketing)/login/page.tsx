@@ -32,6 +32,7 @@ export default function LoginPage() {
       localStorage.setItem('token', data.token);
       localStorage.setItem('role', data.role);
       localStorage.setItem('userName', data.name);
+      window.dispatchEvent(new Event('mm-auth-change'));
 
       if (data.role === 'ADMIN') router.push('/admin');
       else router.push('/');

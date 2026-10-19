@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { Menu, X, ArrowRight, LogOut } from 'lucide-react';
 
 const LINKS = [
   { href: '/classroom', label: 'Classroom' },
@@ -11,8 +12,38 @@ const LINKS = [
   { href: '/subscription', label: 'Pricing' },
 ];
 
+function readAuth(): { name: string } | null {
+  if (typeof window === 'undefined') return null;
+  if (!localStorage.getItem('token')) return null;
+  return { name: localStorage.getItem('userName') || 'Account' };
+}
+
 export default function MarketingNav() {
   const [open, setOpen] = useState(false);
+  const [auth, setAuth] = useState<{ name: string } | null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const sync = () => setAuth(readAuth());
+    sync();
+    window.addEventListener('storage', sync);
+    window.addEventListener('mm-auth-change', sync);
+    return () => {
+      window.removeEventListener('storage', sync);
+      window.removeEventListener('mm-auth-change', sync);
+    };
+  }, []);
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('role');
+    localStorage.removeItem('userName');
+    window.dispatchEvent(new Event('mm-auth-change'));
+    setOpen(false);
+    router.push('/');
+  };
+
+  const firstName = auth ? auth.name.split(' ')[0] : '';
 
   return (
     <>
@@ -38,12 +69,27 @@ export default function MarketingNav() {
           </nav>
 
           <div className="mm-nav-actions">
-            <Link href="/login" className="mm-login">
-              Log in
-            </Link>
-            <Link href="/signup" className="mm-btn mm-btn-primary mm-nav-cta">
-              Start free <ArrowRight size={15} />
-            </Link>
+            {auth ? (
+              <>
+                <Link href="/dashboard" className="mm-nav-user">
+                  <span className="mm-nav-avatar">{firstName.charAt(0).toUpperCase()}</span>
+                  {firstName}
+                </Link>
+                <button onClick={logout} className="mm-nav-logout" aria-label="Log out">
+                  <LogOut size={15} />
+                  Log out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="mm-login">
+                  Log in
+                </Link>
+                <Link href="/signup" className="mm-btn mm-btn-primary mm-nav-cta">
+                  Start free <ArrowRight size={15} />
+                </Link>
+              </>
+            )}
             <button
               className="mm-mobile-toggle"
               onClick={() => setOpen(!open)}
@@ -59,12 +105,28 @@ export default function MarketingNav() {
               {l.label}
             </Link>
           ))}
-          <Link href="/login" onClick={() => setOpen(false)}>
-            Log in
-          </Link>
-          <Link href="/signup" onClick={() => setOpen(false)}>
-            Start free
-          </Link>
+          {auth ? (
+            <>
+              <Link href="/dashboard" onClick={() => setOpen(false)}>
+                {firstName}&rsquo;s dashboard
+              </Link>
+              <button
+                onClick={logout}
+                className="mm-mobile-logout"
+              >
+                Log out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/login" onClick={() => setOpen(false)}>
+                Log in
+              </Link>
+              <Link href="/signup" onClick={() => setOpen(false)}>
+                Start free
+              </Link>
+            </>
+          )}
         </div>
       </header>
     </>
