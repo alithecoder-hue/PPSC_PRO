@@ -740,7 +740,7 @@ function ClassroomContent() {
                         const hasUrdu = subtopicContent.isUrdu || (subtopicContent.keyPoints[0] && /[\u0600-\u06FF]/.test(subtopicContent.keyPoints[0]));
                         return (
                           <div style={{ background: 'rgba(16, 185, 129, 0.05)', borderLeft: hasUrdu ? undefined : '4px solid #10b981', borderRight: hasUrdu ? '4px solid #10b981' : undefined, padding: '20px', borderRadius: '4px', direction: hasUrdu ? 'rtl' : 'ltr' }}>
-                            <h3 style={{ margin: '0 0 15px 0', color: 'var(--cr-success-text)', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: hasUrdu ? 'flex-end' : 'flex-start' }}><Info size={20} /> {hasUrdu ? 'اہم نکات' : 'Key Takeaways'}</h3>
+                            <h3 style={{ margin: '0 0 15px 0', color: 'var(--cr-success-text)', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: hasUrdu ? 'flex-end' : 'flex-start' }}><Info size={20} /> {hasUrdu ? 'اہم ون لائنرز' : 'Important One-Liners'}</h3>
                             <ul style={{ margin: 0, paddingLeft: hasUrdu ? 0 : '20px', paddingRight: hasUrdu ? '20px' : 0, fontFamily: hasUrdu ? "'Noto Naskh Arabic', serif" : 'inherit', lineHeight: hasUrdu ? 2.2 : 1.6, textAlign: hasUrdu ? 'right' : 'left' }}>
                               {subtopicContent.keyPoints.map((pt: string, i: number) => <li key={i}>{pt}</li>)}
                             </ul>
