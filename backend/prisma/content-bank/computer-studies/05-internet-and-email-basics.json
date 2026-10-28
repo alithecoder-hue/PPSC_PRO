@@ -1,0 +1,271 @@
+[
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "What is the Internet and WWW",
+    "bodyText": "<h2>Definition of the Internet</h2><p>The Internet is a global network of interconnected computer networks that communicate with each other using a common set of protocols, principally TCP/IP (Transmission Control Protocol / Internet Protocol). It is often called a <strong>network of networks</strong> because it links millions of private, public, academic, business and government networks around the world. No single person, organisation or government owns the Internet; it is decentralised and governed by shared technical standards.</p><p>The Internet provides a wide range of services, including the World Wide Web, email, file transfer, video conferencing, online banking, e-commerce and cloud computing. A computer connects to the Internet through an Internet Service Provider (ISP) using a modem, broadband, fibre-optic cable, Wi-Fi or mobile data.</p><h2>Origin and History of the Internet</h2><p>The Internet grew out of <strong>ARPANET</strong> (Advanced Research Projects Agency Network), developed in 1969 by the Advanced Research Projects Agency (ARPA) of the United States Department of Defense. ARPANET was designed to allow computers at different research institutions to share information and to keep communication working even if part of the network failed. In the 1970s, Vint Cerf and Bob Kahn developed TCP/IP, which became the standard communication protocol of the Internet in 1983. The term <em>Internet</em> came into common use as these networks were interconnected in the 1980s, and the network was opened to commercial and public use in the 1990s.</p><h2>What is the World Wide Web (WWW)?</h2><p>The World Wide Web, commonly called the Web or WWW, is a system of interlinked hypertext documents and resources accessed over the Internet. It was proposed in 1989 by British computer scientist <strong>Tim Berners-Lee</strong> at CERN (European Organization for Nuclear Research) in Switzerland. Berners-Lee also developed the three foundational technologies of the Web: HTML (HyperText Markup Language), HTTP (HyperText Transfer Protocol) and URLs (Uniform Resource Locators). The first website, info.cern.ch, went live in 1991, and the Web was made freely available to the public in 1993.</p><p>It is important for examinations to distinguish the two terms: the Internet is the physical infrastructure and network, whereas the WWW is only one service that runs on the Internet, just as email and file transfer are other services.</p><h2>Key Terms</h2><ul><li><strong>URL (Uniform Resource Locator):</strong> the unique address of a resource on the Web, for example https://www.example.com. It consists of the protocol, the domain name and the path to the resource.</li><li><strong>HTTP (HyperText Transfer Protocol):</strong> the protocol used to transfer web pages between a web server and a web browser. HTTPS is the secure version, which encrypts data using SSL/TLS.</li><li><strong>HTML (HyperText Markup Language):</strong> the standard language used to create and structure web pages.</li><li><strong>Web Server:</strong> a computer that stores websites and delivers web pages to users on request.</li><li><strong>IP Address:</strong> a unique numerical address assigned to each device on a network, for example 192.168.1.1 in IPv4 format.</li><li><strong>Domain Name:</strong> a human-readable name for a website, such as google.com, which the Domain Name System (DNS) translates into an IP address.</li><li><strong>ISP (Internet Service Provider):</strong> a company that provides individuals and organisations with access to the Internet.</li></ul><h2>Uses of the Internet</h2><p>The Internet is used for communication, education and research, business and e-commerce, entertainment, banking, government services, social networking and access to news and information. For PPSC examinations, candidates should remember both its benefits — instant global communication, vast information resources and online services — and its risks, including misinformation, cybercrime and privacy loss, which are covered in the subtopic on online safety.</p>",
+    "keyPoints": [
+      "Internet is a global network of interconnected networks that communicate using TCP/IP.",
+      "Internet is often called a network of networks; no single person or organisation owns it.",
+      "ARPANET was developed in 1969 by the US Department of Defense's Advanced Research Projects Agency (ARPA).",
+      "TCP/IP was developed by Vint Cerf and Bob Kahn and became the standard Internet protocol in 1983.",
+      "WWW stands for World Wide Web.",
+      "WWW was proposed in 1989 by Tim Berners-Lee at CERN in Switzerland.",
+      "Tim Berners-Lee developed HTML, HTTP and URLs, the three foundational technologies of the Web.",
+      "The first website, info.cern.ch, went live in 1991, and the Web was made free to the public in 1993.",
+      "HTTP stands for HyperText Transfer Protocol; HTTPS is its secure, encrypted version.",
+      "URL stands for Uniform Resource Locator, the unique address of a resource on the Web.",
+      "HTML stands for HyperText Markup Language, the standard language for creating web pages.",
+      "DNS (Domain Name System) translates human-readable domain names into IP addresses."
+    ],
+    "tables": [
+      {
+        "title": "Internet vs World Wide Web (WWW)",
+        "headers": [
+          "Feature",
+          "Internet",
+          "World Wide Web (WWW)"
+        ],
+        "rows": [
+          [
+            "Definition",
+            "Global network of interconnected computer networks",
+            "System of interlinked hypertext documents accessed over the Internet"
+          ],
+          [
+            "Nature",
+            "Infrastructure (hardware and protocols)",
+            "A service that runs on the Internet"
+          ],
+          [
+            "Origin",
+            "ARPANET, 1969",
+            "Proposed by Tim Berners-Lee, 1989"
+          ],
+          [
+            "Main protocol",
+            "TCP/IP",
+            "HTTP / HTTPS"
+          ],
+          [
+            "Access",
+            "Through an ISP",
+            "Through a web browser"
+          ]
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Computer Science: An Overview",
+        "value": "J. Glenn Brookshear and Dennis Brylow — Internet and World Wide Web fundamentals"
+      },
+      {
+        "label": "Discovering Computers",
+        "value": "Shelly and Vermaat — Internet, WWW and web terminology"
+      },
+      {
+        "label": "Punjab Textbook Board, Computer Science (Class 9–10)",
+        "value": "Internet, WWW and networking basics"
+      }
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "Web Browsers and Search Engines",
+    "bodyText": "<h2>What is a Web Browser?</h2><p>A web browser is application software used to access, retrieve and display information on the World Wide Web. When a user types a URL or clicks a link, the browser sends a request to a web server using HTTP or HTTPS, receives the web page (written in HTML, CSS and JavaScript), and displays it on the screen. Common features of modern browsers include tabs, bookmarks (favourites), history, downloads, private/incognito browsing, extensions and built-in security warnings.</p><p>The first web browser was <strong>WorldWideWeb</strong>, later renamed Nexus, developed by Tim Berners-Lee in 1990 at CERN. It was both a browser and an editor. The first widely popular graphical browser was <strong>Mosaic</strong>, released in 1993 by Marc Andreessen and Eric Bina at the National Center for Supercomputing Applications (NCSA). Mosaic made the Web accessible to ordinary users by displaying images inline with text, and it paved the way for Netscape Navigator and later browsers.</p><h2>Popular Web Browsers</h2><ul><li><strong>Google Chrome:</strong> developed by Google, first released in 2008; currently the most widely used browser worldwide.</li><li><strong>Mozilla Firefox:</strong> developed by the Mozilla Foundation, released in 2004 as the successor to the Mozilla Suite.</li><li><strong>Microsoft Edge:</strong> developed by Microsoft, replacing Internet Explorer as the default Windows browser in 2015.</li><li><strong>Apple Safari:</strong> developed by Apple, the default browser on macOS and iOS devices.</li><li><strong>Opera:</strong> developed by Opera Software, first released in 1995.</li></ul><h2>What is a Search Engine?</h2><p>A search engine is a web-based tool that helps users find information on the Internet. The user enters keywords or a question, and the search engine searches its index — a huge database of web pages collected by automated programs called crawlers or spiders — and returns a ranked list of relevant results. Ranking is based on relevance, quality, popularity and other factors determined by the search engine's algorithm.</p><p>Early search tools included Archie (1990), widely regarded as the first search engine, which indexed FTP files. Yahoo! was founded in 1994. <strong>Google</strong> was founded in 1998 by Larry Page and Sergey Brin while they were PhD students at Stanford University, and its PageRank algorithm ranked pages by the number and quality of links pointing to them. Other major search engines include Microsoft Bing (launched 2009) and DuckDuckGo (launched 2008), which emphasises user privacy by not tracking searches.</p><h2>How to Search Effectively</h2><p>For examination and practical purposes, candidates should know basic search techniques: use specific keywords rather than full sentences, use quotation marks for exact phrases (for example, \"World Wide Web\"), use the minus sign to exclude a word, and use site: to restrict results to one website. Always evaluate search results for reliability — prefer official, academic and well-known sources, and cross-check important facts, since anyone can publish on the Web.</p>",
+    "keyPoints": [
+      "A web browser is software used to access, retrieve and display web pages on the World Wide Web.",
+      "The first web browser was WorldWideWeb (later Nexus), developed by Tim Berners-Lee in 1990.",
+      "Mosaic, released in 1993, was the first widely popular graphical web browser.",
+      "Mosaic was developed by Marc Andreessen and Eric Bina at NCSA.",
+      "Google Chrome was developed by Google and first released in 2008.",
+      "Mozilla Firefox was developed by the Mozilla Foundation and released in 2004.",
+      "Microsoft Edge replaced Internet Explorer as the default Windows browser in 2015.",
+      "A search engine searches its index of web pages and returns a ranked list of relevant results.",
+      "Web crawlers, also called spiders, are automated programs that collect web pages for a search engine index.",
+      "Archie (1990) is widely regarded as the first search engine.",
+      "Google was founded in 1998 by Larry Page and Sergey Brin at Stanford University.",
+      "Microsoft Bing was launched in 2009; DuckDuckGo (2008) emphasises search privacy."
+    ],
+    "tables": [
+      {
+        "title": "Web Browser vs Search Engine",
+        "headers": [
+          "Feature",
+          "Web Browser",
+          "Search Engine"
+        ],
+        "rows": [
+          [
+            "Definition",
+            "Software that displays web pages",
+            "Web tool that finds information on the Internet"
+          ],
+          [
+            "Function",
+            "Retrieves and renders a page from its URL",
+            "Searches an index and lists relevant pages"
+          ],
+          [
+            "Needs a browser?",
+            "It is itself the browser",
+            "It is accessed through a browser"
+          ],
+          [
+            "Examples",
+            "Chrome, Firefox, Safari, Edge, Opera",
+            "Google, Bing, Yahoo, DuckDuckGo"
+          ],
+          [
+            "Without it",
+            "No web pages can be viewed",
+            "Finding information is slow and difficult, but direct URLs still work"
+          ]
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Computer Science: An Overview",
+        "value": "J. Glenn Brookshear and Dennis Brylow — Web browsers and search engines"
+      },
+      {
+        "label": "Discovering Computers",
+        "value": "Shelly and Vermaat — Browsers, search tools and search techniques"
+      },
+      {
+        "label": "Punjab Textbook Board, Computer Science (Class 9–10)",
+        "value": "Web browsers and search engines"
+      }
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "Email Etiquette and Usage",
+    "bodyText": "<h2>What is Email?</h2><p>Email (electronic mail) is a method of exchanging messages between people using electronic devices over a computer network, usually the Internet. It is one of the oldest and most widely used Internet services. An email address has two parts separated by the @ symbol: the username (local part) and the domain name, for example username@example.com.</p><p>Email is generally credited to <strong>Ray Tomlinson</strong>, who in 1971 sent the first network email over ARPANET and chose the @ symbol to separate the username from the host computer name. Email became widely popular in the 1990s with the growth of the Internet, and remains essential for official, academic and business communication.</p><h2>How Email Works: Key Protocols</h2><p>Three protocols govern email. <strong>SMTP (Simple Mail Transfer Protocol)</strong> is used to send outgoing mail from a client to a mail server and between mail servers. For receiving mail, <strong>POP3 (Post Office Protocol version 3)</strong> downloads messages to a single device and usually deletes them from the server, while <strong>IMAP (Internet Message Access Protocol)</strong> keeps messages on the server and synchronises them across multiple devices, so mail read on a phone also appears as read on a computer.</p><h2>Parts of an Email</h2><ul><li><strong>To:</strong> the primary recipient(s) of the message.</li><li><strong>CC (Carbon Copy):</strong> recipients who receive a copy for information; all recipients can see who was copied.</li><li><strong>BCC (Blind Carbon Copy):</strong> recipients who receive a copy secretly; other recipients cannot see BCC addresses.</li><li><strong>Subject:</strong> a short, clear line summarising the purpose of the message.</li><li><strong>Body:</strong> the main content of the message.</li><li><strong>Attachment:</strong> a file (document, image or other file) sent along with the message.</li></ul><h2>Email Etiquette</h2><p>Email etiquette means the accepted rules of polite and professional email communication. For PPSC examinations, the following rules are commonly asked:</p><ul><li>Use a clear, specific subject line so the recipient knows the purpose at a glance.</li><li>Begin with a proper greeting (for example, Dear Sir/Madam) and end with a courteous closing and your name.</li><li>Be concise, clear and polite; avoid overly long messages and unnecessary capital letters, which read as shouting.</li><li>Check spelling and grammar before sending, and never send an email written in anger.</li><li>Use CC only when the person genuinely needs to know, and BCC when recipients should not see each other's addresses.</li><li>Do not forward chain emails, unverified news or private messages without permission.</li><li>Do not open attachments from unknown senders, and do not share passwords or sensitive personal information by email.</li><li>Reply promptly to official emails, and use Reply All only when every recipient truly needs the reply.</li><li>Keep attachments reasonably sized and mention them in the body of the message.</li><li>Respect privacy: do not share another person's email address or correspondence without consent.</li></ul><h2>Advantages and Limitations</h2><p>Email is fast, inexpensive, easy to store and search, and can carry attachments to recipients anywhere in the world. Its limitations include spam (unsolicited bulk mail), phishing attempts, the risk of messages being misunderstood without tone of voice, and dependence on Internet access.</p>",
+    "keyPoints": [
+      "Email stands for electronic mail, a method of exchanging messages over a computer network.",
+      "An email address has a username and a domain name separated by the @ symbol.",
+      "Email is credited to Ray Tomlinson, who sent the first network email in 1971 and chose the @ symbol.",
+      "SMTP stands for Simple Mail Transfer Protocol and is used to send outgoing email.",
+      "POP3 stands for Post Office Protocol version 3 and downloads mail to a single device.",
+      "IMAP stands for Internet Message Access Protocol and synchronises mail across multiple devices.",
+      "CC stands for Carbon Copy; all recipients can see who was copied.",
+      "BCC stands for Blind Carbon Copy; other recipients cannot see BCC addresses.",
+      "Spam is unsolicited bulk email sent to large numbers of recipients.",
+      "Writing in all capital letters in an email is considered shouting and should be avoided.",
+      "Use Reply All only when every recipient truly needs to receive the reply.",
+      "Never share passwords or sensitive personal information by email."
+    ],
+    "tables": [
+      {
+        "title": "Email Protocols Compared",
+        "headers": [
+          "Protocol",
+          "Full Form",
+          "Purpose"
+        ],
+        "rows": [
+          [
+            "SMTP",
+            "Simple Mail Transfer Protocol",
+            "Sends outgoing mail from client to server and between servers"
+          ],
+          [
+            "POP3",
+            "Post Office Protocol version 3",
+            "Downloads incoming mail to one device, usually deleting it from the server"
+          ],
+          [
+            "IMAP",
+            "Internet Message Access Protocol",
+            "Keeps mail on the server and synchronises it across all devices"
+          ]
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Computer Science: An Overview",
+        "value": "J. Glenn Brookshear and Dennis Brylow — Electronic mail and Internet protocols"
+      },
+      {
+        "label": "Discovering Computers",
+        "value": "Shelly and Vermaat — Email, email etiquette and communication tools"
+      },
+      {
+        "label": "Punjab Textbook Board, Computer Science (Class 9–10)",
+        "value": "Email usage and etiquette"
+      }
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Internet & Email Basics",
+    "subtopic": "Social Media and Online Safety",
+    "bodyText": "<h2>What is Social Media?</h2><p>Social media refers to websites and applications that allow users to create, share and exchange content and to interact with other people online. Unlike traditional media, where a small number of publishers broadcast to a large audience, social media allows every user to be both a creator and a consumer of content. Major platforms include Facebook (launched 2004), YouTube (2005), X, formerly Twitter (2006), WhatsApp (2009) and Instagram (2010). Social media is used for communication, news, education, marketing, entertainment and community building.</p><p>Social media has clear benefits: instant communication with people worldwide, access to information and learning resources, and opportunities for businesses and creators. It also carries risks that are frequently examined: misinformation and fake news, cyberbullying, addiction and wasted time, privacy loss, and exposure to scams.</p><h2>Online Threats to Know</h2><ul><li><strong>Phishing:</strong> fraudulent emails, messages or websites that pretend to be from a trusted source in order to steal passwords, bank details or personal information.</li><li><strong>Malware:</strong> malicious software, including viruses, worms, Trojans, ransomware and spyware, designed to damage a computer or steal data.</li><li><strong>Cyberbullying:</strong> harassment, threats or humiliation of a person through digital messages, posts or images.</li><li><strong>Identity theft:</strong> using another person's personal information, such as their name or identity card details, to commit fraud.</li><li><strong>Online scams:</strong> fake offers, prizes, jobs or investment schemes designed to trick users into sending money or information.</li><li><strong>Hacking:</strong> unauthorised access to a computer system or account, often to steal or alter data.</li></ul><h2>Online Safety Rules</h2><ul><li>Use strong, unique passwords for each important account, combining upper- and lower-case letters, numbers and symbols, and enable two-factor authentication where available.</li><li>Never share passwords, OTPs (one-time passwords), bank details or identity card numbers with anyone, including people claiming to be from a bank or company.</li><li>Think before you post: anything shared online can be copied and may remain public permanently, even if later deleted.</li><li>Adjust privacy settings so personal information, photos and location are not visible to strangers.</li><li>Do not click links or open attachments in suspicious messages, and verify unexpected requests through a separate, trusted channel.</li><li>Keep software, browsers and antivirus programs updated, and download apps only from official stores.</li><li>Be respectful online, do not spread unverified news, and report cyberbullying, harassment or suspicious accounts to the platform and, where needed, to the authorities.</li><li>Protect children online: supervise their Internet use, discuss safe behaviour, and use parental controls where appropriate.</li><li>Log out of shared or public computers, and avoid entering sensitive information on public Wi-Fi networks.</li></ul><h2>Digital Citizenship</h2><p>Digital citizenship means using technology responsibly, ethically and safely: respecting other people's privacy and opinions, obeying the law online, giving credit for others' work, and protecting one's own digital identity. For examination purposes, candidates should be able to link each threat to its precaution — for example, phishing is countered by verifying the sender before clicking, and weak passwords are countered by strong passwords plus two-factor authentication.</p>",
+    "keyPoints": [
+      "Social media allows users to create, share and exchange content and interact online.",
+      "Facebook was launched in 2004; YouTube in 2005; Instagram in 2010.",
+      "Phishing is a fraudulent attempt to steal passwords or bank details by pretending to be a trusted source.",
+      "Malware is malicious software, including viruses, worms, Trojans, ransomware and spyware.",
+      "Cyberbullying is harassment, threats or humiliation of a person through digital messages or posts.",
+      "Identity theft is using another person's personal information to commit fraud.",
+      "A strong password combines upper- and lower-case letters, numbers and symbols.",
+      "Two-factor authentication adds a second verification step beyond the password.",
+      "Never share passwords, OTPs or bank details with anyone, including claimed bank representatives.",
+      "Anything posted online can be copied and may remain public permanently even if later deleted.",
+      "Verify suspicious links and requests through a separate, trusted channel before acting.",
+      "Log out of shared or public computers and avoid sensitive transactions on public Wi-Fi."
+    ],
+    "tables": [
+      {
+        "title": "Common Online Threats and Precautions",
+        "headers": [
+          "Threat",
+          "What It Does",
+          "Precaution"
+        ],
+        "rows": [
+          [
+            "Phishing",
+            "Fake messages or sites steal passwords and bank details",
+            "Verify the sender; do not click suspicious links"
+          ],
+          [
+            "Malware",
+            "Malicious software damages systems or steals data",
+            "Keep antivirus updated; download only from official sources"
+          ],
+          [
+            "Weak passwords",
+            "Accounts are easily guessed or broken into",
+            "Use strong, unique passwords plus two-factor authentication"
+          ],
+          [
+            "Oversharing",
+            "Personal photos and location reach strangers",
+            "Use privacy settings; think before posting"
+          ]
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Computer Science: An Overview",
+        "value": "J. Glenn Brookshear and Dennis Brylow — Social media, security and privacy"
+      },
+      {
+        "label": "Discovering Computers",
+        "value": "Shelly and Vermaat — Social media, digital safety and cyber threats"
+      },
+      {
+        "label": "Punjab Textbook Board, Computer Science (Class 9–10)",
+        "value": "Social media and safe use of the Internet"
+      }
+    ]
+  }
+]

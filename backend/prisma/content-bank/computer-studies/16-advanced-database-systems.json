@@ -1,0 +1,387 @@
+[
+  {
+    "bodyText": "<h2>What is a Transaction?</h2><p>A transaction is a single logical unit of work in a database that consists of one or more operations, such as reads and writes, which must be executed as a whole. Either all operations in a transaction succeed, or none of them take effect. A classic example is a bank funds transfer, where debiting one account and crediting another must happen together; completing only one half would leave the database inconsistent.</p><p>Transactions are delimited by statements such as BEGIN TRANSACTION, COMMIT and ROLLBACK. COMMIT makes all changes permanent, while ROLLBACK undoes all changes made by the transaction. Database management systems use transaction management to protect data against hardware failures, software errors and concurrent access by many users.</p><h2>States of a Transaction</h2><p>A transaction passes through several states during its lifetime. It starts in the Active state while its operations are executing. When its final operation has executed, it enters the Partially Committed state, because the changes are not yet permanently recorded. If the commit succeeds, it reaches the Committed state; if a failure occurs, it moves to the Failed state and then to the Aborted state after rollback, returning the database to its previous consistent state.</p><ul><li>Active: the transaction is currently executing its operations.</li><li>Partially Committed: the last operation has executed, but commit has not yet completed.</li><li>Failed: an error or failure prevents normal execution.</li><li>Aborted: the transaction has been rolled back after failure.</li><li>Committed: the transaction has completed successfully and its changes are permanent.</li></ul><h2>ACID Properties</h2><p>ACID is the set of four properties that guarantee reliable transaction processing. Atomicity requires that a transaction is treated as an indivisible unit: either all of its operations are performed, or none are. Consistency requires that a transaction brings the database from one valid state to another valid state, preserving all integrity constraints and rules. Isolation requires that concurrent transactions do not interfere with one another, so that the result is the same as if transactions had run one after another. Durability requires that once a transaction has committed, its changes survive subsequent failures, including system crashes and power loss.</p><p>The term ACID was introduced by Andreas Reuter and Theo Härder in 1983, building on earlier work on transaction processing by Jim Gray. Recovery managers implement atomicity and durability using logging, most commonly Write-Ahead Logging, in which log records are written to stable storage before the corresponding database changes. The log makes it possible to undo an aborted transaction and to redo a committed transaction after a crash.</p><h2>Commit Protocols and Recovery</h2><p>In a single database, commit is normally handled by writing a commit record to the log and then flushing the log to stable storage. In distributed databases, the two-phase commit protocol coordinates several sites: in the prepare phase, a coordinator asks all participants whether they can commit, and in the commit phase, it instructs them all to commit or all to abort, so that the distributed transaction has a single outcome. Recovery after a crash uses the log to roll back transactions that had not committed and to roll forward transactions that had committed but whose changes had not yet reached the database files.</p>",
+    "keyPoints": [
+      "ACID stands for Atomicity, Consistency, Isolation and Durability.",
+      "A transaction is a single logical unit of work that must be executed as a whole.",
+      "The term ACID was introduced by Andreas Reuter and Theo Härder in 1983.",
+      "Atomicity means that either all operations of a transaction are performed or none are.",
+      "Consistency means that a transaction takes the database from one valid state to another valid state.",
+      "Isolation means that concurrent transactions do not interfere with one another.",
+      "Durability means that the effects of a committed transaction survive system crashes.",
+      "COMMIT makes the changes of a transaction permanent, while ROLLBACK undoes them.",
+      "The five transaction states are Active, Partially Committed, Failed, Aborted and Committed.",
+      "Write-Ahead Logging requires log records to be written to stable storage before the corresponding data changes.",
+      "The two-phase commit protocol has a prepare phase followed by a commit phase in distributed transactions.",
+      "A recovery manager uses the log to undo uncommitted transactions and redo committed transactions after a crash."
+    ],
+    "references": [
+      {
+        "label": "Silberschatz, Korth and Sudarshan, Database System Concepts",
+        "value": "Standard textbook treatment of transactions, ACID properties and recovery."
+      },
+      {
+        "label": "Elmasri and Navathe, Fundamentals of Database Systems",
+        "value": "Transaction states, concurrency and recovery chapters."
+      },
+      {
+        "label": "Gray and Reuter, Transaction Processing: Concepts and Techniques",
+        "value": "Foundational work on transaction processing and commit protocols."
+      }
+    ],
+    "subject": "Computer Studies",
+    "subtopic": "Transaction Management (ACID Properties)",
+    "tables": [
+      {
+        "headers": [
+          "Property",
+          "Meaning",
+          "What It Prevents"
+        ],
+        "rows": [
+          [
+            "Atomicity",
+            "All operations succeed, or none do",
+            "Partial updates from a failed transaction"
+          ],
+          [
+            "Consistency",
+            "Database moves from one valid state to another",
+            "Violation of integrity constraints and rules"
+          ],
+          [
+            "Isolation",
+            "Concurrent transactions appear to run one after another",
+            "Interference between concurrent transactions"
+          ],
+          [
+            "Durability",
+            "Committed changes are permanent",
+            "Loss of committed data after a crash"
+          ]
+        ],
+        "title": "ACID Properties at a Glance"
+      }
+    ],
+    "topic": "Advanced Database Systems"
+  },
+  {
+    "bodyText": "<h2>Why Concurrency Control is Needed</h2><p>When many users access a database at the same time, uncontrolled interleaving of their transactions can cause serious problems. The lost update problem occurs when two transactions read and update the same item and one update overwrites the other. The dirty read problem occurs when a transaction reads data written by another transaction that later aborts. The unrepeatable read problem occurs when a transaction reads the same item twice and gets different values because another transaction changed it in between. Concurrency control protocols prevent these anomalies and ensure that the final result is serializable, meaning it is equivalent to some serial execution of the same transactions.</p><h2>Lock-Based Protocols</h2><p>In locking protocols, a transaction must acquire a lock on a data item before accessing it and release the lock afterwards. A shared lock, also called a read lock, allows several transactions to read an item at the same time but not to modify it. An exclusive lock, also called a write lock, allows only one transaction to access the item, for either reading or writing. A transaction that requests a lock held incompatibly by another transaction must wait, which can lead to deadlock if transactions wait on each other in a cycle.</p><p>Two-phase locking, commonly abbreviated as 2PL, is the most widely used locking protocol. It has two phases: a growing phase, in which a transaction may acquire locks but may not release any, and a shrinking phase, in which it may release locks but may not acquire any new ones. Any schedule produced by transactions following 2PL is guaranteed to be conflict-serializable. Strict two-phase locking strengthens the rule by holding all exclusive locks until the transaction commits or aborts, which also prevents dirty reads and is used by many commercial systems.</p><h2>Timestamp-Based Protocols</h2><p>Timestamp ordering assigns each transaction a unique timestamp when it starts, usually based on its start time, and orders conflicting operations by these timestamps. If a transaction tries to read or write an item in an order that conflicts with the timestamp order, it is aborted and restarted with a new timestamp. Unlike locking, timestamp ordering is deadlock-free, because no transaction ever waits for a lock, but it can cause more aborts and restarts. The Thomas write rule is an optimisation for obsolete writes: if a transaction tries to write an item that has already been written by a younger transaction, the write can safely be ignored instead of aborting the transaction.</p><h2>Deadlock Handling</h2><p>A deadlock is a situation in which two or more transactions wait indefinitely for locks held by each other. Deadlock prevention schemes avoid deadlocks before they occur. In the wait-die scheme, an older transaction waits for a younger transaction, while a younger transaction that requests a lock held by an older transaction is aborted. In the wound-wait scheme, an older transaction wounds, meaning it forces the abort of, a younger transaction holding the needed lock, while a younger transaction waits for an older transaction. Deadlock detection instead allows deadlocks to occur and then resolves them, typically by building a wait-for graph and aborting one transaction in any cycle found.</p>",
+    "keyPoints": [
+      "Serializability means that a concurrent schedule is equivalent to some serial schedule of the same transactions.",
+      "A shared lock allows multiple transactions to read an item but not to modify it.",
+      "An exclusive lock allows only one transaction to access an item for reading or writing.",
+      "Two-phase locking has a growing phase for acquiring locks and a shrinking phase for releasing locks.",
+      "In two-phase locking, a transaction may not acquire a new lock after it has released any lock.",
+      "Strict two-phase locking holds all exclusive locks until the transaction commits or aborts.",
+      "Timestamp ordering assigns each transaction a unique timestamp at its start and orders operations by it.",
+      "Timestamp ordering is deadlock-free because transactions never wait for locks.",
+      "The Thomas write rule allows an obsolete write to be ignored instead of aborting the transaction.",
+      "A deadlock occurs when transactions wait indefinitely for locks held by each other.",
+      "In the wait-die scheme, an older transaction waits while a younger transaction is aborted.",
+      "In the wound-wait scheme, an older transaction forces a younger transaction to abort."
+    ],
+    "references": [
+      {
+        "label": "Silberschatz, Korth and Sudarshan, Database System Concepts",
+        "value": "Lock-based protocols, two-phase locking and timestamp ordering."
+      },
+      {
+        "label": "Elmasri and Navathe, Fundamentals of Database Systems",
+        "value": "Concurrency control, serializability and deadlock handling."
+      },
+      {
+        "label": "Bernstein, Hadzilacos and Goodman, Concurrency Control and Recovery in Database Systems",
+        "value": "Classic reference on concurrency control theory."
+      }
+    ],
+    "subject": "Computer Studies",
+    "subtopic": "Concurrency Control (Locking, Timestamping)",
+    "tables": [
+      {
+        "headers": [
+          "Lock Requested",
+          "Shared Lock Held",
+          "Exclusive Lock Held"
+        ],
+        "rows": [
+          [
+            "Shared lock",
+            "Granted",
+            "Must wait"
+          ],
+          [
+            "Exclusive lock",
+            "Must wait",
+            "Must wait"
+          ]
+        ],
+        "title": "Lock Compatibility"
+      },
+      {
+        "headers": [
+          "Scheme",
+          "Older Transaction Requests Lock Held by Younger",
+          "Younger Transaction Requests Lock Held by Older"
+        ],
+        "rows": [
+          [
+            "Wait-die",
+            "Waits",
+            "Aborted (dies)"
+          ],
+          [
+            "Wound-wait",
+            "Wounds, or aborts, the younger transaction",
+            "Waits"
+          ]
+        ],
+        "title": "Deadlock Prevention Schemes"
+      }
+    ],
+    "topic": "Advanced Database Systems"
+  },
+  {
+    "bodyText": "<h2>Query Processing Steps</h2><p>When a user submits a query, the database system processes it in stages. The parser checks the syntax and converts the query into an internal representation, usually a relational algebra expression. The optimizer then transforms this expression into an efficient execution plan by choosing the order of operations and the access methods for each table. Finally, the execution engine runs the plan and returns the result. Query optimization matters because the same query can often be executed in many ways whose costs differ by orders of magnitude, especially on large tables.</p><h2>Approaches to Query Optimization</h2><p>Heuristic optimization applies general rules that usually improve performance, such as performing selections and projections as early as possible to reduce the number of rows and columns passed to later operations. Cost-based optimization goes further: the optimizer estimates the cost of several candidate plans using statistics stored in the system catalog, such as table sizes, the number of distinct values in a column and index information, and then chooses the plan with the lowest estimated cost. Most modern relational systems use cost-based optimization. Selectivity, the fraction of rows that satisfy a condition, is a key statistic: a highly selective condition returns few rows and is a good candidate for index use.</p><h2>What is an Index?</h2><p>An index is an auxiliary data structure that speeds up retrieval of rows from a table, much like the index of a book speeds up finding a topic. Without an index, the system may have to scan the whole table, which is called a full table scan. With an index on the searched column, the system can locate matching rows directly. Indexes speed up reads, especially selections and joins, but they slow down inserts, updates and deletes, because each index must also be maintained, and they consume additional storage.</p><h2>Types of Indexes</h2><p>A primary index is built on the primary key and ordering key of a file, while a secondary index can be built on any non-key attribute. A clustered index determines the physical order of rows in the table, so a table can have at most one clustered index, whereas non-clustered indexes store pointers to rows and a table can have many of them. A dense index contains an entry for every search-key value in the file, while a sparse index contains entries only for some values, typically one per block. The most common index structure is the B-tree, and its variant the B-plus tree, which keeps all data pointers in leaf nodes linked in order, making both exact-match searches and range scans efficient. Hash indexes use a hash function to map a key directly to a bucket and are very fast for equality searches, but they cannot support range queries efficiently.</p>",
+    "keyPoints": [
+      "Query processing consists of parsing, optimization and execution.",
+      "Heuristic optimization applies general rules such as performing selections as early as possible.",
+      "Cost-based optimization estimates the cost of candidate plans and chooses the cheapest one.",
+      "Selectivity is the fraction of rows that satisfy a given condition.",
+      "An index is an auxiliary data structure that speeds up data retrieval.",
+      "Without an index, a query may require a full table scan of every row.",
+      "Indexes speed up reads but slow down inserts, updates and deletes.",
+      "A clustered index determines the physical order of rows, so a table can have at most one.",
+      "A non-clustered index stores pointers to rows, and a table can have many of them.",
+      "A dense index has an entry for every search-key value, while a sparse index has entries only for some values.",
+      "A B-plus tree keeps all data pointers in leaf nodes linked in order, supporting range scans efficiently.",
+      "A hash index is very fast for equality searches but poor for range queries."
+    ],
+    "references": [
+      {
+        "label": "Silberschatz, Korth and Sudarshan, Database System Concepts",
+        "value": "Query processing, optimization and indexing chapters."
+      },
+      {
+        "label": "Elmasri and Navathe, Fundamentals of Database Systems",
+        "value": "Indexing structures, B-trees and query optimization."
+      },
+      {
+        "label": "Garcia-Molina, Ullman and Widom, Database Systems: The Complete Book",
+        "value": "Query optimization and index design."
+      }
+    ],
+    "subject": "Computer Studies",
+    "subtopic": "Query Optimization and Indexing",
+    "tables": [
+      {
+        "headers": [
+          "Feature",
+          "Clustered Index",
+          "Non-Clustered Index"
+        ],
+        "rows": [
+          [
+            "Physical order of rows",
+            "Determined by the index",
+            "Not determined by the index"
+          ],
+          [
+            "Maximum per table",
+            "One",
+            "Many"
+          ],
+          [
+            "Lookup method",
+            "Rows found directly",
+            "Pointer to the row is followed"
+          ]
+        ],
+        "title": "Clustered vs Non-Clustered Index"
+      },
+      {
+        "headers": [
+          "Index Type",
+          "Best For",
+          "Limitation"
+        ],
+        "rows": [
+          [
+            "B-tree and B-plus tree",
+            "Equality and range queries",
+            "More complex to maintain than a simple list"
+          ],
+          [
+            "Hash index",
+            "Equality searches",
+            "Range queries are not efficient"
+          ],
+          [
+            "Bitmap index",
+            "Low-cardinality columns in data warehouses",
+            "Costly to update under heavy writes"
+          ]
+        ],
+        "title": "Common Index Structures"
+      }
+    ],
+    "topic": "Advanced Database Systems"
+  },
+  {
+    "bodyText": "<h2>Stored Procedures</h2><p>A stored procedure is a named block of SQL and procedural code that is stored in the database and executed on the server when called by an application or user. It can accept input parameters, return output parameters and return values, and it can contain control-flow statements such as conditionals and loops. Stored procedures improve performance because they are compiled and stored on the server, reducing network traffic compared with sending many individual statements, and they improve security and consistency because applications call a controlled interface instead of issuing ad hoc statements. They also centralise business logic, so a change in the procedure is reflected for all callers without changing application code.</p><h2>Triggers</h2><p>A trigger is a special stored procedure that the database executes automatically in response to a specified event on a table or view, without being called explicitly. The usual events are INSERT, UPDATE and DELETE. Triggers are classified by timing: a BEFORE trigger runs before the triggering statement, an AFTER trigger runs after it, and an INSTEAD OF trigger runs in place of the statement, which is particularly useful for views. Triggers are commonly used to enforce complex business rules, maintain audit trails, and keep derived data consistent. They must be used with care, because a trigger can fire other triggers in a chain and hidden side effects make debugging harder.</p><h2>Views</h2><p>A view is a virtual table defined by a stored query: it does not store data itself, but presents data from one or more base tables as if it were a table. Users can query a view in the same way as a table, which simplifies complex queries, hides sensitive columns or rows for security, and provides a stable interface even when the underlying tables change. A view is updatable only under restrictions: in general, a view defined over a single table without grouping, aggregation or DISTINCT can support inserts, updates and deletes, whereas views involving joins, grouping or aggregation are usually read-only. Some systems also support materialized views, which do store the query result physically and are refreshed periodically, trading freshness for query speed.</p><h2>Comparing the Three Constructs</h2><p>Stored procedures, triggers and views all move logic into the database, but they serve different purposes. A stored procedure is invoked explicitly when needed. A trigger is invoked implicitly by a data change. A view is not executed as a procedure at all: it is a stored query that reshapes how data appears. Together they let a database enforce rules, simplify access and protect data close to where the data lives, which is why examiners frequently ask candidates to distinguish them and to state when each one should be used.</p>",
+    "keyPoints": [
+      "A stored procedure is a named block of SQL code stored in the database and executed on the server.",
+      "A stored procedure can accept input parameters and return output parameters and values.",
+      "Stored procedures reduce network traffic because execution happens on the database server.",
+      "A trigger is executed automatically in response to an event, without being called explicitly.",
+      "The three standard trigger events are INSERT, UPDATE and DELETE.",
+      "A BEFORE trigger runs before the triggering statement and an AFTER trigger runs after it.",
+      "An INSTEAD OF trigger runs in place of the statement and is useful for views.",
+      "Triggers are commonly used for audit trails, complex business rules and derived data maintenance.",
+      "A view is a virtual table defined by a stored query and does not store data itself.",
+      "Views simplify complex queries and hide sensitive columns or rows for security.",
+      "A view over a single table without grouping or aggregation is generally updatable.",
+      "A materialized view stores the query result physically and is refreshed periodically."
+    ],
+    "references": [
+      {
+        "label": "Silberschatz, Korth and Sudarshan, Database System Concepts",
+        "value": "Views, triggers and stored procedures."
+      },
+      {
+        "label": "Elmasri and Navathe, Fundamentals of Database Systems",
+        "value": "Views, triggers and active database concepts."
+      },
+      {
+        "label": "Oracle Database PL/SQL Language Reference and Microsoft SQL Server Transact-SQL Documentation",
+        "value": "Official documentation for stored procedures and triggers."
+      }
+    ],
+    "subject": "Computer Studies",
+    "subtopic": "Stored Procedures, Triggers, Views",
+    "tables": [
+      {
+        "headers": [
+          "Construct",
+          "How It Is Invoked",
+          "Main Purpose"
+        ],
+        "rows": [
+          [
+            "Stored procedure",
+            "Called explicitly by a user or application",
+            "Reusable server-side logic and controlled access"
+          ],
+          [
+            "Trigger",
+            "Fired automatically by INSERT, UPDATE or DELETE",
+            "Enforce rules and audit changes automatically"
+          ],
+          [
+            "View",
+            "Queried like a table",
+            "Simplify access and restrict what users can see"
+          ]
+        ],
+        "title": "Stored Procedure vs Trigger vs View"
+      }
+    ],
+    "topic": "Advanced Database Systems"
+  },
+  {
+    "bodyText": "<h2>What is NoSQL?</h2><p>NoSQL, usually read as Not Only SQL, is a family of database systems designed for data models and scaling requirements that do not fit the rigid tables of relational databases. NoSQL systems typically use flexible schemas, so different records can have different fields, and they are designed to scale horizontally by adding more servers rather than by upgrading a single server. They are a common choice for large volumes of unstructured or semi-structured data, rapidly changing data models, and applications that need high availability across distributed servers. NoSQL does not replace relational databases: the right choice depends on consistency requirements, query patterns and data structure.</p><h2>CAP Theorem and BASE</h2><p>The CAP theorem, formulated by Eric Brewer in 2000, states that a distributed data store can guarantee at most two of three properties at the same time: Consistency, meaning all nodes see the same data at the same time; Availability, meaning every request receives a response; and Partition tolerance, meaning the system continues to operate despite network partitions between nodes. Because partitions cannot be avoided in real networks, distributed systems in practice trade off consistency against availability. Many NoSQL systems therefore follow BASE rather than ACID: Basically Available, Soft state, and Eventually consistent, meaning the system remains available, its state may change without input, and it will become consistent over time if no new updates arrive.</p><h2>Four Types of NoSQL Databases</h2><p>Document databases, such as MongoDB, store data as documents, usually in JSON-like format, and are well suited to content, catalogues and user profiles. Key-value stores, such as Redis, store each item under a unique key and are the simplest and fastest NoSQL model. Column-family stores, such as Apache Cassandra, organise data by column families and suit very large, write-heavy datasets. Graph databases, such as Neo4j, store nodes and relationships explicitly and suit highly connected data such as social networks, recommendation engines and fraud detection.</p><h2>MongoDB Concepts</h2><p>MongoDB is a document-oriented database. Data is stored in collections, which are analogous to tables, and each collection holds documents, which are analogous to rows. A document is a set of field-value pairs stored in BSON, a binary form of JSON, and documents in the same collection need not share the same fields. Every document has a unique _id field that acts as its primary key. MongoDB supports rich queries, secondary indexes, replication through replica sets for high availability, and sharding, which distributes data across multiple servers for horizontal scaling.</p><h2>Redis Concepts</h2><p>Redis is an in-memory data store most often used as a cache, message broker and session store. Keeping data in memory makes it extremely fast, and Redis persists data to disk optionally using snapshots, called RDB, or an append-only file, called AOF, which logs every write. Redis is a key-value store, but its values are rich data structures: strings, lists, sets, sorted sets, hashes, and streams. Common uses include caching frequently read data, storing user sessions, counting with atomic increments, leaderboards with sorted sets, and real-time messaging with publish and subscribe.</p>",
+    "keyPoints": [
+      "NoSQL is usually read as Not Only SQL.",
+      "The CAP theorem was formulated by Eric Brewer in 2000.",
+      "CAP stands for Consistency, Availability and Partition tolerance.",
+      "A distributed store can guarantee at most two of the three CAP properties at once.",
+      "BASE stands for Basically Available, Soft state and Eventually consistent.",
+      "The four main NoSQL types are document, key-value, column-family and graph databases.",
+      "MongoDB is a document-oriented database that stores data in collections of documents.",
+      "MongoDB documents are stored in BSON, a binary form of JSON.",
+      "Every MongoDB document has a unique _id field that acts as its primary key.",
+      "MongoDB sharding distributes data across multiple servers for horizontal scaling.",
+      "Redis is an in-memory data store commonly used as a cache, session store and message broker.",
+      "Redis persistence options are RDB snapshots and the append-only file, or AOF."
+    ],
+    "references": [
+      {
+        "label": "MongoDB Manual, Official Documentation",
+        "value": "Collections, documents, BSON, replication and sharding."
+      },
+      {
+        "label": "Redis Documentation, Official Documentation",
+        "value": "Data structures, persistence with RDB and AOF, and publish and subscribe."
+      },
+      {
+        "label": "Sadalage and Fowler, NoSQL Distilled",
+        "value": "NoSQL data models, CAP theorem and BASE concepts."
+      }
+    ],
+    "subject": "Computer Studies",
+    "subtopic": "NoSQL Databases (MongoDB, Redis Concepts)",
+    "tables": [
+      {
+        "headers": [
+          "Feature",
+          "SQL (Relational)",
+          "NoSQL"
+        ],
+        "rows": [
+          [
+            "Data model",
+            "Fixed tables with rows and columns",
+            "Document, key-value, column-family or graph"
+          ],
+          [
+            "Schema",
+            "Rigid, predefined schema",
+            "Flexible or dynamic schema"
+          ],
+          [
+            "Scaling",
+            "Usually vertical, by upgrading one server",
+            "Usually horizontal, by adding servers"
+          ],
+          [
+            "Consistency model",
+            "Typically ACID",
+            "Often BASE with eventual consistency"
+          ]
+        ],
+        "title": "SQL vs NoSQL"
+      },
+      {
+        "headers": [
+          "Type",
+          "Example",
+          "Well Suited To"
+        ],
+        "rows": [
+          [
+            "Document",
+            "MongoDB",
+            "Content, catalogues and user profiles"
+          ],
+          [
+            "Key-value",
+            "Redis",
+            "Caching, sessions and fast lookups"
+          ],
+          [
+            "Column-family",
+            "Apache Cassandra",
+            "Very large, write-heavy datasets"
+          ],
+          [
+            "Graph",
+            "Neo4j",
+            "Social networks and recommendation engines"
+          ]
+        ],
+        "title": "NoSQL Types and Examples"
+      }
+    ],
+    "topic": "Advanced Database Systems"
+  }
+]

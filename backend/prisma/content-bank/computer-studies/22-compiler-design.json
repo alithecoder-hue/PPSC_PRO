@@ -1,0 +1,188 @@
+[
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Phases of a Compiler (Lexical, Syntax, Semantic)",
+    "bodyText": "<h2>What is a Compiler?</h2><p>A compiler is a program that translates source code written in a high-level language into machine code that a computer can execute. Unlike an interpreter, which translates and executes code line by line, a compiler translates the entire program before execution. Grace Hopper developed the first compiler (the A-0 system) in the early 1950s.</p><h2>The Phases of Compilation</h2><p>Compilation proceeds through a series of phases. Lexical analysis (scanning) reads the source text, removes whitespace and comments, and groups characters into tokens such as keywords, identifiers, literals and operators. Syntax analysis (parsing) checks that the tokens follow the grammar of the language and builds a parse tree. Semantic analysis checks meaning: it verifies types, resolves scopes and catches errors such as type mismatches and undeclared variables, producing an annotated syntax tree.</p><h2>Later Phases</h2><p>After analysis, intermediate code generation produces a machine-independent representation such as three-address code. Code optimization improves this code without changing its meaning, making it faster or smaller. Finally, code generation produces the target machine code. Two supporting components run throughout: the symbol table, which records information about identifiers, and the error handler, which reports and recovers from errors.</p>",
+    "keyPoints": [
+      "A compiler translates an entire high-level program into machine code before execution.",
+      "An interpreter translates and executes code line by line, unlike a compiler.",
+      "Grace Hopper developed the first compiler (the A-0 system) in the early 1950s.",
+      "Lexical analysis (scanning) groups source characters into tokens.",
+      "Tokens include keywords, identifiers, literals and operators.",
+      "Syntax analysis (parsing) checks tokens against the language grammar and builds a parse tree.",
+      "Semantic analysis checks types, resolves scopes and catches type mismatches.",
+      "Intermediate code generation produces a machine-independent representation such as three-address code.",
+      "Code optimization improves code without changing its meaning.",
+      "Code generation is the final phase and produces target machine code.",
+      "The symbol table and error handler operate across all phases of compilation."
+    ],
+    "tables": [
+      {
+        "title": "Compiler Phases: Input and Output",
+        "headers": ["Phase", "Input", "Output"],
+        "rows": [
+          ["Lexical analysis", "Source program characters", "Tokens"],
+          ["Syntax analysis", "Tokens", "Parse tree"],
+          ["Semantic analysis", "Parse tree", "Annotated syntax tree"],
+          ["Intermediate code generation", "Annotated syntax tree", "Intermediate code"],
+          ["Code optimization", "Intermediate code", "Improved intermediate code"],
+          ["Code generation", "Optimized intermediate code", "Target machine code"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam, Sethi and Ullman"},
+      {"label": "Book", "value": "Engineering a Compiler — Keith D. Cooper and Linda Torczon"},
+      {"label": "Book", "value": "Compiler Design — Alfred V. Aho and Jeffrey D. Ullman"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Parsing Techniques (Top-Down, Bottom-Up)",
+    "bodyText": "<h2>What is Parsing?</h2><p>Parsing, or syntax analysis, is the phase that checks whether a sequence of tokens follows the grammar of a programming language. A grammar is a set of rules, usually written as a context-free grammar, that defines valid sentence structures. The parser builds a parse tree showing how the input is derived from the start symbol of the grammar.</p><h2>Top-Down Parsing</h2><p>Top-down parsing starts from the start symbol and tries to derive the input string, using leftmost derivation. The most common form is recursive descent parsing, in which each non-terminal of the grammar becomes a procedure. Predictive parsing is a non-backtracking form of recursive descent that chooses the production using the next input token (lookahead). LL(1) parsers are predictive top-down parsers: the first L means scanning left to right, the second L means leftmost derivation, and 1 means one token of lookahead. Top-down parsers cannot handle left-recursive grammars.</p><h2>Bottom-Up Parsing</h2><p>Bottom-up parsing starts from the input tokens and reduces them step by step to the start symbol, using rightmost derivation in reverse. The standard technique is shift-reduce parsing: tokens are shifted onto a stack and reduced when the top of the stack matches a grammar production. LR parsers (SLR, LALR and CLR) are bottom-up parsers that handle a larger class of grammars than LL parsers. YACC and Bison are tools that generate LALR parsers.</p><h2>Ambiguity</h2><p>A grammar is ambiguous if one input string has more than one parse tree. The classic example is the dangling-else problem in if-else statements. Ambiguity is a property of the grammar, not of the language, and it is usually resolved by rewriting the grammar or by precedence rules.</p>",
+    "keyPoints": [
+      "Parsing checks whether tokens follow the grammar of a programming language.",
+      "A context-free grammar is the standard formalism for defining programming language syntax.",
+      "Top-down parsing starts from the start symbol and derives the input (leftmost derivation).",
+      "Recursive descent parsing turns each grammar non-terminal into a procedure.",
+      "Predictive parsing is non-backtracking recursive descent using lookahead tokens.",
+      "In LL(1), the first L means left-to-right scanning, the second L means leftmost derivation, and 1 means one token of lookahead.",
+      "Top-down parsers cannot handle left-recursive grammars.",
+      "Bottom-up parsing reduces input tokens to the start symbol (rightmost derivation in reverse).",
+      "Shift-reduce parsing shifts tokens onto a stack and reduces them by grammar productions.",
+      "LR parsers (SLR, LALR, CLR) are bottom-up parsers that handle more grammars than LL parsers.",
+      "YACC and Bison generate LALR parsers.",
+      "A grammar is ambiguous if one input string has more than one parse tree."
+    ],
+    "tables": [
+      {
+        "title": "Top-Down vs Bottom-Up Parsing",
+        "headers": ["Feature", "Top-Down", "Bottom-Up"],
+        "rows": [
+          ["Direction", "Start symbol down to input", "Input up to start symbol"],
+          ["Derivation", "Leftmost derivation", "Rightmost derivation in reverse"],
+          ["Technique", "Recursive descent, predictive parsing", "Shift-reduce parsing"],
+          ["Parser class", "LL parsers", "LR parsers (SLR, LALR, CLR)"],
+          ["Grammar coverage", "Smaller (no left recursion)", "Larger class of grammars"],
+          ["Parser generator", "ANTLR (LL-based)", "YACC, Bison (LALR)"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam, Sethi and Ullman"},
+      {"label": "Book", "value": "Engineering a Compiler — Keith D. Cooper and Linda Torczon"},
+      {"label": "Book", "value": "Modern Compiler Implementation in Java — Andrew W. Appel"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Symbol Tables and Error Handling",
+    "bodyText": "<h2>What is a Symbol Table?</h2><p>A symbol table is a data structure used by a compiler to store information about identifiers in a program: their names, types, scopes and memory locations. Every time the compiler encounters a declaration, it inserts an entry; every time it encounters a use, it looks the identifier up to verify it exists and to obtain its attributes. Symbol tables are most commonly implemented with hash tables for fast lookup, though lists and trees are also used.</p><h2>Scope Management</h2><p>Programs have nested scopes: a global scope, function scopes and block scopes. The symbol table must handle this structure, typically with a stack of tables or a single table with scope information, so that a local variable hides a global one of the same name and identifiers go out of scope when their block ends.</p><h2>Types of Compiler Errors</h2><p>Errors are classified by the phase that detects them. Lexical errors include illegal characters. Syntax errors include missing semicolons or unbalanced parentheses. Semantic errors include type mismatches, undeclared variables and operations on incompatible types. A good compiler reports errors clearly and continues to find further errors rather than stopping at the first one.</p><h2>Error Recovery</h2><p>After detecting an error, the parser must recover to continue. The most common strategy is panic-mode recovery: the parser discards input tokens until it reaches a synchronizing token, such as a semicolon or closing brace, and then resumes. Phrase-level recovery repairs the input by inserting or deleting a token, and error productions add special grammar rules that describe common mistakes.</p>",
+    "keyPoints": [
+      "A symbol table stores identifiers with their names, types, scopes and memory locations.",
+      "Symbol tables are most commonly implemented using hash tables for fast lookup.",
+      "Every declaration inserts an entry into the symbol table; every use looks one up.",
+      "A local variable hides a global variable of the same name within its scope.",
+      "A lexical error is an illegal character in the source program.",
+      "A syntax error includes a missing semicolon or unbalanced parentheses.",
+      "A semantic error includes a type mismatch or an undeclared variable.",
+      "Panic-mode recovery discards input until a synchronizing token such as a semicolon is found.",
+      "Phrase-level recovery repairs input by inserting or deleting a token.",
+      "A good compiler reports errors and continues to find further errors instead of stopping at the first.",
+      "Error productions are special grammar rules that describe common mistakes."
+    ],
+    "tables": [
+      {
+        "title": "Compiler Error Types",
+        "headers": ["Error Type", "Detected In", "Example"],
+        "rows": [
+          ["Lexical error", "Lexical analysis", "Illegal character such as @ in an identifier"],
+          ["Syntax error", "Syntax analysis", "Missing semicolon, unbalanced parentheses"],
+          ["Semantic error", "Semantic analysis", "Adding an integer to a string, undeclared variable"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam, Sethi and Ullman"},
+      {"label": "Book", "value": "Engineering a Compiler — Keith D. Cooper and Linda Torczon"},
+      {"label": "Book", "value": "Crafting a Compiler — Charles N. Fischer and Richard J. LeBlanc"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Intermediate Code Generation",
+    "bodyText": "<h2>Why Intermediate Code?</h2><p>Intermediate code is a representation of a program that sits between the source language and the target machine code. Generating it makes a compiler easier to build and retarget: the front end (analysis) is written once per language, and the back end (synthesis) once per machine, with the intermediate representation (IR) in between. The IR is also the level at which most optimization is performed, because it is machine-independent.</p><h2>Three-Address Code</h2><p>The most common intermediate form is three-address code, in which each instruction has at most one operator and at most three operands, for example x = y + z. Complex expressions are broken into simple steps using temporary variables. For example, the expression a = b * c + d becomes t1 = b * c followed by a = t1 + d.</p><h2>Representations of Three-Address Code</h2><p>Three-address code is implemented in several forms. A quadruple stores each instruction as four fields: operator, first argument, second argument and result. A triple stores only three fields (operator and two arguments); the result is implied by the instruction's position, which makes triples compact but harder to rearrange during optimization. Indirect triples add a separate list of pointers to triples, restoring the ability to reorder them. Other intermediate forms include syntax trees, directed acyclic graphs (DAGs) and Static Single Assignment (SSA) form, used by modern optimizing compilers.</p>",
+    "keyPoints": [
+      "Intermediate code sits between the source language and the target machine code.",
+      "The front end of a compiler handles analysis; the back end handles synthesis.",
+      "Intermediate representation makes compilers retargetable across machines.",
+      "Most code optimization is performed on intermediate code because it is machine-independent.",
+      "Three-address code has at most one operator and at most three operands per instruction.",
+      "In three-address code, a = b * c + d becomes t1 = b * c and a = t1 + d.",
+      "A quadruple has four fields: operator, first argument, second argument and result.",
+      "A triple has three fields; its result is implied by its position.",
+      "Indirect triples add a pointer list so triples can be reordered during optimization.",
+      "A directed acyclic graph (DAG) is an intermediate form that exposes common subexpressions.",
+      "SSA (Static Single Assignment) form is used by modern optimizing compilers."
+    ],
+    "tables": [
+      {
+        "title": "Quadruples vs Triples vs Indirect Triples",
+        "headers": ["Form", "Fields Stored", "Drawback"],
+        "rows": [
+          ["Quadruple", "Operator, arg1, arg2, result", "Uses more storage"],
+          ["Triple", "Operator, arg1, arg2 (result implied)", "Hard to reorder during optimization"],
+          ["Indirect triple", "Pointer list plus triples", "Extra indirection through the pointer list"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam, Sethi and Ullman"},
+      {"label": "Book", "value": "Engineering a Compiler — Keith D. Cooper and Linda Torczon"},
+      {"label": "Book", "value": "Modern Compiler Implementation in Java — Andrew W. Appel"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Compiler Design",
+    "subtopic": "Code Optimization Techniques",
+    "bodyText": "<h2>Goals of Optimization</h2><p>Code optimization improves a program's intermediate or target code without changing its meaning. The usual goals are faster execution, smaller code size and lower power consumption. Optimization must always preserve the observable behaviour of the program; an optimization that changes what a program computes is incorrect, no matter how fast it is.</p><h2>Machine-Independent Optimization</h2><p>Machine-independent optimization works on intermediate code and applies to any target machine. Constant folding evaluates constant expressions at compile time, so 2 + 3 becomes 5. Constant propagation replaces a variable known to hold a constant with that constant. Common subexpression elimination computes an expression once and reuses the result. Dead code elimination removes code whose results are never used. Copy propagation replaces a variable with the value copied into it, simplifying later steps.</p><h2>Loop Optimization</h2><p>Because programs spend most of their time in loops, loop optimization gives the largest gains. Code motion moves loop-invariant computations out of the loop. Loop unrolling replicates the loop body to reduce loop overhead. Strength reduction replaces an expensive operation inside a loop, such as multiplication, with a cheaper one, such as addition.</p><h2>Machine-Dependent Optimization</h2><p>Machine-dependent optimization works on target code. Register allocation assigns variables to the processor's fast registers. Peephole optimization examines a small sliding window of target instructions and replaces inefficient patterns, for example removing a redundant load immediately after a store to the same location.</p>",
+    "keyPoints": [
+      "Code optimization improves code without changing the program's meaning.",
+      "Optimization goals are faster execution, smaller code size and lower power consumption.",
+      "Constant folding evaluates constant expressions at compile time, e.g. 2 + 3 becomes 5.",
+      "Constant propagation replaces a variable known to hold a constant with that constant.",
+      "Common subexpression elimination computes an expression once and reuses its result.",
+      "Dead code elimination removes code whose results are never used.",
+      "Copy propagation replaces a variable with the value copied into it.",
+      "Loop optimization gives the largest gains because programs spend most time in loops.",
+      "Code motion moves loop-invariant computations out of the loop.",
+      "Strength reduction replaces an expensive operation in a loop with a cheaper one, e.g. multiplication with addition.",
+      "Register allocation assigns variables to the processor's fast registers.",
+      "Peephole optimization replaces inefficient patterns in a small window of target instructions."
+    ],
+    "tables": [
+      {
+        "title": "Key Optimization Techniques",
+        "headers": ["Technique", "What It Does", "Level"],
+        "rows": [
+          ["Constant folding", "Evaluates constant expressions at compile time", "Machine-independent"],
+          ["Common subexpression elimination", "Computes a repeated expression once", "Machine-independent"],
+          ["Dead code elimination", "Removes code whose results are never used", "Machine-independent"],
+          ["Loop unrolling", "Replicates loop body to reduce overhead", "Loop optimization"],
+          ["Strength reduction", "Replaces costly operations with cheaper ones", "Loop optimization"],
+          ["Peephole optimization", "Replaces inefficient target-code patterns", "Machine-dependent"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam, Sethi and Ullman"},
+      {"label": "Book", "value": "Engineering a Compiler — Keith D. Cooper and Linda Torczon"},
+      {"label": "Book", "value": "Advanced Compiler Design and Implementation — Steven S. Muchnick"}
+    ]
+  }
+]

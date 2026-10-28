@@ -1,0 +1,184 @@
+[
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "AI, Machine Learning, Deep Learning Basics",
+    "bodyText": "<h2>What is Artificial Intelligence?</h2><p>Artificial Intelligence (AI) is the branch of computer science that enables machines to perform tasks normally requiring human intelligence, such as reasoning, learning, perception and decision-making. The term 'artificial intelligence' was coined by John McCarthy in 1956 at the Dartmouth Conference, which is regarded as the birthplace of AI as a field.</p><h2>Types of AI</h2><p>AI is commonly classified into three levels. Narrow AI (Weak AI) is designed for one specific task, such as voice assistants, spam filters and chess programs; almost all AI in use today is narrow AI. General AI (Strong AI) would match human intelligence across any task, while Super AI would surpass human intelligence. The last two remain theoretical and are not yet achieved.</p><h2>Machine Learning</h2><p>Machine Learning (ML) is a subset of AI in which systems learn patterns from data instead of being explicitly programmed for every rule. The term was coined by Arthur Samuel in 1959 through his checkers-playing program. ML is divided into supervised learning (trained on labelled data, e.g. spam detection), unsupervised learning (finds hidden patterns in unlabelled data, e.g. customer grouping) and reinforcement learning (learns by rewards and penalties, e.g. game-playing robots).</p><h2>Deep Learning</h2><p>Deep Learning is a subset of ML that uses artificial neural networks with many layers (hence 'deep'). Inspired loosely by the structure of the human brain, these networks process data through an input layer, several hidden layers and an output layer. Deep learning powers image recognition, speech recognition and natural language processing, and it requires large amounts of data and computing power.</p><h2>Milestones in AI History</h2><p>Alan Turing proposed the Turing Test in 1950 as a measure of machine intelligence. In 1997, IBM's Deep Blue defeated world chess champion Garry Kasparov. In 2016, Google DeepMind's AlphaGo defeated Go champion Lee Sedol, a landmark for deep learning.</p>",
+    "keyPoints": [
+      "The term 'artificial intelligence' was coined by John McCarthy in 1956.",
+      "The Dartmouth Conference of 1956 is regarded as the birthplace of AI.",
+      "Alan Turing proposed the Turing Test in his 1950 paper 'Computing Machinery and Intelligence'.",
+      "Machine Learning was coined by Arthur Samuel in 1959.",
+      "Supervised learning uses labelled data; unsupervised learning uses unlabelled data.",
+      "Reinforcement learning learns through rewards and penalties.",
+      "Deep learning is a subset of machine learning that uses multi-layer neural networks.",
+      "A neural network consists of an input layer, hidden layers and an output layer.",
+      "Narrow AI (Weak AI) performs one specific task and is the only type of AI achieved so far.",
+      "IBM's Deep Blue defeated Garry Kasparov in chess in 1997.",
+      "Google DeepMind's AlphaGo defeated Lee Sedol in 2016.",
+      "AI, Machine Learning and Deep Learning form a nested set: AI is the broadest field, ML is its subset, and Deep Learning is a subset of ML."
+    ],
+    "tables": [
+      {
+        "title": "Types of Machine Learning",
+        "headers": ["Type", "Training Data", "Example"],
+        "rows": [
+          ["Supervised Learning", "Labelled data with known answers", "Spam detection, house price prediction"],
+          ["Unsupervised Learning", "Unlabelled data", "Customer segmentation, anomaly detection"],
+          ["Reinforcement Learning", "Feedback through rewards and penalties", "Game playing, robot navigation"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Artificial Intelligence: A Modern Approach — Stuart Russell and Peter Norvig"},
+      {"label": "Book", "value": "Computer Science: An Overview — J. Glenn Brookshear"},
+      {"label": "Standard", "value": "Turing, A. M. (1950), 'Computing Machinery and Intelligence'"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Expert Systems and Knowledge Representation",
+    "bodyText": "<h2>What is an Expert System?</h2><p>An expert system is an AI program that imitates the decision-making of a human expert within a narrow, specialised domain. Instead of general intelligence, it applies a large body of stored expert knowledge to solve problems such as medical diagnosis, fault detection and financial advice.</p><h2>Components of an Expert System</h2><p>An expert system has four main components. The knowledge base stores facts and rules about the domain, usually in IF-THEN form. The inference engine applies logical reasoning to the knowledge base to reach conclusions. The user interface allows interaction with the user, and the explanation facility explains how a conclusion was reached, which builds user trust.</p><h2>Forward and Backward Chaining</h2><p>The inference engine reasons in two ways. Forward chaining is data-driven: it starts from known facts and applies rules until a conclusion is reached. Backward chaining is goal-driven: it starts from a hypothesis and works backwards to check whether supporting facts exist. Medical diagnosis systems typically use backward chaining, starting from a suspected disease.</p><h2>Knowledge Representation</h2><p>Knowledge representation is the method of encoding human knowledge so a computer can use it. Common methods include production rules (IF-THEN statements), semantic networks (graphs of concepts and relationships), frames (structured records with slots for attributes) and formal logic (propositional and predicate logic). Ontologies define concepts and their relationships in a domain in a formal, shareable way.</p><h2>Early Expert Systems</h2><p>DENDRAL, developed at Stanford University in 1965, was one of the first expert systems; it identified molecular structures from mass spectrometry data. MYCIN, developed at Stanford in the 1970s, diagnosed bacterial infections and recommended antibiotics, using certainty factors to handle uncertain information.</p>",
+    "keyPoints": [
+      "An expert system imitates a human expert's decision-making in a narrow domain.",
+      "The knowledge base stores facts and IF-THEN rules about the domain.",
+      "The inference engine is the reasoning component of an expert system.",
+      "Forward chaining is data-driven reasoning from facts to conclusions.",
+      "Backward chaining is goal-driven reasoning from a hypothesis to supporting facts.",
+      "DENDRAL (1965, Stanford) was one of the first expert systems, used in chemistry.",
+      "MYCIN (1970s, Stanford) diagnosed bacterial infections and recommended antibiotics.",
+      "MYCIN used certainty factors to reason with uncertain information.",
+      "Semantic networks represent knowledge as graphs of concepts and relationships.",
+      "Frames represent knowledge as structured records with slots for attributes.",
+      "The explanation facility of an expert system explains how it reached a conclusion."
+    ],
+    "tables": [
+      {
+        "title": "Forward Chaining vs Backward Chaining",
+        "headers": ["Feature", "Forward Chaining", "Backward Chaining"],
+        "rows": [
+          ["Direction", "Data-driven: facts to conclusion", "Goal-driven: hypothesis to facts"],
+          ["Starting point", "Known facts", "Suspected conclusion"],
+          ["Typical use", "Monitoring, planning, prediction", "Diagnosis, fault finding"],
+          ["Question asked", "What can be concluded?", "Is this hypothesis true?"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Artificial Intelligence: A Modern Approach — Stuart Russell and Peter Norvig"},
+      {"label": "Book", "value": "Artificial Intelligence: Structures and Strategies — George F. Luger"},
+      {"label": "Reference", "value": "MYCIN and DENDRAL case studies, Stanford University"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Natural Language Processing (NLP) Concepts",
+    "bodyText": "<h2>What is NLP?</h2><p>Natural Language Processing (NLP) is the field of AI that enables computers to understand, interpret and generate human language. It bridges human communication and computer understanding, and it powers chatbots, virtual assistants, machine translation and search engines.</p><h2>Stages of NLP Processing</h2><p>Raw text passes through several stages before a computer can use it. Tokenization splits text into words or sentences called tokens. Stop words (common words such as 'the', 'is' and 'in') are often removed because they carry little meaning. Stemming chops words to their root form, while lemmatization returns the proper dictionary base form. Part-of-speech (POS) tagging labels each word as a noun, verb, adjective and so on.</p><h2>Key NLP Tasks</h2><p>Named Entity Recognition (NER) identifies names of people, places and organisations in text. Sentiment analysis determines whether text expresses a positive, negative or neutral opinion. Machine translation converts text from one language to another. Other tasks include text summarization, question answering and speech recognition.</p><h2>Text Representation</h2><p>Computers cannot process words directly, so text is converted into numbers. The Bag of Words model counts word frequencies, ignoring word order. TF-IDF (Term Frequency-Inverse Document Frequency) weights words by how often they appear in a document compared with the whole collection, highlighting distinctive words.</p><h2>Modern NLP</h2><p>The Transformer architecture, introduced in the 2017 paper 'Attention Is All You Need', revolutionised NLP and led to models such as BERT (Google, 2018) and GPT (OpenAI, 2018). These models understand context far better than earlier approaches and are the basis of modern chatbots and virtual assistants such as Siri, Alexa and Google Assistant.</p>",
+    "keyPoints": [
+      "NLP enables computers to understand, interpret and generate human language.",
+      "Tokenization splits text into individual words or sentences called tokens.",
+      "Stop words are common words like 'the' and 'is' that are often removed in NLP.",
+      "Stemming chops words to root forms; lemmatization returns the dictionary base form.",
+      "Part-of-speech tagging labels words as nouns, verbs, adjectives and so on.",
+      "Named Entity Recognition (NER) identifies people, places and organisations in text.",
+      "Sentiment analysis determines whether text is positive, negative or neutral.",
+      "TF-IDF stands for Term Frequency-Inverse Document Frequency.",
+      "The Transformer architecture was introduced in the 2017 paper 'Attention Is All You Need'.",
+      "BERT was introduced by Google in 2018 and GPT by OpenAI in 2018.",
+      "Machine translation converts text from one language to another."
+    ],
+    "tables": [
+      {
+        "title": "Stemming vs Lemmatization",
+        "headers": ["Feature", "Stemming", "Lemmatization"],
+        "rows": [
+          ["Method", "Chops off word endings by rules", "Uses vocabulary and grammar to find base form"],
+          ["Output", "May produce non-words (e.g. 'studies' to 'studi')", "Always produces a real dictionary word"],
+          ["Speed", "Faster and simpler", "Slower, needs a language dictionary"],
+          ["Accuracy", "Less accurate", "More accurate"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Speech and Language Processing — Daniel Jurafsky and James H. Martin"},
+      {"label": "Paper", "value": "Vaswani et al. (2017), 'Attention Is All You Need'"},
+      {"label": "Book", "value": "Natural Language Processing with Python — Steven Bird, Ewan Klein and Edward Loper"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Cloud Computing (IaaS, PaaS, SaaS)",
+    "bodyText": "<h2>What is Cloud Computing?</h2><p>Cloud computing is the on-demand delivery of computing services — servers, storage, databases, networking and software — over the internet. The US National Institute of Standards and Technology (NIST) defines it as a model for enabling convenient, on-demand network access to a shared pool of configurable computing resources that can be rapidly provisioned with minimal management effort.</p><h2>The Three Service Models</h2><p>Cloud services are offered at three levels. Infrastructure as a Service (IaaS) provides raw computing infrastructure such as virtual machines and storage; the user manages the operating system and applications. Platform as a Service (PaaS) provides a ready platform for developing and deploying applications without managing the underlying infrastructure. Software as a Service (SaaS) delivers complete applications over the internet, such as email and office suites, with no installation or maintenance by the user.</p><h2>Deployment Models</h2><p>A cloud can be public (services offered to anyone over the internet), private (dedicated to one organisation), hybrid (a mix of public and private) or community (shared by organisations with common concerns). The five essential characteristics defined by NIST are on-demand self-service, broad network access, resource pooling, rapid elasticity and measured service.</p><h2>Benefits and Examples</h2><p>Cloud computing reduces capital cost, scales up or down with demand, and removes the burden of hardware maintenance. Amazon Web Services (AWS), launched in 2006, pioneered the modern cloud market, while Salesforce, founded in 1999, popularised the SaaS model. Common examples include Amazon EC2 (IaaS), Heroku and Google App Engine (PaaS), and Gmail, Microsoft 365 and Salesforce (SaaS).</p>",
+    "keyPoints": [
+      "NIST defines cloud computing as on-demand network access to a shared pool of configurable computing resources.",
+      "IaaS stands for Infrastructure as a Service; the user manages the operating system and applications.",
+      "PaaS stands for Platform as a Service; it provides a ready platform for developing applications.",
+      "SaaS stands for Software as a Service; complete applications are delivered over the internet.",
+      "The four cloud deployment models are public, private, hybrid and community.",
+      "NIST lists five essential cloud characteristics: on-demand self-service, broad network access, resource pooling, rapid elasticity and measured service.",
+      "Amazon Web Services (AWS) was launched in 2006 and pioneered the modern cloud market.",
+      "Salesforce, founded in 1999, popularised the Software as a Service model.",
+      "Amazon EC2 is an example of IaaS; Heroku and Google App Engine are examples of PaaS.",
+      "Gmail, Microsoft 365 and Salesforce are examples of SaaS.",
+      "Rapid elasticity means cloud resources can scale up or down quickly with demand.",
+      "In SaaS, the provider manages all maintenance, updates and security of the application."
+    ],
+    "tables": [
+      {
+        "title": "Cloud Service Models Compared",
+        "headers": ["Model", "What the Provider Manages", "Example", "User Manages"],
+        "rows": [
+          ["IaaS", "Virtual machines, storage, networking", "Amazon EC2, Google Compute Engine", "Operating system, applications, data"],
+          ["PaaS", "Runtime, middleware, operating system", "Heroku, Google App Engine", "Applications and data only"],
+          ["SaaS", "Everything, including the application", "Gmail, Microsoft 365, Salesforce", "Only its own data and settings"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Standard", "value": "NIST Special Publication 800-145, 'The NIST Definition of Cloud Computing'"},
+      {"label": "Book", "value": "Cloud Computing: Concepts, Technology and Architecture — Thomas Erl"},
+      {"label": "Book", "value": "Computer Science: An Overview — J. Glenn Brookshear"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Artificial Intelligence & Emerging Tech",
+    "subtopic": "Blockchain, IoT, Big Data Fundamentals",
+    "bodyText": "<h2>Blockchain</h2><p>Blockchain is a distributed digital ledger in which records, called blocks, are linked together using cryptographic hashes. Each block contains data, its own hash and the hash of the previous block, so changing one block breaks the chain. The concept was introduced in the 2008 Bitcoin white paper by Satoshi Nakamoto, and the Bitcoin network began operating in 2009. Because copies of the ledger are held by many participants, no single authority controls it. Key properties are decentralisation, transparency and immutability. Agreement on new blocks is reached by consensus mechanisms, the best known being Proof of Work and Proof of Stake.</p><h2>Internet of Things (IoT)</h2><p>The Internet of Things refers to the network of physical devices — sensors, appliances, vehicles and machines — that collect and exchange data over the internet without direct human intervention. The term was coined by Kevin Ashton in 1999. IoT is used in smart homes, healthcare monitoring, precision agriculture and industrial automation (Industrial IoT). Its main challenges are security, privacy and the handling of massive data volumes.</p><h2>Big Data</h2><p>Big Data refers to datasets so large and complex that traditional data-processing tools cannot handle them. It is described by the five Vs: Volume (huge amounts of data), Velocity (data generated at high speed), Variety (structured, semi-structured and unstructured data), Veracity (uncertainty and trustworthiness of data) and Value (useful insight extracted from data). Apache Hadoop, developed by Doug Cutting and released in 2006, is a framework for distributed storage and processing of big data, using the MapReduce programming model; Apache Spark is its faster, in-memory successor.</p>",
+    "keyPoints": [
+      "Blockchain is a distributed digital ledger in which blocks are linked by cryptographic hashes.",
+      "The Bitcoin white paper was published by Satoshi Nakamoto in 2008.",
+      "The Bitcoin network began operating in 2009.",
+      "Blockchain properties are decentralisation, transparency and immutability.",
+      "Proof of Work and Proof of Stake are consensus mechanisms used in blockchain.",
+      "The term 'Internet of Things' was coined by Kevin Ashton in 1999.",
+      "IoT devices collect and exchange data over the internet without direct human intervention.",
+      "Industrial IoT (IIoT) is the use of IoT in manufacturing and industrial automation.",
+      "Big Data is described by the five Vs: Volume, Velocity, Variety, Veracity and Value.",
+      "Apache Hadoop was developed by Doug Cutting and released in 2006.",
+      "Hadoop uses the MapReduce programming model for distributed processing.",
+      "Apache Spark is a faster, in-memory successor to Hadoop for big data processing."
+    ],
+    "tables": [
+      {
+        "title": "The Five Vs of Big Data",
+        "headers": ["V", "Meaning"],
+        "rows": [
+          ["Volume", "The enormous amount of data generated and stored"],
+          ["Velocity", "The high speed at which data is generated and processed"],
+          ["Variety", "Structured, semi-structured and unstructured data types"],
+          ["Veracity", "The uncertainty, accuracy and trustworthiness of data"],
+          ["Value", "The useful insight that can be extracted from data"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Paper", "value": "Nakamoto, S. (2008), 'Bitcoin: A Peer-to-Peer Electronic Cash System'"},
+      {"label": "Book", "value": "Big Data: Principles and Best Practices of Scalable Real-Time Data Systems — Nathan Marz"},
+      {"label": "Book", "value": "Computer Science: An Overview — J. Glenn Brookshear"}
+    ]
+  }
+]

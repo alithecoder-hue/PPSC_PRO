@@ -1,0 +1,185 @@
+[
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "HTML5, CSS3, JavaScript Basics",
+    "bodyText": "<h2>HTML5: Structure of the Web</h2><p>HTML (HyperText Markup Language) is the standard language for creating web pages. It was first developed by Tim Berners-Lee in 1991. HTML5, the fifth major version, became a W3C Recommendation in October 2014. HTML5 introduced semantic elements such as header, nav, section, article and footer, which describe the meaning of content, along with native audio and video tags, the canvas element for drawing graphics, and localStorage for storing data in the browser.</p><h2>CSS3: Presentation of the Web</h2><p>CSS (Cascading Style Sheets) controls the appearance of web pages: layout, colours, fonts and spacing. CSS3 is the third level of CSS, organised into separate modules. Its core concept is the box model: every element is a box made of content, padding, border and margin. CSS3 added rounded corners, shadows, gradients, animations and media queries, which make responsive design possible.</p><h2>JavaScript: Behaviour of the Web</h2><p>JavaScript is the programming language of the web, adding interactivity to pages. It was created by Brendan Eich at Netscape in 1995 in about ten days, originally named Mocha, then LiveScript, before becoming JavaScript. Despite the name, JavaScript is unrelated to Java. It is an interpreted, single-threaded, event-driven language, standardised as ECMAScript. The ES6 (ES2015) edition was a major modernisation, adding classes, arrow functions and modules. JavaScript now also runs outside the browser through Node.js.</p>",
+    "keyPoints": [
+      "HTML stands for HyperText Markup Language.",
+      "HTML was first developed by Tim Berners-Lee in 1991.",
+      "HTML5 became a W3C Recommendation in October 2014.",
+      "Semantic HTML5 elements include header, nav, section, article and footer.",
+      "CSS stands for Cascading Style Sheets and controls the appearance of web pages.",
+      "The CSS box model consists of content, padding, border and margin.",
+      "CSS3 introduced media queries, which make responsive web design possible.",
+      "JavaScript was created by Brendan Eich at Netscape in 1995.",
+      "JavaScript was originally named Mocha, then LiveScript, before becoming JavaScript.",
+      "JavaScript is unrelated to the Java programming language despite the similar name.",
+      "JavaScript is standardised as ECMAScript; ES6 (ES2015) was a major modernisation.",
+      "JavaScript is an interpreted, single-threaded, event-driven language."
+    ],
+    "tables": [
+      {
+        "title": "The Three Web Layers",
+        "headers": ["Technology", "Role", "Example"],
+        "rows": [
+          ["HTML5", "Structure and content", "headings, paragraphs, forms, tables"],
+          ["CSS3", "Presentation and layout", "colours, fonts, spacing, responsive design"],
+          ["JavaScript", "Behaviour and interactivity", "form validation, animations, dynamic content"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Learning Web Design — Jennifer Niederst Robbins"},
+      {"label": "Reference", "value": "MDN Web Docs — HTML, CSS and JavaScript guides"},
+      {"label": "Book", "value": "HTML and CSS: Design and Build Websites — Jon Duckett"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "Client-Server Architecture",
+    "bodyText": "<h2>The Client-Server Model</h2><p>Client-server architecture is a network model in which clients request services and servers provide them. A client is a device or program that initiates a request, such as a web browser asking for a page. A server is a powerful computer or program that waits for requests and returns responses, such as a web server delivering a page or a database server returning records. Communication follows the request-response pattern over protocols such as HTTP.</p><h2>Tiers of Architecture</h2><p>In a two-tier architecture, the client communicates directly with the database server. In a three-tier architecture, an application (logic) tier sits between them: the presentation tier displays the interface, the application tier processes business logic, and the data tier stores information. The three-tier model is more scalable and secure, and it dominates modern web applications.</p><h2>Thin and Thick Clients</h2><p>A thin client depends heavily on the server for processing, as in a browser-based application. A thick client performs much processing locally, as in a desktop application. Centralised servers make data easier to secure, back up and update, but they also create a single point of failure, which is why load balancing and redundancy are used.</p><h2>Common Servers and Ports</h2><p>Different services run on standard ports: a web server uses HTTP on port 80 and HTTPS on port 443, an FTP server uses port 21, DNS uses port 53 and email's SMTP uses port 25. Popular web servers include Apache HTTP Server and Nginx. HTTP is a stateless protocol, meaning each request is independent; cookies and sessions are used to remember users between requests.</p>",
+    "keyPoints": [
+      "In client-server architecture, clients request services and servers provide them.",
+      "Communication in client-server architecture follows the request-response pattern.",
+      "A two-tier architecture has the client communicating directly with the database server.",
+      "A three-tier architecture consists of presentation, application (logic) and data tiers.",
+      "The three-tier model is more scalable and secure than the two-tier model.",
+      "A thin client depends on the server for processing; a thick client processes locally.",
+      "HTTP uses port 80 and HTTPS uses port 443.",
+      "FTP uses port 21, DNS uses port 53 and SMTP uses port 25.",
+      "Apache HTTP Server and Nginx are popular web servers.",
+      "HTTP is a stateless protocol: each request is independent of previous requests.",
+      "Cookies and sessions are used to remember users between HTTP requests.",
+      "A single central server can be a single point of failure, addressed by load balancing."
+    ],
+    "tables": [
+      {
+        "title": "Two-Tier vs Three-Tier Architecture",
+        "headers": ["Feature", "Two-Tier", "Three-Tier"],
+        "rows": [
+          ["Structure", "Client and database server", "Presentation, application and data tiers"],
+          ["Scalability", "Limited", "High: tiers scale independently"],
+          ["Security", "Client connects directly to the database", "Database hidden behind the application tier"],
+          ["Typical use", "Small desktop applications", "Modern web applications"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Book", "value": "Computer Networking: A Top-Down Approach — Kurose and Ross"},
+      {"label": "Book", "value": "Web Technologies: A Computer Science Perspective — Jeffrey C. Jackson"},
+      {"label": "Reference", "value": "MDN Web Docs — Client-server overview"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "RESTful APIs and Web Services",
+    "bodyText": "<h2>What is a Web Service?</h2><p>A web service is a software system that allows applications to communicate over a network, usually using HTTP. An API (Application Programming Interface) is the set of rules and endpoints through which one program requests services from another. Web APIs are the standard way modern applications exchange data, for example a weather app fetching forecasts from a remote server.</p><h2>REST Principles</h2><p>REST (Representational State Transfer) is an architectural style for designing networked applications, defined by Roy Fielding in his 2000 doctoral dissertation. A RESTful API treats everything as a resource identified by a URL, uses standard HTTP methods, and is stateless: each request from a client must contain all information needed, and the server stores no session state between requests. Resources are usually represented in JSON, a lightweight text format that is easier to read and parse than XML.</p><h2>HTTP Methods and Status Codes</h2><p>REST maps operations to HTTP methods: GET retrieves data, POST creates a new resource, PUT replaces a resource completely, PATCH updates it partially, and DELETE removes it. Servers reply with status codes: 200 means OK, 201 means Created, 400 means Bad Request, 401 means Unauthorized, 404 means Not Found and 500 means Internal Server Error.</p><h2>REST vs SOAP</h2><p>SOAP (Simple Object Access Protocol) is an older, strict protocol that uses XML messages and formal contracts (WSDL). REST is simpler, lighter and more flexible, which is why it dominates modern web and mobile APIs.</p>",
+    "keyPoints": [
+      "API stands for Application Programming Interface.",
+      "REST stands for Representational State Transfer.",
+      "REST was defined by Roy Fielding in his 2000 doctoral dissertation.",
+      "A RESTful API treats everything as a resource identified by a URL.",
+      "REST is stateless: each request must contain all information the server needs.",
+      "GET retrieves data, POST creates a resource, PUT replaces it, PATCH updates it partially, DELETE removes it.",
+      "HTTP status code 200 means OK and 201 means Created.",
+      "HTTP status code 400 means Bad Request, 401 means Unauthorized and 404 means Not Found.",
+      "HTTP status code 500 means Internal Server Error.",
+      "JSON is the standard data format for REST APIs and is lighter than XML.",
+      "SOAP is an older, strict XML-based protocol; REST is simpler and more flexible.",
+      "An endpoint is a specific URL through which an API resource is accessed."
+    ],
+    "tables": [
+      {
+        "title": "HTTP Methods in REST",
+        "headers": ["Method", "Purpose", "Example"],
+        "rows": [
+          ["GET", "Retrieve a resource", "GET /api/users/5"],
+          ["POST", "Create a new resource", "POST /api/users"],
+          ["PUT", "Replace a resource completely", "PUT /api/users/5"],
+          ["PATCH", "Update a resource partially", "PATCH /api/users/5"],
+          ["DELETE", "Remove a resource", "DELETE /api/users/5"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Dissertation", "value": "Roy Fielding (2000), 'Architectural Styles and the Design of Network-based Software Architectures'"},
+      {"label": "Book", "value": "RESTful Web Services — Leonard Richardson and Sam Ruby"},
+      {"label": "Reference", "value": "MDN Web Docs — HTTP methods and response status codes"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "Frameworks Overview (React, Node.js, Django)",
+    "bodyText": "<h2>Framework vs Library</h2><p>A framework is a ready-made structure that provides the skeleton of an application; the developer fills in the details. This is called inversion of control: the framework calls your code, rather than your code calling a library. A library, by contrast, is a collection of functions your code calls when needed. Frameworks speed up development, enforce structure and handle common tasks such as routing, security and database access.</p><h2>React</h2><p>React is a JavaScript library for building user interfaces, developed by Jordan Walke at Facebook and released in 2013. It is component-based: the interface is built from small, reusable components. React uses a virtual DOM, an in-memory copy of the page, to update only the parts of the screen that change, which makes it fast. Components are usually written in JSX, a syntax that mixes HTML-like markup with JavaScript.</p><h2>Node.js</h2><p>Node.js is a JavaScript runtime environment created by Ryan Dahl in 2009. It is built on Chrome's V8 JavaScript engine and lets JavaScript run on the server, not only in the browser. Node.js uses an event-driven, non-blocking I/O model, which makes it efficient for applications handling many simultaneous connections, such as chat servers and streaming services. Its default package manager is npm (Node Package Manager).</p><h2>Django</h2><p>Django is a high-level Python web framework released in 2005, created by Adrian Holovaty and Simon Willison. It follows the Model-View-Template (MVT) pattern, the Django variant of MVC: the Model handles data, the Template handles presentation and the View handles logic. Django is called 'batteries included' because it ships with an admin panel, authentication, an ORM and security features out of the box. It is used by Instagram, Pinterest and Mozilla.</p>",
+    "keyPoints": [
+      "A framework provides the skeleton of an application; the framework calls your code (inversion of control).",
+      "A library is a collection of functions that your code calls when needed.",
+      "React is a JavaScript library for building user interfaces, developed by Jordan Walke at Facebook.",
+      "React was released in 2013 and is component-based.",
+      "React uses a virtual DOM to update only the parts of the page that change.",
+      "JSX is the syntax used in React that mixes HTML-like markup with JavaScript.",
+      "Node.js is a JavaScript runtime created by Ryan Dahl in 2009.",
+      "Node.js is built on Chrome's V8 JavaScript engine.",
+      "Node.js uses an event-driven, non-blocking I/O model.",
+      "npm (Node Package Manager) is the default package manager for Node.js.",
+      "Django is a Python web framework released in 2005, created by Adrian Holovaty and Simon Willison.",
+      "Django follows the Model-View-Template (MVT) pattern and is called 'batteries included'."
+    ],
+    "tables": [
+      {
+        "title": "React vs Node.js vs Django",
+        "headers": ["Framework", "Language", "Type", "Used For"],
+        "rows": [
+          ["React", "JavaScript", "Front-end library", "Interactive user interfaces"],
+          ["Node.js", "JavaScript", "Back-end runtime", "Scalable server applications and APIs"],
+          ["Django", "Python", "Full-stack framework", "Database-driven websites with admin panel"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Reference", "value": "React documentation (react.dev)"},
+      {"label": "Reference", "value": "Node.js documentation (nodejs.org)"},
+      {"label": "Reference", "value": "Django documentation (djangoproject.com)"}
+    ]
+  },
+  {
+    "subject": "Computer Studies",
+    "topic": "Web Technologies",
+    "subtopic": "Web Security (SQL Injection, XSS, CSRF)",
+    "bodyText": "<h2>Why Web Security Matters</h2><p>Web applications accept input from untrusted users, which makes them prime targets for attack. The OWASP (Open Web Application Security Project) Top 10 is the standard awareness list of the most critical web application risks. Three of the most commonly examined attacks are SQL Injection, Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF).</p><h2>SQL Injection (SQLi)</h2><p>SQL Injection occurs when an attacker inserts malicious SQL code into an input field, such as a login form, and the application passes it directly to the database. A classic example is entering ' OR '1'='1 in a password field, which can make a query always true and bypass authentication. The main defence is parameterized queries (prepared statements), which separate SQL code from user data, along with input validation and giving the database account only the minimum necessary privileges.</p><h2>Cross-Site Scripting (XSS)</h2><p>Cross-Site Scripting occurs when an attacker injects malicious scripts, usually JavaScript, into pages viewed by other users. In stored XSS the script is saved on the server (for example in a comment) and runs for every visitor; in reflected XSS it comes from a crafted link; in DOM-based XSS it is executed by manipulating the page in the browser. Defences include encoding output before displaying it, validating and sanitising input, and using Content Security Policy (CSP) headers.</p><h2>Cross-Site Request Forgery (CSRF)</h2><p>Cross-Site Request Forgery tricks the browser of an already logged-in user into performing an unwanted action, such as transferring money or changing an email address, by visiting a malicious page that silently sends a request to the trusted site. Because the browser automatically attaches the user's session cookie, the site believes the request is genuine. Defences include anti-CSRF tokens (a secret value in each form that the server verifies), SameSite cookies and requiring re-authentication for sensitive actions.</p>",
+    "keyPoints": [
+      "OWASP (Open Web Application Security Project) Top 10 lists the most critical web application risks.",
+      "SQL Injection inserts malicious SQL code through input fields to manipulate a database.",
+      "Entering ' OR '1'='1 in a login field is a classic SQL Injection attempt to bypass authentication.",
+      "Parameterized queries (prepared statements) are the main defence against SQL Injection.",
+      "XSS stands for Cross-Site Scripting: injecting malicious scripts into pages viewed by other users.",
+      "Stored XSS saves the malicious script on the server; reflected XSS comes from a crafted link.",
+      "DOM-based XSS executes by manipulating the page inside the victim's browser.",
+      "Output encoding and Content Security Policy (CSP) defend against XSS.",
+      "CSRF stands for Cross-Site Request Forgery: tricking a logged-in user's browser into an unwanted action.",
+      "CSRF works because the browser automatically attaches the user's session cookie to requests.",
+      "Anti-CSRF tokens are secret values in forms that the server verifies to prevent CSRF.",
+      "SameSite cookies help prevent CSRF by restricting when cookies are sent cross-site."
+    ],
+    "tables": [
+      {
+        "title": "Three Common Web Attacks",
+        "headers": ["Attack", "How It Works", "Main Defence"],
+        "rows": [
+          ["SQL Injection", "Malicious SQL inserted through input fields", "Parameterized queries (prepared statements)"],
+          ["XSS", "Malicious script injected into pages viewed by others", "Output encoding, Content Security Policy"],
+          ["CSRF", "Logged-in user's browser tricked into unwanted actions", "Anti-CSRF tokens, SameSite cookies"]
+        ]
+      }
+    ],
+    "references": [
+      {"label": "Reference", "value": "OWASP Foundation — Top 10 and Cheat Sheet Series"},
+      {"label": "Book", "value": "The Web Application Hacker's Handbook — Dafydd Stuttard and Marcus Pinto"},
+      {"label": "Book", "value": "Computer Science: An Overview — J. Glenn Brookshear"}
+    ]
+  }
+]
