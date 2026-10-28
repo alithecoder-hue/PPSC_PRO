@@ -29,11 +29,15 @@ import * as path from 'path';
 
 const prisma = new PrismaClient();
 
-interface ContentTable {
+// NOTE: declared as a type alias, not an interface — TypeScript only gives
+// object-literal type aliases an implicit index signature, which is what
+// makes ContentTable[] assignable to Prisma's Json (InputJsonValue) columns.
+// An interface here breaks ts-node with TS2322 on the tables field.
+type ContentTable = {
   title: string;
   headers: string[];
   rows: string[][];
-}
+};
 
 interface ContentEntry {
   subject: string;
