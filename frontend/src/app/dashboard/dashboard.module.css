@@ -275,7 +275,7 @@
 
 .heroVisual {
   position: relative;
-  height: 280px;
+  height: 220px;
   background: linear-gradient(135deg, #0c1b2e 0%, #12263f 55%, #1b3a5c 100%);
   overflow: hidden;
 }
@@ -293,8 +293,9 @@
 .heroCopy {
   position: absolute;
   left: 22px;
-  bottom: 20px;
   right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .heroKicker {
@@ -317,7 +318,7 @@
 .heroTag {
   position: absolute;
   left: 16px;
-  bottom: 14px;
+  top: 16px;
   background: rgba(12, 27, 46, 0.85);
   color: #fbbf24;
   font-size: 0.78rem;
@@ -535,6 +536,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
