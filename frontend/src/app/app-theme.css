@@ -13,12 +13,15 @@
   --app-ink: #0f1e33;
   --app-ink-2: #334155;
   --app-muted: #64748b;
-  --app-faint: #94a3b8;
+  --app-faint: #64748b;
   --app-line: #e6eaf0;
   --app-line-soft: #eef2f7;
   --app-navy: #0c1b2e;
   --app-navy-2: #12263f;
+  --app-navy-3: #1b3a5c;
+  --app-navy-4: #25486b;
   --app-accent: #f59e0b;
+  --app-accent-light: #fbbf24;
   --app-accent-deep: #b45309;
   --app-accent-soft: #fef3c7;
   --app-success: #16a34a;
@@ -27,12 +30,12 @@
   --app-danger-soft: #fef2f2;
   --app-info: #2563eb;
   --app-info-soft: #eff6ff;
-  --app-radius: 14px;
-  --app-radius-sm: 10px;
+  --app-radius: 12px;
+  --app-radius-sm: 8px;
   --app-shadow-sm: 0 1px 2px rgba(15, 30, 51, 0.05);
   --app-shadow: 0 4px 16px rgba(15, 30, 51, 0.07);
   --app-shadow-lg: 0 18px 48px rgba(15, 30, 51, 0.12);
-  --app-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --app-font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Hide the legacy dark-theme animated orbs everywhere (marketing hides them too) */
@@ -165,7 +168,7 @@
   color: #fff !important;
 }
 .cta-content p {
-  color: #94a3b8 !important;
+  color: #cbd5e1 !important;
 }
 .cta-btn {
   background: var(--app-accent) !important;
@@ -242,7 +245,7 @@
 }
 .app-title {
   font-size: 1.9rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--app-ink);
   margin: 0 0 8px;
@@ -271,7 +274,7 @@
 }
 .app-card-title {
   font-size: 1.05rem;
-  font-weight: 750;
+  font-weight: 600;
   color: var(--app-ink);
   margin: 0 0 6px;
 }
@@ -298,8 +301,9 @@
 .app-stat b {
   display: block;
   font-size: 1.7rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
   color: var(--app-ink);
 }
 .app-stat span {
@@ -326,7 +330,7 @@
   justify-content: center;
   gap: 8px;
   font-family: var(--app-font);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.92rem;
   padding: 12px 22px;
   border-radius: 10px;
@@ -445,7 +449,7 @@
 .app-table th {
   text-align: left;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--app-faint);
@@ -534,7 +538,7 @@
 .app-tab[data-active="true"] {
   color: var(--app-ink);
   border-bottom-color: var(--app-accent);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Empty state */
@@ -822,7 +826,7 @@
 /* Dividers / section titles */
 .app-section-title {
   font-size: 1.15rem;
-  font-weight: 750;
+  font-weight: 600;
   color: var(--app-ink);
   margin: 0 0 16px;
   letter-spacing: -0.01em;
@@ -851,4 +855,10 @@
   .app-main {
     padding: 20px 16px;
   }
+}
+
+/* Tabular numerals — use on any number that should line up
+   (stats, scores, prices, deadlines). */
+.tnum {
+  font-variant-numeric: tabular-nums;
 }

@@ -583,30 +583,92 @@
 .statStrip {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 14px;
 }
 
 .statTile {
   background: #fff;
   border: 1px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 16px 18px;
   box-shadow: 0 1px 3px rgba(15, 30, 51, 0.05);
+  min-width: 0;
 }
 
-.statTile span {
+/* 5-number strip (design #4): label / number / sub / tiny visual */
+.stripLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+.stripValue {
   display: block;
+  margin-top: 6px;
   font-size: 1.45rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f1e33;
   letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
 }
-
-.statTile p {
-  margin: 2px 0 0;
+.stripValueSm {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+.stripSub {
+  margin: 3px 0 0;
   font-size: 0.82rem;
   color: #64748b;
+  line-height: 1.45;
+}
+.stripSpark {
+  display: block;
+  margin-top: 10px;
+}
+.streakDots {
+  display: flex;
+  gap: 5px;
+  margin-top: 14px;
+}
+.streakDots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e2e8f0;
+}
+.streakDots .dotOn {
+  background: #f59e0b;
+}
+.stripBar {
+  display: block;
+  height: 6px;
+  margin-top: 14px;
+  background: #eef2f7;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.stripBar i {
+  display: block;
+  height: 100%;
+  background: #12263f;
+  border-radius: 99px;
+}
+.stripBadge {
+  display: inline-flex;
+  margin-top: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.stripBadgeWarn {
+  color: #b45309;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
 }
 
 /* ---------- Subject grid ---------- */
@@ -1099,6 +1161,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .statTile:last-child {
+    grid-column: span 2;
+  }
+
   .subjectGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1110,4 +1176,65 @@
   .heroVisual {
     height: 190px;
   }
+}
+
+/* ---------- Post-payment banner (audit H8) ---------- */
+.payBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  color: #92400e;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.payBanner p {
+  flex: 1;
+  margin: 0;
+}
+.payBannerIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f59e0b;
+  color: #1a1207;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.payBanner button {
+  background: none;
+  border: none;
+  color: #92400e;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+}
+.payBanner button:hover {
+  background: rgba(180, 83, 9, 0.1);
+}
+
+/* ---------- Command palette hint in the header search ---------- */
+.kbdBtn {
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 3px 7px;
+  cursor: pointer;
+  line-height: 1;
+}
+.kbdBtn:hover {
+  color: #0f1e33;
+  border-color: #cbd5e1;
 }

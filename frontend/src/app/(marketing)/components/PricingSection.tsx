@@ -15,7 +15,7 @@ const FREE_FEATS = [
 
 const PRO_FEATS = [
   { ok: true, text: 'Unlimited mock tests & practice' },
-  { ok: true, text: '5+ years of solved past papers (PDF)' },
+  { ok: true, text: 'Past papers, solved online in the classroom' },
   { ok: true, text: 'All subjects, all topics unlocked' },
   { ok: true, text: 'Advanced analytics & weak-area reports' },
   { ok: true, text: 'Custom test builder & study planner' },
@@ -23,7 +23,7 @@ const PRO_FEATS = [
 ];
 
 export default function PricingSection({ h1 = false }: { h1?: boolean }) {
-  const [yearly, setYearly] = useState(false);
+  const [yearly, setYearly] = useState(true);
 
   return (
     <section className="mm-section mm-pricing" id="pricing">
@@ -93,12 +93,17 @@ export default function PricingSection({ h1 = false }: { h1?: boolean }) {
           </div>
 
           <div className="mm-price-card pro">
-            <span className="mm-pop">Most popular</span>
+            <span className="mm-pop">Most popular · Save Rs 1,789</span>
             <h3 className="mm-tier">Premium</h3>
             <div className="mm-price">
               <b>Rs {yearly ? '2,999' : '399'}</b>
               <span>/{yearly ? 'year' : 'month'}</span>
             </div>
+            <p className="mm-price-math">
+              {yearly
+                ? 'Works out to Rs 250/month — you save Rs 1,789 vs paying monthly.'
+                : 'Rs 4,788/year — switch to yearly and save Rs 1,789.'}
+            </p>
             <p className="mm-price-desc">
               Unlimited access to everything on Merit Master.
             </p>
@@ -118,6 +123,7 @@ export default function PricingSection({ h1 = false }: { h1?: boolean }) {
             >
               Go Premium <ArrowRight size={15} />
             </Link>
+            <p className="mm-price-trial">7-day free trial · No card required</p>
           </div>
         </div>
         <p className="mm-price-note">

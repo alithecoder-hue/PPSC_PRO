@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
   Flame, Zap, ClipboardList, Clock, BookOpen, Target, Bookmark,
@@ -11,10 +11,11 @@ import {
   Minus, Plus, Shield, Search, LayoutDashboard, GraduationCap,
   Brain, Calculator, Coins, Cpu, Flag, FlaskConical, Globe,
   Landmark, Languages, Lightbulb, MoonStar, Newspaper, Scale,
-  ScrollText, Sparkles, SpellCheck, LogOut, Check,
+  ScrollText, Sparkles, SpellCheck, LogOut, Check, X,
 } from 'lucide-react';
 import { API_BASE } from '@/lib/api';
 import { authFetch } from '@/lib/authFetch';
+import CommandPalette from './CommandPalette';
 import styles from './dashboard.module.css';
 
 /* ---------- Real content data (verified against the MCQ bank) ---------- */
@@ -109,7 +110,30 @@ function readinessLabel(avg: number | null): string {
   return 'Needs work';
 }
 
-export default function DashboardPage() {
+/* Monochrome sparkline (Stripe-style): 88x24, navy stroke, soft area fill.
+   All-equal input centres the line; all-zero input sits on the baseline. */
+function StripSpark({ values }: { values: number[] }) {
+  if (values.length < 2) return null;
+  const max = Math.max(...values);
+  const min = Math.min(...values);
+  const range = max - min || 1;
+  const pts = values.map((v, i) => {
+    const x = (i / (values.length - 1)) * 88;
+    const y = max === 0 ? 21 : max === min ? 12 : 21 - ((v - min) / range) * 18;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+  const line = pts.join(' ');
+  return (
+    <svg viewBox="0 0 88 24" width="88" height="24" aria-hidden="true" className={styles.stripSpark}>
+      <polygon points={`0,24 ${line} 88,24`} fill="rgba(18,38,63,0.07)" />
+      <polyline points={line} fill="none" stroke="#12263f" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/* useSearchParams() needs a Suspense boundary at build time (same pattern
+   as the classroom). The inner component does the real work. */
+function DashboardContent() {
   const router = useRouter();
   const [data, setData] = useState<PremiumData | null>(null);
   const [profile, setProfile] = useState<ProfileData | null>(null);
@@ -118,10 +142,25 @@ export default function DashboardPage() {
   const [savingGoal, setSavingGoal] = useState(false);
   const [query, setQuery] = useState('');
   const [greeting, setGreeting] = useState('Welcome back');
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [payDismissed, setPayDismissed] = useState(false);
+  const searchParams = useSearchParams();
+  const paySubmitted = searchParams.get('payment') === 'submitted';
 
   useEffect(() => {
     const h = new Date().getHours();
     setGreeting(h >= 5 && h < 12 ? 'Good morning' : h >= 12 && h < 17 ? 'Good afternoon' : 'Good evening');
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setPaletteOpen((v) => !v);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, []);
 
   useEffect(() => {
@@ -235,6 +274,45 @@ export default function DashboardPage() {
     return 'Start with Computer Studies — full notes and 90 MCQs are ready. The other 15 subjects are on the way.';
   }, [nearestJob, avgScore, results, data, goal]);
 
+  /* 5-number strip (design #4): personal numbers only, derived from real
+     results — never the catalogue counts, never invented figures. */
+  const strip = useMemo(() => {
+    const sorted = [...results].sort(
+      (a, b) => new Date(a.completedAt).getTime() - new Date(b.completedAt).getTime()
+    );
+    const weekAgo = Date.now() - 7 * 86400000;
+    const weekResults = sorted.filter((r) => new Date(r.completedAt).getTime() >= weekAgo);
+    const weekMcqs = weekResults.reduce((acc, r) => acc + (r.total || 0), 0);
+    // Daily MCQs for the last 7 days (oldest -> today) for the sparkline.
+    const daily: number[] = Array.from({ length: 7 }, (_, i) => {
+      const day = new Date(Date.now() - (6 - i) * 86400000);
+      const key = day.toDateString();
+      return sorted
+        .filter((r) => new Date(r.completedAt).toDateString() === key)
+        .reduce((acc, r) => acc + (r.total || 0), 0);
+    });
+    const scoreSeries = sorted
+      .slice(-10)
+      .map((r) => (r.total > 0 ? Math.round((r.score / r.total) * 100) : 0));
+    // Weakest area: lowest average score grouped by exam title.
+    const byTitle = new Map<string, { sum: number; n: number }>();
+    sorted.forEach((r) => {
+      const t = (r.exam?.title ?? 'Practice session').trim();
+      const cur = byTitle.get(t) ?? { sum: 0, n: 0 };
+      cur.sum += r.total > 0 ? (r.score / r.total) * 100 : 0;
+      cur.n += 1;
+      byTitle.set(t, cur);
+    });
+    const weakest = Array.from(byTitle.entries()).reduce<{ title: string; avg: number } | null>(
+      (best, [title, v]) => {
+        const avg = Math.round(v.sum / v.n);
+        return !best || avg < best.avg ? { title, avg } : best;
+      },
+      null
+    );
+    return { weekMcqs, weekTests: weekResults.length, daily, scoreSeries, weakest };
+  }, [results]);
+
   const filteredSubjects = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return SUBJECTS;
@@ -328,6 +406,15 @@ export default function DashboardPage() {
               onChange={(e) => setQuery(e.target.value)}
               aria-label="Search subjects"
             />
+            <button
+              type="button"
+              className={styles.kbdBtn}
+              onClick={() => setPaletteOpen(true)}
+              title="Search everything (Ctrl+K)"
+              aria-label="Open command palette"
+            >
+              ⌘K
+            </button>
           </div>
           <span className={styles.userChip}>
             <span className={styles.avatar} title={user?.name || profile?.name || ''}>
@@ -339,6 +426,22 @@ export default function DashboardPage() {
             <LogOut size={17} />
           </button>
         </header>
+
+        {/* Post-payment banner (billing redirects here after a payment is submitted) */}
+        {paySubmitted && !payDismissed && (
+          <div className={styles.payBanner} role="status">
+            <span className={styles.payBannerIcon}>
+              <Check size={17} />
+            </span>
+            <p>
+              <strong>Payment submitted.</strong> We will verify it and activate Premium,
+              usually within 24 hours. You can keep studying on the free plan meanwhile.
+            </p>
+            <button type="button" onClick={() => setPayDismissed(true)} aria-label="Dismiss notification">
+              <X size={16} />
+            </button>
+          </div>
+        )}
 
         {/* Heading + status pills */}
         <div className={styles.headingRow}>
@@ -459,24 +562,68 @@ export default function DashboardPage() {
           </motion.aside>
         </div>
 
-        {/* Content stats strip */}
+        {/* 5-number strip — your numbers, not the catalogue's */}
         <motion.section
           className={styles.statStrip}
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, delay: 0.12, ease: 'easeOut' }}
+          aria-label="Your preparation at a glance"
         >
-          {[
-            { value: '1,271', label: 'MCQs in bank' },
-            { value: '16', label: 'Subjects' },
-            { value: '575', label: 'Subtopics' },
-            { value: '103', label: 'Notes ready' },
-          ].map((s) => (
-            <div key={s.label} className={styles.statTile}>
-              <span>{s.value}</span>
-              <p>{s.label}</p>
-            </div>
-          ))}
+          <div className={styles.statTile}>
+            <p className={styles.stripLabel}>Readiness</p>
+            <span className={styles.stripValue}>{avgScore === null ? '—' : `${avgScore}%`}</span>
+            <p className={styles.stripSub}>{readinessLabel(avgScore)}</p>
+            <StripSpark values={strip.scoreSeries} />
+          </div>
+          <div className={styles.statTile}>
+            <p className={styles.stripLabel}>MCQs this week</p>
+            <span className={styles.stripValue}>{strip.weekMcqs}</span>
+            <p className={styles.stripSub}>
+              {strip.weekTests === 0
+                ? 'No tests this week'
+                : `${strip.weekTests} test${strip.weekTests === 1 ? '' : 's'} this week`}
+            </p>
+            <StripSpark values={strip.daily} />
+          </div>
+          <div className={styles.statTile}>
+            <p className={styles.stripLabel}>Streak</p>
+            <span className={styles.stripValue}>{user?.streak ?? 0}d</span>
+            <p className={styles.stripSub}>
+              {(user?.streak ?? 0) >= 2 ? 'Keep it alive today' : 'Take a test to start one'}
+            </p>
+            <span className={styles.streakDots} aria-hidden="true">
+              {Array.from({ length: 7 }, (_, i) => (
+                <i key={i} className={i < Math.min(user?.streak ?? 0, 7) ? styles.dotOn : ''} />
+              ))}
+            </span>
+          </div>
+          <div className={styles.statTile}>
+            <p className={styles.stripLabel}>Weakest area</p>
+            <span className={`${styles.stripValue} ${styles.stripValueSm}`}>
+              {strip.weakest ? strip.weakest.title.slice(0, 18) : '—'}
+            </span>
+            <p className={styles.stripSub}>
+              {strip.weakest ? `${strip.weakest.avg}% average — revise it` : 'Take a test to find it'}
+            </p>
+            {strip.weakest && (
+              <span className={styles.stripBar} aria-hidden="true">
+                <i style={{ width: `${strip.weakest.avg}%` }} />
+              </span>
+            )}
+          </div>
+          <div className={styles.statTile}>
+            <p className={styles.stripLabel}>Next deadline</p>
+            <span className={styles.stripValue}>{nearestJob ? `${daysLeft(nearestJob.deadline)}d` : '—'}</span>
+            <p className={styles.stripSub}>
+              {nearestJob
+                ? `${nearestJob.title.slice(0, 24)} · ${shortDate(nearestJob.deadline)}`
+                : 'No jobs tracked yet'}
+            </p>
+            {nearestJob && daysLeft(nearestJob.deadline) <= 7 && (
+              <span className={`${styles.stripBadge} ${styles.stripBadgeWarn}`}>Due within a week</span>
+            )}
+          </div>
         </motion.section>
 
         {/* Subject grid */}
@@ -691,6 +838,15 @@ export default function DashboardPage() {
           </motion.section>
         </div>
       </div>
+      <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} subjects={SUBJECTS} />
     </div>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense fallback={<div className={styles.shell}><div className={styles.loading}>Loading your dashboard…</div></div>}>
+      <DashboardContent />
+    </Suspense>
   );
 }
