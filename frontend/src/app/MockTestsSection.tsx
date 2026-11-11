@@ -22,7 +22,7 @@ export default function MockTestsSection({ limit, showViewAll = false }: { limit
 
   const handleTestClick = (e: React.MouseEvent, test: any) => {
     e.preventDefault();
-    router.push(`/classroom`);
+    router.push(`/classroom?tab=test`);
   };
 
   const getBgClass = (index: number) => {
@@ -75,7 +75,7 @@ export default function MockTestsSection({ limit, showViewAll = false }: { limit
 
       {showViewAll && (
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
-          <Link href="/classroom" style={{
+          <Link href="/classroom?tab=test" style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '10px',

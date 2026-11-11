@@ -7,7 +7,7 @@ const COLS: { title: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: 'Features', href: '/#features' },
       { label: 'Past papers', href: '/past-papers' },
-      { label: 'Mock tests', href: '/mock-tests' },
+      { label: 'Mock tests', href: '/classroom?tab=test' },
       { label: 'Pricing', href: '/subscription' },
     ],
   },

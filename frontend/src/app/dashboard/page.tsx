@@ -179,14 +179,14 @@ export default function DashboardPage() {
       {
         label: 'Take your first test',
         hint: 'See your first readiness score',
-        href: '/daily-test',
+        href: '/classroom?tab=test&daily=1',
         cta: 'Take a test',
         done: results.length > 0,
       },
       {
         label: 'Save your first MCQ',
         hint: 'Bookmark questions to revise later',
-        href: '/practice-engine',
+        href: '/classroom?tab=practice',
         cta: 'Practise',
         done: (data?.stats.savedMcqs ?? 0) > 0,
       },
@@ -263,8 +263,8 @@ export default function DashboardPage() {
   const rail = [
     { href: '/dashboard', Icon: LayoutDashboard, label: 'Dashboard', active: true },
     { href: '/classroom', Icon: GraduationCap, label: 'Classroom' },
-    { href: '/practice-engine', Icon: BookOpen, label: 'Practice' },
-    { href: '/mock-tests', Icon: ClipboardList, label: 'Mock tests' },
+    { href: '/classroom?tab=practice', Icon: BookOpen, label: 'Practice' },
+    { href: '/classroom?tab=test', Icon: ClipboardList, label: 'Mock tests' },
     { href: '/past-papers', Icon: FileText, label: 'Past papers' },
     { href: '/jobs', Icon: Briefcase, label: 'Jobs' },
     { href: '/subscription', Icon: Crown, label: 'Subscription' },
@@ -391,7 +391,7 @@ export default function DashboardPage() {
                 <Link href="/classroom" className={styles.primaryBtn}>
                   Open classroom <ArrowRight size={16} />
                 </Link>
-                <Link href="/daily-test" className={styles.ghostBtn}>
+                <Link href="/classroom?tab=test&daily=1" className={styles.ghostBtn}>
                   Today&apos;s test
                 </Link>
               </div>
@@ -414,7 +414,7 @@ export default function DashboardPage() {
                 <p className={styles.emptyText}>
                   Take a short test and your readiness score will appear here.
                 </p>
-                <Link href="/daily-test" className={styles.primaryBtn}>
+                <Link href="/classroom?tab=test&daily=1" className={styles.primaryBtn}>
                   Take your first test <ArrowRight size={16} />
                 </Link>
               </>
@@ -557,14 +557,14 @@ export default function DashboardPage() {
               <h3>
                 <FileText size={18} /> Recent tests
               </h3>
-              <Link href="/mock-tests" className={styles.cardLink}>
+              <Link href="/classroom?tab=test" className={styles.cardLink}>
                 All tests <ArrowRight size={14} />
               </Link>
             </div>
             {results.length === 0 ? (
               <div className={styles.empty}>
                 <p>No tests taken yet.</p>
-                <Link href="/daily-test" className={styles.emptyCta}>
+                <Link href="/classroom?tab=test&daily=1" className={styles.emptyCta}>
                   Take your first daily test <ArrowRight size={15} />
                 </Link>
               </div>
@@ -675,10 +675,10 @@ export default function DashboardPage() {
               </div>
             </div>
             <div className={styles.quickGrid}>
-              <Link href="/practice-engine" className={styles.quickBtn}>
+              <Link href="/classroom?tab=practice" className={styles.quickBtn}>
                 <BookOpen size={16} /> Practice
               </Link>
-              <Link href="/mock-tests" className={styles.quickBtn}>
+              <Link href="/classroom?tab=test" className={styles.quickBtn}>
                 <ClipboardList size={16} /> Mock tests
               </Link>
               <Link href="/past-papers" className={styles.quickBtn}>

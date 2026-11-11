@@ -49,7 +49,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 20px 40px 40px 40px;
+  padding: 12px 20px 24px 20px;
   box-sizing: border-box;
   background-color: var(--cr-bg);
   background-image: radial-gradient(1000px 380px at 50% -100px, rgba(245, 158, 11, 0.055), transparent 70%);
@@ -101,7 +101,7 @@
 
 @media (min-width: 1600px) {
   .classroomRoot {
-    padding: 20px 200px 40px 200px;
+    padding: 12px 32px 24px 32px;
   }
 }
 
@@ -137,14 +137,14 @@
   position: sticky;
   top: 15px;
   z-index: 50;
-  max-width: 1400px;
-  margin: 0 auto 40px auto;
+  max-width: none;
+  margin: 0 0 12px 0;
   background: var(--cr-surface-glass);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 1px solid var(--cr-border);
-  border-radius: 20px;
-  padding: 14px 24px;
+  border-radius: 14px;
+  padding: 8px 16px;
   box-shadow: 0 10px 30px var(--cr-shadow-soft), inset 0 1px 0 var(--cr-inset-hi);
   display: flex;
   align-items: center;
@@ -152,7 +152,7 @@
   gap: 16px;
   flex-wrap: nowrap;
   transition: all 0.3s ease;
-  height: 72px;
+  height: 56px;
   flex-shrink: 0;
 }
 
@@ -329,16 +329,16 @@
 
 /* ==== 2-PANE LLM LAYOUT ==== */
 .twoPaneLayout {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   display: flex;
-  gap: 24px;
+  gap: 16px;
   min-height: 75vh;
 }
 
 /* Sidebar (Left Pane) */
 .sidebarPane {
-  width: 340px;
+  width: 300px;
   flex-shrink: 0;
   background: var(--cr-surface);
   border: 1px solid var(--cr-border);
@@ -513,16 +513,16 @@
 }
 
 .contentHeader {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   border-bottom: 1px solid var(--cr-border-soft);
-  padding-bottom: 30px;
+  padding-bottom: 18px;
 }
 
 .contentTitle {
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--cr-text);
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
   line-height: 1.2;
 }
 
@@ -547,9 +547,9 @@
 
 .contentBody {
   font-size: 1.15rem;
-  line-height: 1.8;
+  line-height: 1.65;
   color: var(--cr-text-2);
-  max-width: 850px;
+  max-width: 960px;
 }
 
 .contentBody h2 {

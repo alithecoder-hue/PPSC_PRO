@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ChevronDown, Check, X, Filter, BookOpen, Layers, Target, FileText, Sun, Moon, ArrowLeft, Info, List, Menu, Bookmark, Settings, Zap, Flame, Send } from 'lucide-react';
+import { Search, ChevronDown, Check, X, Filter, BookOpen, Layers, Target, FileText, Sun, Moon, ArrowLeft, Info, List, Menu, Bookmark, Settings, Zap, Flame, Send, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { authFetch } from '@/lib/authFetch';
 import styles from '../learning-board.module.css';
 
@@ -56,10 +56,22 @@ function ClassroomContent() {
   const searchParams = useSearchParams();
   const mode = searchParams.get('mode') || 'study';
 
+  // Single home for all study/test activity: an explicit ?tab= wins, then
+  // the legacy ?mode= values used by subject pages, past papers and jobs.
+  const resolveTab = (tab: string | null, md: string): string => {
+    if (tab === 'practice' || tab === 'test' || tab === 'study') return tab;
+    if (md === 'test' || md === 'full-mock') return 'test';
+    if (md === 'mixed' || md === 'speed-drill') return 'practice';
+    return 'study';
+  };
+
   const [isLightMode, setIsLightMode] = useState(false);
-  const [activeTab, setActiveTab] = useState('study');  const [searchQuery, setSearchQuery] = useState('');
+  const [activeTab, setActiveTab] = useState(() => resolveTab(searchParams.get('tab'), mode));  const [searchQuery, setSearchQuery] = useState('');
   const [userRole, setUserRole] = useState<string | null>(null);
+  const [hasPremiumAccess, setHasPremiumAccess] = useState(false);
+  const [profileLoaded, setProfileLoaded] = useState(false);
   const [readerFontSize, setReaderFontSize] = useState(18);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   useEffect(() => {
     setUserRole(localStorage.getItem('role'));
@@ -70,7 +82,14 @@ function ClassroomContent() {
     try {
       if (localStorage.getItem('mm-classroom-theme') === 'light') setIsLightMode(true);
     } catch { /* storage unavailable */ }
+    try { if (localStorage.getItem('mm-classroom-sidebar') === 'collapsed') setSidebarCollapsed(true); } catch { /* storage unavailable */ }
   }, []);
+
+  // Follow the URL when the user arrives from a redirect (daily test, mock,
+  // past paper, subject page) so the right tab opens.
+  useEffect(() => {
+    setActiveTab(resolveTab(searchParams.get('tab'), searchParams.get('mode') || 'study'));
+  }, [searchParams]);
 
   const toggleTheme = () => {
     setIsLightMode((prev) => {
@@ -78,6 +97,14 @@ function ClassroomContent() {
       try {
         localStorage.setItem('mm-classroom-theme', next ? 'light' : 'dark');
       } catch { /* storage unavailable */ }
+      return next;
+    });
+  };
+
+  const toggleSidebar = () => {
+    setSidebarCollapsed((prev) => {
+      const next = !prev;
+      try { localStorage.setItem('mm-classroom-sidebar', next ? 'collapsed' : 'open'); } catch { /* storage unavailable */ }
       return next;
     });
   };
@@ -111,6 +138,7 @@ function ClassroomContent() {
   const [isTimeless, setIsTimeless] = useState(false);
   const [testModeTitle, setTestModeTitle] = useState('');
   const [isFetchingTest, setIsFetchingTest] = useState(false);
+  const [testError, setTestError] = useState('');
   
   const [savedMcqs, setSavedMcqs] = useState<Set<number>>(new Set());
 
@@ -123,6 +151,7 @@ function ClassroomContent() {
 
   const startCustomTest = async (selections: any[], timeless: boolean, title: string, durationInSeconds?: number) => {
     setIsFetchingTest(true);
+    setTestError('');
     setTestModeTitle(title);
     setIsTimeless(timeless);
     setIsSubmitted(false);
@@ -142,18 +171,53 @@ function ClassroomContent() {
 
       if (res.ok) {
         const data = await res.json();
-        const formattedMcqs = data.mcqs.map((m: any) => ({
-          ...m,
-          options: m.options ? (typeof m.options === 'string' ? JSON.parse(m.options) : m.options) : []
-        }));
+        // Accept both the new {mcqs:[...]} contract and a bare array.
+        const list = Array.isArray(data) ? data : data.mcqs;
+        if (!Array.isArray(list) || list.length === 0) {
+          setTestError('No questions came back for this test. Please try again.');
+          setTopicMcqs([]);
+          return;
+        }
+        const formattedMcqs = list.map((m: any) => {
+          if (m.options) {
+            return {
+              ...m,
+              text: m.text || m.question,
+              options: typeof m.options === 'string' ? JSON.parse(m.options) : m.options,
+              correct: m.correct || m.correctOption,
+              explanation: m.explanation || '',
+            };
+          }
+          // Legacy row shape (optionA-D) — kept while the backend rolls out.
+          return {
+            id: m.id,
+            text: m.question,
+            options: [
+              { id: 'A', text: m.optionA },
+              { id: 'B', text: m.optionB },
+              { id: 'C', text: m.optionC },
+              { id: 'D', text: m.optionD },
+            ],
+            correct: m.correctOption,
+            explanation: m.explanation || '',
+          };
+        });
+        if (!formattedMcqs[0].correct) {
+          // The test service is still on the old build (no answers yet) —
+          // say so instead of scoring every answer wrong.
+          setTestError('The test service is updating. Please try again in a minute.');
+          setTopicMcqs([]);
+          return;
+        }
         setTopicMcqs(formattedMcqs);
         setTimeRemaining(timeless ? 0 : (durationInSeconds ? durationInSeconds : formattedMcqs.length * 60));
       } else {
-        alert('Failed to generate test. Please try again.');
+        setTestError('Failed to generate test. Please try again.');
         setTopicMcqs([]);
       }
     } catch (err) {
       console.error(err);
+      setTestError('Something went wrong starting the test. Please try again.');
       setTopicMcqs([]);
     } finally {
       setIsFetchingTest(false);
@@ -267,7 +331,7 @@ function ClassroomContent() {
   const totalMcqs = topicMcqs.length;
   const currentMcq = topicMcqs[currentMcqIndex];
   const attemptedCount = Object.keys(selectedAnswers).length;
-  const progressDashoffset = 402 - (402 * attemptedCount) / totalMcqs;
+  const progressDashoffset = totalMcqs > 0 ? 402 - (402 * attemptedCount) / totalMcqs : 402;
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -282,6 +346,11 @@ function ClassroomContent() {
             const profile = await profileRes.json();
             prefs = profile.preferredSubjectIds || [];
             setPreferredSubjectIds(prefs);
+            // Premium means the role OR any active, unexpired subscription —
+            // the 7-day trial grants a subscription while the role stays USER.
+            const subs = profile.subscriptions || [];
+            const premiumBySub = subs.some((s: any) => s.isActive && (!s.endDate || new Date(s.endDate) > new Date()));
+            setHasPremiumAccess(profile.role === 'PREMIUM' || profile.role === 'ADMIN' || premiumBySub);
           }
         }
 
@@ -300,7 +369,7 @@ function ClassroomContent() {
             if (cat) setSelectedCategoryId(cat.id);
           }
         }
-      } catch (err) { console.error(err); }
+      } catch (err) { console.error(err); } finally { setProfileLoaded(true); }
     };
     fetchCategories();
   }, [selectedCategorySlug]);
@@ -318,6 +387,8 @@ function ClassroomContent() {
 
   useEffect(() => {
     if (!activeSubtopic) return;
+    if (!activeSubtopic.id) return; // custom exam — its questions come from startCustomTest
+    resetExamState();
     const fetchContentAndMcqs = async () => {
       setContentLoading(true);
       try {
@@ -361,7 +432,7 @@ function ClassroomContent() {
     if (activeTab === 'test' && activeSubtopic && !isTimeless && !isSubmitted) {
       if (timeRemaining > 0) {
         interval = setInterval(() => setTimeRemaining(prev => prev - 1), 1000);
-      } else {
+      } else if (totalMcqs > 0) {
         handleExamSubmit();
       }
     }
@@ -374,7 +445,10 @@ function ClassroomContent() {
     if (mode === 'speed-drill' && activeTab === 'practice' && activeSubtopic && mcqTimeLeft > 0) {
       interval = setInterval(() => setMcqTimeLeft(prev => prev - 1), 1000);
     } else if (mode === 'speed-drill' && mcqTimeLeft === 0) {
-      handleNextMcq();
+      // On the last question there is nowhere to advance to — give the
+      // student another 15 seconds instead of leaving them stuck at 0.
+      if (currentMcqIndex < totalMcqs - 1) handleNextMcq();
+      else setMcqTimeLeft(15);
     }
     return () => clearInterval(interval);
   }, [mode, activeTab, activeSubtopic, mcqTimeLeft]);
@@ -403,7 +477,7 @@ function ClassroomContent() {
   };
 
   const handleDailyTestClick = () => {
-    if (userRole === 'PREMIUM' || userRole === 'ADMIN') {
+    if (hasPremiumAccess || userRole === 'PREMIUM' || userRole === 'ADMIN') {
       let config: any[] = [];
       if (preferredSubjectIds.length > 0) {
         const limitPerSubject = Math.max(1, Math.floor(100 / preferredSubjectIds.length));
@@ -417,6 +491,42 @@ function ClassroomContent() {
       router.push('/subscription');
     }
   };
+
+  // One reset for the whole exam state — used whenever the student leaves
+  // a test (subtopic switch, Quit, Back to Study) so no stale score or
+  // timer leaks into the next session.
+  const resetExamState = () => {
+    setIsSubmitted(false);
+    setScore(0);
+    setSelectedAnswers({});
+    setCurrentMcqIndex(0);
+    setTimeRemaining(15 * 60);
+    setMcqTimeLeft(15);
+    setIsTimeless(false);
+  };
+
+  // Auto-start when the user arrives from a redirect: the daily test
+  // (?daily=1) or a full mock from a subject page (?mode=full-mock).
+  const autoStartedRef = useRef(false);
+  useEffect(() => {
+    if (autoStartedRef.current) return;
+    if (!profileLoaded) return; // wait until the premium status is known
+    const daily = searchParams.get('daily') === '1';
+    const mockMode = (searchParams.get('mode') || '') === 'full-mock';
+    if (!daily && !mockMode) return;
+    if (daily) {
+      autoStartedRef.current = true;
+      handleDailyTestClick();
+      return;
+    }
+    if (mockMode && categories.length > 0) {
+      const cat = categories.find((c: any) => c.slug === selectedCategorySlug)
+        || categories.find((c: any) => (c.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === selectedCategorySlug);
+      if (!cat) return;
+      autoStartedRef.current = true;
+      startCustomTest([{ categoryId: cat.id, limit: 100, difficulty: 'any' }], false, 'Final Mock Exam', 5400);
+    }
+  }, [searchParams, profileLoaded, categories, selectedCategorySlug]);
 
   // EXAM HANDLERS
   const handleOptionSelect = (mcqId: string, optionId: string) => {
@@ -432,25 +542,28 @@ function ClassroomContent() {
   };
 
   const handlePrevMcq = () => {
-    if (currentMcqIndex > 0) setCurrentMcqIndex(prev => prev - 1);
+    if (currentMcqIndex > 0) {
+      setCurrentMcqIndex(prev => prev - 1);
+      setMcqTimeLeft(15);
+    }
   };
 
   const handleExamSubmit = async () => {
     setIsSubmitted(true);
     let correctCount = 0;
-    
+
     topicMcqs.forEach((mcq: any) => {
       if (selectedAnswers[mcq.id] === mcq.correct) {
         correctCount++;
       }
     });
-    
+
     setScore(correctCount);
 
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await fetch(API_BASE + '/api/mcqs/exam/submit', {
+        const res = await fetch(API_BASE + '/api/mcqs/exam/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -459,9 +572,15 @@ function ClassroomContent() {
           body: JSON.stringify({
             examId: null,
             score: correctCount,
-            total: topicMcqs.length
+            total: topicMcqs.length,
+            // The server grades these answers — its score is authoritative.
+            answers: Object.entries(selectedAnswers).map(([mcqId, selectedOption]) => ({ mcqId: Number(mcqId), selectedOption })),
           })
         });
+        if (res.ok) {
+          const data = await res.json();
+          if (typeof data?.score === 'number') setScore(data.score);
+        }
       }
     } catch (err) {
       console.error('Failed to submit score', err);
@@ -484,7 +603,7 @@ function ClassroomContent() {
   return (
     <div className={`${styles.boardContainer} ${styles.classroomRoot} ${isLightMode ? styles.lightMode : ''}`}>
       
-      <motion.div className={styles.filterBarWrapper} style={{ marginBottom: '20px', top: '0px', maxWidth: '100%', width: '100%', margin: '0 0 20px 0' }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div className={styles.filterBarWrapper} style={{ top: '0px', maxWidth: '100%', width: '100%', margin: '0 0 12px 0' }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
         <div className={styles.filterGroupLeft}>
           <button onClick={() => router.back()} className={styles.backBtn} style={{ background: 'var(--cr-hover)', color: 'inherit', padding: '0 12px', height: '44px' }}>
             <ArrowLeft size={18} />
@@ -559,10 +678,17 @@ function ClassroomContent() {
       <motion.div className={styles.twoPaneLayout} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ flex: 1, minHeight: 0, maxWidth: '100%', width: '100%', margin: 0 }}>
         
         {/* LEFT PANE */}
-        {(activeTab === 'study' || !activeSubtopic) ? (
-          <div className={styles.sidebarPane} style={{ flex: 1, width: 'auto', height: '100%', overflowY: 'auto', boxSizing: 'border-box' }}>
-            <div className={`${styles.sidebarHeader} ${styles.sidebarHeaderSticky}`}>
-              {!selectedCategoryId ? 'Available Subjects' : 'Available Topics'}
+        {sidebarCollapsed ? (
+          <button onClick={toggleSidebar} aria-label="Show subjects" title="Show subjects" style={{ flex: '0 0 44px', width: '44px', height: '100%', background: 'var(--cr-surface)', border: 'var(--cr-border)', borderRadius: '16px', color: 'var(--cr-text-2)', cursor: 'pointer', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', paddingTop: '16px' }}>
+            <PanelLeftOpen size={20} />
+          </button>
+        ) : (
+          <>
+            {(activeTab === 'study' || !activeSubtopic) ? (
+          <div className={styles.sidebarPane} style={{ flex: '0 0 300px', width: '300px', height: '100%', overflowY: 'auto', boxSizing: 'border-box' }}>
+            <div className={`${styles.sidebarHeader} ${styles.sidebarHeaderSticky}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span>{!selectedCategoryId ? 'Available Subjects' : 'Available Topics'}</span>
+              <button onClick={toggleSidebar} aria-label="Hide subjects" title="Hide subjects" style={{ background: 'transparent', border: 'none', color: 'var(--cr-text-muted)', cursor: 'pointer', padding: '4px', display: 'flex' }}><PanelLeftClose size={18} /></button>
             </div>
             {!selectedCategoryId ? (
               categories.length > 0 ? (
@@ -614,8 +740,11 @@ function ClassroomContent() {
           </div>
         ) : (
           /* RESTORED EXAM ENGINE SIDEBAR */
-          <div className={styles.sidebarPane} style={{ flex: 1, width: 'auto', height: '100%', overflowY: 'auto', boxSizing: 'border-box' }}>
-            <div className={`${styles.sidebarHeader} ${styles.sidebarHeaderSticky}`}>Session Status</div>
+          <div className={styles.sidebarPane} style={{ flex: '0 0 300px', width: '300px', height: '100%', overflowY: 'auto', boxSizing: 'border-box' }}>
+            <div className={`${styles.sidebarHeader} ${styles.sidebarHeaderSticky}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span>Session Status</span>
+              <button onClick={toggleSidebar} aria-label="Hide panel" title="Hide panel" style={{ background: 'transparent', border: 'none', color: 'var(--cr-text-muted)', cursor: 'pointer', padding: '4px', display: 'flex' }}><PanelLeftClose size={18} /></button>
+            </div>
             <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               {activeTab === 'test' && (
                 <div className={styles.timerBox}>
@@ -641,23 +770,28 @@ function ClassroomContent() {
               </div>
               {activeTab === 'practice' && currentMcq && selectedAnswers[currentMcq.id] && (
                 <motion.div className={styles.explanationBox} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}>
-                  <div className={styles.explanationHeader}><Check size={18} /> Explanation</div>
-                  <div className={styles.explanationBody}>{currentMcq.explanation || 'The selected option is correct based on general principles.'}</div>
+                  <div className={styles.explanationHeader} style={{ color: selectedAnswers[currentMcq.id] === currentMcq.correct ? '#16a34a' : '#dc2626' }}>
+                    {selectedAnswers[currentMcq.id] === currentMcq.correct ? <Check size={18} /> : <X size={18} />}
+                    {selectedAnswers[currentMcq.id] === currentMcq.correct ? ' Correct' : ' Incorrect'}
+                  </div>
+                  <div className={styles.explanationBody}>{currentMcq.explanation || 'No explanation available for this question.'}</div>
                 </motion.div>
               )}
               <div style={{ marginTop: 'auto', paddingTop: '24px' }}>
-                <button onClick={() => { setActiveSubtopic(null); setSelectedAnswers({}); }} style={{ width: '100%', padding: '12px', background: 'var(--cr-surface-2)', color: 'var(--cr-text-2)', border: 'var(--cr-border)', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer' }}>
+                <button onClick={() => { resetExamState(); setActiveSubtopic(null); }} style={{ width: '100%', padding: '12px', background: 'var(--cr-surface-2)', color: 'var(--cr-text-2)', border: 'var(--cr-border)', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer' }}>
                   Quit Session
                 </button>
               </div>
             </div>
           </div>
+            )}
+          </>
         )}
 
         {/* RIGHT PANE */}
-        <div className={styles.mainPane} style={{ flex: 3, width: 'auto', height: '100%', overflow: 'hidden', boxSizing: 'border-box', position: 'relative', display: 'flex', flexDirection: 'column', padding: 0 }}>
+        <div className={styles.mainPane} style={{ flex: 1, width: 'auto', height: '100%', overflow: 'hidden', boxSizing: 'border-box', position: 'relative', display: 'flex', flexDirection: 'column', padding: 0 }}>
           
-          <div style={{ flex: 1, overflowY: 'auto', padding: '50px' }}>
+          <div style={{ flex: 1, overflowY: 'auto', padding: '28px 32px' }}>
           {activeSubtopic ? (
             activeTab === 'study' ? (
               <motion.div key={activeSubtopic.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -793,12 +927,12 @@ function ClassroomContent() {
                         <div style={{ fontSize: '0.9rem', color: 'var(--cr-text-muted)' }}>Correct</div>
                       </div>
                       <div style={{ textAlign: 'center' }}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--cr-amber-text)' }}>{Math.round((score / totalMcqs) * 100)}%</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--cr-amber-text)' }}>{totalMcqs > 0 ? Math.round((score / totalMcqs) * 100) : 0}%</div>
                         <div style={{ fontSize: '0.9rem', color: 'var(--cr-text-muted)' }}>Accuracy</div>
                       </div>
                     </div>
                     
-                    <button onClick={() => { setIsSubmitted(false); setActiveTab('study'); }} style={{ background: 'linear-gradient(135deg, #F59E0B, #FF5500)', border: 'none', color: '#FFF', padding: '12px 24px', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', width: '100%' }}>
+                    <button onClick={() => { resetExamState(); setActiveTab('study'); }} style={{ background: 'linear-gradient(135deg, #F59E0B, #FF5500)', border: 'none', color: '#FFF', padding: '12px 24px', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', width: '100%' }}>
                       Back to Study
                     </button>
                   </div>
@@ -871,7 +1005,7 @@ function ClassroomContent() {
                   </div>
                 </motion.div>
               ) : (
-                <div className={styles.emptyState}><p>No MCQs available for this topic yet.</p></div>
+                <div className={styles.emptyState}><p>{testError || 'No MCQs available for this topic yet.'}</p></div>
               )
             )
           ) : (

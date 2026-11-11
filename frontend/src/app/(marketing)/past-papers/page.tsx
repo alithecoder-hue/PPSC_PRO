@@ -226,7 +226,7 @@ export default function PastPapersPage() {
   };
 
   const solveUrl = (paper: any) =>
-    paper.isPremium ? '/subscription' : `/classroom?subject=${subjectToSlug(paper.subject)}&mode=test`;
+    paper.isPremium ? '/subscription' : `/classroom?subject=${subjectToSlug(paper.subject)}&tab=test`;
 
   return (
     <div className={styles.pageWrapper}>
