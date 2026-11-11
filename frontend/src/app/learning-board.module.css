@@ -504,12 +504,22 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  min-height: 320px;
+  padding: 40px 20px;
   text-align: center;
   color: var(--cr-text-muted);
 }
 
 .emptyState h3 {
   color: var(--cr-text);
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+
+.emptyState p {
+  max-width: 420px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .contentHeader {
@@ -1089,7 +1099,7 @@
 /* ---- Rich Text HTML Content Renderer ---- */
 .richTextContent {
   color: var(--cr-text-2);
-  line-height: 1.95;
+  line-height: 1.55;
   font-size: 1.15rem;
   letter-spacing: 0.01em;
 }
@@ -1100,7 +1110,7 @@
 .richTextContent h4 {
   color: var(--cr-amber-text);
   margin: 28px 0 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.35;
 }
 
@@ -1218,4 +1228,161 @@
   padding: 16px;
   overflow-x: auto;
   margin: 12px 0;
+}
+
+/* ---------- Phase 2: reading token, focus mode, mastery, practice ---------- */
+
+/* Reading token (design #5): 65ch measure, 1.55 line-height. Applied to
+   the rendered study notes alongside .richTextContent. */
+.prose {
+  max-width: 65ch;
+  line-height: 1.55;
+}
+
+/* Focus mode (design #5): hide every chrome bar, centre the reading
+   column. Toggled with F, Esc, or the button in the reader controls. */
+.focusMode .filterBarWrapper {
+  display: none !important;
+}
+.focusMode .twoPaneLayout > button {
+  display: none;
+}
+.focusMode .sidebarPane {
+  display: none;
+}
+.focusMode .contentBody {
+  margin-left: auto;
+  margin-right: auto;
+}
+.focusExit {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: #0c1b2e;
+  color: #fff;
+  border: 1px solid #1b3a5c;
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 18px 48px rgba(15, 30, 51, 0.25);
+}
+.focusExit:hover {
+  background: #12263f;
+}
+
+/* Khan-style mastery dots (client-side, from practice attempts) */
+.masteryDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  background: transparent;
+  flex-shrink: 0;
+}
+.mastery_none {
+  border-color: #cbd5e1;
+  background: transparent;
+}
+.mastery_attempted {
+  border-color: #f59e0b;
+  background: transparent;
+}
+.mastery_familiar {
+  border-color: #f59e0b;
+  background: linear-gradient(90deg, #f59e0b 50%, transparent 50%);
+}
+.mastery_proficient {
+  border-color: var(--cr-text);
+  background: var(--cr-text);
+}
+.mastery_mastered {
+  border-color: #f59e0b;
+  background: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25);
+}
+
+/* Always-advancing session progress (practice + test) */
+.sessionProgress {
+  height: 6px;
+  background: var(--cr-surface-2);
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 0 0 20px;
+}
+.sessionProgress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #ff5500);
+  border-radius: 99px;
+  transition: width 0.2s ease;
+}
+
+/* Practice verdict, inline under the options (visible with the sidebar
+   collapsed or on mobile — the sidebar copy was removed) */
+.practiceVerdict {
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 0 0 20px;
+  border: 1px solid transparent;
+}
+.verdictOk {
+  background: var(--cr-success-bg);
+  border-color: #bbf7d0;
+}
+.verdictBad {
+  background: var(--cr-danger-bg);
+  border-color: #fecaca;
+}
+.verdictTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.verdictOk .verdictTitle {
+  color: #16a34a;
+}
+.verdictBad .verdictTitle {
+  color: #dc2626;
+}
+.verdictText {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--cr-text-2);
+}
+
+/* EmptyState icon + action */
+.emptyIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--cr-surface-2);
+  border: 1px solid var(--cr-border);
+  color: var(--cr-text-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.emptyAction {
+  margin-top: 20px;
+  background: #f59e0b;
+  color: #1a1207;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.emptyAction:hover {
+  background: #fbbf24;
 }

@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ChevronDown, Check, X, Filter, BookOpen, Layers, Target, FileText, Sun, Moon, ArrowLeft, Info, List, Menu, Bookmark, Settings, Zap, Flame, Send, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
+import { Search, ChevronDown, Check, X, Filter, BookOpen, Layers, Target, FileText, Sun, Moon, ArrowLeft, Info, List, Menu, Bookmark, Settings, Zap, Flame, Send, PanelLeftClose, PanelLeftOpen, Maximize } from 'lucide-react';
 import { authFetch } from '@/lib/authFetch';
 import styles from '../learning-board.module.css';
 
@@ -51,6 +51,43 @@ const CustomDropdown = ({ label, options, selected, onSelect, icon: Icon }: any)
 };
 
 
+/* Khan-style mastery (client-side, from practice attempts):
+   Attempted -> Familiar -> Proficient -> Mastered. Nothing is stored on
+   the server; the levels live in localStorage (mm-classroom-mastery). */
+function masteryLevel(m: { attempted: number; correct: number } | undefined): 'none' | 'attempted' | 'familiar' | 'proficient' | 'mastered' {
+  if (!m || m.attempted === 0) return 'none';
+  const acc = m.correct / m.attempted;
+  if (acc >= 0.85 && m.attempted >= 5) return 'mastered';
+  if (acc >= 0.7) return 'proficient';
+  if (acc >= 0.5) return 'familiar';
+  return 'attempted';
+}
+
+/* One empty state for the whole classroom (design #12): icon, title, a
+   first step to take, and an optional action — no bare one-liners. */
+function EmptyState({ icon: Icon, title, text, action, onAction }: {
+  icon: React.ComponentType<{ size?: number | string; className?: string; style?: React.CSSProperties }>;
+  title: string;
+  text: string;
+  action?: string;
+  onAction?: () => void;
+}) {
+  return (
+    <div className={styles.emptyState}>
+      <span className={styles.emptyIcon}>
+        <Icon size={40} />
+      </span>
+      <h3>{title}</h3>
+      <p>{text}</p>
+      {action && onAction && (
+        <button type="button" className={styles.emptyAction} onClick={onAction}>
+          {action}
+        </button>
+      )}
+    </div>
+  );
+}
+
 function ClassroomContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -72,6 +109,9 @@ function ClassroomContent() {
   const [profileLoaded, setProfileLoaded] = useState(false);
   const [readerFontSize, setReaderFontSize] = useState(18);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [focusMode, setFocusMode] = useState(false);
+  const [mastery, setMastery] = useState<Record<string, { attempted: number; correct: number }>>({});
+  const [furthestIndex, setFurthestIndex] = useState(0);
 
   useEffect(() => {
     setUserRole(localStorage.getItem('role'));
@@ -83,6 +123,11 @@ function ClassroomContent() {
       if (localStorage.getItem('mm-classroom-theme') === 'light') setIsLightMode(true);
     } catch { /* storage unavailable */ }
     try { if (localStorage.getItem('mm-classroom-sidebar') === 'collapsed') setSidebarCollapsed(true); } catch { /* storage unavailable */ }
+    try {
+      const savedMastery = localStorage.getItem('mm-classroom-mastery');
+      if (savedMastery) setMastery(JSON.parse(savedMastery));
+    } catch { /* storage unavailable */ }
+    try { if (localStorage.getItem('mm-classroom-focus') === '1') setFocusMode(true); } catch { /* storage unavailable */ }
   }, []);
 
   // Follow the URL when the user arrives from a redirect (daily test, mock,
@@ -109,6 +154,30 @@ function ClassroomContent() {
     });
   };
 
+  const toggleFocus = () => {
+    setFocusMode((prev) => {
+      const next = !prev;
+      try { localStorage.setItem('mm-classroom-focus', next ? '1' : '0'); } catch { /* storage unavailable */ }
+      return next;
+    });
+  };
+
+  /* Focus mode: F toggles, Esc exits. Never fires while typing. */
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'Escape') { setFocusMode(false); return; }
+      if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        setFocusMode((v) => !v);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
   const handleFontSizeChange = (size: number) => {
     const newSize = Math.min(28, Math.max(14, size));
     setReaderFontSize(newSize);
@@ -130,6 +199,10 @@ function ClassroomContent() {
 
   // Exam Engine State
   const [currentMcqIndex, setCurrentMcqIndex] = useState(0);
+
+  useEffect(() => {
+    setFurthestIndex((prev) => Math.max(prev, currentMcqIndex + 1));
+  }, [currentMcqIndex]);
   const [selectedAnswers, setSelectedAnswers] = useState<{[key: string]: string}>({});
   const [timeRemaining, setTimeRemaining] = useState(15 * 60);
   const [mcqTimeLeft, setMcqTimeLeft] = useState(15);
@@ -332,6 +405,9 @@ function ClassroomContent() {
   const currentMcq = topicMcqs[currentMcqIndex];
   const attemptedCount = Object.keys(selectedAnswers).length;
   const progressDashoffset = totalMcqs > 0 ? 402 - (402 * attemptedCount) / totalMcqs : 402;
+  /* Always-advancing: the furthest point reached this session — the bar
+     never moves backwards when the student goes back to re-check. */
+  const progressPoint = Math.max(attemptedCount, furthestIndex);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -500,6 +576,7 @@ function ClassroomContent() {
     setScore(0);
     setSelectedAnswers({});
     setCurrentMcqIndex(0);
+    setFurthestIndex(0);
     setTimeRemaining(15 * 60);
     setMcqTimeLeft(15);
     setIsTimeless(false);
@@ -532,6 +609,18 @@ function ClassroomContent() {
   const handleOptionSelect = (mcqId: string, optionId: string) => {
     if (activeTab === 'practice' && selectedAnswers[mcqId]) return;
     setSelectedAnswers(prev => ({ ...prev, [mcqId]: optionId }));
+    /* Practice attempts feed the sidebar mastery dots (client-side only).
+       Test answers never count — a test measures, practice teaches. */
+    if (activeTab === 'practice' && activeSubtopic) {
+      const correct = optionId === currentMcq?.correct;
+      const subId = String(activeSubtopic.id);
+      setMastery((prev) => {
+        const cur = prev[subId] ?? { attempted: 0, correct: 0 };
+        const next = { ...prev, [subId]: { attempted: cur.attempted + 1, correct: cur.correct + (correct ? 1 : 0) } };
+        try { localStorage.setItem('mm-classroom-mastery', JSON.stringify(next)); } catch { /* storage unavailable */ }
+        return next;
+      });
+    }
   };
 
   const handleNextMcq = () => {
@@ -601,7 +690,7 @@ function ClassroomContent() {
   };
 
   return (
-    <div className={`${styles.boardContainer} ${styles.classroomRoot} ${isLightMode ? styles.lightMode : ''}`}>
+    <div className={`${styles.boardContainer} ${styles.classroomRoot} ${isLightMode ? styles.lightMode : ''} ${focusMode ? styles.focusMode : ''}`}>
       
       <motion.div className={styles.filterBarWrapper} style={{ top: '0px', maxWidth: '100%', width: '100%', margin: '0 0 12px 0' }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
         <div className={styles.filterGroupLeft}>
@@ -720,14 +809,24 @@ function ClassroomContent() {
                     <AnimatePresence>
                       {isExpanded && topic.topics && (
                         <motion.div className={styles.subtopicList} initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
-                          {topic.topics.map((sub: any) => (
-                            <div key={sub.id} className={`${styles.subtopicItem} ${activeSubtopic?.id === sub.id ? styles.active : ''}`} onClick={() => setActiveSubtopic({ ...sub, parentTopic: topic.name })}>
-                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-                                <span>{sub.name}</span>
-                                {sub.level && <span className={`${styles.levelBadge} ${getLevelBadgeClass(sub.level)}`}>{sub.level.toUpperCase()}</span>}
+                          {topic.topics.map((sub: any) => {
+                            const m = mastery[String(sub.id)];
+                            const level = masteryLevel(m);
+                            const levelLabel = level === 'none'
+                              ? 'Not attempted yet'
+                              : `${level[0].toUpperCase() + level.slice(1)} · ${m.correct}/${m.attempted} correct`;
+                            return (
+                              <div key={sub.id} className={`${styles.subtopicItem} ${activeSubtopic?.id === sub.id ? styles.active : ''}`} onClick={() => setActiveSubtopic({ ...sub, parentTopic: topic.name })}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: '8px' }}>
+                                  <span style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
+                                    <span className={`${styles.masteryDot} ${styles[`mastery_${level}`]}`} title={levelLabel} />
+                                    <span>{sub.name}</span>
+                                  </span>
+                                  {sub.level && <span className={`${styles.levelBadge} ${getLevelBadgeClass(sub.level)}`}>{sub.level.toUpperCase()}</span>}
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -768,15 +867,6 @@ function ClassroomContent() {
                   <span className={styles.progressLabel}>/ {totalMcqs} MCQs</span>
                 </div>
               </div>
-              {activeTab === 'practice' && currentMcq && selectedAnswers[currentMcq.id] && (
-                <motion.div className={styles.explanationBox} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}>
-                  <div className={styles.explanationHeader} style={{ color: selectedAnswers[currentMcq.id] === currentMcq.correct ? '#16a34a' : '#dc2626' }}>
-                    {selectedAnswers[currentMcq.id] === currentMcq.correct ? <Check size={18} /> : <X size={18} />}
-                    {selectedAnswers[currentMcq.id] === currentMcq.correct ? ' Correct' : ' Incorrect'}
-                  </div>
-                  <div className={styles.explanationBody}>{currentMcq.explanation || 'No explanation available for this question.'}</div>
-                </motion.div>
-              )}
               <div style={{ marginTop: 'auto', paddingTop: '24px' }}>
                 <button onClick={() => { resetExamState(); setActiveSubtopic(null); }} style={{ width: '100%', padding: '12px', background: 'var(--cr-surface-2)', color: 'var(--cr-text-2)', border: 'var(--cr-border)', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer' }}>
                   Quit Session
@@ -848,6 +938,21 @@ function ClassroomContent() {
                     >
                       +
                     </button>
+                    <button
+                      onClick={toggleFocus}
+                      title="Focus mode (F) — hide the sidebar and top bar"
+                      aria-label="Toggle focus mode"
+                      style={{
+                        width: '24px', height: '24px', borderRadius: '50%',
+                        background: focusMode ? 'var(--cr-amber-bg)' : 'var(--cr-surface-3)',
+                        border: focusMode ? '1px solid var(--cr-amber-border)' : 'none',
+                        color: focusMode ? 'var(--cr-amber-text)' : 'var(--cr-text)',
+                        cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        marginLeft: '4px',
+                      }}
+                    >
+                      <Maximize size={13} />
+                    </button>
                   </div>
                 </div>
                 <div className={styles.contentBody} style={{ padding: '20px', overflowY: 'auto' }}>
@@ -862,10 +967,10 @@ function ClassroomContent() {
                             dir={hasUrdu ? 'rtl' : 'ltr'}
                             style={{
                               fontSize: `${readerFontSize}px`,
-                              lineHeight: hasUrdu ? 2.4 : 1.9,
+                              lineHeight: hasUrdu ? 2.2 : 1.55,
                               color: 'var(--cr-text-2)'
                             }}
-                            className={`${styles.richTextContent}${hasUrdu ? ' urdu-text' : ''}`}
+                            className={`${styles.richTextContent} ${styles.prose}${hasUrdu ? ' urdu-text' : ''}`}
                             dangerouslySetInnerHTML={{ __html: subtopicContent.bodyText }}
                           />
                         );
@@ -902,11 +1007,13 @@ function ClassroomContent() {
                       )}
                     </div>
                   ) : (
-                    <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--cr-text-faint)' }}>
-                      <FileText size={48} style={{ opacity: 0.2, margin: '0 auto 20px auto' }} />
-                      <p style={{ fontSize: '1.2rem', color: 'var(--cr-text)' }}>No content written yet.</p>
-                      <p>The admin has not added study notes for this subtopic.</p>
-                    </div>
+                    <EmptyState
+                      icon={FileText}
+                      title="No notes for this subtopic yet"
+                      text="The admin hasn't added study notes here — but you can still practise its MCQs."
+                      action="Practise this topic"
+                      onAction={() => setActiveTab('practice')}
+                    />
                   )}
                 </div>
                 <div className={styles.contentActions}>
@@ -969,6 +1076,19 @@ function ClassroomContent() {
                       </button>
                     </div>
                   </div>
+                  {totalMcqs > 0 && (
+                    <div
+                      className={styles.sessionProgress}
+                      role="progressbar"
+                      aria-valuenow={progressPoint}
+                      aria-valuemin={0}
+                      aria-valuemax={totalMcqs}
+                      aria-label={`Session progress: ${progressPoint} of ${totalMcqs}`}
+                      title={`${attemptedCount} answered · ${totalMcqs} questions`}
+                    >
+                      <span style={{ width: `${(progressPoint / totalMcqs) * 100}%` }} />
+                    </div>
+                  )}
                   <div className={styles.mcqOptionsList}>
                     {currentMcq.options.map((option: any) => {
                         const isSelected = selectedAnswers[currentMcq.id] === option.id;
@@ -995,6 +1115,15 @@ function ClassroomContent() {
                         );
                       })}
                   </div>
+                  {activeTab === 'practice' && currentMcq && selectedAnswers[currentMcq.id] && (
+                    <div className={`${styles.practiceVerdict} ${selectedAnswers[currentMcq.id] === currentMcq.correct ? styles.verdictOk : styles.verdictBad}`}>
+                      <div className={styles.verdictTitle}>
+                        {selectedAnswers[currentMcq.id] === currentMcq.correct ? <Check size={17} /> : <X size={17} />}
+                        {selectedAnswers[currentMcq.id] === currentMcq.correct ? ' Correct' : ' Incorrect'}
+                      </div>
+                      <p className={styles.verdictText}>{currentMcq.explanation || 'No explanation available for this question.'}</p>
+                    </div>
+                  )}
                   <div className={styles.mcqControls}>
                     <button className={`${styles.mcqBtn} ${currentMcqIndex === 0 ? styles.disabled : ''}`} onClick={handlePrevMcq}>Previous</button>
                     {activeTab === 'test' && currentMcqIndex === totalMcqs - 1 ? (
@@ -1005,17 +1134,21 @@ function ClassroomContent() {
                   </div>
                 </motion.div>
               ) : (
-                <div className={styles.emptyState}><p>{testError || 'No MCQs available for this topic yet.'}</p></div>
+                <EmptyState
+                  icon={FileText}
+                  title={testError ? 'The test service is updating' : 'No MCQs here yet'}
+                  text={testError || 'This topic has no questions yet — try another subtopic.'}
+                  action="Back to study"
+                  onAction={() => setActiveTab('study')}
+                />
               )
             )
           ) : (
-            <div className={styles.emptyState} style={{ display: 'flex', flexDirection: 'column', height: '100%', position: 'relative' }}>
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <Layers size={64} style={{ opacity: 0.2, margin: '0 auto 24px auto' }} />
-                <h3 style={{ fontSize: '1.8rem', color: 'var(--cr-text)', marginBottom: '8px' }}>Select a Topic</h3>
-                <p style={{ fontSize: '1.1rem' }}>Please select a subtopic from the Study tab to load content.</p>
-              </div>
-            </div>
+            <EmptyState
+              icon={Layers}
+              title="Select a topic"
+              text="Choose a subject in the sidebar, then a topic, to start studying."
+            />
           )}
           </div> {/* End inner scroll container */}
 
@@ -1101,6 +1234,12 @@ function ClassroomContent() {
           )}
         </div>
       </motion.div>
+
+      {focusMode && (
+        <button type="button" className={styles.focusExit} onClick={toggleFocus} title="Exit focus mode (F or Esc)">
+          Exit focus · F
+        </button>
+      )}
 
       {/* Custom Test Configuration Modal */}
       <AnimatePresence>
