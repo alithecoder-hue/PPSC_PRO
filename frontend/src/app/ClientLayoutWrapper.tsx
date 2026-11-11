@@ -35,7 +35,8 @@ export default function ClientLayoutWrapper({ children }: { children: React.Reac
     pathname?.startsWith('/admin') ||
     pathname?.startsWith('/test-engine') ||
     pathname?.startsWith('/study-engine') ||
-    pathname?.startsWith('/classroom');
+    pathname?.startsWith('/classroom') ||
+    pathname === '/dashboard';
 
   const isPremium = role === 'PREMIUM' || role === 'ADMIN';
 

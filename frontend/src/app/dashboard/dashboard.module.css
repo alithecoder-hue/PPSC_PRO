@@ -3,10 +3,9 @@
 
 .shell {
   display: flex;
-  gap: 18px;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 22px 20px 64px;
+  gap: 20px;
+  width: 100%;
+  padding: 18px 26px 64px;
   background: #e9edf2;
   min-height: 100vh;
 }
@@ -67,13 +66,83 @@
   min-width: 0;
 }
 
-/* ---------- Top bar ---------- */
+/* ---------- App header ---------- */
 
-.topbar {
+.appHeader {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 10px 16px;
+  box-shadow: 0 1px 3px rgba(15, 30, 51, 0.06);
 }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.brandWord {
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.brandMerit {
+  color: #0f1e33;
+}
+
+.brandMaster {
+  color: #f59e0b;
+}
+
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #0f1e33;
+  white-space: nowrap;
+}
+
+.logoutBtn {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  color: #64748b;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.logoutBtn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* ---------- Top bar controls ---------- */
 
 .subjectSelect {
   appearance: none;
@@ -93,11 +162,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #fff;
+  background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 999px;
   padding: 0 16px;
   color: #94a3b8;
+  min-width: 0;
+  max-width: 520px;
 }
 
 .searchBox input {
@@ -133,7 +204,7 @@
 /* ---------- Heading + pills ---------- */
 
 .headingRow {
-  margin-top: 26px;
+  margin-top: 22px;
   display: flex;
   align-items: baseline;
   gap: 18px;
@@ -180,7 +251,7 @@
 .heroGrid {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 1.9fr 1fr;
+  grid-template-columns: minmax(0, 1.9fr) minmax(340px, 1fr);
   gap: 16px;
   align-items: stretch;
 }
@@ -197,7 +268,7 @@
 
 .heroVisual {
   position: relative;
-  height: 240px;
+  height: 280px;
   background: #0c1b2e;
 }
 
@@ -820,16 +891,18 @@
   }
 
   .shell {
-    padding: 16px 14px 48px;
+    padding: 14px 14px 48px;
   }
 
-  .topbar {
+  .appHeader {
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .searchBox {
-    order: 3;
+    order: 5;
     flex-basis: 100%;
+    max-width: none;
   }
 
   .statStrip {

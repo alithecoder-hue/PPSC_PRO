@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
@@ -10,7 +11,7 @@ import {
   Minus, Plus, Shield, Search, LayoutDashboard, GraduationCap,
   Brain, Calculator, Coins, Cpu, Flag, FlaskConical, Globe,
   Landmark, Languages, Lightbulb, MoonStar, Newspaper, Scale,
-  ScrollText, Sparkles, SpellCheck,
+  ScrollText, Sparkles, SpellCheck, LogOut,
 } from 'lucide-react';
 import { API_BASE } from '@/lib/api';
 import { authFetch } from '@/lib/authFetch';
@@ -156,6 +157,14 @@ export default function DashboardPage() {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('role');
+    localStorage.removeItem('userName');
+    window.dispatchEvent(new Event('mm-auth-change'));
+    router.push('/');
+  };
+
   const results = useMemo(() => profile?.results ?? [], [profile]);
   const jobs = useMemo(() => data?.trackedJobs ?? [], [data]);
 
@@ -250,8 +259,15 @@ export default function DashboardPage() {
       </nav>
 
       <div className={styles.main}>
-        {/* Top bar */}
-        <div className={styles.topbar}>
+        {/* App header */}
+        <header className={styles.appHeader}>
+          <Link href="/" className={styles.brand}>
+            <Image src="/images/logo.png" alt="Merit Master" width={34} height={34} />
+            <span className={styles.brandWord}>
+              <span className={styles.brandMerit}>MERIT</span>{' '}
+              <span className={styles.brandMaster}>MASTER</span>
+            </span>
+          </Link>
           <select
             className={styles.subjectSelect}
             defaultValue=""
@@ -279,10 +295,16 @@ export default function DashboardPage() {
               aria-label="Search subjects"
             />
           </div>
-          <span className={styles.avatar} title={user?.name || profile?.name || ''}>
-            {firstName.charAt(0).toUpperCase()}
+          <span className={styles.userChip}>
+            <span className={styles.avatar} title={user?.name || profile?.name || ''}>
+              {firstName.charAt(0).toUpperCase()}
+            </span>
+            <span className={styles.userName}>{firstName}</span>
           </span>
-        </div>
+          <button type="button" className={styles.logoutBtn} onClick={handleLogout} title="Log out" aria-label="Log out">
+            <LogOut size={17} />
+          </button>
+        </header>
 
         {/* Heading + status pills */}
         <div className={styles.headingRow}>
