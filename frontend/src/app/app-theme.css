@@ -94,7 +94,10 @@
 .nav-username {
   color: var(--app-ink) !important;
 }
-.nav-user-profile,
+/* The avatar alone gets the navy disc — .nav-user-profile is the whole
+   chip (avatar + name), so giving it the navy background hid the dark
+   username text on a dark chip. The chip itself stays on the white
+   .nav-user-menu pill, where the dark name is readable. */
 .nav-avatar {
   background: var(--app-navy) !important;
   color: #fff !important;
