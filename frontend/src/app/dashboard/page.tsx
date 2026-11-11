@@ -1,17 +1,49 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
   Flame, Zap, ClipboardList, Clock, BookOpen, Target, Bookmark,
-  Briefcase, ArrowRight, Crown, FileText, CalendarDays, GraduationCap,
-  Minus, Plus, Shield,
+  Briefcase, ArrowRight, Crown, FileText, CalendarDays,
+  Minus, Plus, Shield, Search, LayoutDashboard, GraduationCap,
+  Brain, Calculator, Coins, Cpu, Flag, FlaskConical, Globe,
+  Landmark, Languages, Lightbulb, MoonStar, Newspaper, Scale,
+  ScrollText, Sparkles, SpellCheck,
 } from 'lucide-react';
 import { API_BASE } from '@/lib/api';
 import { authFetch } from '@/lib/authFetch';
 import styles from './dashboard.module.css';
+
+/* ---------- Real content data (verified against the MCQ bank) ---------- */
+
+interface SubjectTile {
+  slug: string;
+  name: string;
+  mcqs: number;
+  notesReady: boolean;
+  Icon: React.ComponentType<{ size?: number | string; className?: string }>;
+}
+
+const SUBJECTS: SubjectTile[] = [
+  { slug: 'general', name: 'General', mcqs: 60, notesReady: false, Icon: Lightbulb },
+  { slug: 'pakistan-studies', name: 'Pakistan Studies', mcqs: 91, notesReady: false, Icon: Landmark },
+  { slug: 'islamic-studies', name: 'Islamic Studies', mcqs: 90, notesReady: false, Icon: MoonStar },
+  { slug: 'current-affairs', name: 'Current Affairs', mcqs: 70, notesReady: false, Icon: Newspaper },
+  { slug: 'english', name: 'English', mcqs: 90, notesReady: false, Icon: SpellCheck },
+  { slug: 'urdu', name: 'Urdu', mcqs: 80, notesReady: false, Icon: Languages },
+  { slug: 'everyday-science', name: 'Everyday Science', mcqs: 90, notesReady: false, Icon: FlaskConical },
+  { slug: 'basic-mathematics', name: 'Basic Mathematics', mcqs: 80, notesReady: false, Icon: Calculator },
+  { slug: 'geography', name: 'Geography', mcqs: 80, notesReady: false, Icon: Globe },
+  { slug: 'computer-studies', name: 'Computer Studies', mcqs: 90, notesReady: true, Icon: Cpu },
+  { slug: 'logical-reasoning', name: 'Logical Reasoning', mcqs: 70, notesReady: false, Icon: Brain },
+  { slug: 'pakistan-affairs', name: 'Pakistan Affairs', mcqs: 70, notesReady: false, Icon: Flag },
+  { slug: 'economics', name: 'Economics', mcqs: 70, notesReady: false, Icon: Coins },
+  { slug: 'history', name: 'History', mcqs: 70, notesReady: false, Icon: ScrollText },
+  { slug: 'civics-constitution', name: 'Civics & Constitution', mcqs: 80, notesReady: false, Icon: Scale },
+  { slug: 'general-knowledge', name: 'General Knowledge', mcqs: 90, notesReady: false, Icon: GraduationCap },
+];
 
 interface TrackedJob {
   id: number;
@@ -53,15 +85,12 @@ interface ProfileData {
   results: TestResult[];
 }
 
-function greeting(): string {
-  const h = new Date().getHours();
-  if (h < 12) return 'Good morning';
-  if (h < 17) return 'Good afternoon';
-  return 'Good evening';
+function daysLeft(deadline: string): number {
+  return Math.ceil((new Date(deadline).getTime() - Date.now()) / 86400000);
 }
 
-function daysLeft(deadline: string): string {
-  const diff = Math.ceil((new Date(deadline).getTime() - Date.now()) / 86400000);
+function daysLeftLabel(deadline: string): string {
+  const diff = daysLeft(deadline);
   if (diff < 0) return 'Deadline passed';
   if (diff === 0) return 'Due today';
   if (diff === 1) return '1 day left';
@@ -72,6 +101,13 @@ function shortDate(iso: string): string {
   return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
+function readinessLabel(avg: number | null): string {
+  if (avg === null) return 'No tests yet';
+  if (avg >= 70) return 'Good';
+  if (avg >= 50) return 'Building';
+  return 'Needs work';
+}
+
 export default function DashboardPage() {
   const router = useRouter();
   const [data, setData] = useState<PremiumData | null>(null);
@@ -79,6 +115,7 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [goal, setGoal] = useState<number>(20);
   const [savingGoal, setSavingGoal] = useState(false);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -119,9 +156,51 @@ export default function DashboardPage() {
     }
   };
 
+  const results = useMemo(() => profile?.results ?? [], [profile]);
+  const jobs = useMemo(() => data?.trackedJobs ?? [], [data]);
+
+  const avgScore = useMemo(() => {
+    if (results.length === 0) return null;
+    const summed = results.reduce((acc, r) => acc + (r.total > 0 ? r.score / r.total : 0), 0);
+    return Math.round((summed / results.length) * 100);
+  }, [results]);
+
+  const bestScore = useMemo(() => {
+    if (results.length === 0) return null;
+    return Math.max(...results.map((r) => (r.total > 0 ? Math.round((r.score / r.total) * 100) : 0)));
+  }, [results]);
+
+  const nearestJob = useMemo(() => {
+    const upcoming = jobs.filter((j) => daysLeft(j.deadline) >= 0).sort((a, b) => daysLeft(a.deadline) - daysLeft(b.deadline));
+    return upcoming[0] ?? null;
+  }, [jobs]);
+
+  const insight = useMemo(() => {
+    if (nearestJob && daysLeft(nearestJob.deadline) <= 14) {
+      return `Your ${nearestJob.title} deadline is in ${daysLeft(nearestJob.deadline)} days — take a mock test this week to check where you stand.`;
+    }
+    if (avgScore !== null && avgScore < 60) {
+      const weakest = [...results].sort((a, b) => a.score / a.total - b.score / b.total)[0];
+      return `Your recent average is ${avgScore}%. Your weakest test was ${weakest.exam?.title ?? 'a practice session'} (${weakest.score}/${weakest.total}) — review it before your next mock.`;
+    }
+    if ((data?.user.streak ?? 0) >= 3) {
+      return `You're on a ${data?.user.streak}-day streak — keep it alive with today's ${goal} MCQs.`;
+    }
+    if (avgScore !== null) {
+      return `Your recent average is ${avgScore}% — solid. Take today's test to push it higher.`;
+    }
+    return 'Start with Computer Studies — full notes and 90 MCQs are ready. The other 15 subjects are on the way.';
+  }, [nearestJob, avgScore, results, data, goal]);
+
+  const filteredSubjects = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return SUBJECTS;
+    return SUBJECTS.filter((s) => s.name.toLowerCase().includes(q));
+  }, [query]);
+
   if (loading) {
     return (
-      <div className={styles.page}>
+      <div className={styles.shell}>
         <div className={styles.loading}>Loading your dashboard…</div>
       </div>
     );
@@ -134,106 +213,232 @@ export default function DashboardPage() {
     isAdmin ||
     (user?.role || profile?.role) === 'PREMIUM' ||
     (profile?.subscriptions?.length ?? 0) > 0;
-  const today = new Date().toLocaleDateString('en-GB', {
-    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric',
-  });
-  const memberSince = user?.createdAt
-    ? new Date(user.createdAt).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })
-    : null;
-  const results = profile?.results ?? [];
-  const jobs = data?.trackedJobs ?? [];
+  const ringPct = avgScore ?? 0;
+  const ringR = 52;
+  const ringC = 2 * Math.PI * ringR;
 
-  const stats = [
-    { icon: Flame, label: 'Day streak', value: String(user?.streak ?? 0), tint: styles.tintAmber },
-    { icon: Zap, label: 'XP earned', value: String(user?.xp ?? 0), tint: styles.tintBlue },
-    { icon: ClipboardList, label: 'Tests taken', value: String(user?.testsTaken ?? 0), tint: styles.tintGreen },
-    { icon: Clock, label: 'Hours studied', value: String(user?.hoursStudied ?? 0), tint: styles.tintPurple },
+  const rail = [
+    { href: '/dashboard', Icon: LayoutDashboard, label: 'Dashboard', active: true },
+    { href: '/classroom', Icon: GraduationCap, label: 'Classroom' },
+    { href: '/practice-engine', Icon: BookOpen, label: 'Practice' },
+    { href: '/mock-tests', Icon: ClipboardList, label: 'Mock tests' },
+    { href: '/past-papers', Icon: FileText, label: 'Past papers' },
+    { href: '/jobs', Icon: Briefcase, label: 'Jobs' },
+    { href: '/subscription', Icon: Crown, label: 'Subscription' },
   ];
 
   return (
-    <div className={styles.page}>
-      <motion.section
-        className={styles.hero}
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, ease: 'easeOut' }}
-      >
-        <div>
-          <p className={styles.heroDate}>{today}</p>
-          <h1 className={styles.heroTitle}>
-            {greeting()}, {firstName}
-          </h1>
-          <p className={styles.heroSub}>
-            {memberSince ? `Member since ${memberSince} · ` : ''}Your preparation, all in one place.
-          </p>
-        </div>
-        <div className={styles.heroChips}>
-          <span className={styles.chip}>
-            <Flame size={15} /> {user?.streak ?? 0}-day streak
-          </span>
-          <span className={styles.chip}>
-            <Zap size={15} /> {user?.xp ?? 0} XP
-          </span>
-          {isPremium ? (
-            <span className={`${styles.chip} ${styles.chipGold}`}>
-              <Crown size={15} /> {isAdmin ? 'Admin' : 'Premium'}
-            </span>
-          ) : (
-            <Link href="/subscription" className={`${styles.chip} ${styles.chipGold} ${styles.chipLink}`}>
-              <Crown size={15} /> Free · Upgrade
-            </Link>
-          )}
-        </div>
-      </motion.section>
-
-      <motion.section
-        className={styles.continueCard}
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, delay: 0.06, ease: 'easeOut' }}
-      >
-        <div className={styles.continueIcon}>
-          <GraduationCap size={26} />
-        </div>
-        <div className={styles.continueText}>
-          <h2>Continue studying</h2>
-          <p>Notes, MCQs and mock tests across all 16 subjects — pick up right where you left off.</p>
-        </div>
-        <div className={styles.continueActions}>
-          <Link href="/classroom" className={styles.primaryBtn}>
-            Open classroom <ArrowRight size={16} />
+    <div className={styles.shell}>
+      {/* Left icon rail */}
+      <nav className={styles.rail} aria-label="Dashboard sections">
+        {rail.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`${styles.railBtn} ${item.active ? styles.railActive : ''}`}
+            title={item.label}
+            aria-label={item.label}
+          >
+            <item.Icon size={20} />
           </Link>
-          <Link href="/daily-test" className={styles.ghostBtn}>
-            Today&apos;s test
-          </Link>
-        </div>
-      </motion.section>
-
-      <motion.section
-        className={styles.statGrid}
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, delay: 0.12, ease: 'easeOut' }}
-      >
-        {stats.map((s) => (
-          <div key={s.label} className={styles.statCard}>
-            <span className={`${styles.statIcon} ${s.tint}`}>
-              <s.icon size={19} />
-            </span>
-            <span className={styles.statValue}>{s.value}</span>
-            <span className={styles.statLabel}>{s.label}</span>
-          </div>
         ))}
-      </motion.section>
+        {isAdmin && (
+          <Link href="/admin" className={styles.railBtn} title="Admin panel" aria-label="Admin panel">
+            <Shield size={20} />
+          </Link>
+        )}
+      </nav>
 
-      <div className={styles.mainGrid}>
-        <motion.div
-          className={styles.column}
+      <div className={styles.main}>
+        {/* Top bar */}
+        <div className={styles.topbar}>
+          <select
+            className={styles.subjectSelect}
+            defaultValue=""
+            onChange={(e) => {
+              if (e.target.value) router.push(`/classroom?subject=${e.target.value}`);
+            }}
+            aria-label="Jump to a subject"
+          >
+            <option value="" disabled>
+              Jump to a subject…
+            </option>
+            {SUBJECTS.map((s) => (
+              <option key={s.slug} value={s.slug}>
+                {s.name}
+              </option>
+            ))}
+          </select>
+          <div className={styles.searchBox}>
+            <Search size={16} />
+            <input
+              type="text"
+              placeholder="Search subjects…"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              aria-label="Search subjects"
+            />
+          </div>
+          <span className={styles.avatar} title={user?.name || profile?.name || ''}>
+            {firstName.charAt(0).toUpperCase()}
+          </span>
+        </div>
+
+        {/* Heading + status pills */}
+        <div className={styles.headingRow}>
+          <h1 className={styles.title}>PREPARATION</h1>
+          <div className={styles.pills}>
+            <span className={`${styles.pill} ${styles.pillOk}`}>Computer Studies · Notes ready</span>
+            <span className={styles.pill}>
+              <Flame size={13} /> {user?.streak ?? 0}-day streak
+            </span>
+            <span className={styles.pill}>{isPremium ? (isAdmin ? 'Admin' : 'Premium plan') : 'Free plan'}</span>
+            <span className={styles.pill}>1,271 MCQs in bank</span>
+          </div>
+        </div>
+
+        {/* Hero + readiness */}
+        <div className={styles.heroGrid}>
+          <motion.section
+            className={styles.heroCard}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: 'easeOut' }}
+          >
+            <div className={styles.heroVisual}>
+              <img src="/images/subjects/computer-studies.jpg" alt="Computer Studies" />
+              <span className={styles.heroTag}>Featured · Computer Studies</span>
+            </div>
+            <div className={styles.heroBody}>
+              <div className={styles.assistantHead}>
+                <span className={styles.assistantIcon}>
+                  <Sparkles size={17} />
+                </span>
+                <div>
+                  <p className={styles.assistantTitle}>Merit AI</p>
+                  <p className={styles.assistantSub}>Your study assistant</p>
+                </div>
+              </div>
+              <p className={styles.assistantText}>
+                Hi {firstName}, {insight}
+              </p>
+              <div className={styles.heroActions}>
+                <Link href="/classroom" className={styles.primaryBtn}>
+                  Open classroom <ArrowRight size={16} />
+                </Link>
+                <Link href="/daily-test" className={styles.ghostBtn}>
+                  Today&apos;s test
+                </Link>
+              </div>
+            </div>
+          </motion.section>
+
+          <motion.aside
+            className={styles.readinessCard}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.06, ease: 'easeOut' }}
+          >
+            <p className={styles.readinessLabel}>READINESS</p>
+            <div className={styles.gaugeWrap}>
+              <svg viewBox="0 0 120 120" className={styles.gauge} role="img" aria-label={`Readiness ${avgScore === null ? 'not yet measured' : `${avgScore} percent`}`}>
+                <circle cx="60" cy="60" r={ringR} className={styles.gaugeTrack} />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r={ringR}
+                  className={styles.gaugeFill}
+                  strokeDasharray={ringC}
+                  strokeDashoffset={ringC - (ringC * ringPct) / 100}
+                />
+              </svg>
+              <div className={styles.gaugeCenter}>
+                <span>{avgScore === null ? '—' : `${avgScore}%`}</span>
+              </div>
+            </div>
+            <p className={styles.readinessCondition}>
+              Condition: <strong>{readinessLabel(avgScore)}</strong>
+            </p>
+            <div className={styles.readinessStats}>
+              <div>
+                <span>{user?.testsTaken ?? 0}</span>
+                <p>Tests taken</p>
+              </div>
+              <div>
+                <span>{bestScore === null ? '—' : `${bestScore}%`}</span>
+                <p>Best score</p>
+              </div>
+              <div>
+                <span>{user?.xp ?? 0}</span>
+                <p>XP earned</p>
+              </div>
+            </div>
+            {avgScore === null && (
+              <Link href="/daily-test" className={styles.readinessCta}>
+                Take your first test →
+              </Link>
+            )}
+          </motion.aside>
+        </div>
+
+        {/* Content stats strip */}
+        <motion.section
+          className={styles.statStrip}
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.12, ease: 'easeOut' }}
+        >
+          {[
+            { value: '1,271', label: 'MCQs in bank' },
+            { value: '16', label: 'Subjects' },
+            { value: '575', label: 'Subtopics' },
+            { value: '103', label: 'Notes ready' },
+          ].map((s) => (
+            <div key={s.label} className={styles.statTile}>
+              <span>{s.value}</span>
+              <p>{s.label}</p>
+            </div>
+          ))}
+        </motion.section>
+
+        {/* Subject grid */}
+        <motion.section
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, delay: 0.18, ease: 'easeOut' }}
         >
-          <section className={styles.card}>
+          <div className={styles.sectionHead}>
+            <h2>SUBJECTS</h2>
+            <span>{filteredSubjects.length} of 16 shown</span>
+          </div>
+          {filteredSubjects.length === 0 ? (
+            <div className={styles.emptyGrid}>No subject matches “{query}”.</div>
+          ) : (
+            <div className={styles.subjectGrid}>
+              {filteredSubjects.map((s) => (
+                <Link key={s.slug} href={`/classroom?subject=${s.slug}`} className={styles.subjectTile}>
+                  <span className={`${styles.subjectIcon} ${s.notesReady ? styles.subjectIconReady : ''}`}>
+                    <s.Icon size={20} />
+                  </span>
+                  <span className={styles.subjectName}>{s.name}</span>
+                  <span className={styles.subjectMeta}>{s.mcqs} MCQs</span>
+                  <span className={`${styles.subjectStatus} ${s.notesReady ? styles.statusReady : styles.statusSoon}`}>
+                    {s.notesReady ? 'Notes ready' : 'Notes soon'}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </motion.section>
+
+        {/* Bottom grid */}
+        <div className={styles.bottomGrid}>
+          <motion.section
+            className={styles.card}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.24, ease: 'easeOut' }}
+          >
             <div className={styles.cardHead}>
               <h3>
                 <FileText size={18} /> Recent tests
@@ -258,15 +463,21 @@ export default function DashboardPage() {
                       <p className={styles.resultMeta}>{shortDate(r.completedAt)}</p>
                     </div>
                     <span className={styles.score}>
-                      {r.score}<span className={styles.scoreTotal}>/{r.total}</span>
+                      {r.score}
+                      <span className={styles.scoreTotal}>/{r.total}</span>
                     </span>
                   </li>
                 ))}
               </ul>
             )}
-          </section>
+          </motion.section>
 
-          <section className={styles.card}>
+          <motion.section
+            className={styles.card}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.3, ease: 'easeOut' }}
+          >
             <div className={styles.cardHead}>
               <h3>
                 <Briefcase size={18} /> Tracked jobs
@@ -291,30 +502,26 @@ export default function DashboardPage() {
                       <p className={styles.jobMeta}>{j.organization}</p>
                     </div>
                     <span className={styles.deadline}>
-                      <CalendarDays size={14} /> {daysLeft(j.deadline)}
+                      <CalendarDays size={14} /> {daysLeftLabel(j.deadline)}
                     </span>
                   </li>
                 ))}
               </ul>
             )}
-          </section>
-        </motion.div>
+          </motion.section>
 
-        <motion.div
-          className={styles.column}
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, delay: 0.24, ease: 'easeOut' }}
-        >
-          <section className={styles.card}>
+          <motion.section
+            className={styles.card}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.36, ease: 'easeOut' }}
+          >
             <div className={styles.cardHead}>
               <h3>
                 <Target size={18} /> Today&apos;s goal
               </h3>
             </div>
-            <p className={styles.goalText}>
-              How many MCQs will you finish today?
-            </p>
+            <p className={styles.goalText}>How many MCQs will you finish today?</p>
             <div className={styles.stepper}>
               <button
                 type="button"
@@ -346,42 +553,29 @@ export default function DashboardPage() {
                 </div>
               </div>
               <div className={styles.miniStat}>
-                <BookOpen size={16} />
+                <Clock size={16} />
                 <div>
-                  <strong>{data?.stats.pendingTodos ?? 0}</strong>
-                  <span>Tasks to do</span>
+                  <strong>{user?.hoursStudied ?? 0}h</strong>
+                  <span>Studied</span>
                 </div>
               </div>
             </div>
-          </section>
-
-          <section className={styles.card}>
-            <div className={styles.cardHead}>
-              <h3>
-                <Zap size={18} /> Quick actions
-              </h3>
-            </div>
             <div className={styles.quickGrid}>
               <Link href="/practice-engine" className={styles.quickBtn}>
-                <BookOpen size={17} /> Practice
+                <BookOpen size={16} /> Practice
               </Link>
               <Link href="/mock-tests" className={styles.quickBtn}>
-                <ClipboardList size={17} /> Mock tests
+                <ClipboardList size={16} /> Mock tests
               </Link>
               <Link href="/past-papers" className={styles.quickBtn}>
-                <FileText size={17} /> Past papers
+                <FileText size={16} /> Past papers
               </Link>
               <Link href="/subscription" className={styles.quickBtn}>
-                <Crown size={17} /> Subscription
+                <Crown size={16} /> Subscription
               </Link>
             </div>
-            {isAdmin && (
-              <Link href="/admin" className={styles.adminLink}>
-                <Shield size={15} /> Open admin panel <ArrowRight size={14} />
-              </Link>
-            )}
-          </section>
-        </motion.div>
+          </motion.section>
+        </div>
       </div>
     </div>
   );
