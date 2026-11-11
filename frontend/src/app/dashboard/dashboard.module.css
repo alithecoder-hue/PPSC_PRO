@@ -206,17 +206,24 @@
 .headingRow {
   margin-top: 22px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
   gap: 18px;
   flex-wrap: wrap;
 }
 
 .title {
   margin: 0;
-  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #0f1e33;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 0.95rem;
+  color: #64748b;
 }
 
 .pills {
@@ -269,14 +276,42 @@
 .heroVisual {
   position: relative;
   height: 280px;
-  background: #0c1b2e;
+  background: linear-gradient(135deg, #0c1b2e 0%, #12263f 55%, #1b3a5c 100%);
+  overflow: hidden;
 }
 
-.heroVisual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.heroGlow {
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.28) 0%, rgba(245, 158, 11, 0) 70%);
+}
+
+.heroCopy {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  right: 22px;
+}
+
+.heroKicker {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.heroStats {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fbbf24;
 }
 
 .heroTag {
@@ -488,6 +523,59 @@
   text-decoration: underline;
 }
 
+/* Light "not measured yet" readiness card — the dark gauge only
+   appears once the member actually has test scores. */
+
+.readinessEmpty {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 2px 8px rgba(15, 30, 51, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.readinessLabelDark {
+  margin: 0;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #94a3b8;
+}
+
+.emptyRing {
+  width: 132px;
+  height: 132px;
+  margin-top: 14px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed #cbd5e1;
+  border-radius: 50%;
+  color: #f59e0b;
+}
+
+.emptyTitle {
+  margin: 16px 0 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f1e33;
+}
+
+.emptyText {
+  margin: 6px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.readinessEmpty .primaryBtn {
+  margin-top: 18px;
+}
+
 /* ---------- Stat strip ---------- */
 
 .statStrip {
@@ -560,11 +648,11 @@
   background: #fff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 16px;
+  padding: 0;
+  overflow: hidden;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
   box-shadow: 0 1px 3px rgba(15, 30, 51, 0.05);
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
@@ -574,20 +662,25 @@
   transform: translateY(-2px);
 }
 
-.subjectIcon {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: #f1f5f9;
-  color: #475569;
-  margin-bottom: 4px;
+.subjectThumb {
+  position: relative;
+  display: block;
+  height: 96px;
+  background: #0c1b2e;
 }
 
-.subjectIconReady {
-  background: #fef3c7;
-  color: #b45309;
+.subjectThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.subjectBody {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .subjectName {
@@ -603,12 +696,14 @@
 }
 
 .subjectStatus {
-  margin-top: 4px;
-  align-self: flex-start;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 3px 9px;
   border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(15, 30, 51, 0.25);
 }
 
 .statusReady {
@@ -626,7 +721,7 @@
 .bottomGrid {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   align-items: start;
 }
@@ -691,7 +786,100 @@
 }
 
 .empty p {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
+}
+
+.emptyCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #f59e0b;
+  color: #0c1b2e;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+
+.emptyCta:hover {
+  filter: brightness(1.07);
+}
+
+/* First-steps checklist */
+
+.stepsProgress {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  border-radius: 999px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.stepsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stepRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid #eef2f7;
+}
+
+.stepRow:first-child {
+  border-top: none;
+  padding-top: 2px;
+}
+
+.stepCheck {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.stepDone {
+  border-color: #16a34a;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.stepText {
+  flex: 1;
+  min-width: 0;
+}
+
+.stepLabel {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #0f1e33;
+}
+
+.stepHint {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.stepDoneLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #166534;
+  white-space: nowrap;
 }
 
 .resultList,

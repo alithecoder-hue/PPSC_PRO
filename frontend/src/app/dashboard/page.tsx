@@ -11,7 +11,7 @@ import {
   Minus, Plus, Shield, Search, LayoutDashboard, GraduationCap,
   Brain, Calculator, Coins, Cpu, Flag, FlaskConical, Globe,
   Landmark, Languages, Lightbulb, MoonStar, Newspaper, Scale,
-  ScrollText, Sparkles, SpellCheck, LogOut,
+  ScrollText, Sparkles, SpellCheck, LogOut, Check,
 } from 'lucide-react';
 import { API_BASE } from '@/lib/api';
 import { authFetch } from '@/lib/authFetch';
@@ -117,6 +117,12 @@ export default function DashboardPage() {
   const [goal, setGoal] = useState<number>(20);
   const [savingGoal, setSavingGoal] = useState(false);
   const [query, setQuery] = useState('');
+  const [greeting, setGreeting] = useState('Welcome back');
+
+  useEffect(() => {
+    const h = new Date().getHours();
+    setGreeting(h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening');
+  }, []);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -167,6 +173,34 @@ export default function DashboardPage() {
 
   const results = useMemo(() => profile?.results ?? [], [profile]);
   const jobs = useMemo(() => data?.trackedJobs ?? [], [data]);
+
+  const steps = useMemo(
+    () => [
+      {
+        label: 'Take your first test',
+        hint: 'See your first readiness score',
+        href: '/daily-test',
+        cta: 'Take a test',
+        done: results.length > 0,
+      },
+      {
+        label: 'Save your first MCQ',
+        hint: 'Bookmark questions to revise later',
+        href: '/practice-engine',
+        cta: 'Practise',
+        done: (data?.stats.savedMcqs ?? 0) > 0,
+      },
+      {
+        label: 'Track your first job',
+        hint: 'Never miss a PPSC deadline',
+        href: '/jobs',
+        cta: 'Browse jobs',
+        done: jobs.length > 0,
+      },
+    ],
+    [results, data, jobs]
+  );
+  const doneCount = steps.filter((s) => s.done).length;
 
   const avgScore = useMemo(() => {
     if (results.length === 0) return null;
@@ -308,7 +342,12 @@ export default function DashboardPage() {
 
         {/* Heading + status pills */}
         <div className={styles.headingRow}>
-          <h1 className={styles.title}>PREPARATION</h1>
+          <div>
+            <h1 className={styles.title}>
+              {greeting}, {firstName}
+            </h1>
+            <p className={styles.subtitle}>Here is where your preparation stands today.</p>
+          </div>
           <div className={styles.pills}>
             <span className={`${styles.pill} ${styles.pillOk}`}>Computer Studies · Notes ready</span>
             <span className={styles.pill}>
@@ -328,8 +367,12 @@ export default function DashboardPage() {
             transition={{ duration: 0.35, ease: 'easeOut' }}
           >
             <div className={styles.heroVisual}>
-              <img src="/images/subjects/computer-studies.jpg" alt="Computer Studies" />
+              <div className={styles.heroGlow} aria-hidden="true" />
               <span className={styles.heroTag}>Featured · Computer Studies</span>
+              <div className={styles.heroCopy}>
+                <p className={styles.heroKicker}>Your first subject is ready</p>
+                <p className={styles.heroStats}>90 MCQs · 103 notes · 22 topics</p>
+              </div>
             </div>
             <div className={styles.heroBody}>
               <div className={styles.assistantHead}>
@@ -356,49 +399,62 @@ export default function DashboardPage() {
           </motion.section>
 
           <motion.aside
-            className={styles.readinessCard}
+            className={avgScore === null ? styles.readinessEmpty : styles.readinessCard}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: 0.06, ease: 'easeOut' }}
           >
-            <p className={styles.readinessLabel}>READINESS</p>
-            <div className={styles.gaugeWrap}>
-              <svg viewBox="0 0 120 120" className={styles.gauge} role="img" aria-label={`Readiness ${avgScore === null ? 'not yet measured' : `${avgScore} percent`}`}>
-                <circle cx="60" cy="60" r={ringR} className={styles.gaugeTrack} />
-                <circle
-                  cx="60"
-                  cy="60"
-                  r={ringR}
-                  className={styles.gaugeFill}
-                  strokeDasharray={ringC}
-                  strokeDashoffset={ringC - (ringC * ringPct) / 100}
-                />
-              </svg>
-              <div className={styles.gaugeCenter}>
-                <span>{avgScore === null ? '—' : `${avgScore}%`}</span>
-              </div>
-            </div>
-            <p className={styles.readinessCondition}>
-              Condition: <strong>{readinessLabel(avgScore)}</strong>
-            </p>
-            <div className={styles.readinessStats}>
-              <div>
-                <span>{user?.testsTaken ?? 0}</span>
-                <p>Tests taken</p>
-              </div>
-              <div>
-                <span>{bestScore === null ? '—' : `${bestScore}%`}</span>
-                <p>Best score</p>
-              </div>
-              <div>
-                <span>{user?.xp ?? 0}</span>
-                <p>XP earned</p>
-              </div>
-            </div>
-            {avgScore === null && (
-              <Link href="/daily-test" className={styles.readinessCta}>
-                Take your first test →
-              </Link>
+            {avgScore === null ? (
+              <>
+                <p className={styles.readinessLabelDark}>READINESS</p>
+                <div className={styles.emptyRing}>
+                  <Target size={34} />
+                </div>
+                <p className={styles.emptyTitle}>Not measured yet</p>
+                <p className={styles.emptyText}>
+                  Take a short test and your readiness score will appear here.
+                </p>
+                <Link href="/daily-test" className={styles.primaryBtn}>
+                  Take your first test <ArrowRight size={16} />
+                </Link>
+              </>
+            ) : (
+              <>
+                <p className={styles.readinessLabel}>READINESS</p>
+                <div className={styles.gaugeWrap}>
+                  <svg viewBox="0 0 120 120" className={styles.gauge} role="img" aria-label={`Readiness ${avgScore} percent`}>
+                    <circle cx="60" cy="60" r={ringR} className={styles.gaugeTrack} />
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r={ringR}
+                      className={styles.gaugeFill}
+                      strokeDasharray={ringC}
+                      strokeDashoffset={ringC - (ringC * ringPct) / 100}
+                    />
+                  </svg>
+                  <div className={styles.gaugeCenter}>
+                    <span>{avgScore}%</span>
+                  </div>
+                </div>
+                <p className={styles.readinessCondition}>
+                  Condition: <strong>{readinessLabel(avgScore)}</strong>
+                </p>
+                <div className={styles.readinessStats}>
+                  <div>
+                    <span>{user?.testsTaken ?? 0}</span>
+                    <p>Tests taken</p>
+                  </div>
+                  <div>
+                    <span>{bestScore === null ? '—' : `${bestScore}%`}</span>
+                    <p>Best score</p>
+                  </div>
+                  <div>
+                    <span>{user?.xp ?? 0}</span>
+                    <p>XP earned</p>
+                  </div>
+                </div>
+              </>
             )}
           </motion.aside>
         </div>
@@ -439,13 +495,15 @@ export default function DashboardPage() {
             <div className={styles.subjectGrid}>
               {filteredSubjects.map((s) => (
                 <Link key={s.slug} href={`/classroom?subject=${s.slug}`} className={styles.subjectTile}>
-                  <span className={`${styles.subjectIcon} ${s.notesReady ? styles.subjectIconReady : ''}`}>
-                    <s.Icon size={20} />
+                  <span className={styles.subjectThumb}>
+                    <img src={`/images/subjects/${s.slug}.jpg`} alt={s.name} loading="lazy" />
+                    <span className={`${styles.subjectStatus} ${s.notesReady ? styles.statusReady : styles.statusSoon}`}>
+                      {s.notesReady ? 'Notes ready' : 'Notes soon'}
+                    </span>
                   </span>
-                  <span className={styles.subjectName}>{s.name}</span>
-                  <span className={styles.subjectMeta}>{s.mcqs} MCQs</span>
-                  <span className={`${styles.subjectStatus} ${s.notesReady ? styles.statusReady : styles.statusSoon}`}>
-                    {s.notesReady ? 'Notes ready' : 'Notes soon'}
+                  <span className={styles.subjectBody}>
+                    <span className={styles.subjectName}>{s.name}</span>
+                    <span className={styles.subjectMeta}>{s.mcqs} MCQs</span>
                   </span>
                 </Link>
               ))}
@@ -463,6 +521,40 @@ export default function DashboardPage() {
           >
             <div className={styles.cardHead}>
               <h3>
+                <Target size={18} /> Your first steps
+              </h3>
+              <span className={styles.stepsProgress}>{doneCount} of 3 done</span>
+            </div>
+            <ul className={styles.stepsList}>
+              {steps.map((st, i) => (
+                <li key={st.label} className={styles.stepRow}>
+                  <span className={`${styles.stepCheck} ${st.done ? styles.stepDone : ''}`}>
+                    {st.done ? <Check size={15} /> : <span>{i + 1}</span>}
+                  </span>
+                  <div className={styles.stepText}>
+                    <p className={styles.stepLabel}>{st.label}</p>
+                    <p className={styles.stepHint}>{st.hint}</p>
+                  </div>
+                  {st.done ? (
+                    <span className={styles.stepDoneLabel}>Done</span>
+                  ) : (
+                    <Link href={st.href} className={styles.cardLink}>
+                      {st.cta} <ArrowRight size={14} />
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </motion.section>
+
+          <motion.section
+            className={styles.card}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: 0.3, ease: 'easeOut' }}
+          >
+            <div className={styles.cardHead}>
+              <h3>
                 <FileText size={18} /> Recent tests
               </h3>
               <Link href="/mock-tests" className={styles.cardLink}>
@@ -472,8 +564,8 @@ export default function DashboardPage() {
             {results.length === 0 ? (
               <div className={styles.empty}>
                 <p>No tests taken yet.</p>
-                <Link href="/daily-test" className={styles.textLink}>
-                  Take your first daily test →
+                <Link href="/daily-test" className={styles.emptyCta}>
+                  Take your first daily test <ArrowRight size={15} />
                 </Link>
               </div>
             ) : (
@@ -498,7 +590,7 @@ export default function DashboardPage() {
             className={styles.card}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.35, delay: 0.36, ease: 'easeOut' }}
           >
             <div className={styles.cardHead}>
               <h3>
@@ -511,8 +603,8 @@ export default function DashboardPage() {
             {jobs.length === 0 ? (
               <div className={styles.empty}>
                 <p>You aren&apos;t tracking any jobs yet.</p>
-                <Link href="/jobs" className={styles.textLink}>
-                  Find PPSC openings to track →
+                <Link href="/jobs" className={styles.emptyCta}>
+                  Find PPSC openings to track <ArrowRight size={15} />
                 </Link>
               </div>
             ) : (
@@ -536,7 +628,7 @@ export default function DashboardPage() {
             className={styles.card}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.36, ease: 'easeOut' }}
+            transition={{ duration: 0.35, delay: 0.42, ease: 'easeOut' }}
           >
             <div className={styles.cardHead}>
               <h3>
