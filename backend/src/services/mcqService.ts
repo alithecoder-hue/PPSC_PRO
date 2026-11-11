@@ -9,7 +9,7 @@ export const getAllMCQs = async (categoryId?: number, subCategoryId?: number, to
       ...(subCategoryId && { subCategoryId }),
       ...(topicId && { topicId }),
     },
-    take: limit,
+    take: Math.max(1, Math.min(Math.floor(limit) || 10, 100)),
   });
 };
 
@@ -19,22 +19,43 @@ export const createMCQ = async (data: any) => {
   });
 };
 
+// The shape the classroom test engine expects:
+// { id, text, options: [{id:'A',text},...], correct: 'A'|'B'|'C'|'D', explanation }
+export const formatExamMcq = (row: any) => ({
+  id: row.id,
+  text: row.question,
+  options: [
+    { id: 'A', text: row.optionA },
+    { id: 'B', text: row.optionB },
+    { id: 'C', text: row.optionC },
+    { id: 'D', text: row.optionD },
+  ],
+  correct: row.correctOption,
+  explanation: row.explanation || '',
+});
+
 export const getExamSession = async (limit: number = 100) => {
-  // Random MCQs for exam session
-  const mcqs = await prisma.$queryRaw`SELECT id, question, "optionA", "optionB", "optionC", "optionD" FROM "MCQ" ORDER BY RANDOM() LIMIT ${limit}`;
-  return mcqs;
+  // Random MCQs for exam session. Answers are included because only the
+  // classroom practice/test engine consumes this endpoint, and it grades instantly.
+  const safeLimit = Math.max(1, Math.min(Math.floor(limit) || 100, 100));
+  const mcqs = await prisma.$queryRaw`SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation FROM "MCQ" ORDER BY RANDOM() LIMIT ${safeLimit}`;
+  return (mcqs as any[]).map(formatExamMcq);
 };
 
 export const getCustomExamSession = async (config: { categoryId?: number | null, limit: number, difficulty?: string }[]) => {
   let combinedMcqs: any[] = [];
-  
-  for (const item of config) {
+  // Never let one request pull the whole bank: at most 16 subject slices.
+  const safeConfig = config.slice(0, 16);
+
+  for (const item of safeConfig) {
+    // Clamp each slice so a huge limit cannot dump the bank.
+    item.limit = Math.max(0, Math.min(Math.floor(item.limit) || 0, 100));
     if (item.limit > 0) {
       let mcqs;
       if (item.categoryId) {
         if (item.difficulty && item.difficulty !== 'any') {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD" 
+            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
             FROM "MCQ" 
             WHERE "categoryId" = ${item.categoryId} AND difficulty = ${item.difficulty}
             ORDER BY RANDOM() 
@@ -42,7 +63,7 @@ export const getCustomExamSession = async (config: { categoryId?: number | null,
           `;
         } else {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD" 
+            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
             FROM "MCQ" 
             WHERE "categoryId" = ${item.categoryId}
             ORDER BY RANDOM() 
@@ -52,7 +73,7 @@ export const getCustomExamSession = async (config: { categoryId?: number | null,
       } else {
         if (item.difficulty && item.difficulty !== 'any') {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD" 
+            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
             FROM "MCQ" 
             WHERE difficulty = ${item.difficulty}
             ORDER BY RANDOM() 
@@ -60,7 +81,7 @@ export const getCustomExamSession = async (config: { categoryId?: number | null,
           `;
         } else {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD" 
+            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
             FROM "MCQ" 
             ORDER BY RANDOM() 
             LIMIT ${item.limit}
@@ -77,5 +98,5 @@ export const getCustomExamSession = async (config: { categoryId?: number | null,
     [combinedMcqs[i], combinedMcqs[j]] = [combinedMcqs[j], combinedMcqs[i]];
   }
 
-  return combinedMcqs;
+  return combinedMcqs.map(formatExamMcq);
 };
