@@ -236,9 +236,10 @@ function ClassroomContent() {
     setActiveSubtopic({ name: title, parentTopic: "Custom Exam", level: "variable" });
 
     try {
-      const res = await fetch(API_BASE + '/api/mcqs/custom-exam', {
+      // authFetch: exam generation is gated server-side (requirePremium),
+      // so the JWT must travel with the request.
+      const res = await authFetch(API_BASE + '/api/mcqs/custom-exam', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ selections })
       });
 
@@ -284,6 +285,11 @@ function ClassroomContent() {
         }
         setTopicMcqs(formattedMcqs);
         setTimeRemaining(timeless ? 0 : (durationInSeconds ? durationInSeconds : formattedMcqs.length * 60));
+      } else if (res.status === 402) {
+        // Free monthly mock allowance used up (server-side, requirePremium).
+        const data = await res.json().catch(() => null);
+        setTestError(data?.error || 'Monthly free mock limit reached — upgrade for unlimited.');
+        setTopicMcqs([]);
       } else {
         setTestError('Failed to generate test. Please try again.');
         setTopicMcqs([]);
@@ -298,7 +304,10 @@ function ClassroomContent() {
   };
 
   const handleCustomTestSubmit = () => {
-    if (!userRole || (userRole !== 'PREMIUM' && userRole !== 'ADMIN')) {
+    // hasPremiumAccess (role OR active subscription) is the same check the
+    // server applies — a trial member's role stays USER, so a role-only
+    // check here used to bounce them even though the server would let them in.
+    if (!hasPremiumAccess) {
       alert('The Custom Test Generator is a Premium feature. You will be redirected to the subscription page.');
       router.push('/subscription');
       return;
@@ -470,7 +479,9 @@ function ClassroomContent() {
       try {
         const [contentRes, mcqsRes] = await Promise.all([
           fetch(API_BASE + `/api/mcqs/subtopic-content/${activeSubtopic.id}`),
-          fetch(API_BASE + `/api/mcqs?topicId=${activeSubtopic.id}&limit=10`)
+          // authFetch: the practice list now requires a signed-in member
+          // (audit H2/H3 — the answer key must not be public).
+          authFetch(API_BASE + `/api/mcqs?topicId=${activeSubtopic.id}&limit=10`)
         ]);
         
         if (contentRes.ok) setSubtopicContent(await contentRes.json());
@@ -495,6 +506,11 @@ function ClassroomContent() {
           setSelectedAnswers({});
         } else {
           setTopicMcqs([]);
+          // Guests can read notes but not practise: the list endpoint now
+          // requires a login, so say so instead of "No MCQs here yet".
+          if (mcqsRes.status === 401) {
+            setTestError('Please sign in to practise MCQs — it is free.');
+          }
         }
       } catch (e) { console.error(e); }
       setContentLoading(false);
@@ -1153,7 +1169,7 @@ function ClassroomContent() {
           </div> {/* End inner scroll container */}
 
           {/* Main Pane Footer Bar for Premium Users */}
-          {(userRole === 'PREMIUM' || userRole === 'ADMIN') && (
+          {hasPremiumAccess && (
             <div className={styles.footerBar} style={{ 
               width: '100%',
               display: 'flex', 

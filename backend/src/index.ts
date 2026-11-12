@@ -1,5 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -10,8 +12,41 @@ const PORT = process.env.PORT || 5000;
 import fs from 'fs';
 import path from 'path';
 
-app.use(cors());
+app.use(helmet());
+// CORS was open to any origin (audit H11). Only the real frontends may call
+// this API: the Vercel deployment, the custom domain, and local dev.
+const ALLOWED_ORIGINS = [
+  'https://ppsc-pro.vercel.app',
+  'https://meritmaster.pk',
+  'https://www.meritmaster.pk',
+  'http://localhost:3000',
+];
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || ALLOWED_ORIGINS.includes(origin)) return callback(null, true);
+    return callback(new Error('Not allowed by CORS'));
+  },
+}));
 app.use(express.json());
+
+// Rate limiting (audit H11): auth endpoints are the brute-force surface,
+// so they get the strictest budget; the general API gets a looser one.
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 30,
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: { error: 'Too many attempts — please try again in 15 minutes' },
+});
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 600,
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: { error: 'Too many requests — please try again shortly' },
+});
+app.use('/api/auth', authLimiter);
+app.use('/api', apiLimiter);
 
 const uploadsDir = path.join(__dirname, '../uploads');
 if (!fs.existsSync(uploadsDir)) {

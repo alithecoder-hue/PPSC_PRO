@@ -138,6 +138,12 @@ model Subscription {
   // user-submitted payments start inactive until an admin approves them.
   transactionId String?
   paymentMethod String?
+  // Server-side price at submit time (Rs), from the PLAN_PRICES map in
+  // billingController — never trusted from the client (audit H8).
+  amount Int?
+  // Promo code applied at submit time; its usedCount is only incremented
+  // when an admin approves the payment (audit H8).
+  promoCode String?
 }
 
 model Badge {

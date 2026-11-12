@@ -4,6 +4,17 @@ import { AuthRequest } from '../middleware/authMiddleware';
 
 const prisma = new PrismaClient();
 
+// Server-side price map (Rs) — the single source of truth for what a plan
+// costs. The client never sends a price (audit H8).
+export const PLAN_PRICES: Record<string, number> = {
+  premium: 399,
+  yearly: 2999,
+};
+export const PLAN_MONTHS: Record<string, number> = {
+  premium: 1,
+  yearly: 12,
+};
+
 /**
  * Manual mobile-money verification flow (Easypaisa / JazzCash / bank transfer).
  *
@@ -22,26 +33,43 @@ export const verifySubscription = async (req: AuthRequest, res: Response) => {
 
     const { planId, transactionId, paymentMethod, promoCode } = req.body;
 
-    if (!planId || !transactionId || String(transactionId).trim().length < 6) {
+    // Whitelist the plan (audit H8): any other string used to silently
+    // create a 1-month subscription.
+    if (!planId || !(planId in PLAN_PRICES)) {
+      return res.status(400).json({ error: 'Invalid plan' });
+    }
+    if (!transactionId || String(transactionId).trim().length < 6) {
       return res.status(400).json({ error: 'A valid transaction ID is required' });
     }
+    const cleanTransactionId = String(transactionId).trim();
 
-    // Optional: check promo code
+    // One transaction ID pays for one subscription (audit H8): refuse a
+    // duplicate claim instead of creating a second record for it.
+    const existing = await prisma.subscription.findFirst({
+      where: { transactionId: cleanTransactionId },
+    });
+    if (existing) {
+      return res.status(409).json({ error: 'This transaction ID has already been submitted' });
+    }
+
+    // Validate the promo code but do NOT increment usedCount here — that
+    // happens only when an admin approves the payment (audit H8).
     let discountApplied = 0;
+    let appliedPromoCode: string | null = null;
     if (promoCode) {
       const code = await prisma.promoCode.findUnique({ where: { code: promoCode } });
       if (code && code.status === 'Active' && new Date(code.expiryDate) > new Date()) {
+        if (code.usageLimit > 0 && code.usedCount >= code.usageLimit) {
+          return res.status(400).json({ error: 'This promo code has reached its usage limit' });
+        }
         discountApplied = code.discountValue;
-        await prisma.promoCode.update({
-          where: { id: code.id },
-          data: { usedCount: { increment: 1 } }
-        });
+        appliedPromoCode = code.code;
       }
     }
 
     const startDate = new Date();
     const endDate = new Date();
-    endDate.setMonth(endDate.getMonth() + (planId === 'yearly' ? 12 : 1));
+    endDate.setMonth(endDate.getMonth() + PLAN_MONTHS[planId]);
 
     const subscription = await prisma.subscription.create({
       data: {
@@ -51,8 +79,10 @@ export const verifySubscription = async (req: AuthRequest, res: Response) => {
         endDate,
         // Stays inactive until an admin verifies the payment
         isActive: false,
-        transactionId: String(transactionId).trim(),
+        transactionId: cleanTransactionId,
         paymentMethod: paymentMethod ? String(paymentMethod) : null,
+        amount: PLAN_PRICES[planId],
+        promoCode: appliedPromoCode,
       }
     });
 

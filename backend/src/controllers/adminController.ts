@@ -388,7 +388,14 @@ export const createSubscription = async (req: Request, res: Response) => {
         startDate: new Date(),
         endDate,
         isActive: true,
+        amount: amount ? Number(amount) : null,
       }
+    });
+    // A manually-created active subscription must grant the role too
+    // (audit H12): otherwise the member pays but the paywall still bounces them.
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { role: 'PREMIUM' },
     });
 
     res.json(sub);
@@ -400,9 +407,23 @@ export const createSubscription = async (req: Request, res: Response) => {
 export const deleteSubscription = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    await prisma.subscription.update({
-      where: { id: parseInt(id) },
-      data: { isActive: false, endDate: new Date() } // also set endDate to now so it expires immediately
+    // Revoking must also take the role back (audit H12) — but only if the
+    // user has no other live premium subscription left.
+    const updated = await prisma.$transaction(async (tx: any) => {
+      const sub = await tx.subscription.update({
+        where: { id: parseInt(id) },
+        data: { isActive: false, endDate: new Date() } // also set endDate to now so it expires immediately
+      });
+      const remaining = await tx.subscription.count({
+        where: { userId: sub.userId, isActive: true, endDate: { gt: new Date() } },
+      });
+      if (remaining === 0) {
+        await tx.user.update({
+          where: { id: sub.userId },
+          data: { role: 'USER' },
+        });
+      }
+      return sub;
     });
     res.json({ success: true });
   } catch (error) {
@@ -416,14 +437,31 @@ export const deleteSubscription = async (req: Request, res: Response) => {
 export const approveSubscription = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const subscription = await prisma.subscription.update({
-      where: { id: parseInt(id) },
-      data: { isActive: true }
-    });
-    // Grant premium access for the subscription period
-    await prisma.user.update({
-      where: { id: subscription.userId },
-      data: { role: 'PREMIUM' }
+    const existing = await prisma.subscription.findUnique({ where: { id: parseInt(id) } });
+    if (!existing) return res.status(404).json({ error: 'Subscription not found' });
+    if (existing.isActive) return res.json({ success: true, subscription: existing });
+    // Activation + role grant + promo accounting happen together (audit H8/H12):
+    // a promo's usedCount is only incremented here, on approval — never at
+    // submit time, so an unverified claim cannot burn a promo use.
+    const subscription = await prisma.$transaction(async (tx: any) => {
+      const sub = await tx.subscription.update({
+        where: { id: parseInt(id) },
+        data: { isActive: true }
+      });
+      await tx.user.update({
+        where: { id: sub.userId },
+        data: { role: 'PREMIUM' }
+      });
+      if (sub.promoCode) {
+        const promo = await tx.promoCode.findUnique({ where: { code: sub.promoCode } });
+        if (promo && promo.status === 'Active') {
+          await tx.promoCode.update({
+            where: { id: promo.id },
+            data: { usedCount: { increment: 1 } }
+          });
+        }
+      }
+      return sub;
     });
     res.json({ success: true, subscription });
   } catch (error) {
