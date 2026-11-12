@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
+import * as mcqService from '../services/mcqService';
 
 const prisma = new PrismaClient();
 
@@ -109,5 +110,48 @@ export const getDailyTest = async (req: Request, res: Response) => {
 
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch daily test' });
+  }
+};
+
+// ---- Landing mini-quiz (design #2) ----
+// Five real MCQs anyone can try before signing up. The question endpoint
+// NEVER returns the answer key (audit H3): grading happens server-side in
+// submitMiniQuiz, which returns the score plus the correct answers.
+export const getMiniQuiz = async (req: Request, res: Response) => {
+  try {
+    const mcqs = await mcqService.getExamSession(5);
+    res.json({
+      mcqs: mcqs.map((m: any) => ({
+        id: m.id,
+        text: m.text,
+        options: m.options,
+        subject: m.subject || 'Mixed',
+      })),
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load the mini quiz' });
+  }
+};
+
+export const submitMiniQuiz = async (req: Request, res: Response) => {
+  try {
+    const { answers } = req.body;
+    if (!Array.isArray(answers) || answers.length === 0 || answers.length > 5) {
+      return res.status(400).json({ error: 'Send 1 to 5 answers' });
+    }
+    const ids = answers.map((a: any) => Number(a.mcqId)).filter((n: number) => Number.isFinite(n));
+    const rows = await prisma.mCQ.findMany({ where: { id: { in: ids } } });
+    const byId = new Map(rows.map((r: any) => [r.id, r]));
+    let score = 0;
+    const results = answers.map((a: any) => {
+      const row: any = byId.get(Number(a.mcqId));
+      if (!row) return { mcqId: a.mcqId, correct: null, yourAnswer: a.selectedOption, explanation: '' };
+      const isCorrect = a.selectedOption === row.correctOption;
+      if (isCorrect) score += 1;
+      return { mcqId: row.id, correct: row.correctOption, yourAnswer: a.selectedOption, explanation: row.explanation || '' };
+    });
+    res.json({ score, total: answers.length, results });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to grade the mini quiz' });
   }
 };

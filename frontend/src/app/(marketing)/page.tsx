@@ -11,6 +11,8 @@ import {
 } from 'lucide-react';
 import { AnalyticsMock } from './components/ProductMock';
 import PricingSection from './components/PricingSection';
+import HeroQuizCard from './components/HeroQuizCard';
+import MiniQuiz from './components/MiniQuiz';
 import FaqSection from './components/FaqSection';
 import SubjectsSection from './components/SubjectsSection';
 import FeaturesShowcase from './components/FeaturesShowcase';
@@ -84,6 +86,7 @@ export default function LandingPage() {
               <span>from 2,300+ aspirants</span>
             </div>
           </div>
+          <HeroQuizCard />
         </div>
       </section>
 
@@ -102,6 +105,9 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+
+      {/* ============ MINI QUIZ — 5 real questions, no signup ============ */}
+      <MiniQuiz />
 
       {/* ============ FEATURES ============ */}
       <section className="mm-section mm-features" id="features">
