@@ -27,6 +27,7 @@ export default function MiniQuiz() {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [loading, setLoading] = useState(true);
+  const [slow, setSlow] = useState(false);
   const [loadError, setLoadError] = useState('');
   const [grading, setGrading] = useState(false);
   const [gradeError, setGradeError] = useState('');
@@ -34,6 +35,7 @@ export default function MiniQuiz() {
 
   const load = useCallback(async () => {
     setLoading(true);
+    setSlow(false);
     setLoadError('');
     setResult(null);
     setAnswers({});
@@ -53,6 +55,14 @@ export default function MiniQuiz() {
   useEffect(() => {
     load();
   }, [load]);
+
+  // The quiz server sleeps when idle and can take up to a minute to wake.
+  // After 6s of waiting, say so — a bare "Loading…" that long reads as broken.
+  useEffect(() => {
+    if (!loading) return;
+    const t = setTimeout(() => setSlow(true), 6000);
+    return () => clearTimeout(t);
+  }, [loading]);
 
   const current = mcqs[index];
   const answered = current ? answers[current.id] : undefined;
@@ -91,7 +101,15 @@ export default function MiniQuiz() {
 
         <div className="mm-quiz-card">
           {loading ? (
-            <p className="mm-quiz-status">Loading 5 real questions…</p>
+            <p className="mm-quiz-status">
+              Loading 5 real questions…
+              {slow ? (
+                <>
+                  <br />
+                  Still waking up the question server — it can take up to a minute after a quiet spell. Please wait, it is coming.
+                </>
+              ) : null}
+            </p>
           ) : loadError ? (
             <div className="mm-quiz-status">
               <p>{loadError}</p>
