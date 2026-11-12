@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const COLS: { title: string; links: { label: string; href: string }[] }[] = [
@@ -32,6 +34,33 @@ const COLS: { title: string; links: { label: string; href: string }[] }[] = [
 ];
 
 export default function MarketingFooter() {
+  // Same auth signal as the marketing navbar: a token in localStorage.
+  // Signed-in visitors get Dashboard instead of Log in / Sign up.
+  const [signedIn, setSignedIn] = useState(false);
+  useEffect(() => {
+    const sync = () => setSignedIn(Boolean(localStorage.getItem('token')));
+    sync();
+    window.addEventListener('mm-auth-change', sync);
+    return () => window.removeEventListener('mm-auth-change', sync);
+  }, []);
+
+  const cols = signedIn
+    ? COLS.map((col) =>
+        col.title === 'Company'
+          ? {
+              ...col,
+              links: col.links.map((l) =>
+                l.label === 'Log in'
+                  ? { label: 'Dashboard', href: '/dashboard' }
+                  : l.label === 'Sign up'
+                    ? { label: 'Classroom', href: '/classroom' }
+                    : l
+              ),
+            }
+          : col
+      )
+    : COLS;
+
   return (
     <footer className="mm-footer">
       <div className="mm-container">
@@ -49,7 +78,7 @@ export default function MarketingFooter() {
               show exactly where you stand.
             </p>
           </div>
-          {COLS.map((col) => (
+          {cols.map((col) => (
             <div key={col.title}>
               <h4>{col.title}</h4>
               <ul>
