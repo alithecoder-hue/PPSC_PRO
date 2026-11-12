@@ -1386,3 +1386,53 @@
 .emptyAction:hover {
   background: #fbbf24;
 }
+
+/* ---- Phase 3: test shell palette, submit confirm, review queue ---- */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 14px 0;
+}
+.paletteBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--cr-border);
+  background: var(--cr-surface-2);
+  color: var(--cr-text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+.paletteAnswered {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+}
+.paletteCurrent {
+  outline: 2px solid #f59e0b;
+  outline-offset: 1px;
+  color: var(--cr-text);
+}
+.submitConfirm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--cr-surface-2);
+  border: 1px solid var(--cr-amber-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  color: var(--cr-text);
+  font-size: 0.95rem;
+}
+.reviewCard {
+  background: var(--cr-surface);
+  border: var(--cr-border);
+  border-radius: 16px;
+  padding: 20px 22px;
+}
