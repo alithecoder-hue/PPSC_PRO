@@ -96,7 +96,7 @@ function ClassroomContent() {
   // Single home for all study/test activity: an explicit ?tab= wins, then
   // the legacy ?mode= values used by subject pages, past papers and jobs.
   const resolveTab = (tab: string | null, md: string): string => {
-    if (tab === 'practice' || tab === 'test' || tab === 'study') return tab;
+    if (tab === 'practice' || tab === 'test' || tab === 'study' || tab === 'review') return tab;
     if (md === 'test' || md === 'full-mock') return 'test';
     if (md === 'mixed' || md === 'speed-drill') return 'practice';
     return 'study';
@@ -112,6 +112,12 @@ function ClassroomContent() {
   const [focusMode, setFocusMode] = useState(false);
   const [mastery, setMastery] = useState<Record<string, { attempted: number; correct: number }>>({});
   const [furthestIndex, setFurthestIndex] = useState(0);
+  // Mistakes Review queue (design #11, audit follow-up): wrong answers are
+  // saved client-side (no server model exists for per-question results) and
+  // come back on a 1 -> 3 -> 7 day ladder, capped at 10 reviews a day.
+  const [mistakes, setMistakes] = useState<any[]>([]);
+  const [reviewAnswers, setReviewAnswers] = useState<Record<string, string>>({});
+  const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
 
   useEffect(() => {
     setUserRole(localStorage.getItem('role'));
@@ -126,6 +132,10 @@ function ClassroomContent() {
     try {
       const savedMastery = localStorage.getItem('mm-classroom-mastery');
       if (savedMastery) setMastery(JSON.parse(savedMastery));
+    } catch { /* storage unavailable */ }
+    try {
+      const savedMistakes = localStorage.getItem('mm-classroom-mistakes');
+      if (savedMistakes) setMistakes(JSON.parse(savedMistakes));
     } catch { /* storage unavailable */ }
     try { if (localStorage.getItem('mm-classroom-focus') === '1') setFocusMode(true); } catch { /* storage unavailable */ }
   }, []);
@@ -406,7 +416,21 @@ function ClassroomContent() {
     { value: 'study', label: 'Study Mode' },
     { value: 'practice', label: 'Practice Mode' },
     { value: 'test', label: 'Test Mode' },
+    { value: 'review', label: 'Review Mistakes' },
   ];
+  const activeMistakes = mistakes.filter((m: any) => !m.retired);
+  const dueMistakes = activeMistakes
+    .filter((m: any) => new Date(m.nextReview).getTime() <= Date.now())
+    .sort((a: any, b: any) => new Date(a.nextReview).getTime() - new Date(b.nextReview).getTime());
+  // Cards answered this session stay on screen with their verdict, even
+  // though their next review is now in the future.
+  const reviewSessionList = mistakes
+    .filter((m: any) => !m.retired && (new Date(m.nextReview).getTime() <= Date.now() || reviewAnswers[String(m.id)]))
+    .concat(mistakes.filter((m: any) => m.retired && reviewAnswers[String(m.id)]))
+    .sort((a: any, b: any) => new Date(a.nextReview).getTime() - new Date(b.nextReview).getTime());
+  const nextReviewAt = activeMistakes.length
+    ? new Date(Math.min(...activeMistakes.map((m: any) => new Date(m.nextReview).getTime())))
+    : null;
   
   const [topicMcqs, setTopicMcqs] = useState<any[]>([]);
 
@@ -589,6 +613,7 @@ function ClassroomContent() {
   // timer leaks into the next session.
   const resetExamState = () => {
     setIsSubmitted(false);
+    setShowSubmitConfirm(false);
     setScore(0);
     setSelectedAnswers({});
     setCurrentMcqIndex(0);
@@ -621,6 +646,65 @@ function ClassroomContent() {
     }
   }, [searchParams, profileLoaded, categories, selectedCategorySlug]);
 
+  // ---- Mistakes Review queue (1 -> 3 -> 7 day ladder) ----
+  const saveMistakes = (next: any[]) => {
+    setMistakes(next);
+    try { localStorage.setItem('mm-classroom-mistakes', JSON.stringify(next)); } catch { /* storage unavailable */ }
+  };
+  const subjectNameFor = (mcq: any) =>
+    mcq?.subject
+    || categories.find((c: any) => c.id === selectedCategoryId)?.name
+    || activeSubtopic?.parentTopic
+    || 'Mixed';
+  const recordMistake = (mcq: any, wrongOption: string) => {
+    if (!mcq || !mcq.correct || wrongOption === mcq.correct) return;
+    setMistakes((prev) => {
+      const existing = prev.find((m: any) => String(m.id) === String(mcq.id));
+      const entry = existing
+        ? { ...existing, wrong: wrongOption, nextReview: new Date(Date.now() + 24 * 3600 * 1000).toISOString(), interval: 1 }
+        : {
+            id: mcq.id, text: mcq.text, options: mcq.options, correct: mcq.correct,
+            explanation: mcq.explanation || '', subject: subjectNameFor(mcq),
+            subtopic: activeSubtopic?.name || '', wrong: wrongOption,
+            interval: 1, reviews: 0,
+            nextReview: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
+          };
+      const next = existing ? prev.map((m: any) => (String(m.id) === String(mcq.id) ? entry : m)) : [...prev, entry];
+      try { localStorage.setItem('mm-classroom-mistakes', JSON.stringify(next)); } catch { /* storage unavailable */ }
+      return next;
+    });
+  };
+  const answerReview = (mcqId: string, optionId: string) => {
+    if (reviewAnswers[mcqId]) return;
+    setReviewAnswers((prev) => ({ ...prev, [mcqId]: optionId }));
+    setMistakes((prev) => {
+      const m = prev.find((x: any) => String(x.id) === String(mcqId));
+      if (!m) return prev;
+      let next: any[];
+      if (optionId === m.correct) {
+        // Correct: climb the ladder; a correct answer at 7 days retires it
+        // (kept, flagged, so the verdict stays visible this session).
+        if (m.interval >= 7) {
+          next = prev.map((x: any) => (String(x.id) === String(mcqId)
+            ? { ...x, retired: true, reviews: (x.reviews || 0) + 1 }
+            : x));
+        } else {
+          const interval = m.interval === 1 ? 3 : 7;
+          next = prev.map((x: any) => (String(x.id) === String(mcqId)
+            ? { ...x, interval, reviews: (x.reviews || 0) + 1, nextReview: new Date(Date.now() + interval * 24 * 3600 * 1000).toISOString() }
+            : x));
+        }
+      } else {
+        // Wrong again: back to a 1-day interval.
+        next = prev.map((x: any) => (String(x.id) === String(mcqId)
+          ? { ...x, interval: 1, nextReview: new Date(Date.now() + 24 * 3600 * 1000).toISOString() }
+          : x));
+      }
+      try { localStorage.setItem('mm-classroom-mistakes', JSON.stringify(next)); } catch { /* storage unavailable */ }
+      return next;
+    });
+  };
+
   // EXAM HANDLERS
   const handleOptionSelect = (mcqId: string, optionId: string) => {
     if (activeTab === 'practice' && selectedAnswers[mcqId]) return;
@@ -629,6 +713,7 @@ function ClassroomContent() {
        Test answers never count — a test measures, practice teaches. */
     if (activeTab === 'practice' && activeSubtopic) {
       const correct = optionId === currentMcq?.correct;
+      if (!correct && currentMcq) recordMistake(currentMcq, optionId);
       const subId = String(activeSubtopic.id);
       setMastery((prev) => {
         const cur = prev[subId] ?? { attempted: 0, correct: 0 };
@@ -655,11 +740,15 @@ function ClassroomContent() {
 
   const handleExamSubmit = async () => {
     setIsSubmitted(true);
+    setShowSubmitConfirm(false);
     let correctCount = 0;
 
     topicMcqs.forEach((mcq: any) => {
       if (selectedAnswers[mcq.id] === mcq.correct) {
         correctCount++;
+      } else if (selectedAnswers[mcq.id]) {
+        // Attempted and wrong: it joins the review queue (unanswered does not).
+        recordMistake(mcq, selectedAnswers[mcq.id]);
       }
     });
 
@@ -692,6 +781,18 @@ function ClassroomContent() {
     }
   };
 
+  // Test shell (design #10): submitting with unanswered questions asks
+  // once first — "Submit now? 3 unanswered." — instead of silently grading
+  // the blanks wrong. The timer's auto-submit calls handleExamSubmit directly.
+  const unansweredCount = totalMcqs - attemptedCount;
+  const requestSubmit = () => {
+    if (unansweredCount > 0 && !showSubmitConfirm) {
+      setShowSubmitConfirm(true);
+      return;
+    }
+    handleExamSubmit();
+  };
+
   const toggleTopic = (topicId: number) => {
     setExpandedTopicId(expandedTopicId === topicId ? null : topicId);
   };
@@ -718,6 +819,7 @@ function ClassroomContent() {
             <button className={`${styles.boardTab} ${activeTab === 'study' ? styles.active : ''}`} onClick={() => setActiveTab('study')} style={{ color: activeTab === 'study' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'study' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Study</button>
             <button className={`${styles.boardTab} ${activeTab === 'practice' ? styles.active : ''}`} onClick={() => setActiveTab('practice')} style={{ color: activeTab === 'practice' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'practice' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Practice</button>
             <button className={`${styles.boardTab} ${activeTab === 'test' ? styles.active : ''}`} onClick={() => setActiveTab('test')} style={{ color: activeTab === 'test' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'test' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Test</button>
+            <button className={`${styles.boardTab} ${activeTab === 'review' ? styles.active : ''}`} onClick={() => setActiveTab('review')} style={{ color: activeTab === 'review' ? '#FFF' : 'var(--cr-text-muted)', border: 'none', background: activeTab === 'review' ? 'linear-gradient(135deg, #F59E0B, #FF5500)' : 'transparent', padding: '8px 24px', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>Review{dueMistakes.length > 0 ? ` (${dueMistakes.length})` : ''}</button>
           </div>
 
           <div className={styles.mobileTabsOnly}>
@@ -898,8 +1000,71 @@ function ClassroomContent() {
         <div className={styles.mainPane} style={{ flex: 1, width: 'auto', height: '100%', overflow: 'hidden', boxSizing: 'border-box', position: 'relative', display: 'flex', flexDirection: 'column', padding: 0 }}>
           
           <div style={{ flex: 1, overflowY: 'auto', padding: '28px 32px' }}>
-          {activeSubtopic ? (
-            activeTab === 'study' ? (
+          {(activeSubtopic || activeTab === 'review') ? (
+            activeTab === 'review' ? (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div className={styles.contentHeader} style={{ marginBottom: 0 }}>
+                  <h2 className={styles.contentTitle}>Mistakes Review</h2>
+                  <p style={{ color: 'var(--cr-text-muted)', margin: '6px 0 0 0' }}>
+                    Wrong answers come back on a 1 &rarr; 3 &rarr; 7 day ladder — get one right at 7 days and it retires. At most 10 a day.
+                  </p>
+                </div>
+                {dueMistakes.length === 0 ? (
+                  <EmptyState
+                    icon={Target}
+                    title={activeMistakes.length > 0 ? 'Nothing due right now' : 'No mistakes saved yet'}
+                    text={activeMistakes.length > 0
+                      ? `You have ${activeMistakes.length} mistake${activeMistakes.length === 1 ? '' : 's'} saved — your next review is ${nextReviewAt ? nextReviewAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : 'soon'}.`
+                      : 'Get a question wrong in Practice or a test and it will appear here for review.'}
+                    action={activeMistakes.length > 0 ? undefined : 'Start practising'}
+                    onAction={activeMistakes.length > 0 ? undefined : () => setActiveTab('practice')}
+                  />
+                ) : (
+                  reviewSessionList.slice(0, 10).map((m: any) => {
+                    const answered = reviewAnswers[String(m.id)];
+                    return (
+                      <div key={m.id} className={styles.reviewCard}>
+                        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '10px' }}>
+                          <span className={styles.metaPill}>{m.subject}</span>
+                          {m.subtopic ? <span className={styles.metaPill}>{m.subtopic}</span> : null}
+                          <span className={styles.metaPill}>You picked {m.wrong}</span>
+                        </div>
+                        <h3 className={styles.mcqQuestion} style={{ fontSize: '1.15rem', marginBottom: '14px' }}>{m.text}</h3>
+                        <div className={styles.mcqOptionsList}>
+                          {m.options.map((option: any) => {
+                            const isSelected = answered === option.id;
+                            let optionClass = styles.mcqOption;
+                            if (isSelected) optionClass += ` ${styles.selected}`;
+                            if (answered) {
+                              if (option.id === m.correct) optionClass += ` ${styles.correct}`;
+                              else if (isSelected) optionClass += ` ${styles.incorrect}`;
+                              optionClass += ` ${styles.disabled}`;
+                            }
+                            return (
+                              <div key={option.id} className={optionClass} onClick={() => answerReview(String(m.id), option.id)}>
+                                <div className={styles.optionLabel}>{option.id}</div>
+                                <div className={styles.optionText}>{option.text}</div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        {answered && (
+                          <div className={`${styles.practiceVerdict} ${answered === m.correct ? styles.verdictOk : styles.verdictBad}`}>
+                            <div className={styles.verdictTitle}>
+                              {answered === m.correct ? <Check size={17} /> : <X size={17} />}
+                              {answered === m.correct
+                                ? (m.retired ? ' Correct — retired! This one will not come back.' : ` Correct — next review in ${m.interval} days.`)
+                                : ' Incorrect — the correct answer is shown above. It comes back tomorrow.'}
+                            </div>
+                            <p className={styles.verdictText}>{m.explanation || 'No explanation available for this question.'}</p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })
+                )}
+              </motion.div>
+            ) : activeTab === 'study' ? (
               <motion.div key={activeSubtopic.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className={styles.contentHeader} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px' }}>
                   <div>
@@ -1055,6 +1220,46 @@ function ClassroomContent() {
                       </div>
                     </div>
                     
+                    {(() => {
+                      const bySubject: Record<string, { total: number; correct: number }> = {};
+                      topicMcqs.forEach((mcq: any) => {
+                        const key = mcq.subject || 'Mixed';
+                        if (!bySubject[key]) bySubject[key] = { total: 0, correct: 0 };
+                        bySubject[key].total += 1;
+                        if (selectedAnswers[mcq.id] === mcq.correct) bySubject[key].correct += 1;
+                      });
+                      const entries = Object.entries(bySubject).sort((a, b) => (a[1].correct / a[1].total) - (b[1].correct / b[1].total));
+                      if (entries.length === 0) return null;
+                      return (
+                        <div style={{ textAlign: 'left', marginBottom: '24px' }}>
+                          <h3 style={{ color: 'var(--cr-text)', fontSize: '1rem', margin: '0 0 12px 0' }}>Per-subject breakdown</h3>
+                          {entries.map(([subject, v]) => {
+                            const pct = v.total > 0 ? Math.round((v.correct / v.total) * 100) : 0;
+                            const slug = subject.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                            return (
+                              <div key={subject} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderTop: '1px solid var(--cr-border)' }}>
+                                <div style={{ flex: 1, minWidth: 0 }}>
+                                  <div style={{ fontWeight: 600, color: 'var(--cr-text)' }}>{subject}</div>
+                                  <div style={{ fontSize: '0.85rem', color: 'var(--cr-text-muted)' }}>{v.correct}/{v.total} correct · {pct}%</div>
+                                </div>
+                                <div style={{ width: '90px', height: '8px', background: 'var(--cr-surface-2)', borderRadius: '999px', overflow: 'hidden' }}>
+                                  <div style={{ width: `${pct}%`, height: '100%', background: pct >= 70 ? '#16A34A' : pct >= 50 ? '#F59E0B' : '#DC2626' }} />
+                                </div>
+                                <button
+                                  onClick={() => { resetExamState(); router.push(`/classroom?subject=${slug}&tab=practice`); }}
+                                  style={{ background: 'none', border: 'none', color: '#B45309', fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}
+                                >
+                                  Revise &rarr;
+                                </button>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })()}
+                    <button onClick={() => { resetExamState(); setActiveTab('review'); }} style={{ background: 'var(--cr-surface-2)', border: 'var(--cr-border)', color: 'var(--cr-text)', padding: '12px 24px', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', width: '100%', marginBottom: '10px' }}>
+                      Review my mistakes{dueMistakes.length > 0 ? ` (${dueMistakes.length} due)` : ''}
+                    </button>
                     <button onClick={() => { resetExamState(); setActiveTab('study'); }} style={{ background: 'linear-gradient(135deg, #F59E0B, #FF5500)', border: 'none', color: '#FFF', padding: '12px 24px', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', width: '100%' }}>
                       Back to Study
                     </button>
@@ -1076,8 +1281,8 @@ function ClassroomContent() {
                     </div>
                     <div style={{ display: 'flex', gap: '8px' }}>
                       {activeTab === 'test' && (
-                        <button 
-                          onClick={handleExamSubmit}
+                        <button
+                          onClick={requestSubmit}
                           style={{ background: 'var(--cr-danger-bg)', border: '1px solid var(--cr-danger-border)', color: 'var(--cr-danger-text)', padding: '10px 16px', borderRadius: '12px', cursor: 'pointer', fontWeight: 'bold', transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '8px' }}
                         >
                           <Send size={18} /> <span className={styles.hideOnMobile}>Submit Early</span>
@@ -1092,6 +1297,24 @@ function ClassroomContent() {
                       </button>
                     </div>
                   </div>
+                  {activeTab === 'test' && totalMcqs > 0 && (
+                    <div className={styles.palette} role="group" aria-label="Question palette">
+                      {topicMcqs.map((q: any, i: number) => {
+                        const answered = !!selectedAnswers[q.id];
+                        const current = i === currentMcqIndex;
+                        return (
+                          <button
+                            key={q.id}
+                            onClick={() => setCurrentMcqIndex(i)}
+                            className={`${styles.paletteBtn} ${answered ? styles.paletteAnswered : ''} ${current ? styles.paletteCurrent : ''}`}
+                            aria-label={`Question ${i + 1}${answered ? ', answered' : ', unanswered'}`}
+                          >
+                            {i + 1}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                   {totalMcqs > 0 && (
                     <div
                       className={styles.sessionProgress}
@@ -1140,10 +1363,22 @@ function ClassroomContent() {
                       <p className={styles.verdictText}>{currentMcq.explanation || 'No explanation available for this question.'}</p>
                     </div>
                   )}
+                  {showSubmitConfirm && (
+                    <div className={styles.submitConfirm} role="alert">
+                      <div>
+                        <strong>Submit now?</strong>
+                        <span> {unansweredCount} question{unansweredCount === 1 ? '' : 's'} unanswered — they will be marked wrong.</span>
+                      </div>
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        <button className={`${styles.mcqBtn} ${styles.primary}`} onClick={handleExamSubmit}>Submit now</button>
+                        <button className={styles.mcqBtn} onClick={() => setShowSubmitConfirm(false)}>Keep answering</button>
+                      </div>
+                    </div>
+                  )}
                   <div className={styles.mcqControls}>
                     <button className={`${styles.mcqBtn} ${currentMcqIndex === 0 ? styles.disabled : ''}`} onClick={handlePrevMcq}>Previous</button>
                     {activeTab === 'test' && currentMcqIndex === totalMcqs - 1 ? (
-                      <button className={`${styles.mcqBtn} ${styles.primary}`} onClick={handleExamSubmit}>Submit Exam</button>
+                      <button className={`${styles.mcqBtn} ${styles.primary}`} onClick={requestSubmit}>Submit Exam</button>
                     ) : (
                       <button className={`${styles.mcqBtn} ${styles.primary} ${currentMcqIndex === totalMcqs - 1 ? styles.disabled : ''}`} onClick={handleNextMcq}>Next Question</button>
                     )}

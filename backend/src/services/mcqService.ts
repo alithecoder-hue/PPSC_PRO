@@ -32,13 +32,15 @@ export const formatExamMcq = (row: any) => ({
   ],
   correct: row.correctOption,
   explanation: row.explanation || '',
+  // Subject name, so the analysis screen can break a test down per subject.
+  subject: row.categoryName || 'Mixed',
 });
 
 export const getExamSession = async (limit: number = 100) => {
   // Random MCQs for exam session. Answers are included because only the
   // classroom practice/test engine consumes this endpoint, and it grades instantly.
   const safeLimit = Math.max(1, Math.min(Math.floor(limit) || 100, 100));
-  const mcqs = await prisma.$queryRaw`SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation FROM "MCQ" ORDER BY RANDOM() LIMIT ${safeLimit}`;
+  const mcqs = await prisma.$queryRaw`SELECT m.id, m.question, m."optionA", m."optionB", m."optionC", m."optionD", m."correctOption", m.explanation, c.name AS "categoryName" FROM "MCQ" m LEFT JOIN "Category" c ON c.id = m."categoryId" ORDER BY RANDOM() LIMIT ${safeLimit}`;
   return (mcqs as any[]).map(formatExamMcq);
 };
 
@@ -55,16 +57,16 @@ export const getCustomExamSession = async (config: { categoryId?: number | null,
       if (item.categoryId) {
         if (item.difficulty && item.difficulty !== 'any') {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
-            FROM "MCQ" 
+            SELECT m.id, m.question, m."optionA", m."optionB", m."optionC", m."optionD", m."correctOption", m.explanation, c.name AS "categoryName" 
+            FROM "MCQ" m LEFT JOIN "Category" c ON c.id = m."categoryId" 
             WHERE "categoryId" = ${item.categoryId} AND difficulty = ${item.difficulty}
             ORDER BY RANDOM() 
             LIMIT ${item.limit}
           `;
         } else {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
-            FROM "MCQ" 
+            SELECT m.id, m.question, m."optionA", m."optionB", m."optionC", m."optionD", m."correctOption", m.explanation, c.name AS "categoryName" 
+            FROM "MCQ" m LEFT JOIN "Category" c ON c.id = m."categoryId" 
             WHERE "categoryId" = ${item.categoryId}
             ORDER BY RANDOM() 
             LIMIT ${item.limit}
@@ -73,16 +75,16 @@ export const getCustomExamSession = async (config: { categoryId?: number | null,
       } else {
         if (item.difficulty && item.difficulty !== 'any') {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
-            FROM "MCQ" 
+            SELECT m.id, m.question, m."optionA", m."optionB", m."optionC", m."optionD", m."correctOption", m.explanation, c.name AS "categoryName" 
+            FROM "MCQ" m LEFT JOIN "Category" c ON c.id = m."categoryId" 
             WHERE difficulty = ${item.difficulty}
             ORDER BY RANDOM() 
             LIMIT ${item.limit}
           `;
         } else {
           mcqs = await prisma.$queryRaw`
-            SELECT id, question, "optionA", "optionB", "optionC", "optionD", "correctOption", explanation 
-            FROM "MCQ" 
+            SELECT m.id, m.question, m."optionA", m."optionB", m."optionC", m."optionD", m."correctOption", m.explanation, c.name AS "categoryName" 
+            FROM "MCQ" m LEFT JOIN "Category" c ON c.id = m."categoryId" 
             ORDER BY RANDOM() 
             LIMIT ${item.limit}
           `;
