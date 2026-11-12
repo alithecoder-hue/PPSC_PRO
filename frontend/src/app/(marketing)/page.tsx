@@ -11,7 +11,6 @@ import {
 } from 'lucide-react';
 import { AnalyticsMock } from './components/ProductMock';
 import PricingSection from './components/PricingSection';
-import HeroQuizCard from './components/HeroQuizCard';
 import MiniQuiz from './components/MiniQuiz';
 import FaqSection from './components/FaqSection';
 import SubjectsSection from './components/SubjectsSection';
@@ -86,7 +85,6 @@ export default function LandingPage() {
               <span>from 2,300+ aspirants</span>
             </div>
           </div>
-          <HeroQuizCard />
         </div>
       </section>
 
