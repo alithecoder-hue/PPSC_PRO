@@ -334,9 +334,6 @@ function DashboardContent() {
     isAdmin ||
     (user?.role || profile?.role) === 'PREMIUM' ||
     (profile?.subscriptions?.length ?? 0) > 0;
-  const ringPct = avgScore ?? 0;
-  const ringR = 52;
-  const ringC = 2 * Math.PI * ringR;
 
   const rail = [
     { href: '/dashboard', Icon: LayoutDashboard, label: 'Dashboard', active: true },
@@ -501,65 +498,6 @@ function DashboardContent() {
             </div>
           </motion.section>
 
-          <motion.aside
-            className={avgScore === null ? styles.readinessEmpty : styles.readinessCard}
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.06, ease: 'easeOut' }}
-          >
-            {avgScore === null ? (
-              <>
-                <p className={styles.readinessLabelDark}>READINESS</p>
-                <div className={styles.emptyRing}>
-                  <Target size={34} />
-                </div>
-                <p className={styles.emptyTitle}>Not measured yet</p>
-                <p className={styles.emptyText}>
-                  Take a short test and your readiness score will appear here.
-                </p>
-                <Link href="/classroom?tab=test&daily=1" className={styles.primaryBtn}>
-                  Take your first test <ArrowRight size={16} />
-                </Link>
-              </>
-            ) : (
-              <>
-                <p className={styles.readinessLabel}>READINESS</p>
-                <div className={styles.gaugeWrap}>
-                  <svg viewBox="0 0 120 120" className={styles.gauge} role="img" aria-label={`Readiness ${avgScore} percent`}>
-                    <circle cx="60" cy="60" r={ringR} className={styles.gaugeTrack} />
-                    <circle
-                      cx="60"
-                      cy="60"
-                      r={ringR}
-                      className={styles.gaugeFill}
-                      strokeDasharray={ringC}
-                      strokeDashoffset={ringC - (ringC * ringPct) / 100}
-                    />
-                  </svg>
-                  <div className={styles.gaugeCenter}>
-                    <span>{avgScore}%</span>
-                  </div>
-                </div>
-                <p className={styles.readinessCondition}>
-                  Condition: <strong>{readinessLabel(avgScore)}</strong>
-                </p>
-                <div className={styles.readinessStats}>
-                  <div>
-                    <span>{user?.testsTaken ?? 0}</span>
-                    <p>Tests taken</p>
-                  </div>
-                  <div>
-                    <span>{bestScore === null ? '—' : `${bestScore}%`}</span>
-                    <p>Best score</p>
-                  </div>
-                  <div>
-                    <span>{user?.xp ?? 0}</span>
-                    <p>XP earned</p>
-                  </div>
-                </div>
-              </>
-            )}
-          </motion.aside>
         </div>
 
         {/* 5-number strip — your numbers, not the catalogue's */}
@@ -626,52 +564,63 @@ function DashboardContent() {
           </div>
         </motion.section>
 
-        {/* Subject grid */}
+        {/* Continue studying — one row, not a 16-tile grid of boxes */}
         <motion.section
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, delay: 0.18, ease: 'easeOut' }}
         >
           <div className={styles.sectionHead}>
-            <h2>SUBJECTS</h2>
-            <span>{filteredSubjects.length} of 16 shown</span>
+            <h2>CONTINUE STUDYING</h2>
+            <Link href="/classroom" className={styles.cardLink}>
+              All subjects <ArrowRight size={14} />
+            </Link>
           </div>
-          {filteredSubjects.length === 0 ? (
-            <div className={styles.emptyGrid}>No subject matches “{query}”.</div>
-          ) : (
-            <div className={styles.subjectGrid}>
-              {filteredSubjects.map((s) => (
-                <Link key={s.slug} href={`/classroom?subject=${s.slug}`} className={styles.subjectTile}>
-                  <span className={styles.subjectThumb}>
-                    <img src={`/images/subjects/${s.slug}.jpg`} alt={s.name} loading="lazy" />
-                    <span className={`${styles.subjectStatus} ${s.notesReady ? styles.statusReady : styles.statusSoon}`}>
-                      {s.notesReady ? 'Notes ready' : 'Notes soon'}
-                    </span>
-                  </span>
-                  <span className={styles.subjectBody}>
-                    <span className={styles.subjectName}>{s.name}</span>
-                    <span className={styles.subjectMeta}>{s.mcqs} MCQs</span>
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
+          <Link href="/classroom?subject=computer-studies" className={styles.continueRow}>
+            <span className={styles.continueThumb}>
+              <img src="/images/subjects/computer-studies.jpg" alt="Computer Studies" loading="lazy" />
+            </span>
+            <span className={styles.continueBody}>
+              <span className={styles.continueName}>Computer Studies</span>
+              <span className={styles.continueMeta}>90 MCQs · 103 notes · 22 topics — notes ready</span>
+            </span>
+            <span className={styles.continueCta}>
+              Open classroom <ArrowRight size={15} />
+            </span>
+          </Link>
+          {query.trim() !== '' &&
+            (filteredSubjects.length === 0 ? (
+              <div className={styles.emptyGrid}>No subject matches “{query}”.</div>
+            ) : (
+              <ul className={styles.subjectList}>
+                {filteredSubjects.map((sub) => (
+                  <li key={sub.slug}>
+                    <Link href={`/classroom?subject=${sub.slug}`} className={styles.subjectListRow}>
+                      <sub.Icon size={17} />
+                      <span className={styles.subjectListName}>{sub.name}</span>
+                      <span className={styles.subjectListMeta}>
+                        {sub.mcqs} MCQs · {sub.notesReady ? 'Notes ready' : 'Notes soon'}
+                      </span>
+                      <ArrowRight size={15} />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ))}
         </motion.section>
 
-        {/* Bottom grid */}
-        <div className={styles.bottomGrid}>
+        {/* Up next — plain columns, no card boxes */}
+        <div className={styles.upNext}>
           <motion.section
-            className={styles.card}
+            className={styles.upNextCol}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: 0.24, ease: 'easeOut' }}
           >
-            <div className={styles.cardHead}>
-              <h3>
-                <Target size={18} /> Your first steps
-              </h3>
+            <h3 className={styles.upNextHead}>
+              <Target size={18} /> Your first steps
               <span className={styles.stepsProgress}>{doneCount} of 3 done</span>
-            </div>
+            </h3>
             <ul className={styles.stepsList}>
               {steps.map((st, i) => (
                 <li key={st.label} className={styles.stepRow}>
@@ -692,22 +641,45 @@ function DashboardContent() {
                 </li>
               ))}
             </ul>
+            <div className={styles.goalRow}>
+              <span>Today&apos;s goal</span>
+              <div className={styles.stepper}>
+                <button
+                  type="button"
+                  aria-label="Lower daily goal"
+                  onClick={() => changeGoal(goal - 5)}
+                  disabled={savingGoal || goal <= 5}
+                >
+                  <Minus size={16} />
+                </button>
+                <span className={styles.goalValue}>
+                  {goal} <span>MCQs</span>
+                </span>
+                <button
+                  type="button"
+                  aria-label="Raise daily goal"
+                  onClick={() => changeGoal(goal + 5)}
+                  disabled={savingGoal || goal >= 100}
+                >
+                  <Plus size={16} />
+                </button>
+              </div>
+              <span className={styles.goalHint}>{savingGoal ? 'Saving…' : 'Saved'}</span>
+            </div>
           </motion.section>
 
           <motion.section
-            className={styles.card}
+            className={styles.upNextCol}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: 0.3, ease: 'easeOut' }}
           >
-            <div className={styles.cardHead}>
-              <h3>
-                <FileText size={18} /> Recent tests
-              </h3>
+            <h3 className={styles.upNextHead}>
+              <FileText size={18} /> Recent tests
               <Link href="/classroom?tab=test" className={styles.cardLink}>
                 All tests <ArrowRight size={14} />
               </Link>
-            </div>
+            </h3>
             {results.length === 0 ? (
               <div className={styles.empty}>
                 <p>No tests taken yet.</p>
@@ -731,110 +703,14 @@ function DashboardContent() {
                 ))}
               </ul>
             )}
-          </motion.section>
-
-          <motion.section
-            className={styles.card}
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.36, ease: 'easeOut' }}
-          >
-            <div className={styles.cardHead}>
-              <h3>
-                <Briefcase size={18} /> Tracked jobs
-              </h3>
-              <Link href="/jobs" className={styles.cardLink}>
-                Browse jobs <ArrowRight size={14} />
-              </Link>
-            </div>
-            {jobs.length === 0 ? (
-              <div className={styles.empty}>
-                <p>You aren&apos;t tracking any jobs yet.</p>
-                <Link href="/jobs" className={styles.emptyCta}>
-                  Find PPSC openings to track <ArrowRight size={15} />
-                </Link>
-              </div>
-            ) : (
-              <ul className={styles.jobList}>
-                {jobs.map((j) => (
-                  <li key={j.id} className={styles.jobRow}>
-                    <div>
-                      <p className={styles.jobTitle}>{j.title}</p>
-                      <p className={styles.jobMeta}>{j.organization}</p>
-                    </div>
-                    <span className={styles.deadline}>
-                      <CalendarDays size={14} /> {daysLeftLabel(j.deadline)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </motion.section>
-
-          <motion.section
-            className={styles.card}
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.42, ease: 'easeOut' }}
-          >
-            <div className={styles.cardHead}>
-              <h3>
-                <Target size={18} /> Today&apos;s goal
-              </h3>
-            </div>
-            <p className={styles.goalText}>How many MCQs will you finish today?</p>
-            <div className={styles.stepper}>
-              <button
-                type="button"
-                aria-label="Lower daily goal"
-                onClick={() => changeGoal(goal - 5)}
-                disabled={savingGoal || goal <= 5}
-              >
-                <Minus size={16} />
-              </button>
-              <span className={styles.goalValue}>
-                {goal} <span>MCQs</span>
-              </span>
-              <button
-                type="button"
-                aria-label="Raise daily goal"
-                onClick={() => changeGoal(goal + 5)}
-                disabled={savingGoal || goal >= 100}
-              >
-                <Plus size={16} />
-              </button>
-            </div>
-            <p className={styles.goalHint}>{savingGoal ? 'Saving…' : 'Saved automatically'}</p>
-            <div className={styles.miniStats}>
-              <div className={styles.miniStat}>
-                <Bookmark size={16} />
-                <div>
-                  <strong>{data?.stats.savedMcqs ?? 0}</strong>
-                  <span>Saved MCQs</span>
-                </div>
-              </div>
-              <div className={styles.miniStat}>
-                <Clock size={16} />
-                <div>
-                  <strong>{user?.hoursStudied ?? 0}h</strong>
-                  <span>Studied</span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.quickGrid}>
-              <Link href="/classroom?tab=practice" className={styles.quickBtn}>
-                <BookOpen size={16} /> Practice
-              </Link>
-              <Link href="/classroom?tab=test" className={styles.quickBtn}>
-                <ClipboardList size={16} /> Mock tests
-              </Link>
-              <Link href="/past-papers" className={styles.quickBtn}>
-                <FileText size={16} /> Past papers
-              </Link>
-              <Link href="/subscription" className={styles.quickBtn}>
-                <Crown size={16} /> Subscription
-              </Link>
-            </div>
+            <p className={styles.jobsLine}>
+              <Briefcase size={15} />
+              {jobs.length === 0 ? (
+                <>No jobs tracked yet — <Link href="/jobs">Browse PPSC openings</Link> to track one</>
+              ) : (
+                <>{jobs.length} job{jobs.length === 1 ? '' : 's'} tracked — <Link href="/jobs">View jobs</Link></>
+              )}
+            </p>
           </motion.section>
         </div>
       </div>

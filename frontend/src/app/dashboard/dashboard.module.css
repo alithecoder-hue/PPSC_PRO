@@ -1238,3 +1238,162 @@
   color: #0f1e33;
   border-color: #cbd5e1;
 }
+
+/* ---- v6: de-boxed dashboard (Ali: "mess of boxes") ----
+   One focal hero, one flat numbers row, one continue row, two plain
+   columns. The old 16-tile subject grid, the 4-card bottom grid, the
+   readiness aside and the quick-button grid are gone from the page;
+   their old classes stay in this file unused. */
+.heroGrid {
+  display: block;
+}
+.statStrip {
+  background: transparent;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+  gap: 0;
+}
+.statTile {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 18px 20px;
+}
+.statTile + .statTile {
+  border-left: 1px solid #eef2f7;
+}
+.continueRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+.continueThumb {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.continueThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.continueBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.continueName {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0f1e33;
+}
+.continueMeta {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+.continueCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #b45309;
+  font-weight: 700;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+.subjectList {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  border-top: 1px solid #eef2f7;
+}
+.subjectListRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #eef2f7;
+  text-decoration: none;
+  color: #0f1e33;
+}
+.subjectListName {
+  flex: 1;
+  font-weight: 600;
+}
+.subjectListMeta {
+  font-size: 0.88rem;
+  color: #64748b;
+}
+.upNext {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.upNextCol {
+  min-width: 0;
+}
+.upNextHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f1e33;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.upNextHead .stepsProgress,
+.upNextHead .cardLink {
+  margin-left: auto;
+}
+.goalRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #eef2f7;
+  font-weight: 600;
+  color: #0f1e33;
+}
+.goalRow .stepper {
+  margin-left: auto;
+}
+.jobsLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #eef2f7;
+  font-size: 0.92rem;
+  color: #64748b;
+}
+.jobsLine a {
+  color: #b45309;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (max-width: 760px) {
+  .upNext {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .statTile + .statTile {
+    border-left: none;
+  }
+}
